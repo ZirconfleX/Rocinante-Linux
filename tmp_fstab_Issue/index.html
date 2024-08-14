@@ -1,0 +1,1081 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Rocinante Documentation">
+      
+      
+        <meta name="author" content="ZirconfleX">
+      
+      
+      
+        <link rel="prev" href="../Rocinante-Manjaro/">
+      
+      
+        <link rel="next" href="../Numlockx/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>/tmp fstab issue - Rocinante</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tmp-fstab-issue" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Rocinante" class="md-header__button md-logo" aria-label="Rocinante" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rocinante
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              /tmp fstab issue
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Rocinante" class="md-nav__button md-logo" aria-label="Rocinante" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Rocinante
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-PC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Used Hardware
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux Install Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Linux Install Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-LinuxMint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux - Mint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-Ubuntu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-Manjaro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manjaro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Add-on Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Add-on Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    /tmp fstab issue
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    /tmp fstab issue
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-log-warming-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      The log warming message
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solved-the-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solved the warning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-and-resize-a-disk-partition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remove and Resize a disk partition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fstab-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      fstab A
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fstab-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      fstab B
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Numlockx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numlockx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Remove_SNAP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Remove SNAP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The_Apt_Command/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The APT commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Updating_Keyring_Files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Keyring Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tech Add-on Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tech Add-on Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Install_Manage_Pyenv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PYENV & Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VirtualBox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VirtualBox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GTK_Wave_Installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GTK-Wave
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UseKiCad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using KiCad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstallXilinxTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Xilinx Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstallEfinixTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Efinix Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-log-warming-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      The log warming message
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solved-the-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solved the warning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-and-resize-a-disk-partition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remove and Resize a disk partition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fstab-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      fstab A
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fstab-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      fstab B
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="tmp-fstab-issue">tmp fstab issue</h1>
+<p>Working with a manual created partition table as the table provided in the base <a href="../Rocinante/">Rocinante</a> document makes Linux Mint and Ubuntu work without warnings about the system partitioning. Arch Linux and thus also Manjaro uses the automatic <code>systemd /tmp mount</code> what results in a warning about the partitioning of the system. 
+This can only be checked (it should be one of the first things to check) and solved after Ubuntu(Mint) or Manjaro is installed and boot logs can be examined.</p>
+<ul>
+<li>
+<p>Ubuntu and Mint are happy with the partitioning table as provided above and there will be no complaints about the partitioning table in any log file.</p>
+</li>
+<li>
+<p>Manjaro is not that happy and produces a warning in the boot log file about the /tmp partition.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The explication in this document shows how to solve a possible warning about the system partitioning when using the automatic /tmp mount setting. When knowing that Manjaro is going to be used and before installation, remove the /tmp partition from the partitioning table and add the size spend to the /tmp partitioning to the users /home partitioning. This will avoid the need to use this document to solve a boot warning about partitioning issues.</p>
+</div>
+<h3 id="the-log-warming-message">The log warming message</h3>
+<div class="highlight"><pre><span></span><code>system /usr/lib/systemd/system-generators/systemd-fstab-generator failed with exit status 1. system Failed to create unit file &#39;/run/systemd/generator/tmp.mount&#39;, as it already exists. Duplicate entry in &#39;/etc/fstab&#39;?
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Tip</p>
+<p>To easily get the above warning and in general get notified about errors, warnings, and other hardware and software messages normally written in different logs files, install after the first boot the <strong>gnome logs</strong> tool.</p>
+</div>
+<blockquote>
+<ul>
+<li>
+<p>In the <strong>Add/Remove Software</strong> tool, click the magnifying glass and type in the search bar <strong>logs</strong></p>
+</li>
+<li>
+<p>The top of the list shows a magnifying glass with title Logs (gnome-logs) and some brief comments.</p>
+</li>
+<li>
+<p>Hit the blue square with white down pointing arrow to install the logs tool and click [Apply].</p>
+</li>
+<li>
+<p>After the tool is installed the blue square with white down pointing arrow is replaced by a red square with wastebasket.</p>
+</li>
+<li>
+<p>Click the Manjaro button at the left bottom of the screen and start typing "logs". A logs icon with magnifier glass will appear, click that and discover what might or should be solved to make the system run smooth.</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="solved-the-warning">Solved the warning</h3>
+<p>The reason for this warning is that the system probably has the <em>systemd tmp.mount</em> setting enabled.
+The reported warning is no shows stopper, as the PC boots perfectly.
+What's happening is that at boot a /tmp is created bij the OS and the partition setup as /tmp is not used.
+Due to that, if the warning is not checked or there is no solution applied for the warning, a complete disk partition will never be used. A solution for this is presented later in this document.</p>
+<p>Check if <em>systemd tmp.mount</em> is used by typing: <code>systemctl status tmp.mount</code> in a command terminal.</p>
+<ol>
+<li>
+<p>The response to the command when <em>systemd tmp.mount</em> is running is:</p>
+<div class="highlight"><pre><span></span><code>tmp.mount - /tmp
+     Loaded: loaded (/etc/fstab; generated)
+     Active: active (mounted) since Wed 2024-06-26 18:24:32 CEST; 20h ago
+      Where: /tmp
+       What: tmpfs
+       Docs: man:fstab(5)
+             man:systemd-fstab-generator(8)
+      Tasks: 0 (limit: 76762)
+     Memory: 8.0K (peak: 1.5M)
+        CPU: 3ms
+     CGroup: /system.slice/tmp.mount
+jun 26 18:24:32 Rocinante systemd[1]: Mounting /tmp...
+jun 26 18:24:32 Rocinante systemd[1]: Mounted /tmp.
+</code></pre></div>
+</li>
+<li>
+<p>When the response to the command is something else, <em>systemd tmp.mount</em> is not running.</p>
+</li>
+</ol>
+<p>When <strong>1</strong> go and edit the <strong>/etc/fstab</strong> file, else do nothing.</p>
+<ul>
+<li>Start a command terminal</li>
+<li>Go to the /etc directory (cd /etc)</li>
+<li>Start a text editor as root user an load the fstab file (sudo \<text-editor> fstab)
+    \<text-editor> can be: gedit, xed, code, vim, ...</li>
+<li>Comment (#) the line dictating the /tmp partition.<ul>
+<li>If the fstab file content looks as <a href="#fstab-A">fstab A</a> then check the partition table to find out what partition represents /tmp and comment that out.</li>
+<li>if the fstab file looks as <a href="#fstab-B">fstab B</a> comment the line with /tmp</li>
+</ul>
+</li>
+<li>Save the file and close the text editor.</li>
+<li>When rebooting <ul>
+<li>The log file should have no warning anymore about the /tmp.</li>
+<li>A disk check (in a command terminal type: <code>gnome-disks</code>) will reveal that one partition, the original defined /tmp partition, is no longer used or mounted. It is thus not available for the system nor for the user.
+    The best thing to do is to append the partition in a previous or next partition.</li>
+</ul>
+</li>
+</ul>
+<h3 id="remove-and-resize-a-disk-partition">Remove and Resize a disk partition</h3>
+<p>The easiest to do this is by using the <strong>gparted</strong> tool. For Manjaro gparted is installed by default. 
+In case it is not installed do:</p>
+<blockquote>
+<ul>
+<li>In the <strong>Add/Remove Software</strong> tool, click the magnifying glass and type in the search bar <strong>gparted</strong></li>
+<li>The top of the list shows a icon of a hard disk with title GParted Partition Editor (gparted) and some brief comments.</li>
+<li>Hit the blue square with white down pointing arrow to install the logs tool and click [Apply]</li>
+<li>After the tool is installed the blue square with white down pointing arrow is replaced by a red square with wastebasket.</li>
+</ul>
+</blockquote>
+<p>Click the Manjaro button at the left bottom of the screen and start typing "gparted". A icon with gparted text appears, click that, end the root/sudo password, and discover in the popped up GUI the partitioning setup of all hard disks of the system.</p>
+<ul>
+<li>
+<p>In the top tab menu click [GParted] . Clicking the [Devices] option allow selection of all drives in the system and show for each drive it's partitioning. Default the first or main drive partitioning table should be showed.</p>
+</li>
+<li>
+<p>When a partitioning table as the one provided in the base  <a href="../Rocinante/">Rocinante</a>  document is used, the  <strong>/dev/nvme0n1p4</strong> or /tmp partition will show up as unmounted.</p>
+</li>
+<li>
+<p>To not wate the size of the unused and unmounted partition it is best to append it to neighbour partition. As /tmp is auto-mounted in the system from the systemd it sounds logical to append the size of the unused /tmp to the root or <strong>/</strong> partition. Make that grow by the size of the unmounted partition and allow by that an auto-mounted /tmp partition of that size.</p>
+</li>
+<li>
+<p>First thing to do is to delete the unused and unmounted partition. The cleared space can then be used to add it onto an existing partition.</p>
+<ul>
+<li>Select the <strong>/dev/nvme0n1p4</strong>  /tmp partition and click the [Partition] tab. In the fall down menu select [Delete].</li>
+<li>The space occupied by the partition is freed and can be used for something else as add it onto an exiting partition.</li>
+</ul>
+</li>
+<li>
+<p>Second thing, enlarge the <strong>/dev/nvme0n1p3 /</strong> partition with the size of the just removed <strong>/dev/nvme0n1p4</strong> partition.</p>
+<ul>
+<li>
+<p>Select the <strong>/dev/nvme0n1p3 /</strong> partition, right click and in the pop-up menu chose [Resize/Move]</p>
+</li>
+<li>
+<p>A new pup-up GUI pane appears</p>
+<ul>
+<li>Free space preceding (MiB): should be left as is (normally this is geyed out)</li>
+<li>New size (Mib): Add the MiB of the freed space to the displayed value.</li>
+<li>Free space following (MiB): leave it or set it to <strong>0</strong></li>
+<li>Align to: MiB</li>
+</ul>
+<p>Hit the [Resize] button.</p>
+</li>
+<li>
+<p>Till now nothing happened and everything can be reset as it is/was without any damage.</p>
+</li>
+<li>
+<p>Hit the [<strong>V</strong>] (Apply All Operations) button to start making the required changes.
+    When everything is done the <strong>/</strong> partition grew with the extra size of the formal /tmp partition.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Close GParted.</p>
+</li>
+</ul>
+<h3 id="fstab-a">fstab A</h3>
+<p>Consult the partitioning table and find out what partition is occupied by /tmp. 
+Here it is the line starting with <strong>/dev/nvme0n1p4</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>The lines indicating the mount points of the NAS drive are not included here.</p>
+</div>
+<p><span style="font-size:10px; ">/dev/nvme0n1p7: UUID="da728a9f-47b3-4784-9aa0-942d78536418" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="4f19ce30-7825-4724-958d-e10ddb540199"</span>
+<span style="font-size:10px; ">/dev/nvme0n1p5: UUID="da9dfb0b-df66-4a7f-9391-408d4c735ee2" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="42c60059-7008-42a5-96e4-4917ab9e276b"</span>
+<span style="font-size:10px; ">/dev/nvme0n1p3: UUID="0f23c13a-2fba-48aa-8e8a-66ebe579bdd5" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="1ea974c9-9f97-45ea-8f0a-cd8292e823f3"</span>
+<span style="font-size:10px; ">/dev/nvme0n1p1: UUID="0514-B43A" BLOCK_SIZE="512" TYPE="vfat"                             PARTUUID="09378e87-5a92-4b6e-9050-9f115e6050fc"</span>
+<span style="font-size:10px; ">/dev/nvme0n1p6: UUID="94fc2177-2a79-4bdc-a6a9-91ed9a92f5e9" TYPE="swap"                   PARTUUID="2bc06b3d-7d07-44a2-8fb7-4495cacd3c42"</span>
+<span style="font-size:10px; "><strong># /dev/nvme0n1p4: UUID="a5424545-6a80-4ae7-a12e-6b48bdfe992f" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="dec78de3-f683-4011-bddc-147ff448e530</strong>"</span>
+<span style="font-size:10px; ">/dev/nvme0n1p2: UUID="c3c08eef-a84f-415d-8ca0-ae5aff560974" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="7f317f4d-6b63-485f-a4b6-072602cfa4c9"</span>
+<span style="font-size:10px; ">/dev/sdb1:      UUID="6ed0c36e-ae98-4e58-930e-d4bc7810f082" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="20848443-5946-4acd-a86a-93a9acf53741"</span>
+<span style="font-size:10px; ">/dev/nvme1n1p2: UUID="cf3acd37-243d-4bd5-9385-500576b25164" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="f2aff194-0e33-40c4-a24b-968f0025e2f8"</span>
+<span style="font-size:10px; ">/dev/nvme1n1p1: UUID="37db1472-d722-42bd-8cf1-48080d098072" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="849eed55-4e0e-47bd-9d0b-40867b8cdbd3"</span>
+<span style="font-size:10px; ">/dev/sda1:      UUID="5e8c3765-4ced-447b-b81e-88bd2be15863" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="239d98a5-16c9-45d6-864c-aa1db4832122"</span></p>
+<h3 id="fstab-b">fstab B</h3>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>The lines indicating the mount points of the NAS drive are not included here.</p>
+</div>
+<div class="highlight"><pre><span></span><code># /etc/fstab: static file system information.
+#
+# Use &#39;blkid&#39; to print the universally unique identifier for a device; this may
+# be used with UUID= as a more robust way to name devices that works even if
+# disks are added and removed. See fstab(5).
+#
+# &lt;file system&gt;             &lt;mount point&gt;  &lt;type&gt;  &lt;options&gt;  &lt;dump&gt;  &lt;pass&gt;
+UUID=0514-B43A                            /boot/efi      vfat    umask=0077 0 2
+UUID=c3c08eef-a84f-415d-8ca0-ae5aff560974 /boot          ext4    defaults,noatime 0 2
+UUID=0f23c13a-2fba-48aa-8e8a-66ebe579bdd5 /              ext4    defaults,noatime 0 1
+# Comment below line as &lt;systemd tmp.mount&gt; is running
+# UUID=a5424545-6a80-4ae7-a12e-6b48bdfe992f /tmp           ext4    defaults,noatime 0 2
+
+UUID=da9dfb0b-df66-4a7f-9391-408d4c735ee2 /var           ext4    defaults,noatime 0 2
+UUID=da728a9f-47b3-4784-9aa0-942d78536418 /home          ext4    defaults,noatime 0 2
+UUID=37db1472-d722-42bd-8cf1-48080d098072 /opt           ext4    defaults,noatime 0 2
+UUID=cf3acd37-243d-4bd5-9385-500576b25164 /mnt/VirtualMachines ext4  defaults,noatime 0 2
+UUID=5e8c3765-4ced-447b-b81e-88bd2be15863 /mnt/TimeMachine ext4    defaults,noatime 0 2
+UUID=6ed0c36e-ae98-4e58-930e-d4bc7810f082 /mnt/Dropbox   ext4    defaults,noatime 0 2
+tmpfs                              /tmp           tmpfs   defaults,noatime,mode=1777 0 0
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 - ZirconfleX bv
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

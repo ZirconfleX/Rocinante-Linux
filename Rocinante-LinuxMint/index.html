@@ -1,0 +1,3479 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Rocinante Documentation">
+      
+      
+        <meta name="author" content="ZirconfleX">
+      
+      
+      
+        <link rel="prev" href="../Rocinante-PC/">
+      
+      
+        <link rel="next" href="../Rocinante-Ubuntu/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Linux - Mint - Rocinante</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rocinante-linux-mint" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Rocinante" class="md-header__button md-logo" aria-label="Rocinante" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rocinante
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Linux - Mint
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Rocinante" class="md-nav__button md-logo" aria-label="Rocinante" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Rocinante
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-PC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Used Hardware
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux Install Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Linux Install Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Linux - Mint
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Linux - Mint
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-linux-mint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Linux Mint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-the-first-reboot" class="md-nav__link">
+    <span class="md-ellipsis">
+      After the First Reboot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="After the First Reboot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#games" class="md-nav__link">
+    <span class="md-ellipsis">
+      Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numlockx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numlockx
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-snap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remove SNAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nas-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      NAS devices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bluetooth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bluetooth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-manager-dm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display Manager (DM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-cinnamon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Cinnamon
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Cinnamon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tuning-cinnamon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tuning Cinnamon
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-user-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing user software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing user software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system" class="md-nav__link">
+    <span class="md-ellipsis">
+      System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timeshift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timeshift
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appimagelauncher" class="md-nav__link">
+    <span class="md-ellipsis">
+      AppImageLauncher
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AppImageLauncher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-appimagelauncher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure AppImageLauncher
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-the-tool-appimage-file-and-save-it-somewhere-on-disk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download the tool .appimage file and save it somewhere on disk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdebi" class="md-nav__link">
+    <span class="md-ellipsis">
+      GDebi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitwarden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bitwarden
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dropbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dropbox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyenv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pyenv
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Administration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Administration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bleachbit" class="md-nav__link">
+    <span class="md-ellipsis">
+      BleachBit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gparted" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gparted
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dconf-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      dconf Editor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sound &amp; Video
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sound & Video">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obs-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      OBS Studio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vlc-media-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      VLC Media Player
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pulse-audio-volume-control-pavu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pulse Audio Volume Control (PAVU)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      GIT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Studio Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meld" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qt-qute" class="md-nav__link">
+    <span class="md-ellipsis">
+      QT (QuTe)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcl-tk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tcl-Tk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#office" class="md-nav__link">
+    <span class="md-ellipsis">
+      Office
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Office">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typora" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typora
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pandoc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#texlive-latex" class="md-nav__link">
+    <span class="md-ellipsis">
+      TexLive - Latex
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latexdraw" class="md-nav__link">
+    <span class="md-ellipsis">
+      LatexDraw
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#texmaker" class="md-nav__link">
+    <span class="md-ellipsis">
+      TexMaker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sozi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sozi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freeplane" class="md-nav__link">
+    <span class="md-ellipsis">
+      Freeplane
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foxit-reader" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foxit Reader
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdfsam" class="md-nav__link">
+    <span class="md-ellipsis">
+      PdfSam
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Internet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eid-electronic-id-belgium" class="md-nav__link">
+    <span class="md-ellipsis">
+      eid (Electronic ID Belgium)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thunderbird" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thunderbird
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vivladi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vivladi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deluge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deluge
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graphics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inkscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inkscape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freecad" class="md-nav__link">
+    <span class="md-ellipsis">
+      FreeCad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FreeCad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#odafileconverter" class="md-nav__link">
+    <span class="md-ellipsis">
+      ODAfileConverter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#darktable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Darktable
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electronics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electronics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Electronics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtualbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      VirtualBox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#putty" class="md-nav__link">
+    <span class="md-ellipsis">
+      PuTTY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cutecom" class="md-nav__link">
+    <span class="md-ellipsis">
+      CuteCom
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gtkwave" class="md-nav__link">
+    <span class="md-ellipsis">
+      GTKwave
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logisim-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logisim-Evolution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kicad" class="md-nav__link">
+    <span class="md-ellipsis">
+      KiCad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="KiCad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kicad-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      KiCad Libraries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xilinx-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xilinx Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efinix-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efinix tools
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-Ubuntu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-Manjaro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manjaro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Add-on Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Add-on Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tmp_fstab_Issue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /tmp fstab issue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Numlockx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numlockx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Remove_SNAP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Remove SNAP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The_Apt_Command/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The APT commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Updating_Keyring_Files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Keyring Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tech Add-on Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tech Add-on Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Install_Manage_Pyenv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PYENV & Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VirtualBox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VirtualBox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GTK_Wave_Installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GTK-Wave
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UseKiCad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using KiCad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstallXilinxTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Xilinx Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstallEfinixTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Efinix Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-linux-mint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Linux Mint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-the-first-reboot" class="md-nav__link">
+    <span class="md-ellipsis">
+      After the First Reboot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="After the First Reboot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#games" class="md-nav__link">
+    <span class="md-ellipsis">
+      Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numlockx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numlockx
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-snap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remove SNAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nas-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      NAS devices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bluetooth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bluetooth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-manager-dm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display Manager (DM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-cinnamon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Cinnamon
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Cinnamon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tuning-cinnamon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tuning Cinnamon
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-user-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing user software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing user software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system" class="md-nav__link">
+    <span class="md-ellipsis">
+      System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timeshift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timeshift
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appimagelauncher" class="md-nav__link">
+    <span class="md-ellipsis">
+      AppImageLauncher
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AppImageLauncher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-appimagelauncher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure AppImageLauncher
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-the-tool-appimage-file-and-save-it-somewhere-on-disk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download the tool .appimage file and save it somewhere on disk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdebi" class="md-nav__link">
+    <span class="md-ellipsis">
+      GDebi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitwarden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bitwarden
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dropbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dropbox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyenv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pyenv
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Administration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Administration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bleachbit" class="md-nav__link">
+    <span class="md-ellipsis">
+      BleachBit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gparted" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gparted
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dconf-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      dconf Editor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sound &amp; Video
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sound & Video">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obs-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      OBS Studio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vlc-media-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      VLC Media Player
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pulse-audio-volume-control-pavu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pulse Audio Volume Control (PAVU)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      GIT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Studio Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meld" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qt-qute" class="md-nav__link">
+    <span class="md-ellipsis">
+      QT (QuTe)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcl-tk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tcl-Tk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#office" class="md-nav__link">
+    <span class="md-ellipsis">
+      Office
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Office">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typora" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typora
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pandoc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#texlive-latex" class="md-nav__link">
+    <span class="md-ellipsis">
+      TexLive - Latex
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latexdraw" class="md-nav__link">
+    <span class="md-ellipsis">
+      LatexDraw
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#texmaker" class="md-nav__link">
+    <span class="md-ellipsis">
+      TexMaker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sozi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sozi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freeplane" class="md-nav__link">
+    <span class="md-ellipsis">
+      Freeplane
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foxit-reader" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foxit Reader
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdfsam" class="md-nav__link">
+    <span class="md-ellipsis">
+      PdfSam
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Internet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eid-electronic-id-belgium" class="md-nav__link">
+    <span class="md-ellipsis">
+      eid (Electronic ID Belgium)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thunderbird" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thunderbird
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vivladi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vivladi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deluge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deluge
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graphics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inkscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inkscape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freecad" class="md-nav__link">
+    <span class="md-ellipsis">
+      FreeCad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FreeCad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#odafileconverter" class="md-nav__link">
+    <span class="md-ellipsis">
+      ODAfileConverter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#darktable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Darktable
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electronics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electronics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Electronics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtualbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      VirtualBox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#putty" class="md-nav__link">
+    <span class="md-ellipsis">
+      PuTTY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cutecom" class="md-nav__link">
+    <span class="md-ellipsis">
+      CuteCom
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gtkwave" class="md-nav__link">
+    <span class="md-ellipsis">
+      GTKwave
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logisim-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logisim-Evolution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kicad" class="md-nav__link">
+    <span class="md-ellipsis">
+      KiCad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="KiCad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kicad-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      KiCad Libraries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xilinx-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xilinx Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efinix-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efinix tools
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="rocinante-linux-mint">Rocinante-Linux Mint</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Installing Linux Mint or Ubuntu is for both performing and following nearly the same mouse clicks and typing the same command terminal lines.
+Searching and starting tools in Ubuntu is done by hitting the <strong>[show apps]</strong> button and then start typing "<em>name of the tool or tool function that needs to be started</em> ...". While typing the name or function of the required tool a list is presented so one can click the tool icon most of the time after a few typed letters.</p>
+<p>Searching and starting tool in Linux Mint goes nearly the same, but here one needs to click the bottom left screen corner main <strong>Linux mint menu icon</strong>. Then start typing "<em>name of the tool or tool function that needs to be started</em> ...". While typing the name or function of the required tool a list is presented so one can click the tool icon most of the time after a few typed letters.</p>
+<h2 id="install-linux-mint">Install Linux Mint</h2>
+<ul>
+<li>
+<p>Download the Linux-Mint regular or edge ISO, at time of writing; version 21.3, and write it to a USB thumb-drive</p>
+</li>
+<li>
+<p>Boot form the thumb-drive and select <strong>Try or install Linux-Mint</strong> (1<sup>st</sup> choice) from the GRUB menu.</p>
+<ul>
+<li>Double click the CD-like <strong>Install Linux Mint</strong> icon.</li>
+<li>Select the language for the installation</li>
+<li>Select the keyboard and it's variant</li>
+<li>Vote to install extra multi-media codecs</li>
+</ul>
+</li>
+<li>
+<p>Tell how Linux Mint should be installed and chose for the:</p>
+<ul>
+<li>
+<p>"Erase disk and install Linux Mint" when you want an installation when the installer makes the partitioning choice. A pane will pop up telling that the entire disk is going to be used for the installation.</p>
+</li>
+<li>
+<p>"Something else" when you want to partition the disk(s) yourself before installing the whole shebang. When this option is chosen, the installer will show a screen were the disks can be partitioned, named and formatted.</p>
+<div class="admonition note">
+<p class="admonition-title">Tip</p>
+<p>Before partitioning the disk(s) make a list, for the disk setup of your system, as the one given in the Rocinante document. This will get rid of a lot of possible (most likely) frustration.</p>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>Follow the install pages and provide the correct answers.</p>
+</li>
+</ul>
+<p>Go and have a cup of coffee, hot chocolate or cup of thee with coffee corner chat and upon return Linux Mint is going to be installed. The installer is asking to remove the USB thumb drive and hit [Enter]. Do it to reboot in Ubuntu.</p>
+<h2 id="after-the-first-reboot">After the First Reboot</h2>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>During the evolution of the text, software can and will be installed.
+Installing, updating and/or upgrading software requires root access. 
+When the Installation, update and/or upgrade is done using GUI type of tools a popup will be presented asking for the root password. When installing, updating and/or upgrading software in a command terminal root access is obtained by the <strong>sudo</strong> keyword (sudo followed by a command). The command line interface will ask for the root password.</p>
+</div>
+<h3 id="updates">Updates</h3>
+<ul>
+<li>
+<p>This is an important part of the whole text!
+    Updates and backups are life savers!</p>
+</li>
+<li>
+<p>Check if the installer tool implemented the latest updates/upgrades for the OS and pre-installed software tools.</p>
+</li>
+<li>
+<p>Hit the [Linux Mint] icon in the left screen bottom, start typing "update ...". While typing the list of possible installed tools will get smaller and after having typed the word "update " select the <strong>Update Manager</strong></p>
+</li>
+<li>When all updates are installed the tool displays: <strong>Your system is up to date</strong></li>
+<li>Anyway, while here it's time to configure the Update Manager tool.</li>
+<li>
+<p>Hit the [Linux Mint] icon in the left screen bottom, type "update ...". Select <strong>Software Sources</strong></p>
+<ul>
+<li>Official Repositories<ul>
+<li>Click Mirrors Main and afterwards click Mirrors Base. Select for each the mirror at the top of the list (The one with the lowest ping)</li>
+</ul>
+</li>
+<li>PPAs, Additional Repositories and Authentication Keys<ul>
+<li>These items will be at first empty. When installing tools, the GUI tool installer will add here the repository address and authentication key of the tool so that it gets automatically updated. A command line install, using apt, will get as first a command line to add the repository address and  authentication key. Afterwards thos things are found here.</li>
+</ul>
+</li>
+<li>Maintenance<ul>
+<li>If ever the updater has issues with repositories and/or authentication keys, this menu tab can solve, mostly, the issue. Use one after the other the first four buttons to get things back on the rails. </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>It might be that when closing the tool a window pops up telling that the information gathered is out of date. Check that all modifications work by clicking [Refresh].</p>
+</li>
+</ul>
+<h3 id="backups">Backups</h3>
+<ul>
+<li>
+<p><strong>Timeshift</strong> is the Linux equivalent of Apple's Time Machine. Thus Timeshift is the <strong>must have</strong> tool. Linux-Mint has this tool installed by default,  Timeshift is be available from the [Linux Mint] icon in the left screen bottom but also from the command line then it will work without GUI interface. </p>
+<ul>
+<li>
+<ul>
+<li>
+<p>Hit the [Linux Mint] icon in the left screen bottom, start typing "timeshift".
+        Double click the timeshift icon to start the GUI version of Timeshift</p>
+<ul>
+<li>
+<p>Click [Settings]</p>
+<ul>
+<li>
+<p>[Location]: indicate where Timeshift can drop it's backups of the system </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>At least 1 TB to 2 TB is required as a decent backup space.
+The Timeshift storage location can be set onto the NAS drive (setup is discussed later in this document) as that device has most of the time lots of space. Another option is, like in the the provided partition table shown, to install a 2 TB drive only for Timeshift backups.</p>
+</div>
+</li>
+<li>
+<p>[Schedule]: Tell the system when to backup and how many backups to keep.
+    Example: hourly, 1 backup and daily 2 backups.</p>
+</li>
+<li>
+<p>[Filters]: Tell the system what, and what not to backup.</p>
+</li>
+<li>
+<p>Click [OK]</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click [Create] to make the first set of backups.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Close the Timeshift tool</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="logs">Logs</h3>
+<ul>
+<li>One thing to know; if warnings and/or errors are listed here, it means they are not blocking or at first harmful to the Linux and desktop environment. That does not mean that the listed items don't need to be solved. </li>
+<li>After a start or reboot of the PC and Linux, do start the Logs tool and solve any listed item.</li>
+<li>
+<p>Type Hit the [Linux Mint] icon in the left screen bottom and start typing "Logs", select the Logs tool.</p>
+<ul>
+<li>When the tool is started, under <strong>Important</strong> all warnings and errors that need attention are listed. </li>
+<li>One of the listed items can be the warning about the <strong>/tmp</strong> discussed in the main Rocinante document. Go to the <a href="../tmp_fstab_Issue/">tmp_fstab_Issue</a> document and solve the problem.</li>
+</ul>
+</li>
+<li>
+<p>Reboot and again type "Logs" Hit the[Linux Mint] icon in the left screen bottom and start the logs tool.
+    It is possible that a warning message appears about “something ... casper”.
+    This casper tool is not of any use when not porting Linux and can thus be disabled.
+    Do this as:</p>
+<p><code>sudo sysemctl disable casper-md5check.service</code></p>
+</li>
+<li>
+<p>Possible the next and only warning left will be about <strong>gkr-pam</strong>. 
+    This message can safely be ignored.</p>
+</li>
+<li>
+<p>If there are other warnings or errors listed, select the text and copy it in a browser to search for possible solution on the WWW.</p>
+</li>
+</ul>
+<h3 id="graphics">Graphics</h3>
+<ul>
+<li>
+<p>For the AMD GPU graphics card installation do:</p>
+<ul>
+<li>
+<p>Download and safe the latest AMD graphical and GPU driver software: “amdgpu-install_6.0.60002-1_all.deb“
+    <code>sudo apt install ./amdgpu-install_6.0.60002-1_all.deb</code></p>
+</li>
+<li>
+<p>Setup the GPU software
+    <code>amdgpu-install --opencl=rocr --vukan=pro --usecase=workstation</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not run this command as sudo</p>
+</div>
+<ul>
+<li>
+<p>Add the \&lt;user&gt; to the “video” group
+    <code>sudo usermod -a -G video &lt;user&gt;</code></p>
+</li>
+<li>
+<p>Change the configuration file:<code>/etc/udev/rules.d/70-amdgpu.rules</code></p>
+<p>Change: “group <strong>==</strong> video” to “group <strong>=</strong> video”</p>
+</li>
+<li>
+<p>Add: <code>export PATH=$PATH:/opt/amdgpu:/opt/amdgpu-pro:/opt/rocm</code> to the .bash-aliases file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not alter the default <strong>.bashrc</strong> file but use a <strong>.bash-aliases</strong> file for all bash customisation. The .bashrc file automatically looks for an existing bash-aliases file. When there is one, it uses it when not is just continues.</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="games">Games</h3>
+<ul>
+<li>If you don't play simple games, remove all pre-installed games.</li>
+</ul>
+<h3 id="kernel">Kernel</h3>
+<ul>
+<li>
+<p>Linux-Mint is a conservative user of Ubuntu Linux kernels. 
+    The latest available 21.3 version uses Ubuntu 22.04, 5.15. ... kernel </p>
+</li>
+<li>
+<p>Maybe it is worth to upgrade Linux kernel 6.5 or newer. 
+    To install the Linux kernel easily:</p>
+<ul>
+<li>Start a command terminal.
+    Type Hit the [Linux Mint] icon in the left screen bottom and start typing "terminal" select the Terminal tool.</li>
+<li>Type following lines, press [Enter] after each line to execute the command
+    <code>sudo add-apt-repository ppa:cappelikan/ppa -y</code>
+    <code>sudo apt update</code>sudo apt install mainline`</li>
+<li>To upgrade to a new Linux kernel use the graphical <strong>mainline</strong> tool.
+    Type Hit the [Linux Mint] icon in the left screen bottom and start typing "mainline" select the Mainline tool.</li>
+</ul>
+<p>​       If possible use a “generic” core instead of a ”HWE” core.</p>
+</li>
+</ul>
+<h3 id="numlockx">Numlockx</h3>
+<p>Useful to have installed is "numlockx". It makes the numeric keypad of a keyboard available without the need to push the [Numlock] key.</p>
+<p><code>sudo apt install numlockx</code></p>
+<p>After installation check <code>/etc/X11/Xsession.d</code> for a file called <code>55numlockx</code>
+If the file exist, everything will work
+If the file does not exist, go to the <a href="../Numlockx/">Numlockx</a> document and create a file as is discussed in the text..</p>
+<h3 id="remove-snap">Remove SNAP</h3>
+<p>There is no need to remove SNAP, as it is not installed by Linux Mint.
+Why Linux Mint does not support SNAP is explained <a href="https://linuxmint-user-guide.readthedocs.io/en/latest/snap.html">here</a>.</p>
+<h3 id="nas-devices">NAS devices</h3>
+<p>When having a NAS device connected to the network, enable access to its directories</p>
+<ul>
+<li>
+<p>Install the NFS clients software, the NAS is normally the host, which provides NFS functionality without including any server components</p>
+<div class="highlight"><pre><span></span><code>sudo apt update
+sudo apt install nfs-common
+sudo apt install nfs-kernel-server
+</code></pre></div>
+</li>
+<li>
+<p>Add the user(s) to the <strong>netdev</strong> group
+    <code>sudo usermod -a -G groupname username</code> or for user marc and netdev: <code>sudo usermod -a -G netdev marc</code></p>
+</li>
+<li>
+<p>Add the different users and their directories to the <strong>fstab</strong> file. The NAS drive users and their directories are mounted, using NFS, as if they were regular drives locally to the computer, this makes it look as if the NAS drive is part of the drives in the PC</p>
+</li>
+<li>
+<p>Open with a text editor the <strong>/etc/fstab</strong> file
+    <code>sudo gedit /etc/fstab</code></p>
+<ul>
+<li>gedit can be every other text editor as: gnome-text-editor, code, xed, vi, ...</li>
+</ul>
+</li>
+<li>
+<p>Add the NAS drive and its user directories to the file and provide a mount point for ec
+    <div class="highlight"><pre><span></span><code>&lt;NAS IP&gt;/&lt;Volume&gt;/&lt;User&gt; /mnt/&lt;NAS Directory&gt; nfs4 &lt;nfs options&gt; 0 0
+</code></pre></div></p>
+<p>example:</p>
+<div class="highlight"><pre><span></span><code>NAS-IP:/volume1/Marc /mnt/Marc nfs4 x-systemd.automount,_netdev,noacl,nocto,rsize=32768,wsize=32768 0   0
+</code></pre></div>
+</li>
+<li>
+<p>Restart to let the modified fstab file be read.
+    It will create directories at the given mount points and with the given names.
+    Example: If the NAS drive/directory is in the fstab file coupled to /mnt/Marc then; after reboot there will be a /Marc directory under the /mnt system directory.</p>
+</li>
+<li>
+<p>It is possible, most likely, that the created files and possible directories are owned by root and that the content of the directories is not accessible by the user of the machine.
+    To get this solved do:</p>
+<ul>
+<li>Disable the nfs NAS mount points in the fstab file. Put a # in front of each line.</li>
+<li>Reboot the machine.</li>
+<li>It is possible, most likely, that the created files and possible directories are owned by root and that therefore the content of the directories is not accessible by the user of the machine.
+    To get this solved do:<ul>
+<li>Disable the nfs NAS mount points in the fstab file (Put a # in front of each line).</li>
+<li>Reboot the machine.</li>
+<li>After boot go to the /mnt system directory (the earlier created directories are still there) and change the owner, group and access permissions of the directories, these directories are constructed by nfs due to the execution of the root owned fstab at the first boot.</li>
+<li>Enable the nfs NAS mount lines in the fstab file (remove the #).</li>
+<li>Reboot the machine.</li>
+<li>Now accessing the NAS directories should work.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Directories and other stuff created on the NAS might be owned by a user <strong>user</strong>. Therefore it might be necessary to make the Linux user part of the group <strong>users</strong>, by:
+     <code>sudo usermod -a -G users &lt;user&gt;</code></p>
+<div class="admonition note">
+<p class="admonition-title">Other groups the user might be part of</p>
+<ul>
+<li>When planning to use openvpn add the user to <strong>nm-openvpn</strong></li>
+<li>When planning to use one or more virtual machines under VirtualBox, make the user part of <strong>vboxsf</strong> and <strong>vboxusers</strong>. Since VirtualBox is not installed yet, the two groups must be created first: <code>sudo groupadd groupname</code></li>
+<li>I’ve had in the past troubles with Bluetooth. Some of those were solved by making the user part of the Bluetooth group</li>
+</ul>
+</div>
+</li>
+</ul>
+<h3 id="enhancements">Enhancements</h3>
+<ul>
+<li>
+<p>Install Ubuntu enhancements and codex with <strong>ubuntu-restricted-extras</strong>
+    Ubuntu Restricted Extras is a software package that enhances the user experience on Ubuntu desktops by providing a set of important utilities and codex that are typically not included in the standard installation. This includes media codex necessary to play various audio and video files, support for playing DVDs, and Microsoft TrueType fonts. These are called “restricted” because they are not included with Ubuntu by default due to legal and copyright restrictions in various countries.</p>
+<p><code>sudo apt update``
+sudo apt install ubuntu-restricted-extras</code></p>
+</li>
+<li>
+<p>If the PC is going to be used for software development or an eventual compilation of source code, the <strong>ubuntu-essential</strong> meta-package can be useful to have. The meta-package contains the GNU Compiler Collection (GCC), being a collection of compilers and libraries for C, C++, Objective-C, Fortran, Ada, <a href="https://linuxize.com/post/how-to-install-go-on-ubuntu-20-04/">Go</a> , and D programming languages. A lot of open-source projects, including the Linux kernel and GNU tools, are compiled using GCC.
+    <code>sudo apt update</code>
+    <code>sudo apt install build-essential</code>
+    <code>sudo apt-get install manpages-dev</code></p>
+</li>
+</ul>
+<h3 id="bluetooth">Bluetooth</h3>
+<p>All, 99.9 %, of all new motherboards is equipped with Bluetooth capabilities and the Bluetooth hardware is normally default enabled in the BIOS. But in my experience with several motherboards, making the on-board Bluetooth work is a real pain. </p>
+<p>Maybe the first thing one should do is to check if the motherboard is equipped with Bluetooth and it is indeed default enabled in the BIOS. </p>
+<ul>
+<li>
+<p>For a ASUS motherboard; boot or reboot the machine and keep hitting the [DEL] or [F2] key to get the BIOS pages. Check for Bluetooth.</p>
+</li>
+<li>
+<p>Try first to use the on-board Bluetooth, go to <strong>1</strong>.</p>
+<ol>
+<li>
+<p>Remove all Bluetooth related tools (<code>sudo apt purge bluetooth bluez bluez-tools rfkill blueman blueman-manager</code> </p>
+</li>
+<li>
+<p>Rebooted the PC, then reinstall Bluetooth stuff as indicated. </p>
+<div class="highlight"><pre><span></span><code>sudo apt-get install bluetooth bluez bluez-tools rfkill
+sudo apt-get install blueman &amp;&amp; blueman-manager
+sudo rfkill list
+sudo rfkill unblock bluetooth
+sudo service bluetooth start
+</code></pre></div>
+</li>
+<li>
+<p>Now, normally, Bluetooth should work. If not search for warning or error messages in the <strong>logs</strong> and search for solutions.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>If Bluetooth still doesn't work decently, disable the on-board Bluetooth and plug a Bluetooth dongle in one of the many USB ports. Try to use a USB port on the front or top of the computer case (exposure of the dongle).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These days motherboards seem to have also on-board WIFI. Disable it!.</p>
+<p>A desktop computer needs to connect to wired Ethernet</p>
+</div>
+</li>
+<li>
+<p>Check if the Bluetooth dongle is recognised by one of the on-board USB switches.</p>
+<ul>
+<li>Start a command terminal and enter <code>lsusb</code></li>
+<li>One of the returned line can be something as:
+    <code>Bus 009 Device 003: ID 0a12:0001 Cambridge Silicon Radio, Ltd Bluetooth Dongle (HCI mode)</code> 
+    This is the Bluetooth dongle signature.</li>
+</ul>
+</li>
+<li>
+<p>Restart from point <strong>1</strong> above and normally Bluetooth should work now.</p>
+</li>
+</ul>
+<p>If Bluetooth don't work or don't decently work or stops working or ... with or without bluetooth dongle, these things can be done to find a possible cause.</p>
+<ul>
+<li>
+<p>Open a command terminal and:</p>
+<ul>
+<li>
+<p>Check the Bluetooth blocking status , enter <code>sudo rfkill list</code></p>
+<ul>
+<li>The correct returned answer is <strong>no</strong>  for soft and hard blocked Bluetooth.</li>
+<li>If one or both return <strong>yes</strong>, unblock it by typing <code>sudo rfkill unblock bluetooth</code></li>
+</ul>
+</li>
+<li>
+<p>Check the Bluetooth service status, enter <code>sudo systemctl status bluetooth.service</code></p>
+<ul>
+<li>If the Bluetooth is inactive, start it with: <code>sudo systemctl start bluetooth.service</code></li>
+</ul>
+</li>
+<li>
+<p>The <strong>bluez</strong> daemon is the orchestrating Bluetooth part and when that is not up to date all kind of weird issues can pop up. </p>
+<ul>
+<li>Check the current version of bluez: <code>sudo apt-show-versions bluez</code></li>
+<li>Update the bluez daemon: <code>sudo apt install bluez</code></li>
+</ul>
+</li>
+<li>
+<p>Make Bluetooth persistent</p>
+<ul>
+<li>
+<p>Start a text editor as sudo with a file name <strong>bluetooth-restore.service</strong></p>
+</li>
+<li>
+<p>Save the empty file in: <strong>/etc/systemd/system</strong></p>
+</li>
+<li>
+<p>Add following lines to the empty file</p>
+<div class="highlight"><pre><span></span><code>[Unit]
+Description=Restart Bluetooth after suspend
+After=suspend.target 
+
+[Service]  
+Type=simple
+ExecStart=/usr/bin/bash -c &quot;rfkill unblock bluetooth ; systemctl start bluetooth&quot;
+
+[Install]  
+WantedBy=suspend.target
+</code></pre></div>
+</li>
+<li>
+<p>Save the file and close the text editor.</p>
+</li>
+<li>
+<p>Start the just created service: <code>sudo systemctl enable bluetooth-restore.service</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>If audio quality sucks</p>
+<ul>
+<li>
+<p>install, with Add/Remove Software, the <strong>bluetoothctl</strong> command line tool </p>
+<p>Command line install: <code>sudo apt install bluetoothctl</code></p>
+</li>
+<li>
+<p>Run the tool, to get device info, by typing in the command terminal: <code>bluetoothctl</code></p>
+<ul>
+<li>When having run earlier <code>sudo systemctl status bluetooth.service</code> the Bluetooth device MAC address has been displayed. Run now, from the bluetoothctl prompt: 
+    <code>info &lt;MAC address&gt;</code></li>
+<li>There should be a mentioning of <strong>A2DP</strong> in all obtained information.
+    If it's not displayed and the device support high-quality audio then, force A2DP.</li>
+</ul>
+</li>
+<li>
+<p>exit the bluetoothctl tool by typing: <code>quit</code></p>
+<ul>
+<li>
+<p>Start a text editor with /etc/bluetooth/main.conf as file to open.</p>
+</li>
+<li>
+<p>Add under the General section:</p>
+<div class="highlight"><pre><span></span><code>Enable=Source,Sink,Media
+Disable=Socket
+</code></pre></div>
+</li>
+<li>
+<p>Save the file and restart the daemon: <code>sudo systemctl restart bluetooth</code>.
+    That explicitly permits A2DP while stopping HFP.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="display-manager-dm">Display Manager (DM)</h3>
+<p>No need to install a new Display Manager as the default display manager is LightDM.</p>
+<h3 id="install-cinnamon">Install Cinnamon</h3>
+<p>No need to install the Cinnamon desktop as the Cionnamon desktop is the signature desktop of Linux Mint.</p>
+<h4 id="tuning-cinnamon">Tuning Cinnamon</h4>
+<p>Tuning is user's choice or otherwise said, it's the problem” of the user.
+Thus as user, do with it what you like but find here the tuning experiment to make Cinnamon running on Ubuntu as a close copy of the Linux-Mint Cinnamon desktop on other (older) PCs. It will never be exactly the same and it does not need to be, but it must have the looks and feel for let's say 90%.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>One need to be root or operate as sudo to execute most of the commands explained below</p>
+</div>
+<p>After the reboot and selection of Cinnamon as desktop, it already looks a bit as Cinnamon but needs settings for:</p>
+<ul>
+<li>
+<p>Background</p>
+<ul>
+<li>The typical Linux-Mint background is; dark gray Linux Mint eDesigner with LM sign in left bottom quadrant of the screen.</li>
+<li>
+<p>For the eDesigner background, you’ll need a Linux-Mint system in the neighbourhood.</p>
+<ul>
+<li>Go to a machine running Linux-Mint<ul>
+<li>Browse to “/usr/share/backgrounds” (This is the directory with all system backgrounds).</li>
+<li>Copy, to a USB drive, the “linuxmint” directory.</li>
+</ul>
+</li>
+<li>Plug the USB drive into the new machine and copy or move the “linuxmint” directory to “/usr/share/backgrounds”</li>
+<li>Open <strong>SystemSettings - Backgrounds</strong> and add (<strong>+</strong>) the “/usr/share/backgrounds/linuxmint” directory to the backgrounds list (left size). Select and click “linuxmint” and make a choice in the right pane.</li>
+</ul>
+</li>
+<li>
+<p>If no Linux-Mint machine is available, find beautiful and stylish backgrounds here:
+    https://wallpapersafari.com/linux-mint-wallpaper-hd/</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Fonts and themes.</p>
+<ul>
+<li>
+<p>Go to: https://github.com/orgs/linuxmint/repositories</p>
+<ul>
+<li>Select the “mint-y-Icons” repository and download the zip file</li>
+<li>Select the “mint-themes” repository and download the zip file.</li>
+</ul>
+<p>Open the “mint-y-icons-master.zip” file and extract the contents of “/usr/share/icons” directory to the “/usr/share/icons” directory of the machine.
+Open the “mint-themes-master.zip” file and extract the contents of “/files/usr/share/themes” directory to the “/usr/share/themes” directory of the machine.</p>
+</li>
+<li>
+<p>Themes</p>
+<ul>
+<li>Window borders: Mint-Y</li>
+<li>icons: Mint-Y</li>
+<li>Controls: Mint-Y</li>
+<li>Mouse pointer: DMZ-white</li>
+<li>Desktop: Mint-Y-black</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Preferences</p>
+<ul>
+<li>Applets: Selected (turned on) are:<ul>
+<li>Sticky Notes , Calendar (select the configuration wheel and enter the custom date format “%H:%M:%S %n %d %b %y”), Grouped Window List, Menu, Network Manger, Notifications, Power Manger</li>
+<li>Printers, Removable Drives, Rubbish Bin, Sound, System Tray, Workspaces Switcher, XApp Status Applet</li>
+</ul>
+</li>
+<li>Date and Time<ul>
+<li>Network Time</li>
+<li>24h clock, with date and seconds</li>
+<li>First day of the week : Monday</li>
+</ul>
+</li>
+<li>Desktop<ul>
+<li>Nothing is selected here. There are thus no desktop icons.</li>
+</ul>
+</li>
+<li>Panel<ul>
+<li>Always show panel</li>
+<li>Panel Height is 40</li>
+<li>Left, centre and right zone font size is 7.0 with a coloured optimally sized to the panel.</li>
+</ul>
+</li>
+<li>Privacy<ul>
+<li>Recent files and check connectivity are on.</li>
+</ul>
+</li>
+<li>Screensaver<ul>
+<li>Turns on after 10 minutes.</li>
+<li>The machine locks immediately when going to sleep and when the screen-saver starts.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Program and tool settings</p>
+<ul>
+<li>
+<p>Copy the play and listen list for Rhythmbox from the previous PC to the new.
+    These things can be found in:</p>
+<div class="highlight"><pre><span></span><code>~/.local/share/rhythmbox
+</code></pre></div>
+<p>Copy the content of above directory from one PC to the other.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="installing-user-software">Installing user software</h2>
+<p>The software installed on a PC is the choice of the user. If you have a machine like the one discussed here, there is plenty of room for all kinds of software. Provided here is a list of software tools installed on my machines. These tools are not used daily but let’s say at least ones an week and certainly more of the tools are used weekly.</p>
+<p>The tool install instructions are provided as command lines and are expressed as a <code></code> bubble. <br />
+Start a command terminal by hitting the  [Linux Mint] icon in the left screen bottom and then start typing "terminal". When it's displayed hit [Enter]. In the terminal type and execute, [Enter], each given command line to install a software tool.</p>
+<h3 id="system">System</h3>
+<h4 id="timeshift">Timeshift</h4>
+<p>Timeshift is default installed on Linux Mint.
+This is just a guide to give a hint how to setup Timeshift.</p>
+<ul>
+<li>Start Timeshift from the menu (start typing timeshift and when it's displayed hit enter).</li>
+<li>Select the snapshot type : RSYNC</li>
+<li>It starts estimating the snapshot size and then comes back with a list of disks. During install of Ubuntu the 4 TB WDC siak has been reserved for timeshift. It got the name <strong>TimeMachine</strong> and is mounted as /mnt/TimeMachine. Select that disk and click[Next].</li>
+<li>Set the snapshot levels you want (Monthly, Weekly, Daily, Hourly, Boot) and determine how many snapshots to keep. Example: Daily: 3 and Hourly: 6.</li>
+<li>Determine what to backup and what not.</li>
+<li>[Finish], hit the [Create] tab to get the first snapshot.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is a good idea to make a new snapshot when all tools are installed and configured.</p>
+</div>
+<h4 id="appimagelauncher">AppImageLauncher</h4>
+<p>Integrate AppImages to your application launcher with one click, and manage, update and remove them from there. Double-click AppImages to open them, without having to make them executable first.</p>
+<p><div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:appimagelauncher-team/stable
+sudo apt update
+sudo apt install appimagelauncher
+</code></pre></div>
+An <a href="https://appimage.org">appimage</a> file  is kind of a compressed directory containing all files and directories required bij the tool the appimage file is representing. The only thing an appimage file has not is the files representing the customisation of the tool. Customisation of tools can be found in the users home directory under .config and .local directories.</p>
+<p>Installing and removing tools using appimages is thus very easy. download the tools appimage file (\&lt;<em>File_Name</em>&gt;.appimage) and pass it through AppImageLauncher. Removing a tool is done by deleting the appimage file.</p>
+<h5 id="configure-appimagelauncher">Configure AppImageLauncher</h5>
+<ul>
+<li>
+<p>Create, as root/sudo, in <strong>/opt</strong> a directory <strong>AppImages</strong> and change the owner, group and properties of the directory. Use a file browser (Nemo) to do that or use a command line terminal.</p>
+<ul>
+<li><code>cd /opt
+    sudo chown &lt;user&gt; AppImages
+    sudo chgrp &lt;user&gt; AppImages
+    sudo chmod 775 AppImages</code></li>
+<li>Click the [Menu] button in the left bottom corner of the screen and start typing <strong>appimagelauncher</strong>. The first presented option is: <strong>AppImageLauncher Settings</strong>, select it.</li>
+</ul>
+</li>
+<li>
+<p>[AppimageLauncher] tab</p>
+<ul>
+<li>Tick the box left of "Ask whether to move AppImage files ... "</li>
+<li>Set the location were to store the appimage files and were to execute them from to
+    <strong>/opt/AppImages</strong></li>
+</ul>
+</li>
+<li>
+<p>[AppimageLauncherd] tab</p>
+<ul>
+<li>Tick the box left of "Auto start auto-integration ... "</li>
+</ul>
+</li>
+<li>
+<p>Click [OK]</p>
+</li>
+</ul>
+<p>How to run a tool disguised as appimage </p>
+<ul>
+<li>
+<h5 id="download-the-tool-appimage-file-and-save-it-somewhere-on-disk">Download the tool .appimage file and save it somewhere on disk</h5>
+</li>
+<li>Right click the appimage file and select "Open with AppImageLauncher" (Double click the file also works).</li>
+<li>A pop-up pane will ask (2 buttons): <strong>[Run Once]</strong> - <strong>[Integrate and run]</strong>
+    Chose for [Integrate and run] as then the tool will become available in the general menu of the system.</li>
+<li>The installed tool is, GUI or apt, installed tools available in the [Linux Mint] icon in the left screen bottom  and updates for the tool are going to be handled by the AppImageLauncher.</li>
+</ul>
+<h4 id="gdebi">GDebi</h4>
+<p>According to the utility's official documentation: "GDebi lets you install local deb packages resolving and installing its dependencies. apt does the same, but only for remote (http, ftp) located packages.". Normally it is pre-installed but in case it is not:</p>
+<div class="highlight"><pre><span></span><code>sudo apt install gdebi
+</code></pre></div>
+<h4 id="bitwarden">Bitwarden</h4>
+<p>Best password storage and sharing tool.
+The best Password storage and sharing application. It's a desktop tool (Windows/Linux/IOS), a phone app (Android/IOS) and a browser plugin. Thus when used passwords are available from any and for any system.
+It is possible to sync the PC version with the web browser version, this is easy to keep things nicely arranged.</p>
+<ul>
+<li>Download as Appimage file from the <a href="https://bitwarden.com/download/">Bitwarden web site</a>, </li>
+<li>Save the file on disk</li>
+<li>Double click the saved file and for the popped-up pane click the [Integrate and Run] button</li>
+<li>Bitwarden will start and ask for credentials.</li>
+</ul>
+<p>What happened is; the saved appimage file is copied to the /opt/AppImages directory and the AppImageLauncher created an input for the [Manjaro main] menu so that when clicking the [Memu] button one can type bitwarden and launch bitwarden from the menu structure.
+The AppImageLauncher tool will also take care of regularly updating the Bitwarden tool.</p>
+<div class="admonition note">
+<p class="admonition-title">Tip</p>
+<p>In case of ... On regularly base export the vault, using the PC version, of all passwords as csv or json file and store that file somewhere safe (in another personal vault).</p>
+</div>
+<h4 id="dropbox">Dropbox</h4>
+<p>Keep everything that’s important to you and your family shareable and safe in one place.
+Back up files in the cloud, share photos and videos, and more.</p>
+<p><div class="highlight"><pre><span></span><code>https://www.dropbox.com/install
+dropbox_2024.01.22_amd64.deb
+</code></pre></div>
+After downloading the .deb file install it with the GDebi Package Installer</p>
+<h4 id="pyenv">Pyenv</h4>
+<p>Manage Multiple Python Versions With pyenv.
+Use another Python environment to play with than the system installed Python so you cannot break anything in your system.</p>
+<p>For a in depth discussion about installing and using pyenv read the <a href="../Install_Manage_Pyenv/">Install and Manager Pyenv</a> document
+Discussed with the installation of pyenv the installation and configuration of the required/wanted Python version(s) and packages is discussed.</p>
+<h3 id="administration">Administration</h3>
+<h4 id="bleachbit">BleachBit</h4>
+<p>Keep the computer clean and sane use BleachBit. BleachBit guards privacy. With BleachBit you can free cache, delete cookies, clear Internet history, shred temporary files, delete logs, and discard junk you even didn't know was there. Designed for Linux and Windows systems, it  wipes clean thousands of applications including Firefox, Internet  Explorer, Adobe Flash, Google Chrome, Opera, Safari,and <a href="https://www.bleachbit.org/features">more</a>.  Beyond simply deleting files, BleachBit includes advanced features such as shredding files to prevent recovery, wiping free disk space to hide traces of files deleted by other applications, and vacuuming Firefox to make it faster. Better than free, BleachBit is open source.</p>
+<div class="highlight"><pre><span></span><code>sudo apt install bleachbit
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not run sudo or root functions, in deep-scan and system, in the user or non-sudo version of the tool. There is a dedicated sudo version of the tool and both are installed at the same time.</p>
+</div>
+<h4 id="gparted">Gparted</h4>
+<p>GNOME partition editor (Hard Disk management tool). This tool can help managing partitions, add disks and/or portable disks and USB drives.</p>
+<div class="highlight"><pre><span></span><code>sudo apt install gparted
+</code></pre></div>
+<h4 id="dconf-editor">dconf Editor</h4>
+<p><strong>dconf</strong>  is a low-level configuration system, the configuration system is based  on keys, which stores the settings for most applications. The  configuration keys are in the unstructured database (keys are logically  interconnected grouped into categories), the key database is stored in a  binary file located:</p>
+<div class="highlight"><pre><span></span><code>sudo apt install dconf-editor
+</code></pre></div>
+<h3 id="sound-video">Sound &amp; Video</h3>
+<h4 id="obs-studio">OBS Studio</h4>
+<p>OBS Studio, also known as Open Broadcaster Software Studio, serves content creators, streamers, and video professionals as top-tier open-source software.</p>
+<div class="highlight"><pre><span></span><code>sudo apt update
+sudo add-apt-repository ppa:obsproject/obs-studio -y
+sudo apt install obs-studio -y
+</code></pre></div>
+<h4 id="vlc-media-player">VLC Media Player</h4>
+<p>VLC is a free and open-source multimedia player. It supports a wide range of multimedia formats such as MKV, MP4, MPEG, MPEG-2, MPEG-4, DivX, MOV, WMV, QuickTime, WebM, FLAC, MP3, Ogg/Vorbis files, BluRays, DVDs, VCDs, podcasts, and multimedia streams from various network sources.</p>
+<div class="highlight"><pre><span></span><code>sudo apt update
+sudo apt install vlc
+sudo apt install vlc-plugin-access-extra
+</code></pre></div>
+<h4 id="pulse-audio-volume-control-pavu">Pulse Audio Volume Control (PAVU)</h4>
+<p>PulseAudio Volume Control (pavucontrol) is a simple GTK+ based volume control tool (mixer) for the PulseAudio sound server. In contrast to classic mixer tools this one allows you to control the volume of hardware devices and of each playback stream separately. It also allows you to redirect a playback stream to another output device without interrupting playback.</p>
+<div class="highlight"><pre><span></span><code>sudo apt update
+sudo apt -y install pavucontrol
+</code></pre></div>
+<h3 id="programming">Programming</h3>
+<h4 id="git">GIT</h4>
+<p>Git for use with GitHub.</p>
+<div class="highlight"><pre><span></span><code>sudo apt update
+sudo apt install git-cola
+</code></pre></div>
+<h4 id="visual-studio-code">Visual Studio Code</h4>
+<p>Installing Visual Studio Code is a fundamental step for anyone looking to create a powerful coding environment. Visual Studio Code, often abbreviated as VS Code, is a by Microsoft re-owned code editor (Git atom) appreciated for its lightweight nature and extensible. 
+Good to know is:</p>
+<ul>
+<li>That <strong>Visual Studio Code</strong> is a distribution of the Code - OSS repository with Microsoft specific customisation released under a traditional Microsoft product license.</li>
+<li><strong>Code - OSS</strong> is an open source project without any proprietary code.</li>
+</ul>
+<p>Both can be installed and used, but below instructions are for the Microsoft version</p>
+<ul>
+<li>
+<p>Add the GPG key
+  <code>curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -</code></p>
+</li>
+<li>
+<p>Two issues will pop up: curl is not installed and key format is deprecated. </p>
+</li>
+<li>Install curl: <code>sudo apt install curl</code></li>
+<li>
+<p>Bring the gpg key up to date. </p>
+<p>Read details about this in the <a href="../Updating_Keyring_Files/">Updating Keyring Files</a> document</p>
+</li>
+<li>
+<p>Add the Visual Studio Code repository
+  <code>sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"</code></p>
+</li>
+<li>
+<p>update the system's package lists.
+  <code>sudo apt update</code></p>
+</li>
+<li>
+<p>Install Vs-Code
+  <code>sudo apt install code</code></p>
+</li>
+</ul>
+<p>Since code is a flexible text editor there are lots of extensions available making it a versatile and specialised  text and code editor for general and (very) specific tasks. The list of all current extensions is hidden under the, on the left side showed, extensions button or after pressing <strong>[CTRL]+[SHIFT]+X</strong>.
+Click an extension, browse to its web site and maybe install it.</p>
+<h4 id="meld">Meld</h4>
+<p>Files and directories comparison is the task that is often required, Meld takes this job seriously and is considered one of the best tools to perform comparisons between files, directories, and version control
+projects. It is widely used by Linux desktop users and app developers to cater their daily comparison needs. Here are some of the noteworthy features of this application.</p>
+<div class="highlight"><pre><span></span><code>sudo apt update
+sudo apt install meld
+</code></pre></div>
+<p>Meld is installed because a extension installed in the code editor is using it.</p>
+<h4 id="qt-qute">QT (QuTe)</h4>
+<p>All the tools you need for creating software applications or embedded devices, from planning and design to development, testing, and future-proofing your products. QT is a tool that needs to be purchased and licensed, but there is a open source version available for the non-commercial developer (Hobby or home user). the rules are described here:
+<div class="highlight"><pre><span></span><code>https://www.qt.io/download-open-source
+</code></pre></div></p>
+<p>READ the page about what can/must be done and cannot be done using the open source license.
+Download the online installer here:</p>
+<div class="highlight"><pre><span></span><code>https://doc.qt.io/qt-6/qt-online-installation.html#2-download-qt-online-installer
+</code></pre></div>
+<p>Select the option to go for the open-source version.</p>
+<h4 id="tcl-tk">Tcl-Tk</h4>
+<p>Tcl (Tool Command Language) is a powerful, open source, business-friendly and easy to learn programming language. Tcl is a mature yet evolving language that is truly cross platform, easily deployed and highly extensible. It is suitable for a very wide range of uses, including web and desktop applications, networking, administration, testing and many more.</p>
+<p>Tk is a graphical user interface toolkit that act as the standard GUI for not only Tcl but for many other languages It can can produce rich, native applications that run unchanged across Windows, Mac OS X, Linux and more.</p>
+<ul>
+<li>Normally both TCL and TK are default installed (run tclsh and type <code>info patchlevel</code>)</li>
+<li>The main Tcl-Tk web can be found <a href="https://www.tcl.tk/">here</a></li>
+<li>On the software page of the Tcl-Tk web page several ways to get and install the software are presented. The Tcl-Tk version preferably used is that from ActiveState and can be downloaded <a href="https://www.activestate.com/products/activetcl/downloads/">here</a>.
+    ActiveState actively maintains the latest version and updates of Tcl-Tk, but to keep up withe new version releases of the language one must regularly visit the ActiveState web page, download and install new versions when required.</li>
+</ul>
+<p>Find <a href="https://www.tcl.tk/">here</a> beside software; tutorials, manuals and links to all kind of other related stuff.</p>
+<ul>
+<li>
+<p>A full development system with the latest version of the Tcl-Tk software can be downloaded from the ActiveState web side (Probably you’ll need to make an account in order to get it).</p>
+</li>
+<li>
+<p>Save the download on the machine.</p>
+</li>
+<li>
+<p>Uncompress the file in the <em>/Download</em> directory.
+    A directory <em>ActiveTcl-<version>-x86_64-linux-glibc-<list></em> will be created.</p>
+</li>
+<li>
+<p>start a terminal and change into the above given directory.
+    <code>cd ActiveTcl-8.6.9.8609.2-x86_64-linux-glibc-2.5-dcd3ff05d</code></p>
+</li>
+<li>
+<p>Run the <em>install.sh</em> script as root (sudo) and install the Tcl-Tk tooling in <em>/opt/ActiveState</em>.</p>
+<ul>
+<li>
+<p>Accept the list of what is going to be installed, hit [enter].</p>
+</li>
+<li>
+<p>Accept the license of ActiveState by typing [A]</p>
+</li>
+<li>
+<p>Provide the path where ActiveState Tcl-Tk will be installed or accept the default value.
+    The default value is /opt/ActiveTcl-8.6
+    Hit [enter]cd ..</p>
+</li>
+</ul>
+<p>-</p>
+<ul>
+<li>
+<p>Provide the path where demo design will dropped or accept the default. Hit [enter]</p>
+</li>
+<li>
+<p>Specify the runtime installation or accept the default given value. Hit [enter]</p>
+</li>
+<li>
+<p>Hit [enter] to start the installation.</p>
+</li>
+<li>
+<p>At the end of the installation some settings are provided.
+    Open the <em>.bash_aliases</em> or <em>.bashrc</em> file with a text editor <code>~/.bash_aliases</code> .</p>
+</li>
+<li>
+<p>Add following lines to one of the files.</p>
+<div class="highlight"><pre><span></span><code># TCL-TK settings (ActiveState)
+export TCLTK_ROOT=/opt/ActiveTcl-8.6
+export PATH=$PATH:$TCLTK_ROOT/bin:$TCLTK_ROOT/lib
+export MANPATH=$TCLTK_ROOT/man
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="office">Office</h3>
+<h4 id="typora">Typora</h4>
+<p>Typora provides a seamless experience as both a Markdown reader and a writer.
+It removes the preview window, mode switcher, syntax symbols of markdown source code, and all other unnecessary distractions of other markdown readers &amp; writers.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Typora is no longer a free tool. The cost is $15. But it’s worth it. 
+Pay the money, get a license it and download it.</p>
+</div>
+<div class="highlight"><pre><span></span><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
+wget -qO - https://typora.io/linux/public-key.asc | sudo tee /etc/apt/trusted.gpg.d/typora.asc
+</code></pre></div>
+<p>Add Typora's repository to the list of repositories</p>
+<div class="highlight"><pre><span></span><code>sudo add-apt-repository &#39;deb https://typora.io/linux ./&#39;
+</code></pre></div>
+<p>Install Typora
+<div class="highlight"><pre><span></span><code>sudo apt-get update
+sudo apt-get install typora
+</code></pre></div></p>
+<h4 id="pandoc">Pandoc</h4>
+<p><a href="http://pandoc.org/">Pandoc</a> is a universal document text converter.
+Typora is using it to support file import/export features for several file types (pdf, html, docx, ...).
+If ever using it, the GitHub Atom text edit is also using it.</p>
+<p><code>sudo apt install pandoc</code></p>
+<h4 id="texlive-latex">TexLive - Latex</h4>
+<p>TeX Live is an easy way to get up and running with the <a href="https://tug.org/">TeX document production system</a>.</p>
+<ul>
+<li>
+<p>Start a web browser and go to: https://tug.org/texlive/acquire-netinstall.html</p>
+</li>
+<li>
+<p>Click on the download for a <a href="http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip">install-tl.zip</a> file and save it (/Downloads)</p>
+</li>
+<li>
+<p>Extract the zip file. The result will be a directory called install-tl-\&lt;invers-date&gt;</p>
+</li>
+<li>
+<p>Launch a terminal and change into the directory created by the unzip operation.</p>
+</li>
+<li>
+<p>Run the install script <code>./install-tl -gui</code></p>
+<ul>
+<li>The most important in the install script is the install location .</li>
+<li>Provide the install directory <code>/opt/TexLive/&lt;year&gt;</code></li>
+</ul>
+</li>
+<li>
+<p>Installing TexLive will take a while, so be patient.</p>
+</li>
+<li>
+<p>........ (waiting)</p>
+</li>
+<li>
+<p>When installed, or even during install, add the TexLive installation to the path.</p>
+<ul>
+<li>
+<p>In the user home directory, open with a edit, xed, the <em>.bash_aliases</em> file.</p>
+</li>
+<li>
+<p>Add following lines to the file and save it afterwards.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>export TL_ROOT=/opt/TexLive/2024
+export PATH=$PATH:TL_ROOT/bin/x86_64-linux
+</code></pre></div>
+</li>
+</ul>
+<h4 id="latexdraw">LatexDraw</h4>
+<p>LaTeXDraw is a graphical drawing editor for LaTeX.
+LaTeXDraw can be used to:</p>
+<ul>
+<li>Generate <a href="http://tug.org/PSTricks/main.cgi/"><strong>PSTricks</strong></a> code</li>
+<li>Directly create PDF or PS pictures.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo apt update
+sudo apt install latexdraw
+</code></pre></div>
+<h4 id="texmaker">TexMaker</h4>
+<p>Texmaker is a free, modern and cross-platform LaTeX editor for linux systems that integrates many tools needed to develop documents with LaTeX, in just one application. It includes unicode support, spell checking, auto-completion, code folding and a built-in pdf viewer with synctex support and continuous view mode.
+Texmaker is easy to use and to configure. Texmaker is released under the GPL license .</p>
+<ul>
+<li>In a web browser go to: https://www.xm1math.net/texmaker/download.html</li>
+<li>Select, download and save the Linux Package for Ubuntu 22.04</li>
+<li>Double click the saved <strong>texmaker_... .deb</strong> file.</li>
+<li>Gdebi will start and install TexMaker.</li>
+<li>For updates, a timely visit to the Texmaker website or click the [Help] tab in Textmaker selecting [Check for Updates].</li>
+</ul>
+<h4 id="sozi">Sozi</h4>
+<p>Sozi is a piece of software for creating animated presentations. It is generally used to make visual aids for lectures or meetings. With Sozi, a presentation is not organised as a sequence of slides, but rather as a succession of <em>viewpoints</em> on a <em>map</em> that you <em>explore</em>.</p>
+<p>The Sozi web page can be found here: http://sozi.guide/en/about-sozi.html</p>
+<p>Go to this page for the installation: http://sozi.guide/en/installation.html</p>
+<p>Double click the downloaded file from GitHub to install with Gdebi the tool.</p>
+<h4 id="freeplane">Freeplane</h4>
+<p>This is a mind mapping tool</p>
+<p>Maybe don’t install it immediately (Unless you need such tool of course)
+Install it when required.</p>
+<h4 id="foxit-reader">Foxit Reader</h4>
+<p>Foxit Reader is a fast, free, lightweight alternative to Adobe Reader for opening and displaying PDF files. It's also feature-packed. I've been using Foxit Reader since back in the day… The day when Adobe Reader had become a fat slob of a program that took forever to boot and load files. Adobe has improved greatly, but so has Foxit Reader.</p>
+<ul>
+<li>Go to: https://www.foxit.com/downloads/</li>
+<li>Click the <strong>Foxit PDF Reader</strong> button</li>
+<li>Save the downloaded file somewhere on the system</li>
+<li>Extract the "FoxitReader.enu.setup.<version>.x64.run.tar.gz" file.</li>
+<li>Open a terminal and change directory to <em>/Downloads</em> when the extracted file is stored there.</li>
+<li>Rename the extracted file to FoxitReader.enu.setup.\&lt;version&gt;.x64.run
+    Remove the number between the ( )</li>
+<li>Type: <code>sudo ./FoxitReader.enu.setup.&lt;version&gt;.x64.run</code></li>
+<li>Follow the install GUI!<ul>
+<li>Install the Foxit PDF reader in "/opt/Foxitsoftware/FoxitReader"</li>
+<li>Accept the license</li>
+<li>Wait till Foxit is installed and click [Finish].</li>
+</ul>
+</li>
+<li>Start Foxit Reader and set the preferences; [Edit]-[Preferences]
+    There is a Foxit Reader icon in the Linux-Mint Menu - Office</li>
+</ul>
+<h4 id="pdfsam">PdfSam</h4>
+<p><strong>PDFsam</strong> Visual <strong>PDFsam</strong> Visual is a powerful tool to visually compose PDF files, reorder pages, delete pages. Split PDF files into individual pages, delete or rotate pages, easily merge PDF files together or edit and modify PDF files. A free and open source application, a powerful visual tool or a professional PDF editor,
+join thousands of happy users, we have the solution you are looking for.</p>
+<ul>
+<li>Go to: https://pdfsam.org</li>
+<li>Click the [Download] button/tab.</li>
+<li>Download the .deb file of the <em>PDFsam Basic</em>.</li>
+<li>Save the downloaded file.</li>
+<li>Open a file browser and open the directory were the file is saved.</li>
+<li>Double click the "pdfsam_\&lt;version&gt;_amd64.deb" file to make Gdebi start and load the file for installation.</li>
+<li>Let GDebi install the tool.</li>
+</ul>
+<h3 id="internet">Internet</h3>
+<h4 id="eid-electronic-id-belgium">eid (Electronic ID Belgium)</h4>
+<p>The Belgian <strong>eID</strong> <strong>is</strong> an essential element in the chain of trust that provides a framework for safe digital exchanges. By its virtue of certifying the identity of the person doing the exchange and protecting access to citizens' data, the Belgian <strong>eID</strong> card actively participates in the success of e-Government policy.
+Go to:</p>
+<div class="highlight"><pre><span></span><code>https://eid.belgium.be/en/block/18/popup?width=970&amp;height=570&amp;top=10
+</code></pre></div>
+<p>Select the “Download for Linux” button and download: <strong>eid-archive.deb</strong></p>
+<p>When the .deb file is saved, install it (double click the file and allow GDebi to install it).</p>
+<div class="highlight"><pre><span></span><code>sudo apt update (the terminal output should include repositories for Eid)
+sudo apt install eid-mw
+sudo apt install eid-viewer
+</code></pre></div>
+<ul>
+<li>Attach a card reader or use the build in card reader.</li>
+<li>Restart the computer.</li>
+<li>Go to the main menu or show apps button and start the eid-viewer.</li>
+<li>Plug your eid card into the reader.</li>
+<li>Normally, when everything is working the eid-viewer should show the data on the eid card.</li>
+<li>Leave the card in the reader.</li>
+<li>
+<p>Finally go to this site: https://iamapps.belgium.be/tma/?lang=en</p>
+<ul>
+<li>Hit [Start test]</li>
+<li>Hit [Log in]</li>
+<li>Click [OK] for the user certificate</li>
+<li>Provide the passcode</li>
+<li>Wait for "Log in Successful"</li>
+<li>Click the [Sign Out] button and close the web browser.</li>
+</ul>
+</li>
+</ul>
+<h4 id="thunderbird">Thunderbird</h4>
+<p>Maybe, perhaps the best mail client available. It is default installed when Ubuntu is installed.
+Normally one will use the installed Thunderbird software but here mail needed to be stored on an external network connected drive and then it was better to completely remove Thunderbird and install it again in the /opt directory. To do this and put all mail on a NAS or network drive do:</p>
+<ul>
+<li>
+<p>Browse to: https://www.thunderbird.net</p>
+</li>
+<li>
+<p>Hit the [download] button and save the downloaded “thunderbird-\&lt;version&gt;.tar.bz2”</p>
+</li>
+<li>
+<p>In a command terminal do:</p>
+<div class="highlight"><pre><span></span><code>sudo apt remove --purge thunderbird
+</code></pre></div>
+</li>
+<li>
+<p>Un-compress the .tar.bz2 file, as sudo, in the /opt directory. After the operation there will be a /opt/thunderbird directory available.</p>
+</li>
+<li>
+<p>Add “/opt/thunderbird”  to the path.
+    Open .bash-aliases with a text editor and add</p>
+<div class="highlight"><pre><span></span><code># Thunderbird mail client settings
+export PATH=$PATH:/opt/thunderbird.
+</code></pre></div>
+</li>
+<li>
+<p>Of course there is now no menu clickable entry for Thunderbird, create one by:</p>
+<ul>
+<li>Right click the menu in the left corner and select ‘configure’.</li>
+<li>In the pop up menu select the [Menu] tab and the hit the [Open the menu editor] button.</li>
+<li>Select [Internet] in the left menu and then hit [New Item] in the right menu.<ul>
+<li>Name: Thunderbird Mail</li>
+<li>Command: [Browse] go to /opt/thunderbird and pick thunderbird. Add a space and “<strong>%U</strong>”.</li>
+<li>Comment: Send and receive mail with Thunderbird</li>
+<li>Click the icon and in the popup go to /opt/thunderbird/chrome/icons/default.
+    Pick an icon from the listed, like default24.png</li>
+<li>[OK]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Assume Thunderbird is started for the first time and mail need to be stored on a NAS drive. Thunderbird cannot do it by default ,  but:</p>
+<ul>
+<li>
+<p>**Do this when Thunderbird is closed / not running! **</p>
+</li>
+<li>
+<p>Thunderbird creates a .thunderbird directory in a users home directory.
+    If there in no such directory yet, start Thunderbird and the close it again.</p>
+</li>
+<li>
+<p>Copy that entire directory to a default mounted directory on the NAS, rename it to thunderbird (remove the ”<strong>.</strong>”).</p>
+</li>
+<li>
+<p>A precaution rename the .thunderbird directory in the users home to something like thunderbird_Org.</p>
+</li>
+<li>
+<p>Open a command terminal in the users home directory and create a symbolic link to the NAS Thunderbird directory.</p>
+<div class="highlight"><pre><span></span><code>ln -s /mnt/MainNasDir/thunderbird .thunderbird
+</code></pre></div>
+<p>A directory link .thunderbird  is created in the user home directory.
+The link shows all directories and files copied earlier to the Thunderbird NAS directory.</p>
+</li>
+<li>
+<p>Now Thunderbird can be started and used. all mail will nbe stored on the NAS drive.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="vivladi">Vivladi</h4>
+<p>Get a browser with unrivalled customisation options and built-in features for better performance, productivity, and privacy.</p>
+<ul>
+<li>Go to: https://vivaldi.com/download/</li>
+<li>Click the “Vivaldi x.x for Linux DEB” button</li>
+<li>Save te file and let GDebi install the browser.</li>
+</ul>
+<h4 id="signal">Signal</h4>
+<p>Say "hello" to a different messaging experience.
+An unexpected focus on privacy, combined with all of the features you expect</p>
+<ul>
+<li>Install the official public software signing key:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor &gt; signal-desktop-keyring.gpg
+cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg &gt; /dev/null
+</code></pre></div>
+<ul>
+<li>Add the repository to the list of repositories:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>echo &#39;deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main&#39; | sudo tee /etc/apt/sources.list.d/signal-xenial.list
+</code></pre></div>
+<ul>
+<li>Update the package database and install Signal:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo apt update
+sudo apt install signal-desktop
+</code></pre></div>
+<ul>
+<li>Add signal to the startup applications BUT first:<ul>
+<li>Make it run minimised and stored in the system tray. To do so:</li>
+<li>Right click the menu in the left corner and select ‘configure’.</li>
+<li>In the pop up menu select the [Menu] tab and the hit the [Open the menu editor] button.</li>
+<li>Select [Internet] in the left menu, select “Signal” in the right menu and then click the [Properties] button.</li>
+<li>Add to the <strong>Command:</strong> line: <code>--no-sandbox --use-tray-icon</code></li>
+<li>Do the same when adding Signal to the startup applications.</li>
+</ul>
+</li>
+</ul>
+<h4 id="deluge">Deluge</h4>
+<p><a href="http://deluge-torrent.org/">Deluge</a> is one of the most used <strong>torrent</strong> downloaders. It’s stable and easier to use as any other torrent client but the team makes it more stable by providing fix updates.</p>
+<div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:deluge-team/ppa
+sudo apt update
+sudo apt install deluge
+</code></pre></div>
+<h3 id="graphics_1">Graphics</h3>
+<h4 id="inkscape">Inkscape</h4>
+<p>Inkscape is professional quality vector graphics software which runs on Windows, Mac OS X and GNU/Linux. It is used by design professionals and hobbyists worldwide, for creating a wide variety of graphics such as illustrations, icons, logos, diagrams, maps and web graphics. Inkscape uses the <a href="http://www.w3.org/">W3C</a> open standard <a href="http://www.w3.org/Graphics/SVG/">SVG</a> (Scalable Vector Graphics) as its native format, and is free and open-source software.</p>
+<p>With below install Inkscape 1.3.2</p>
+<div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:inkscape.dev/stable
+sudo apt update
+sudo apt install inkscape
+</code></pre></div>
+<p>I've all kind of issues with this latest version of Inkscape so I go back to the previous version and use it as appimage. Go to the <a href="https://inkscape.org">Inkscape website</a>, select the [Download] tab and then [Current Stable Version]. At the right under <strong>Versiona</strong> select 1.2. The screen refreshes for version 1.2.2. Click the [GNU/Linux] button and then the [An Executable file for Linux] button. Save the downloaded appimage file.
+Right click the file, select appimagelauncher, start it and select [Integrate and Run]</p>
+<p>Tutorials and guides:</p>
+<ul>
+<li>http://goinkscape.com/</li>
+<li>https://daviesmediadesign.com/inkscape-tutorials/</li>
+</ul>
+<h4 id="freecad">FreeCad</h4>
+<p>Freedom to build what you want. FreeCAD is an open-source parametric 3D modeler made primarily to           design real-life objects of any size. Parametric modeling allows you to easily modify your design by going back into your model history and changing its parameters. Create 3D from 2D &amp; back. FreeCAD allows you to sketch geometry constrained 2D shapes and use them as a base to build other objects. It contains many components to adjust dimensions or extract design details from 3D models to create high quality production ready drawings.</p>
+<p>It can be installed as appimage and that seems the favourite choice of the developers, but it can alse be installed from PPA.</p>
+<div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:freecad-maintainers/freecad-stable
+sudo apt update
+sudo apt install freecad
+</code></pre></div>
+<ul>
+<li>
+<p>Find all information about FreeCad <a href="https://www.freecadweb.org/">here</a>.</p>
+</li>
+<li>
+<p>A basics tutorial can be found <a href="https://www.freecadweb.org/wiki/Basic_Part_Design_Tutorial">here</a>.</p>
+</li>
+<li>
+<p>Video tutorials on YouTube can be found <a href="https://www.youtube.com/watch?v=QzfT-ZDp0Wo">here</a>, (this is the first tutorial of a series).</p>
+</li>
+</ul>
+<h5 id="odafileconverter">ODAfileConverter</h5>
+<p>ODA DWG-DXF CONVERTER For converting between different versions of .dwg and .dxf
+Useful when used with FreeCad</p>
+<ul>
+<li>Click the <strong>(DEB)</strong> button in the <strong>Downloads</strong> area</li>
+<li>Save the downloaded file.</li>
+<li>Double click the file and let GDebi install the tool</li>
+</ul>
+<h4 id="darktable">Darktable</h4>
+<p>Darktable is an open source photography workflow application and raw developer. A virtual lighttable and darkroom for photographers. It manages your digital negatives in a database, lets you view them through a zoom-able lighttable and enables you to develop raw images and enhance them.</p>
+<div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:pmjdebruijn/darktable-release
+sudo apt-get update
+sudo apt install darktable
+</code></pre></div>
+<p>Find darktable stuff <a href="https://www.darktable.org/">here</a></p>
+<h3 id="electronics">Electronics</h3>
+<h4 id="virtualbox">VirtualBox</h4>
+<p>VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use. Download VirtualBox from <a href="https://www.virtualbox.org/wiki/Linux_Downloads">here</a>. Click the Ubuntu 22.04 version and save the downloaded file. Download the VirtualBox Extension pack from <a href="https://www.virtualbox.org/wiki/Downloads">here</a>. 
+Double click the downloaded .deb file to allow Gdebi to install the tool.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For several hardware projects, experiments are done with Linux. Download the 21.3 Cinnamon edition form <a href="https://linuxmint.com/download.php">Linux-Mint</a> . Save the downloaded ISO image somewhere on disk and setup and install a virtual machine. Read the details in the <a href="../VirtualBox/">Virtualbox</a> document.</p>
+</div>
+<h4 id="putty">PuTTY</h4>
+<p>PuTTY is an SSH and telnet client, developed originally by Simon Tatham for the Windows platform. PuTTY is open source software that is available with source code and is developed and supported by a group of volunteers.</p>
+<div class="highlight"><pre><span></span><code>sudo apt update
+sudo apt install putty
+</code></pre></div>
+<h4 id="cutecom">CuteCom</h4>
+<p>CuteCom is a graphical serial terminal. Currently it runs on Linux, FreeBSD and Mac OS X.
+It is aimed mainly at hardware developers or other people who need a terminal to talk to their devices. It is free software and distributed under the GNU General Public License Version 2, which can find in the file <a href="https://cutecom.sourceforge.net/COPYING">COPYING</a>. It is written using the <a href="http://www.trolltech.com/">Qt library</a> by Trolltech. Follow this link to visit the <a href="http://www.sf.net/projects/cutecom/">sourceforge project page</a>.
+CuteCom doesn't use the autotools (autoconf, automake, libtool, etc.) Instead "configure" is simply a wrapper script which calls qmake. To uninstall CuteCom simply delete the file "cutecom" and the file "cutecom.desktop" and you're done. The config file is ~/.config/CuteCom/CuteCom.conf (was ~/.qt/cutecomrc in the Qt3-based versions).</p>
+<div class="highlight"><pre><span></span><code>sudo apt update
+sudo apt install cutecom
+</code></pre></div>
+<h4 id="gtkwave">GTKwave</h4>
+<p>GTKWave is a fully featured <a href="http://www.gtk.org/">GTK+</a> based wave viewer for Unix, Win32, and Mac OSX which reads LXT, LXT2, VZT, FST, and GHW files as well as standard Verilog VCD/EVCD files and allows their viewing.</p>
+<p>Documentation can be found <a href="https://gtkwave.sourceforge.net/gtkwave.pdf">here</a> as PDF file.</p>
+<p>There is NO repository for GTK-wave, thus for updates a timely visit to the gtkwave web site is required.
+That visit is necessary when the most up to date version is wanted because earlier (older) versions are available in Ubuntu repositories and can simply be installed by typing:</p>
+<div class="highlight"><pre><span></span><code>sudo apt update
+sudo apt install gtkwave
+</code></pre></div>
+<p>The more extended way, when the latest version is required, to install it is described in <a href="../GTK_Wave_Installation/">GTK Wave Installation</a>. With this extended install it is also possible to install GtkWave in a chosen directory.</p>
+<h4 id="logisim-evolution">Logisim-Evolution</h4>
+<p><code>Logisim-evolution</code> is educational software for designing and simulating digital logic circuits. <code>Logisim-evolution</code> is <a href="https://github.com/logisim-evolution/logisim-evolution#license">free</a>, <a href="https://github.com/logisim-evolution">open-source</a>, and <a href="https://github.com/logisim-evolution/logisim-evolution#requirements">cross-platform</a>.</p>
+<p>Project highlights:</p>
+<ul>
+<li>easy to use circuit designer,</li>
+<li>logic circuit simulations,</li>
+<li>chronogram (to see the evolution of signals in your circuit),</li>
+<li>electronic board integration (schematics can be simulated on real hardware),</li>
+<li>VHDL components (components behavior can be specified in VHDL!),</li>
+<li>TCL/TK console (interfaces between the circuit and the user),</li>
+<li>huge library of components (LEDs, TTLs, switches, SoCs),</li>
+<li>supports <a href="https://github.com/logisim-evolution/logisim-evolution/blob/main/docs/docs.md#translations">multiple languages</a>,</li>
+<li>and more!</li>
+</ul>
+<p>To install it go to the GitHub page</p>
+<div class="highlight"><pre><span></span><code>https://github.com/logisim-evolution/logisim-evolution
+</code></pre></div>
+<p>Logisim-evolution is a Java application it can thus run on any operating system supporting the Java runtime enviroment.
+It requires <a href="https://www.oracle.com/java/technologies/javase-downloads.html">Java 16 (or newer)</a>.</p>
+<p>Click the following <a href="https://github.com/logisim-evolution/logisim-evolution/releases">platform specific packages</a>, they include the Java runtime and do not require it to be installed separately:</p>
+<h4 id="kicad">KiCad</h4>
+<p>KiCad EDA is A Cross Platform and Open Source Electronics Design Automation Suite</p>
+<div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:kicad/kicad-8.0-releases
+sudo apt update
+sudo apt install kicad
+</code></pre></div>
+<h5 id="kicad-libraries">KiCad Libraries</h5>
+<p>Libraries are included along with KiCad installation. Downloading the libraries is only necessary when a newer version is required than the one offered with the installed KiCad version. Libraries can be kept up to date with the latest additions by cloning the library repositories using Git. Tracking the library repositories using Git means that only the <em>changes</em> to the libraries need to be downloaded, rather than retrieving the entire library set each time.
+It is also a good idea to download the libraries and keep them up to date in case there is no internet connection available.</p>
+<ul>
+<li>Schematic symbols: https://kicad.github.io/symbols</li>
+<li>PCB footprints: https://kicad.github.io/footprints</li>
+<li>3D models: https://kicad.github.io/packages3d</li>
+<li>Library data are updated weekly, and track the <a href="https://github.com/KiCad">KiCad GitHub repositories</a>.</li>
+</ul>
+<p>There are also third party libraries available form:</p>
+<ul>
+<li><a href="https://www.digikey.com">Digi-Key</a> maintains an atomic parts library for KiCad on their <a href="https://github.com/digikey/digikey-kicad-library/">GitHub page</a>. These libraries are licensed under an agreement similar to the official libraries.</li>
+<li><a href="https://sparkfun.com">SparkFun Electronics</a> provide KiCad library files for many of their products on their <a href="https://github.com/sparkfun/SparkFun-KiCad-Libraries">GitHub page</a>. These libraries are based on the SparkFun Eagle libraries.</li>
+<li><a href="https://www.snapeda.com">SnapEDA</a> provides KiCad symbol and footprint libraries for their customers.  The libraries are freely available and can be found on their <a href="https://www.snapeda.com/kicad">KiCad library page</a>.  The library license can be found on their <a href="https://www.snapeda.com/about/terms">terms of service page</a>.</li>
+</ul>
+<h4 id="xilinx-tools">Xilinx Tools</h4>
+<p>This is the big name in Field Programmable Gate Array (FPGA).
+Install the tools as described in the <a href="../InstallXilinxTools/">Xilinx Tools Setup</a> document.</p>
+<h4 id="efinix-tools">Efinix tools</h4>
+<p>A very promising low cost FPGA vendor.
+Install and configure the software as described in <a href="../InstallEfinixTools/">Efinix_Installation</a> document.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 - ZirconfleX bv
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
