@@ -1,0 +1,1544 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Rocinante Documentation">
+      
+      
+        <meta name="author" content="ZirconfleX">
+      
+      
+      
+        <link rel="prev" href="../Updating_Keyring_Files/">
+      
+      
+        <link rel="next" href="../VirtualBox/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>PYENV & Python - Rocinante</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#appendix-e-install-and-manage-pyenv-python" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Rocinante" class="md-header__button md-logo" aria-label="Rocinante" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rocinante
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PYENV & Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Rocinante" class="md-nav__button md-logo" aria-label="Rocinante" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Rocinante
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-PC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Used Hardware
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux Install Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Linux Install Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-LinuxMint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux - Mint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-Ubuntu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-Manjaro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manjaro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Add-on Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Add-on Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tmp_fstab_Issue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /tmp fstab issue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Numlockx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numlockx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Remove_SNAP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Remove SNAP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The_Apt_Command/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The APT commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Updating_Keyring_Files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Keyring Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tech Add-on Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tech Add-on Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    PYENV & Python
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    PYENV & Python
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-e-install-and-manage-pyenv-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendix E: Install and Manage Pyenv &amp; Python
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appendix E: Install and Manage Pyenv & Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-a-installed-python-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use a installed Python version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrade-a-python-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrade a Python installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-librariespackages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python libraries/packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-stuff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful Stuff
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Useful Stuff">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numpy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matplotlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matplotlib
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pandas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jupyter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#myhdl" class="md-nav__link">
+    <span class="md-ellipsis">
+      MyHdl
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#myhdlpeek" class="md-nav__link">
+    <span class="md-ellipsis">
+      MyHdlPeek
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyside" class="md-nav__link">
+    <span class="md-ellipsis">
+      PySide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PySide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remark" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remark:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spyder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spyder
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VirtualBox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VirtualBox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GTK_Wave_Installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GTK-Wave
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UseKiCad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using KiCad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstallXilinxTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Xilinx Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstallEfinixTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Efinix Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-e-install-and-manage-pyenv-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendix E: Install and Manage Pyenv &amp; Python
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appendix E: Install and Manage Pyenv & Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-a-installed-python-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use a installed Python version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrade-a-python-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrade a Python installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-librariespackages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python libraries/packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-stuff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful Stuff
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Useful Stuff">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numpy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matplotlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matplotlib
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pandas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jupyter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#myhdl" class="md-nav__link">
+    <span class="md-ellipsis">
+      MyHdl
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#myhdlpeek" class="md-nav__link">
+    <span class="md-ellipsis">
+      MyHdlPeek
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyside" class="md-nav__link">
+    <span class="md-ellipsis">
+      PySide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PySide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remark" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remark:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spyder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spyder
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>PYENV & Python</h1>
+
+<h2 id="appendix-e-install-and-manage-pyenv-python">Appendix E: Install and Manage Pyenv &amp; Python</h2>
+<ul>
+<li>
+<p>Before being able to flawless install <em>pyenv</em> some build dependencies need to be installed.
+    Installing <em>pyenv</em> means building it up from source. That process needs specific tools installed in the OS.</p>
+</li>
+<li>
+<p>Run below in a terminal for all <em>pyenv</em> Ubuntu/Mint build dependencies</p>
+<div class="highlight"><pre><span></span><code>sudo apt install -y make build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev \
+libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl
+</code></pre></div>
+</li>
+<li>
+<p>When above dependencies are installed it's time to install <em>pyenv</em> itself.
+    Run below in a terminal (<em>pyenv</em> and Python are installed as user, so no need for sudo anymore):</p>
+<div class="highlight"><pre><span></span><code>curl https://pyenv.run | bash
+</code></pre></div>
+<p>Pyenv will be installed with a few useful plugins:</p>
+<ol>
+<li><strong><code>pyenv</code></strong>: The actual <code>pyenv</code> application</li>
+<li><strong><code>pyenv-update</code></strong>: Plugin for updating <code>pyenv</code></li>
+<li><strong><code>pyenv-doctor</code></strong>: Plugin to verify that <code>pyenv</code> and build dependencies are installed</li>
+<li><strong><code>pyenv-which-ext</code></strong>: Plugin to automatically lookup system commands</li>
+<li><strong><code>pyenv-virtualenv</code></strong>: Plugin for <code>pyenv</code> and virtual environments</li>
+</ol>
+<p>Finally the install will show something like this in the terminal</p>
+<div class="highlight"><pre><span></span><code>WARNING: seems you still have not added &#39;pyenv&#39; to the load path.
+# Load pyenv automatically by adding
+# the following to ~/.bashrc:
+export PATH=&quot;$HOME/.pyenv/bin:$PATH&quot;
+eval &quot;$(pyenv init -)&quot;
+eval &quot;$(pyenv virtualenv-init -)&quot;
+</code></pre></div>
+<p>Edit the <code>.bash_aliases</code>file in the users home directory and add the below given lines.</p>
+<div class="highlight"><pre><span></span><code># Pyenv Python installer, Python and other Python stuff goes below
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+eval &quot;$(pyenv init -)&quot;
+eval &quot;$(pyenv virtualenv-init -)&quot;
+</code></pre></div>
+<p>As extra install the <em>pyenv</em> pip-migrate plugin. This plugin makes it easy to take libraries and packages installed with pip from one Python version into another.</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/pyenv/pyenv-pip-migrate.git $(pyenv root)/plugins/pyenv-pip-migrate
+</code></pre></div>
+</li>
+<li>
+<p>Pyenv knows a lot of commands, the most used are listed here:</p>
+<ul>
+<li>help        Display help for a command</li>
+<li>version     Show the current Python version and its origin
+    --version   Display the version of <em>pyenv</em></li>
+<li>
+<p>install     Install a Python version using python-build</p>
+</li>
+<li>
+<p>uninstall   Uninstall a specific Python version</p>
+</li>
+<li>local       Set or show the local application-specific Python version</li>
+<li>global      Set or show the global Python version</li>
+<li>migrate     Migrate pip packages from a Python version to another</li>
+</ul>
+<p>For all other <em>pyenv</em> command just type <code>pyenv</code> in a terminal or command window.</p>
+</li>
+</ul>
+<h3 id="install-python">Install Python</h3>
+<ul>
+<li>First find out what Python versions are available. This allows that the most recent version or the version required can be installed and use. From the list of versions several can be picked and installed.
+    In a terminal type: <code>pyenv install --list | grep " 3\.[6789]"</code>
+    The terminal will output a list of available Python versions.
+    When omitting the <code>grep</code> the result will be a very long list!</li>
+<li>Find the version needed and install it as: <code>pyenv install -v 3.8.0</code>
+    Pyenv will install Python version 3.8.0 and the -v (verbose) will list a lot of text while installing and building Python. Remove the -v to get rid of most text lines.</li>
+<li>pyenv Installs each Pyhton version in its own directory under the pyenv umbrella.
+    The 3.8.0 version will be installed in <code>./home/&lt;user&gt;/.pyenv/versions/3.8.0</code>
+    When a second Python version is installed, let's say 3.7.4, it will reside in <code>~/.pyenv/versions/3.7.4</code>.</li>
+<li>Packages installed with pip (the pip belonging to the python version) are also installed under the directory <Python_version>.</li>
+</ul>
+<h3 id="use-a-installed-python-version">Use a installed Python version</h3>
+<ul>
+<li>
+<p>Type in a terminal: <code>pyenv versions</code></p>
+</li>
+<li>
+<p>The output will most likely be something like:</p>
+<div class="highlight"><pre><span></span><code>* system (set by &lt;path/to/the/system/python)
+  2.7.15
+  3.7.4
+  3.8.0
+</code></pre></div>
+<p>The ***** shows what Python version is in use.</p>
+</li>
+<li>
+<p>To use one of the just installed Python versions type: <code>pyenv global 3.8.0</code>
+    Running <code>pyenv versions</code> will now have a ***** in front of 3.8.0 indicating that this is now the version used by you as user.</p>
+</li>
+<li>
+<p>To check if the installation went OK and is working fully type <code>python -m test</code> in the terminal.
+    This will run a long list of Python checks and test, assuring at the end everything works OK.
+    This command will take a long time as a lot of tests are run (interrupt with CTRL-C).</p>
+</li>
+<li>
+<p>Everything is ready now to start using Python.
+    But better first install some packages that make a programmers life easier.
+    Go to <strong>Python Libraries/Packages</strong>.</p>
+</li>
+</ul>
+<h3 id="upgrade-a-python-installation">Upgrade a Python installation</h3>
+<p>Every minor version of Python, that is any 3.x version, will install side-by-side with other versions on your computer. Only patch versions will upgrade existing installations.</p>
+<p>As for PyPI packages, every Python installation comes with its own folder where modules are installed into. So if you install a new version and you want to use modules you installed for a previous version, you will have to install them first for the new version.</p>
+<h3 id="python-librariespackages">Python libraries/packages</h3>
+<p>Python add-on libraries or packages are there to make life easier.
+When in need for something, in a lot of cases somebody already developed it.
+Those add-ons can be download from the PyPi website. PyPi is a huge database/repository of community developed and shared software utilities.</p>
+<p>PyPi packages are installed in a terminal/command window using <strong>pip</strong> (<strong>pip</strong> works the same for Linux and Microsoft).</p>
+<p><strong>Remark:</strong></p>
+<p>Using a Python version allows that a set of packages/libraries for/with that version are installed and used. The packages are installed in the same <em>pyenv</em> directory containing the Python version.</p>
+<p>When a new Python version is installed all in a previous version installed packages are gone. The remain installed with the old Python version.</p>
+<p>To get all previous used packages back into the new Python version use the <strong>pyenv-pip-migrate</strong> tool.
+<code>pyenv migrate &lt;old_version&gt; &lt;new_version&gt;</code> Like: <em>pyenv migrate 3.7.4 3.8.0</em></p>
+<h3 id="useful-stuff">Useful Stuff</h3>
+<p>It is not that all what is mentioned and discussed below is you-need-to-have-this-or-else ...
+Below is just a set of packages I have installed and use.</p>
+<h4 id="numpy">Numpy</h4>
+<ul>
+<li>
+<p>NumPy is the fundamental package for scientific computing with Python. It contains
+    among other things:</p>
+<ul>
+<li>A powerful N-dimensional array object.</li>
+<li>Sophisticated (broadcasting) functions.</li>
+<li>Tools for integrating C/C++ and Fortran code.</li>
+<li>Useful linear algebra, Fourier transform, and random number capabilities.
+    Besides its obvious scientific uses, NumPy can also be used as an efficient multi-dimensional container of generic data. Arbitrary data-types can be defined. This allows NumPy to seamlessly and speedily integrate with a wide variety of databases.</li>
+</ul>
+</li>
+<li>
+<p>The numpy web site with documentation and more can be found here:</p>
+<ul>
+<li><a href="https://numpy.org">https://numpy.org</a></li>
+</ul>
+</li>
+<li>
+<p><code>pip install numpy</code></p>
+</li>
+</ul>
+<h4 id="matplotlib">Matplotlib</h4>
+<ul>
+<li>
+<p>Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. Matplotlib can be used in Python scripts, the Python and |Python shells, the |: yr notebook, web application servers, and four graphical user interface toolkits.</p>
+</li>
+<li>
+<p>Matplotlib tries to make easy things easy and hard things possible. You can generate plots, histograms, power spectra, bar charts, errorcharts, Scatterplots, ¢ etc., with just a few lines of code. For examples, see the sample plots and thumbnail gallery For simple plotting the pyplot module rovides : a , MATLAB- like interface, “particularly when combined with IPython. For the power user, you have full control of line styles, font properties, axes properties, etc, via an object oriented interface or via a set of
+    functions familiar to MATLAB users.</p>
+</li>
+<li>
+<p>The matplotlib documentation can be found here:</p>
+<ul>
+<li><a href="https://matplotlib.org">https://matplotlib.org</a></li>
+</ul>
+</li>
+<li>
+<p><code>pip install matplotlib</code></p>
+</li>
+</ul>
+<h4 id="pandas">Pandas</h4>
+<ul>
+<li>
+<p>Pandas is a Python package providing fast, flexible, and expressive data structures designed to make working with structured (tabular, multidimensional, potentially heterogeneous) and time series data both easy and intuitive. It aims to be the fundamental high-level building block for doing practical, real world data analysis in Python.</p>
+</li>
+<li>
+<p>Pandas is well suited for many different kinds of data:</p>
+<ul>
+<li>Tabular data with heterogeneously-typed columns, as in an SQL table or Excel spreadsheet.</li>
+<li>Ordered and unordered (not necessarily fixed-frequency) time series data.</li>
+<li>Arbitrary matrix data (homogeneously typed or heterogeneous) with row and column labels</li>
+<li>Any other form of observational / statistical data sets. The data actually need not be labelled at all to be placed into a pandas data structure.</li>
+</ul>
+</li>
+<li>
+<p><code>pip install pandas</code></p>
+</li>
+</ul>
+<p>Above tools are all installed to make working with <em>MyHdl</em> easy. <em>Jupyter</em> allows one to write code and document it. Myhdl can create from a described hardware system verilog and/or vhdl files so that the system can be implemented in an FPGA using Vivado (Synthesis and implementation).
+On other side the output of MyHdl can be any other format that can be created by using python.
+Therefore the <em>numpy, matplotlib</em> and <em>pandas</em> python libraries can be used. Extra waveform help for those working with Jupyter notebook is offered with the MyHdlPeek library.</p>
+<h4 id="jupyter">Jupyter</h4>
+<ul>
+<li>
+<p>The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualisations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modelling, data visualisation, machine learning, and much more. The next generation of Jupyter is called JupyterLabs and can be installed the same way as the classic Jupyter.</p>
+</li>
+<li>
+<p>The jupyter web site with documentation, tutorial and more can be found here:</p>
+<ul>
+<li><a href="https://jupyter.org">https://jupyter.org</a></li>
+</ul>
+</li>
+<li>
+<p><code>pip install jupyter
+    or
+    pip install jupyterlab</code></p>
+</li>
+</ul>
+<p><strong>Remark:</strong> Use Jupyter notebook with VS code editor (or Atom)</p>
+<ul>
+<li>
+<p>Start VS Code</p>
+</li>
+<li>
+<p>Click the Marketplace button in the left vertical menu.</p>
+</li>
+<li>Type in the search bar Jupyter and install<ul>
+<li>Jupyter</li>
+<li>Jupyter Slide Show</li>
+<li>Jupyter Keymap</li>
+<li>Jupyter Notebook renderers</li>
+<li>Jupyter Cell Tags</li>
+</ul>
+</li>
+</ul>
+<h4 id="myhdl">MyHdl</h4>
+<ul>
+<li>
+<p>MyHDL turns Python into a hardware description and verification language, providing hardware engineers with the power of the Python ecosystem.</p>
+</li>
+<li>
+<p>The MyHdl documentation can be found here:</p>
+<ul>
+<li><a href="https://myhdl.org">https://myhdl.org</a></li>
+<li><a href="https://doc.myhdl.org/en/stable">https://doc.myhdl.org/en/stable</a></li>
+</ul>
+</li>
+<li>
+<p><code>pip install myhdl</code></p>
+</li>
+</ul>
+<h4 id="myhdlpeek">MyHdlPeek</h4>
+<ul>
+<li>
+<p>Why should or can you use this.</p>
+</li>
+<li>
+<p>In most designs the test bench is written out as a VCD file. This file format can be viewed by a waveform viewer as GtKwave, a free available tool for waveform viewing. The VCD file can also be displayed in the waveform viewer of Vivado[^1] or in Mentor Modelsim/Questasim[^2] when one or all of those are available or in other third party waveform viewers [<sup>3][</sup>4].</p>
+</li>
+<li>
+<p>MyHdlPeek provides a waveform viewer in the Jypiter notebook so that documenting notebooks with waveforms no longer require screen captures of waveform viewer windows. MyHdlPeek is a module that lets you monitor signals in a MyHDL digital system simulation and display them as wave-forms in a Jupyter notebook.</p>
+</li>
+<li>
+<p>Myhdlpeek implements a Peeker object that monitors a signal and records the time and value when it changes. Just add multiple Peekers where you want to monitor something (even at sub-levels of a hierarchical design) and then view the collected timing wave-forms with a single command. You can also select which signals are shown, set the beginning and ending times of the display, and set other options.</p>
+</li>
+<li>
+<p>Documentation can be found here:</p>
+<ul>
+<li>https://xesscorp.github.io/myhdlpeek/docs/_build/singlehtml/index.html</li>
+</ul>
+</li>
+<li>
+<p><code>pip install myhdlpeek</code></p>
+</li>
+</ul>
+<p>Below are two bonus Python libraries one can install to do more than just hardware system design.
+Pyside2 allows the use of QT for generating professional looking GUI tools and Urubu allows quick generation of static web pages.</p>
+<h4 id="pyside">PySide</h4>
+<ul>
+<li>
+<p>Qt for Python is the project that provides the official set of Python bindings (PySide2) that will supercharge your Python applications. While the Qt APIs are world renowned, there are more reasons why you should consider Qt for Python. The first official release of the PySide2 module is available now! But what is Qt (Qute)?</p>
+</li>
+<li>
+<p>Qt is a platform to create high-performance, intuitive (if they are designed to be) UI, applications and other for embedded, desktop and all kind of other platforms. Qt appears in our homes, our cars, our workplaces and our pockets smart devices. Qt makes sure you can create unique &amp; modern connected devices that stand out from the crowd.</p>
+</li>
+</ul>
+<h5 id="installation">Installation:</h5>
+<ul>
+<li>
+<p>Open a web browser and go to:
+    https://download.qt.io/snapshots/ci/pyside</p>
+</li>
+<li>
+<p>Double click the latest stable version, let’s say 6.6/, and then double click <strong>latest</strong></p>
+</li>
+<li>
+<p>Download the <strong>shiboken ** and **PySide</strong> files with <em>manylinux</em> and <em>x86_64</em> in the filename.</p>
+</li>
+<li>
+<p>Save the downloaded wheel file.
+    All filenames have the <em>.whl</em> (wheel) extension.</p>
+</li>
+<li>
+<p>Open a command window and type:</p>
+<div class="highlight"><pre><span></span><code>pip install &lt;drive&gt;:/&lt;Path&gt;/To/Downloaded/wheel/File
+</code></pre></div>
+</li>
+</ul>
+<h5 id="remark">Remark:</h5>
+<ul>
+<li>To do stuff with PySide, the Qt tools must be installed. That is subject for another text.</li>
+<li>Qt (cute) is basically an aid to give to C/C++ easy graphical possibilities.</li>
+<li>Due to that PySide has dependencies to a C/C++ parser clang.</li>
+</ul>
+<p>A complete Python IDE that can be installed using pip:</p>
+<h4 id="spyder">Spyder</h4>
+<ul>
+<li>
+<p>Spyder is a kind of all in one tool for Python development.</p>
+</li>
+<li>
+<p>Spyder is a powerful scientific environment written in Python, for  Python, and designed by and for scientists, engineers and data analysts. It offers a unique combination of the advanced editing, analysis,  debugging, and profiling functionality of a comprehensive development  tool with the data exploration, interactive execution, deep inspection,  and beautiful visualization capabilities of a scientific package.</p>
+<p>Beyond its many built-in features, its abilities can be extended even further via its plugin system and API. Furthermore, Spyder can also be  used as a PyQt extension library, allowing developers to build upon its functionality and embed its components, such as the interactive  console, in their own PyQt software.</p>
+</li>
+<li>
+<p>Web site:</p>
+<ul>
+<li>https//www.spyder-ide.org</li>
+</ul>
+</li>
+<li>
+<p>Before installation these dependencies MUST be installed.</p>
+<ul>
+<li>
+<p><a href="https://www.python.org/">Python</a> 2.7 or &gt;=3.3        DO NOT USE Python 2 ANYMORE, please!</p>
+</li>
+<li>
+<p><a href="https://www.riverbankcomputing.com/software/pyqt/download5">PyQt5</a> &gt;=5.5</p>
+</li>
+<li>
+<p><a href="https://github.com/jupyter/qtconsole">Qtconsole</a> &gt;=4.2.0 – for an enhanced Python interpreter.</p>
+</li>
+<li>
+<p><a href="https://github.com/python-rope/rope">Rope</a> &gt;=0.9.4 and <a href="https://github.com/davidhalter/jedi">Jedi</a> &gt;=0.9.0 – for code completion, go-to-definition and calltips in the Editor.</p>
+</li>
+<li>
+<p><a href="https://github.com/PyCQA/pyflakes">Pyflakes</a>  – for real-time code analysis.</p>
+</li>
+<li>
+<p><a href="https://www.sphinx-doc.org/en/master/">Sphinx</a> – for the Help pane rich text mode and to get our documentation.</p>
+</li>
+<li>
+<p><a href="http://pygments.org/">Pygments</a> &gt;=2.0 – for syntax highlighting and code completion in the Editor of all file types it supports.</p>
+</li>
+<li>
+<p><a href="https://www.pylint.org/">Pylint</a>  – for static code analysis.</p>
+</li>
+<li>
+<p><a href="https://github.com/PyCQA/pycodestyle">Pycodestyle</a> – for style analysis.</p>
+</li>
+<li>
+<p><a href="https://github.com/giampaolo/psutil">Psutil</a>  – for memory/CPU usage in the status bar.</p>
+</li>
+<li>
+<p><a href="https://github.com/jupyter/nbconvert">Nbconvert</a> – to manipulate Jupyter notebooks on the Editor.</p>
+</li>
+<li>
+<p><a href="https://github.com/spyder-ide/qtawesome">Qtawesome</a> &gt;=0.4.1 – for an icon theme based on FontAwesome.</p>
+</li>
+<li>
+<p><a href="https://github.com/pickleshare/pickleshare">Pickleshare</a> – To show import completions in the Editor and Consoles.</p>
+</li>
+<li>
+<p><a href="https://github.com/zeromq/pyzmq">PyZMQ</a> – To run introspection services in the Editor asynchronously.</p>
+</li>
+<li>
+<p><a href="https://github.com/spyder-ide/qtpy">QtPy</a> &gt;=1.2.0 – To run Spyder with different Qt bindings seamlessly.</p>
+</li>
+<li>
+<p><a href="https://github.com/chardet/chardet">Chardet</a> &gt;=2.0.0– Character encoding auto-detection in the Editor.</p>
+</li>
+<li>
+<p><a href="https://github.com/numpy/numpydoc">Numpydoc</a> Used by Jedi to get return types for functions with Numpydoc docstrings.</p>
+</li>
+<li>
+<p><a href="https://github.com/cloudpipe/cloudpickle">Cloudpickle</a> Serialize variables in the IPython kernel to send them to Spyder.</p>
+<p><strong>Optional Modules</strong></p>
+</li>
+<li>
+<p><a href="https://matplotlib.org/">Matplotlib</a> &gt;=1.0 – for 2D and 3D plotting in the consoles.</p>
+</li>
+<li>
+<p><a href="https://pandas.pydata.org/">Pandas</a> &gt;=0.13.1 – for viewing and editing Series and DataFrames in the Variable Explorer.</p>
+</li>
+<li>
+<p><a href="https://www.numpy.org/">Numpy</a> – for viewing and editing two or three dimensional arrays in the Variable Explorer.</p>
+</li>
+<li>
+<p><a href="https://www.sympy.org/en/index.html">Sympy</a> &gt;=0.7.3 – for working with symbolic mathematics in the IPython console.</p>
+</li>
+<li>
+<p><a href="https://www.scipy.org/">Scipy</a> – for importing Matlab workspace files in the Variable Explorer.</p>
+</li>
+<li>
+<p><a href="http://cython.org/">Cython</a> &gt;=0.21 – to run Cython files or Python files that depend on Cython libraries in the IPython console.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Install now Spyder</p>
+<ul>
+<li><code>pip install spyder</code></li>
+</ul>
+</li>
+<li>
+<p>After installation, launch Spyder and customise it to your needs.</p>
+</li>
+<li>
+<p>Something that might be useful in Spider is Kite.</p>
+<p><strong>Kite</strong></p>
+<ul>
+<li>Kite is a plugin for Spyder.</li>
+<li><strong>Kite</strong> is a free AI-powered autocomplete for <strong>Python</strong> developers. Code faster with the <strong>Kite</strong> plugin for your code editor, featuring Intelligent Snippets, Line-of-Code Completions, <strong>Python</strong> docs, and cloudless processing.</li>
+<li>Read also this article before you start:<ul>
+<li>https://qz.com/1043614/this-startup-learned-the-hard-way-that-you-do-not-piss-off-open-source-programmers/</li>
+</ul>
+</li>
+<li>Web site:<ul>
+<li>https://kite.com/</li>
+</ul>
+</li>
+<li>Install Kite<ul>
+<li>When Spyder is launched the first time, it is possible that a popup appears asking to install Kite. Thus, just follow the installation procedure.</li>
+<li>If no popup appear or not using Spyder but Atom and want Kite, go to the Kite web site and follow the install procedure.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 - ZirconfleX bv
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,982 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Rocinante Documentation">
+      
+      
+        <meta name="author" content="ZirconfleX">
+      
+      
+      
+        <link rel="prev" href="../GTK_Wave_Installation/">
+      
+      
+        <link rel="next" href="../InstallXilinxTools/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Using KiCad - Rocinante</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#use-kicad" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Rocinante" class="md-header__button md-logo" aria-label="Rocinante" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rocinante
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Using KiCad
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Rocinante" class="md-nav__button md-logo" aria-label="Rocinante" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Rocinante
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-PC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Used Hardware
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux Install Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Linux Install Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-LinuxMint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux - Mint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-Ubuntu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-Manjaro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manjaro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Add-on Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Add-on Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tmp_fstab_Issue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /tmp fstab issue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Numlockx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numlockx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Remove_SNAP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Remove SNAP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The_Apt_Command/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The APT commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Updating_Keyring_Files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Keyring Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tech Add-on Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tech Add-on Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Install_Manage_Pyenv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PYENV & Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VirtualBox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VirtualBox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GTK_Wave_Installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GTK-Wave
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Using KiCad
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Using KiCad
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Libraries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Work Method
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kicad-steup" class="md-nav__link">
+    <span class="md-ellipsis">
+      KiCAd Steup
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstallXilinxTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Xilinx Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstallEfinixTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Efinix Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Libraries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Work Method
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kicad-steup" class="md-nav__link">
+    <span class="md-ellipsis">
+      KiCAd Steup
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="use-kicad">Use KiCad</h1>
+<p>All about software and certainly all about CAD software depends on the easiness of operation, manipulation, tunability and the easiness of setting up projects. the tool itself can then have flaws in such and so corner but as long as the four earlier named characteristics are met the tool is good to perfect.
+For CAD tools the extra great thing rises and dies with available, customisable and adaptable libraries.
+For KiCAd a default and extended set of libraries is installed is <code>/usr/share/kicad/</code>. These libraries are during life adapted, modified and components are add, meaning that the libraries need to be updated on a regularly base and that is normally faster than updating the CAD tool itself. Also for each self respecting CAD tool there are third party libraries available and working with CAD tools means that the operators make their own libraries.</p>
+<p>All this to say libraries, keeping libraries up to date and organising libraries is very important.</p>
+<p>Another thing is the way how to one works with a CAD tool. Are the work and libraries going to be a mess, then the tool how performant it might be, is going to be a bad tool. A the work and libraries organised then the tool might have flaws but it will be a good tool.</p>
+<h2 id="libraries">Libraries</h2>
+<p>As earlier written, default libraries are installed when the CAD tool is installed and by default they are updated when a newer version of the tool is installed. KiCad libraries can be kept up to date with the latest additions by cloning the library repositories using Git. Tracking the library repositories using Git means that only the <em>changes</em> to the libraries need to be downloaded, rather than retrieving the entire library set each time. Another idea is to keep the libraries up to date by downloading and replacing them manually (track the differences yourself)</p>
+<ul>
+<li>Schematic symbols: https://kicad.github.io/symbols</li>
+<li>PCB footprints: https://kicad.github.io/footprints</li>
+<li>3D models: https://kicad.github.io/packages3d</li>
+<li>Library data are updated weekly, and track the <a href="https://github.com/KiCad">KiCad GitHub repositories</a></li>
+</ul>
+<p>There are KiCad third party libraries available form:</p>
+<ul>
+<li><a href="https://www.digikey.com">Digi-Key</a> maintains an atomic parts library for KiCad on their <a href="https://github.com/digikey/digikey-kicad-library/">GitHub page</a>. 
+    These libraries are licensed under an agreement similar to the official libraries.</li>
+<li><a href="https://sparkfun.com">SparkFun Electronics</a> provide KiCad library files for many of their products on their <a href="https://github.com/sparkfun/SparkFun-KiCad-Libraries">GitHub page</a>. 
+    These libraries are based on the SparkFun Eagle libraries.</li>
+<li><a href="https://www.snapeda.com">SnapEDA</a> provides KiCad symbol and footprint libraries for their customers.<br />
+    The libraries are freely available and can be found on their <a href="https://www.snapeda.com/kicad">KiCad library page</a>.<br />
+    The library license can be found on their <a href="https://www.snapeda.com/about/terms">terms of service page</a>.</li>
+</ul>
+<p>The default KiCad libraries are installed in the Linux file system directory <code>/usr/share/kicad</code>. One needs to be root/sudo in order to access that directory. It's thus not the easies way to keep, as user, thing up to date.</p>
+<p>The way, I use, to keep libraries in one place and easily up to date is:</p>
+<ul>
+<li>
+<p>Create as root/sudo in <code>/opt</code>a directory <strong>KiCad</strong> and modify the properties so that the user can read, modify, write all created sub directories.
+    <div class="highlight"><pre><span></span><code>sudo mkdir /opt/KiCad
+sudo chown &lt;user&gt; /opt/KiCad
+sudo chgrp &lt;user&gt; /opt/KiCad
+sudo chmod 775 /opt/KiCad
+</code></pre></div></p>
+<p>In that directory all libraries for KiCad get a own directory. There is a <strong>kicad</strong> directory mimicking the default installed libraries. A copy of the latest downloaded libraries for GitHub or other online source is kept in the directory <strong>LibUpdates</strong> and there is a directory <strong>KicadUser</strong> to store 3<sup>th</sup> party and user created libraries.  </p>
+</li>
+<li>
+<p>Set a dynamic link for the default libraries to the <code>/opt/KiCad</code> directory (why /opt, see note)</p>
+<div class="highlight"><pre><span></span><code>sudo ln -s /usr/share/kicad /opt/KiCad/kicad
+</code></pre></div>
+<p>All default libraries, templates, demos and other user things are going to be available to the user from the <code>/opt</code> directory but remain under root/sudo control. Since everything is going to be in one place it is easy to manipulate and modify. What is modified in <code>/opt/KiCad/kicad</code> sub-folders is modified in the default installation <code>/usr/.share/kicad</code> and vice-versa.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Why /opt?</p>
+<p><strong>/opt (Optional Software)</strong>: The /opt directory is used for optional software installed on the system. This directory can be used for installing software that is not included in the system’s package manager.</p>
+<p>Optional files such as vendor supplied application programs should be located here.</p>
+</div>
+<h2 id="work-method">Work Method</h2>
+<p>As earlier written, the usefulness and easiness (call it feeling) of a CAD tool is closely related to how one organises work and operates the CAD tool.  When that is done in a smooth and consistent way, flaws of the tooling can mostly be forgiven and solved.
+As showed in the libraries paragraph the setup of libraries is important and the organisation of a project leans very close to the organisation of libraries. Because all things need a place and storage. The cleaner the organisation the easier one can work. The structure of the default installed libraries already shows a useful way how to organise the things of a project.</p>
+<p>In short, a project starts, after brainstorming and project goal and calculation writing, with a "project idea" schematic on a sheet of paper (nowadays on a tablet). From that drawing a list of required, necessary and wanted components is created. The list ends in a search for and download of data sheets and from the data sheets a list of footprints rises. </p>
+<p>KiCad library organisation is almost following the same path because footprints and symbols and other things are each fit in their own directory. So create a project in similar way.</p>
+<ul>
+<li>
+<p><strong>Project</strong></p>
+<p>Everything that has to do with the project goes into a sub-directory. The listed sub-directories are given as guide, nothing hold one to create extra directories (like sub-directories for PCB or mechanical issues or a sub-directory for return &amp; repair or ... ).</p>
+<ul>
+<li>
+<p><strong>DataSheets</strong></p>
+<p>Store here the data sheets of all for the project required components.
+Even the data sheets of used resistors and capacitors must be stored here so that all relevant information captured at the moment of the project run stays together in one place</p>
+</li>
+<li>
+<p><strong>Documents</strong></p>
+<ul>
+<li>
+<p><strong>Documents</strong></p>
+<p>Store here the documentation as pre-studies, calculations, user guide and more of the project </p>
+</li>
+<li>
+<p><strong>Figures</strong></p>
+<p>Store here the figures (png, svg, ...) used in the various documents of the sub-directories of the top level /Documents directory.</p>
+</li>
+<li>
+<p><strong>Mechanics</strong></p>
+<p>Storage for all information that has to do with mechanical dimensions and behaviour of the project. Example: store here all measurements of a PCB (dimensions of the PCB, dimensions of the mounting holes, cut-outs, ...)</p>
+</li>
+<li>
+<p><strong>Partslist</strong></p>
+<p>The complete parts list goes here. In case of a PSB it's the list of all electric and electronic components but also the list of all mechanical things as screws, housing, ...</p>
+</li>
+<li>
+<p><strong>Production</strong></p>
+<p>Store here all documentation related to the production of the project. documentation about how to mount things, hints and tips, notes, ...</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Lib3d</strong></p>
+<p>This directory will contain 3D models created for this project.
+Copy 3D models present in the default library <code>/opt/KiCad/kicad/3dmodels</code>and/or 3<sup>th</sup> party and/or global user created 3D models into this directory. This way, again, everything that has to do with the project stays with the project. </p>
+</li>
+<li>
+<p><strong>LibSymbols</strong></p>
+<p>Symbols of components created for this project are stored here.
+Copy symbols present in the default library <code>/opt/KiCad/kicad/symbols</code>and/or 3<sup>th</sup> party and/or global user created symbols into this directory. This way, again, everything that has to do with the project stays with the project. </p>
+</li>
+<li>
+<p><strong>LibFootpints</strong></p>
+<p>Idem dito as for the <strong>Lib3d</strong> and <strong>LibSymbols</strong> directories, store footprints made for the project here and copy footprints from the other footprint libraries inhere.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Tip</p>
+<p>When the project is stable, schematics, PCB and mechanics are checked and the functioning of the whole is proven 3d models, symbols and footprints can be copied to the <code>/opt/KicadUser</code> sub-directories. </p>
+<p>Of course all of this takes time and attention, but once the habit of it kicks in it makes things so easy. After years all information about a project is still available without any effort to spend. Once models, symbols, footprints, mechanical stuff has proven to be correct and working it can be copied to the global user libraries.</p>
+</div>
+<ul>
+<li>
+<p><strong>GerberFiles</strong></p>
+<p>Outputs of PCB design work required for manufacturing go here.</p>
+</li>
+<li>
+<p><strong>Schemas</strong></p>
+<p>As the directory title reads, a place to store all schematics</p>
+</li>
+<li>
+<p><strong>Pdfs</strong></p>
+<p>Usually from schematics, gerbers, layouts, gerbers and other thinsg PDF documents are created. Store them here.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="kicad-steup">KiCAd Steup</h2>
+<p>All directories can be setup in KiCad using the <strong>Preferences</strong> <strong>, **Configure paths</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 - ZirconfleX bv
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1308 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Rocinante Documentation">
+      
+      
+        <meta name="author" content="ZirconfleX">
+      
+      
+      
+        <link rel="prev" href="../InstallXilinxTools/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Install Efinix Tools - Rocinante</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#efinix-tools-setup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Rocinante" class="md-header__button md-logo" aria-label="Rocinante" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rocinante
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Install Efinix Tools
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Rocinante" class="md-nav__button md-logo" aria-label="Rocinante" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Rocinante
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-PC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Used Hardware
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux Install Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Linux Install Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-LinuxMint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux - Mint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-Ubuntu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-Manjaro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manjaro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Add-on Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Add-on Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tmp_fstab_Issue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /tmp fstab issue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Numlockx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numlockx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Remove_SNAP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Remove SNAP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The_Apt_Command/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The APT commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Updating_Keyring_Files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Keyring Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tech Add-on Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tech Add-on Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Install_Manage_Pyenv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PYENV & Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VirtualBox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VirtualBox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GTK_Wave_Installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GTK-Wave
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UseKiCad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using KiCad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstallXilinxTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Xilinx Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Install Efinix Tools
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Install Efinix Tools
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#efinity-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efinity IDE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risc-v-software-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      RISC-V software installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#freertos" class="md-nav__link">
+    <span class="md-ellipsis">
+      FreeRTOS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-about-environment-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      More about environment settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="More about environment settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-script-for-efinix" class="md-nav__link">
+    <span class="md-ellipsis">
+      A script for Efinix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-script-for-efinix-and-xilinx" class="md-nav__link">
+    <span class="md-ellipsis">
+      A script for Efinix and Xilinx
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#efinity-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efinity IDE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risc-v-software-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      RISC-V software installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#freertos" class="md-nav__link">
+    <span class="md-ellipsis">
+      FreeRTOS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-about-environment-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      More about environment settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="More about environment settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-script-for-efinix" class="md-nav__link">
+    <span class="md-ellipsis">
+      A script for Efinix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-script-for-efinix-and-xilinx" class="md-nav__link">
+    <span class="md-ellipsis">
+      A script for Efinix and Xilinx
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="efinix-tools-setup">Efinix Tools Setup</h1>
+<h2 id="installation">Installation</h2>
+<ul>
+<li>
+<p>Browse to the <a href="https://www.efinixinc.com/index.html">Efinix</a> web page, click the [Support] - [Support Home] tab.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>One <strong>must</strong> have a Efinix support account to download software, guides, application notes, ...
+The first thing to do is to create an account.
+[Register] and when allowed, log on to the page.</p>
+</div>
+<p>When logging on do not forget to tick the "I agree to Efinix's <a href="https://www.efinixinc.com/privacy-policy.html">privacy policy</a> and <a href="https://www.efinixinc.com/terms-of-use.html">terms of use</a>" box.</p>
+</li>
+<li>
+<p>Click the download software box and download:</p>
+<ul>
+<li>The Ubuntu version of the <strong>Efinity IDE Full Release</strong></li>
+<li>The Ubuntu version of the <strong>Efinity Patch</strong></li>
+<li>The Linux version of the <strong>Efinity RISC-V Embedded Software IDE</strong></li>
+</ul>
+</li>
+<li>
+<p>Save each downloaded files somewhere on disk and the start the installation of the tools.</p>
+</li>
+</ul>
+<h2 id="efinity-ide">Efinity IDE</h2>
+<ul>
+<li>
+<p>Create a <code>/opt/Efinix</code> directory.</p>
+<ul>
+<li>
+<p>When creating sub-directories in <code>/opt</code> one needs to be root/sudo.
+    The created <code>Efinix</code> directory will thus be owned to root. This must be changed because the Effinix tool have issues when running from a root owned directory.</p>
+</li>
+<li>
+<p>Start a command terminal and:</p>
+<div class="highlight"><pre><span></span><code>cd /opt
+sudo chown &lt;user&gt; Efinix
+sudo chgrp &lt;user&gt; Efinix
+</code></pre></div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>/opt (Optional Software)</strong>: The /opt directory is used for optional software installed on the system. This directory can be used for installing software that is not included in the system’s package manager and vendor supplied application programs.</p>
+</div>
+</li>
+<li>
+<p>Uncompress the Efinity package into <code>/opt/Efinix</code>.</p>
+<ul>
+<li>Use a file browser as Nemo or Nautillus and open the directory where the <strong>tar.bz2</strong> file is stored.</li>
+<li>Open the tar.bz2 file using the default installed "File Roller" tool and extract the contents to <code>/opt/Efinix</code>. A sub-directory <code>efinity</code> is created in <code>/opt/Efinix</code></li>
+</ul>
+</li>
+<li>
+<p>The <code>/opt/Efinix/efinity/2014.1/bin/setup.sh</code> script has a wrong command syntax and produces a  <em>bad Substitution</em> error for the <strong>SCRIPT_PATH</strong>  environment. Due to that the <strong>EFINITY_HOME</strong> environment is not set. Set the path to the tools in the .bash_aliases file. The .bash_aliases file looks as:</p>
+<div class="highlight"><pre><span></span><code>export EFINITY_VERSION=2024.1
+export EFINITY_HOME=/opt/Efinix/efinity/$EFINITY_VERSION/
+export PATH=$PATH:EFINITY_HOME/bin
+. /opt/Efinix/efinity/$EFINITY_VERSION/bin/setup.sh
+</code></pre></div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>When the Efinix tools are the only FPGA tools installed modify the setup.sh scripts delivered by Efinix. The Efinix tools,as many 3th party tools and maybe all vendor tools drop their path settings in front of all other settings, making that using Python and some other development tools is not possible anymore. Python is by installation run from it's own environment, securing the system installed Python version, called <strong>pyenv</strong>. The first item of the path must point to pyenv else it will not work. <strong>Thus</strong> go and read about <a href="#More-about-environment-settings">more environment settings</a></p>
+</div>
+<ul>
+<li>When downloading the Efinity tool a patch was also available and downloaded
+    Use Nemo or Nautillus and File Roller to uncompress the <code>...ubuntu-x64-patch</code> in its own directory.</li>
+<li>
+<p>Start a command terminal (this also sets the Efinity environments)</p>
+<ul>
+<li>Change directory into the patch directory.</li>
+<li>Execute the <strong>run.sh</strong> script, type <code>./run.sh</code></li>
+</ul>
+</li>
+<li>
+<p>Start the Efinix tools from within a command terminal by typing: <strong>efinity &amp;</strong> </p>
+</li>
+</ul>
+<h2 id="risc-v-software-installation">RISC-V software installation</h2>
+<ul>
+<li>
+<p>Make the <strong>efinity-riscv-ide-<version>-linux-x64.run</strong> file executable.</p>
+</li>
+<li>
+<p>Start a command terminal and browse to were the <strong>efinity ...-linux-x64.run</strong> file is stored.</p>
+</li>
+<li>
+<p>Run Efinity-riscv-ide-\&lt;version&gt;-linux-x64.run and follow the on-screen instructions.</p>
+<div class="highlight"><pre><span></span><code>./efinity-riscv-ide-&lt;version&gt;-linux-x64.run
+</code></pre></div>
+<ul>
+<li>
+<p>Messages in the terminal when above command is executed
+    <div class="highlight"><pre><span></span><code>Verifying archive integrity...  100%   All good.
+Uncompressing Efinity RISC-V Embedded Software IDE Installation  100%  
+</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Getting these messages in the terminal takes some time. Be patient.</p>
+</div>
+</li>
+<li>
+<p>After the last message the next message asks for the place to store the Efinix RISC-V IDE</p>
+<div class="highlight"><pre><span></span><code>Default Efinity RISC-V Embedded Software IDE installation path is /home/marc/efinity/efinity-riscv-ide-2024.1
+Press Enter to use the default path or provide the new path for Efinity RISC-V Embedded Software IDE installation
+</code></pre></div>
+</li>
+<li>
+<p>DO NOT press [enter], but give the path to the Efinix installation in the <code>/opt</code> directory.
+    Enter <code>/opt/Efinix/efinity-riscv-ide-2024.1</code></p>
+<p>The output in the terminal is:
+<div class="highlight"><pre><span></span><code>Installing Efinity RISC-V Embedded Software IDE at /opt/Efinix/efinity-riscv-ide-2024.1
+Efinity RISC-V Embedded Software IDE Installation successfully completed
+</code></pre></div></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Finally add below line to the earlier set Efinix environment settings in the .bash_aliases file
+    <code>. /opt/Efinix/efinity-riscv-ide-$EFINITY_VERSION/setup.sh</code></p>
+<div class="admonition note">
+<p class="admonition-title">important</p>
+<p>When Efinix FPGA tools are the only FPGA tools installed, or if Efinix tools are installed with Xilinx FPGA tools read the <a href="#More-about-environment-settings">More about environment settings</a> chapter.</p>
+</div>
+</li>
+<li>
+<p>Start the Efinix RISC-V tools from within a command terminal by typing: <strong>efinity-riscv-ide &amp;</strong></p>
+</li>
+</ul>
+<h2 id="freertos">FreeRTOS</h2>
+<p>When starting the Efinity RISC-V software it will ask for the path to the FreeRTOS installation.
+That is something not installed and/or not downloaded yet.</p>
+<ul>
+<li>
+<p>Download the FreeRTOS from https://www.freertos.org. Hit the [Download] tab at the top right of the screen.</p>
+</li>
+<li>
+<p>In the popup, select a version. The one presented is the latest stable version and hit [Download].
+    Save the downloaded file.</p>
+</li>
+<li>
+<p>Create a directory <code>FreeRTOS</code>in <code>/opt</code>
+    <div class="highlight"><pre><span></span><code>cd /opt/Efinix
+mkdir FreeRTOS
+</code></pre></div></p>
+</li>
+<li>
+<p>Use file roller to uncompress the just downloaded FreeRTOS zip file into the just created <code>/opt/Efinix/FreeRTOS</code>directory. After the uncompress operation there will be a sub-directory FreeRTOS*\<version>* in the /opt/Efinix/FreeRTOS`directory.</p>
+</li>
+<li>
+<p>Each time when the RISC-V Efinix tool is started it will ask for the root directory of the FreeRTOS installation. To prevent this and set once and for all the FreeRTOS directory do:</p>
+<ul>
+<li>
+<p>Open with a text editor the <strong>setup.sh</strong> file in the `/opt/Efinix/efinity-riscv-ide-<em>\<version></em> directory.</p>
+</li>
+<li>
+<p>Comment ( put a <strong>#</strong> in front of each text line) all of following text 
+    <div class="highlight"><pre><span></span><code> Prompt the user for the directory of freertos_src folder
+echo &quot;Enter the directory of freertos_src folder &quot;
+read -p &quot; (Enter if no freertos src required): &quot; FREERTOS_DIR
+
+ Check if the directory exists
+ if [ -d &quot;$FREERTOS_DIR/FreeRTOS&quot; ]; then
+    echo &quot;Valid FreeRTOS Kernel input at $FREERTOS_DIR&quot;
+    export FreeRTOS_KERNEL_SRC=$FREERTOS_DIR
+   # Additional actions you want to perform if the directory exists
+ else
+    echo &quot;Invalid FreeRTOS Kernel directory. &quot;
+    echo &quot;Ensure you inputted the correct directory. No FreeRTOS Kernel set.&quot;
+ fi
+</code></pre></div></p>
+</li>
+<li>
+<p>Add after the commented text following lines and save the file.
+    <div class="highlight"><pre><span></span><code>FREERTOS_DIR=/opt/Efinix/FreeRTOS/FreeRTOS&lt;version&gt;
+export FreeRTOS_KERNEL_SRC=$FREERTOS_DIR
+echo &quot;Valid FreeRTOS Kernel input at $FREERTOS_DIR&quot;
+</code></pre></div></p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">important</p>
+<p>When ever a new Efinix RISC-V IDE environment is installed or when a new FreeRTOS system is installed, the <strong>setup.sh</strong> file must be changed.</p>
+</div>
+<h2 id="more-about-environment-settings">More about environment settings</h2>
+<h3 id="a-script-for-efinix">A script for Efinix</h3>
+<p>As written before, the Efinix path settings are placed in front of all other path settings blocking normal Python development. Therefore a small script is created and source from the bash_aliases file.</p>
+<ul>
+<li>
+<p>Add following to the .bash_aliases file and save it afterwards</p>
+<div class="highlight"><pre><span></span><code># Source a script that sets environments for Efinix FPGA tools
+. .EfinixFpgaEnv.sh
+</code></pre></div>
+</li>
+<li>
+<p>Create in the users home directory a script. Start a text editor (Xed, Gedit, Code, ..), create a new text file and name it <strong>.EfinixFpgaEnv.sh</strong> or give it another name, but make the name understandable.</p>
+</li>
+<li>
+<p>Drop below text in the open text file and save it afterwards.</p>
+</li>
+<li>
+<p>Text for the script:
+    <div class="highlight"><pre><span></span><code>#!/bin/bash
+#
+# Arrive here from .bash_aliases to make a decide if the Efinix tools environment 
+# variables are going to be set.
+########################################################
+#
+AskQuestion () {
+    read -p &quot; Use Efinix FPGA tools or No tools at all? (E/N) : &quot; Answr
+    if [ &quot;${Answr,,}&quot; == &quot;e&quot; ]; then
+        EnvsFor=Efnx
+    elif [ &quot;${Answr,,}&quot; == &quot;n&quot; ]; then
+        EnvsFor=Quit
+    else
+        echo &quot; Probably entered wrong answer! &quot;
+        AskQuestion
+    fi
+}
+#
+SetEfnxEnvs () {
+    # Efinity FPGA
+    export EFINITY_VERSION=2024.1
+    export EFINITY_VERSION=2024.1
+    export EFINITY_HOME=/opt/Efinix/efinity/$EFINITY_VERSION/
+    export PATH=$PATH:EFINITY_HOME/bin
+    . /opt/Efinix/efinity/$EFINITY_VERSION/bin/setup.sh
+    . /opt/Efinix/efinity-riscv-ide-$EFINITY_VERSION/setup.sh
+    echo &quot; Efinix Efinity tool is started by typingh: efinity &amp; &quot;
+    echo &quot; Efinityy-RISC-V tool is started by typing: efinity-riscv-ide &amp; &quot;
+    sleep 1
+}
+#
+SetNone () {
+    echo &quot; No FPGA environments are set. &quot;
+}
+#=====================================================================================
+# Start/run the script to create a new project or library
+#=====================================================================================
+echo &quot; Set the environment variables for the Efinix FPGA tools &quot;
+echo &quot; or do not set any FPGA tool variables at all. &quot;
+#
+sleep 1
+AskQuestion
+if [ &quot;$EnvsFor&quot; = &quot;Efnx&quot; ]; then
+    SetEfnxEnvs
+elif [ &quot;$EnvsFor&quot; = &quot;Quit&quot; ]; then
+    SetNone
+else
+    AskQuestion 
+fi
+#
+# The end
+</code></pre></div></p>
+</li>
+</ul>
+<h3 id="a-script-for-efinix-and-xilinx">A script for Efinix and Xilinx</h3>
+<ul>
+<li>
+<p>When both Efinix and Xilinx FPGA tools installed make use of a sourced script in the bash_aliases file. 
+    Add with a text editor following lines in the bash_aliases file</p>
+<div class="highlight"><pre><span></span><code># Source a script that sets environments following the used FPGA technology.
+# The script asks if Xilinx or Efinix FPGA are going to be used and set the
+# required environment variables accordingly.
+. .SelectFpgaEnv.sh
+</code></pre></div>
+</li>
+<li>
+<p>When both Efinix and Xilinx FPGA tools are installed vendor scripts doesn't need to be altered.</p>
+</li>
+<li>
+<p>Create in the users home directory a script. Start a text editor (Xed, Gedit, Code, ..), create a new text file and name it <strong>.SelectFpgaEnv.sh</strong> or give it another name, but make the name understandable.</p>
+</li>
+<li>
+<p>Drop below text in the open text file and save it afterwards.</p>
+</li>
+<li>
+<p>Text for the script:
+    <div class="highlight"><pre><span></span><code>#!/bin/bash
+#
+# Arrive here from .bash_aliases to make a selection on what 
+# FPGA tools to set the environments for. This approach has been 
+# taken because the Efinix tools are taking over the default 
+# Python environment and that can not be tolerated.
+#
+########################################################
+#
+AskQuestion () {
+    read -p &quot; Use FPGA tools for Xilinx, Efinix or No tools at all? (X/E/N) : &quot; Answr
+    if [ &quot;${Answr,,}&quot; == &quot;x&quot; ]; then
+        EnvsFor=Xlnx
+    elif [ &quot;${Answr,,}&quot; == &quot;e&quot; ]; then
+        EnvsFor=Efnx
+    elif [ &quot;${Answr,,}&quot; == &quot;n&quot; ]; then
+        EnvsFor=Quit
+    else
+        echo &quot; Probably entered wrong answer! &quot;
+        AskQuestion
+    fi
+}
+#
+SetXlnxEnvs () {
+    # Xilinx Tools
+    export XILINX_VERSION=2024.1
+    #
+    export XILINX_VIVADO=/opt/Xilinx/Vivado/$XILINX_VERSION
+    export XILINX_HLS=/opt/Xilinx/Vitis_HLS/$XILINX_VERSION
+    export XILINX_VITIS=/opt/Xilinx/Vitis/$XILINX_VERSION
+    export XILINX_DOCNAV=/opt/Xilinx/DocNav
+    #
+    export PATH=$PATH:$XILINX_VIVADO/bin
+    export PATH=$PATH:$XILINX_HLS/bin
+    export PATH=$PATH:$XILINX_VITIS/bin
+    export PATH=$PATH:$XILINX_DOCNAV
+    #
+    # PetaLinux
+    . /opt/Xilinx/PetaLinux/$XILINX_VERSION/tool/settings.sh
+    echo &quot; Vivado is started by typing: vivado &amp; &quot;
+    echo &quot; Vitis is started by typing: vitis &amp; &quot;
+    echo &quot; PetaLinux settings done. &quot;
+    sleep 1
+}
+#
+SetEfnxEnvs () {
+    # Efinity FPGA
+    export EFINITY_VERSION=2024.1
+    export EFINITY_VERSION=2024.1
+    export EFINITY_HOME=/opt/Efinix/efinity/$EFINITY_VERSION/
+    export PATH=$PATH:EFINITY_HOME/bin
+    . /opt/Efinix/efinity/$EFINITY_VERSION/bin/setup.sh
+    . /opt/Efinix/efinity-riscv-ide-$EFINITY_VERSION/setup.sh
+    echo &quot; Efinix Efinity tool is started by typingh: efinity &amp; &quot;
+    echo &quot; Efinityy-RISC-V tool is started by typing: efinity-riscv-ide &amp; &quot;S
+    sleep 1
+}
+#
+SetNone () {
+    echo &quot; No FPGA environments are set. &quot;
+}
+#=========================================================================================
+# Start/run the script to create a new project or library
+#=========================================================================================
+echo &quot; Set the environment variables for the Xilinx FPGA tools &quot;
+echo &quot; or set the environment variables for the Efinix FPGA tools &quot;
+echo &quot; or do not set any FPGA tool variables at all. &quot;
+#
+sleep 1
+AskQuestion
+if [ &quot;$EnvsFor&quot; = &quot;Xlnx&quot; ]; then
+    SetXlnxEnvs
+elif [ &quot;$EnvsFor&quot; = &quot;Efnx&quot; ]; then
+    SetEfnxEnvs
+elif [ &quot;$EnvsFor&quot; = &quot;Quit&quot; ]; then
+    SetNone
+else
+    AskQuestion 
+fi
+#
+# The end
+</code></pre></div></p>
+</li>
+<li>
+<p>When a command terminal is started, it will ask if Xilinx or Efinix or no tools are going to be used.
+    Answer X, E or N (not case sensitive).</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 - ZirconfleX bv
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

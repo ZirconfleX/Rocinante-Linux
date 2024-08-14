@@ -1,0 +1,3594 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Rocinante Documentation">
+      
+      
+        <meta name="author" content="ZirconfleX">
+      
+      
+      
+        <link rel="prev" href="../Rocinante-Ubuntu/">
+      
+      
+        <link rel="next" href="../tmp_fstab_Issue/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Manjaro - Rocinante</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rocinante-manjaro" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Rocinante" class="md-header__button md-logo" aria-label="Rocinante" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rocinante
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Manjaro
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Rocinante" class="md-nav__button md-logo" aria-label="Rocinante" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Rocinante
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-PC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Used Hardware
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux Install Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Linux Install Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-LinuxMint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux - Mint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-Ubuntu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Manjaro
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Manjaro
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-manjaro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Manjaro
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-the-first-reboot" class="md-nav__link">
+    <span class="md-ellipsis">
+      After the First Reboot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="After the First Reboot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#games" class="md-nav__link">
+    <span class="md-ellipsis">
+      Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#possible-reboot-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Possible Reboot Issue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numlockx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numlockx
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nas-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      NAS devices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bluetooth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bluetooth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printer-scanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Printer / Scanner
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Printer / Scanner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#printer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Printer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scanner
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuning-cinnamon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tuning Cinnamon
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-user-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing user software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing user software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system" class="md-nav__link">
+    <span class="md-ellipsis">
+      System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timeshift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timeshift
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appimagelauncher" class="md-nav__link">
+    <span class="md-ellipsis">
+      AppImageLauncher
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitwarden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bitwarden
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dropbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dropbox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyenv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pyenv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Administration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Administration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bleachbit" class="md-nav__link">
+    <span class="md-ellipsis">
+      BleachBit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gparted" class="md-nav__link">
+    <span class="md-ellipsis">
+      GParted
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dconf-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      dconf Editor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sticky-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sticky Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sound &amp; Video
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sound & Video">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obs-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      OBS Studio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vlc-media-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      VLC Media Player
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pulse-audio-volume-control-pavu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pulse Audio Volume Control (PAVU)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-git-cola" class="md-nav__link">
+    <span class="md-ellipsis">
+      GIT - Git-Cola
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Studio Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meld" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qt" class="md-nav__link">
+    <span class="md-ellipsis">
+      QT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcl-tk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tcl-Tk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#office" class="md-nav__link">
+    <span class="md-ellipsis">
+      Office
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Office">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typora" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typora
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pandoc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latex-texlive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Latex (TexLive)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latexdraw" class="md-nav__link">
+    <span class="md-ellipsis">
+      LatexDraw
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#texstudio" class="md-nav__link">
+    <span class="md-ellipsis">
+      TeXstudio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sozi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sozi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freeplane" class="md-nav__link">
+    <span class="md-ellipsis">
+      Freeplane
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf-reader-writer-organiser" class="md-nav__link">
+    <span class="md-ellipsis">
+      PDF Reader / Writer / Organiser
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Internet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eid-electronic-id-belgium" class="md-nav__link">
+    <span class="md-ellipsis">
+      eid (Electronic ID Belgium)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thunderbird" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thunderbird
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vivaldi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vivaldi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deluge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deluge
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graphics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inkscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inkscape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freecad" class="md-nav__link">
+    <span class="md-ellipsis">
+      FreeCad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#odafileconverter" class="md-nav__link">
+    <span class="md-ellipsis">
+      ODAfileConverter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#darktable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Darktable
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electronics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electronics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Electronics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtualbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      VirtualBox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#putty" class="md-nav__link">
+    <span class="md-ellipsis">
+      PuTTY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cutecom" class="md-nav__link">
+    <span class="md-ellipsis">
+      CuteCom
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gtkwave" class="md-nav__link">
+    <span class="md-ellipsis">
+      GTKwave
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logisim-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logisim-Evolution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kicad" class="md-nav__link">
+    <span class="md-ellipsis">
+      KiCad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="KiCad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#libaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Libaries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-ons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add-ons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xilinx-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xilinx Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efinix-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efinix tools
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Add-on Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Add-on Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tmp_fstab_Issue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /tmp fstab issue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Numlockx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numlockx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Remove_SNAP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Remove SNAP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The_Apt_Command/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The APT commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Updating_Keyring_Files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Keyring Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tech Add-on Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tech Add-on Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Install_Manage_Pyenv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PYENV & Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VirtualBox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VirtualBox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GTK_Wave_Installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GTK-Wave
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UseKiCad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using KiCad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstallXilinxTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Xilinx Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstallEfinixTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Efinix Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-manjaro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Manjaro
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-the-first-reboot" class="md-nav__link">
+    <span class="md-ellipsis">
+      After the First Reboot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="After the First Reboot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#games" class="md-nav__link">
+    <span class="md-ellipsis">
+      Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#possible-reboot-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Possible Reboot Issue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numlockx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numlockx
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nas-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      NAS devices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bluetooth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bluetooth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printer-scanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Printer / Scanner
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Printer / Scanner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#printer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Printer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scanner
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuning-cinnamon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tuning Cinnamon
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-user-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing user software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing user software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system" class="md-nav__link">
+    <span class="md-ellipsis">
+      System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timeshift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timeshift
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appimagelauncher" class="md-nav__link">
+    <span class="md-ellipsis">
+      AppImageLauncher
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitwarden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bitwarden
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dropbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dropbox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyenv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pyenv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Administration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Administration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bleachbit" class="md-nav__link">
+    <span class="md-ellipsis">
+      BleachBit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gparted" class="md-nav__link">
+    <span class="md-ellipsis">
+      GParted
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dconf-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      dconf Editor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sticky-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sticky Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sound &amp; Video
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sound & Video">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obs-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      OBS Studio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vlc-media-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      VLC Media Player
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pulse-audio-volume-control-pavu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pulse Audio Volume Control (PAVU)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-git-cola" class="md-nav__link">
+    <span class="md-ellipsis">
+      GIT - Git-Cola
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Studio Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meld" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meld
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qt" class="md-nav__link">
+    <span class="md-ellipsis">
+      QT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcl-tk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tcl-Tk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#office" class="md-nav__link">
+    <span class="md-ellipsis">
+      Office
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Office">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typora" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typora
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pandoc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latex-texlive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Latex (TexLive)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latexdraw" class="md-nav__link">
+    <span class="md-ellipsis">
+      LatexDraw
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#texstudio" class="md-nav__link">
+    <span class="md-ellipsis">
+      TeXstudio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sozi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sozi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freeplane" class="md-nav__link">
+    <span class="md-ellipsis">
+      Freeplane
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf-reader-writer-organiser" class="md-nav__link">
+    <span class="md-ellipsis">
+      PDF Reader / Writer / Organiser
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Internet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eid-electronic-id-belgium" class="md-nav__link">
+    <span class="md-ellipsis">
+      eid (Electronic ID Belgium)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thunderbird" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thunderbird
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vivaldi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vivaldi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deluge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deluge
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graphics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inkscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inkscape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freecad" class="md-nav__link">
+    <span class="md-ellipsis">
+      FreeCad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#odafileconverter" class="md-nav__link">
+    <span class="md-ellipsis">
+      ODAfileConverter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#darktable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Darktable
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electronics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electronics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Electronics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtualbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      VirtualBox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#putty" class="md-nav__link">
+    <span class="md-ellipsis">
+      PuTTY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cutecom" class="md-nav__link">
+    <span class="md-ellipsis">
+      CuteCom
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gtkwave" class="md-nav__link">
+    <span class="md-ellipsis">
+      GTKwave
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logisim-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logisim-Evolution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kicad" class="md-nav__link">
+    <span class="md-ellipsis">
+      KiCad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="KiCad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#libaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Libaries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-ons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add-ons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xilinx-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xilinx Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efinix-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efinix tools
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="rocinante-manjaro">Rocinante-Manjaro</h1>
+<h2 id="introduction">Introduction</h2>
+<p>After finding Arch-Linux and discovering that it had all whistles and bells I needed but then reading all the comments about the heavy install procedure, It was a refreshing discovery that Manjaro popped up to the rescue.</p>
+<p>Manjaro installs as easy as Linux Mint and/or Ubuntu but offers all Arch Linux offers and It must be said, It works perfect and without hassle. Yes there are things like settings, tuning and installs that need to be done manually but that's also the case for Mint and Ubuntu. After that and when getting used to the small differences with the other distros, two things run smooth (Bluetooth now even connects automatically the Edifier bookshelf speakers what never happened with Mint and Ubuntu).</p>
+<h2 id="install-manjaro">Install Manjaro</h2>
+<ul>
+<li>
+<p>Download the Manjaro ISO image from <a href="https://manjaro.org">Manjaro.org</a>.</p>
+</li>
+<li>
+<p>Select after pushing the [Download] button, chose to download the Cinnamon Desktop Manjaro version or select a different desktop. Know that the Cinnamon version is community managed while there are also three official desktop (KDE, Xfce, Gnome) versions.
+    At time of writing this text the download is: <strong>majaro-cinnamon-24.0.0.240710-linux69.iso</strong></p>
+</li>
+<li>
+<p>Write the downloaded ISO to a USB thumb drive and then boot the new PC from that drive.</p>
+</li>
+<li>
+<p>At the first booted Manjaro screen tell to boot with:</p>
+<ul>
+<li>Open source drivers (<em>this is the default and also used here as no proprietary driver is required</em>)</li>
+<li>Proprietary drivers (<em>select this when using Nvidia graphics cards or special Ethernet setups</em>)</li>
+</ul>
+</li>
+<li>
+<p>Double click the <strong>Install Manjaro Linux icon</strong> on the desktop to start the install tool.</p>
+</li>
+<li>
+<p>Select the installation language and click [Next]</p>
+</li>
+<li>
+<p>Chose the region and zone the PC with Manjaro Linux is going to be in.</p>
+</li>
+<li>
+<p>Select the keyboard and it's variant.
+    Try the specialist keys of the keyboard out in the trial area.</p>
+</li>
+<li>
+<p>Select in the partition selection:</p>
+<ul>
+<li>"Erase Disk - SWAP(with Hibernate)" for a Microsoft Windows-isch installation when the installer does the complete job of partitioning and installing.</li>
+<li>
+<p>"<strong>Manual partitioning</strong>" for a own partitioning scheme as the one provided in the main Rocinante document. </p>
+<div class="admonition note">
+<p class="admonition-title">Tip</p>
+<p>The partitioning table in the main Rocinante is that for the new PC I have constructed, but most likely another new PC will require a different partitioning table. Thus make a similar table for your new machine before starting the installation. This will overcome a lot of frustration during and after installation.</p>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>Follow the install pages and provide the correct answers.</p>
+</li>
+<li>
+<p>Indicate during the installation to also do software updates but don’t ask to load proprietary software as none is required for the given hardware setup.</p>
+</li>
+</ul>
+<p>Go and have a cup of coffee, hot chocolate or cup of thee with coffee corner chat and upon return Ubuntu Linux is going to be installed. The installer is asking to remove the USB thumb drive and hit [Enter]. Do it to reboot in Manjaro.</p>
+<h2 id="after-the-first-reboot">After the First Reboot</h2>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>Installing, updating and/or upgrading software requires root access. 
+When the Installation, update and/or upgrade is done using GUI type of tools a popup will be presented asking for the root password. When installing, updating and/or upgrading software in a command terminal root access is obtained by the <strong>sudo</strong> keyword (sudo followed by a command). The command line interface will ask for the root password.</p>
+</div>
+<h3 id="updates">Updates</h3>
+<p>Completely different than Linux Mint and Ubuntu, Manjaro is on a rolling release cycle, so you never have to download a new version of Manjaro or worry about your current install reaching its end of life. Keeping Manjaro up to date is then a very important necessity!</p>
+<p>Manjaro does not function the Ubuntu and Mint way of using repositories either. official Arch Linux and Manjaro repositories are installed by default and can easily be accessed. Launch the software center and install or update/upgrade tools. Manjaro know one extra repository called the Arch User Repository (AUR). Find here all software Mint and Ubuntu need multiple repositories.</p>
+<p>During daily use, updating can be done with a few clicks via GUI or a few keystrokes via the command line <code>sudo pacman -Syu</code>, and is very simple to do. Since Manjaro is on a rolling release schedule, updating Manjaro is just a matter of instructing the package manager to install all the latest versions of the software on your system. Package dependencies, conflicts, and outdated software are taken care of automatically. </p>
+<p>Here it's a first startup after the installation of Manjaro, thus make sure all new stuff is installed and functional before continuing anything else.</p>
+<p>Let's start the first check if everything is up to date and functioning</p>
+<ul>
+<li>
+<p>Hit the [Menu] button in the left bottom corner of the screen, start typing "update ...". 
+    While typing one tool is showed; <strong>Add/Remove Software</strong>. Click it to start the tool.</p>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>The tool showing up in the Manjaro main menu structure as <strong>Add/Remove Software</strong> is in reality called <strong>PAMAC</strong>. From now on Add/Remove Software will be referred to as PAMAC.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Manjaro only knows one tool to do it all. Installing, removing, updating, upgrading and OS related things are all done using PAMAC.</p>
+</div>
+</li>
+<li>
+<p>Set up of the PAMAC tool</p>
+<ul>
+<li>
+<p>Click the thee small horizontal lines at the right top of the tools pane (left of the minimise, maximise and close buttons).</p>
+</li>
+<li>
+<p>In the drop down menu select [Preferences] (requires root password).</p>
+<ul>
+<li>
+<p>[General] - [Updates] tab:</p>
+<ul>
+<li>Check for updates should be default ON, if not turn it on</li>
+<li>Update check frequency, change it if wanted but default it's set to <em>every day</em></li>
+<li>Check the other options and maybe change them else leave the rest as is.</li>
+</ul>
+</li>
+<li>
+<p>[General] - [Downloads] tab:</p>
+<ul>
+<li>I've set the number of parallel downloads to 6</li>
+</ul>
+</li>
+<li>
+<p>[General] - [Official Repositories]</p>
+<ul>
+<li>Leave it to: <em>Worldwide</em></li>
+</ul>
+</li>
+<li>
+<p>[General] - [Cache] tab:</p>
+<ul>
+<li>I've set "keep package versions" to 2</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Tip</p>
+<p>Come here on a regularly base and hit the [Clean] button to clear the cache.</p>
+</div>
+</li>
+<li>
+<p>[Advanced] tab:</p>
+<ul>
+<li>Turn the slider for chack available disk space to ON.</li>
+<li>Do the same for required dependencies</li>
+</ul>
+</li>
+<li>
+<p>[Third Party] tab:</p>
+<ul>
+<li>Turn the slide for "Enable AUR support" to ON.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Tip</p>
+<p>Come here on a regularly base and hit the [Clean] button to clear the tmp</p>
+</div>
+</li>
+<li>
+<p>The tool is configured, close the pane and return to the main pane.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click the [Updates] button on top of the tool pane.</p>
+<ul>
+<li>When everything i updated and running it shows: <strong>Your system is up to date</strong></li>
+<li>Hit the [Regresh] button to check and when it tool comes back with the above message everything is really up to date.</li>
+<li>If there are things that need updated, they will be presented and a button click will update the things.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The updater will set itself, as a little shield, in the bottom right panel and after the "every day" check, it's possible that updates need to be applied. The little shield will turn red.</p>
+<h3 id="logs">Logs</h3>
+<p>Let this be the first software package to install with the <strong>PAMAC</strong> tool.
+When booting, stopping or running drivers and software, log files are created. In Manjaro there is no one place to show all log messages of the system as in Linux Mint can be done. But it is possible to install the tool that does the job in Linux Mint, called; <strong>gnome logs</strong>.</p>
+<ul>
+<li>
+<p>In the <strong>PAMAC</strong> tool, search bar type <strong>logs</strong></p>
+</li>
+<li>
+<p>The top of the list shows a magnifying glass with title Logs (gnome-logs) and some brief comments.</p>
+</li>
+<li>
+<p>Hit the blue square with white down pointing arrow to install the logs tool.</p>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>When a tool is installed the blue square with white down pointing arrow is changed into a red square with rubbish bin graph.</p>
+<p>To remove a tool from the system, click the red square with rubbish bin graph. The tool and all its dependencies is removed from the system.</p>
+</div>
+</li>
+</ul>
+<p>One thing to know; if warnings and/or errors are listed here, it means they are not blocking or at first harmful to the Linux and desktop environment. That does not mean that the listed items don't need to be solved.</p>
+<ul>
+<li>
+<p>After a start or reboot of the PC and Linux, do start the Logs tool and solve any listed item.</p>
+</li>
+<li>
+<p>When the tool is started, under <strong>Important</strong> all warnings and errors that need attention are listed. </p>
+<ul>
+<li>
+<p>A suddenly listed item was about the keyboard, a Logitech Logi keyboard and mouse are used and the warning showing up was:
+    <div class="highlight"><pre><span></span><code>systemd-udevd[298]: event3: Failed to call EVIOCSKEYCODE with scan code 0x7c, and key code 190: Invalid argument
+</code></pre></div></p>
+</li>
+<li>
+<p>After searching teh web, this explication came </p>
+</li>
+<li>
+<p><code>Most keyboards report a single usb device 'interface' for the keyboard (some have separate interface(s) for builtin mice or other non-keyboard stuff). However, your keyboard reports two separate 'interfaces' for your single keyboard. Unfortunately, both of the interfaces it reports use the exact same vendor and product id, so there's no way for systemd to tell which is which, from the bus/vendor/product info.
+    However these warning log messages are only produced for the second interface which doesn't actually support or provide the scancodes in question. So, this logged warning is completely harmless and you can ignore it.</code></p>
+</li>
+<li>
+<p>The the reported issue is harmless but annoying in the logs.
+    It need a solution, so it wont pop up again</p>
+</li>
+<li>
+<p>Solve it by blacklisting the <strong>eeepc-wmi</strong> module.
+    To blacklist, create the file <code>/etc/modprobe.d/blacklist.conf</code> and add the following 
+    line: <code>blacklist eepc-wmi</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Reboot and again type "Logs" Hit the [Menu] button and start the logs tool.</p>
+</li>
+<li>Possible the next and only warning left will be about <strong>gkr-pam</strong>. 
+    This message can safely be ignored.</li>
+</ul>
+<h3 id="backups">Backups</h3>
+<ul>
+<li>
+<p>As for the two other discussed disti, having a system backup is required. <strong>Timeshift</strong> is the Linux equivalent of Apple's Time Machine. Thus Timeshift is the must have tool. </p>
+</li>
+<li>
+<p>Install the tool:</p>
+<ul>
+<li>
+<p>Hit the [Menu] button in the left bottom corner of the screen, start typing "software ...". 
+    While typing one tool is showed; <strong>Add/Remove Software</strong>. Click it to start the tool.</p>
+</li>
+<li>
+<p>Click the magnifying glass in the left top of the tool pane and enter in the [Search   ] bar <strong>timeshift</strong>.</p>
+</li>
+<li>
+<p>The Timeshift tool is presented as an icon with some brief comments and at the right side a blue square with white down pointing arrow.</p>
+</li>
+<li>
+<p>Hit the blue square with white down pointing arrow and then hit the [Apply] button at the bottom of the pane to install Timeshift</p>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>When a tool is installed the blue square with white down pointing arrow is changed into a red square with rubbish bin icon.</p>
+<p>To remove a tool from the system, click the red square with rubbish bin graph. The tool and all its dependencies is removed from the system.</p>
+</div>
+</li>
+<li>
+<p>After installation Timeshift will be available from the [Manjaro Menu] button at the left bottom of the screen and also from the command line but then it will work without GUI interface. </p>
+<ul>
+<li>
+<p>Hit the [Manjaro Menu] button, and start typing "timeshift".
+    Double click the appearing timeshift icon to start the GUI version of Timeshift</p>
+<ul>
+<li>
+<p>Click [Settings]</p>
+<ul>
+<li>
+<p>[Location]: indicate where Timeshift can drop it's backups of the system </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>At least 1 TB to 2 TB is required as a decent backup space.
+The Timeshift storage location, like in the base <a href="../Rocinante/">Rocinante</a> document provided partition table shown, can be set to a installed and dedicated 2 TB hard disk. Timeshift backups can be set onto the NAS drive (setup of a NAS drive is discussed later in this document) as that device has most of the time lots of space. </p>
+</div>
+</li>
+<li>
+<p>[Schedule]: Tell the system when to backup and how many backups to keep.
+    Example: hourly, 1 backup and daily 2 backups.</p>
+</li>
+<li>
+<p>[Filters]: Tell the system what, and what not to backup.</p>
+</li>
+<li>
+<p>Click [OK]</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click [Create] to make the first set of backups.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Close the Timeshift tool</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="graphics">Graphics</h3>
+<ul>
+<li>Thanks to the hardware scanner part of the Manjaro installer the GPU tools are installed automatically.</li>
+</ul>
+<h3 id="games">Games</h3>
+<ul>
+<li>No games are installed, thus no need to remove them.</li>
+</ul>
+<h3 id="kernel">Kernel</h3>
+<ul>
+<li>
+<p>As all Linux Arch based systems Manjaro comes with the latest available stable kernel version. </p>
+</li>
+<li>
+<p>If a newer stable version is available when Manjaro is installed an update run will install that newer kernel.</p>
+</li>
+<li>
+<p>The installed Manjaro system will always use the latest available stable kernel.
+    Manually installing a new kernel is as easy as:</p>
+<ul>
+<li>
+<p>Click the [Manjaro Menu] icon in the left bottom of the screen.</p>
+</li>
+<li>
+<p>Start typing <strong>settings</strong></p>
+</li>
+<li>
+<p>From the presented options list, select <strong>Manjaro Settings Manager</strong></p>
+</li>
+<li>
+<p>Double click the <strong>Kernel</strong> (Penguin) icon</p>
+</li>
+<li>
+<p>A list of all, at that moment, available kernels is presented.</p>
+<ul>
+<li>The one running the system is indicted as [Running] - [Installed]</li>
+<li>Select the wanted kernel and hit the [Install] button.
+    The selected kernel is installed and will be used at next boot.</li>
+</ul>
+<p>At time of writing, the 6.5.3-1 kernel was changed for the 6.6.40-1 kernel.
+The 6.5.3-1 kernel is left [Installed] as possible fall-back kernel in case of ...</p>
+</li>
+</ul>
+<p>!!!! Note "Important"
+    To keep a stable system, use only kernels indicated as [LTS] and [Recommended]</p>
+</li>
+</ul>
+<h3 id="possible-reboot-issue">Possible Reboot Issue</h3>
+<p>It is possible that after a reboot in “logs” a warning message appears about “something ... casper”.
+This casper tool is not of any use when not porting Linux and can thus be disabled. Do this as:</p>
+<ul>
+<li>Start a command terminal</li>
+<li>Enter: <code>sudo sysemctl disable casper-md5check.service</code></li>
+</ul>
+<h3 id="numlockx">Numlockx</h3>
+<p>Useful to have installed is "numlockx". It makes the numeric keypad of keyboard available without the need to push the [Numlock] key.</p>
+<p>Install the tool:</p>
+<ul>
+<li>
+<p>Hit the [Menu] button in the left bottom corner of the screen, start typing "software ...". 
+    While typing one tool is showed; <strong>Add/Remove Software</strong>. Click it to start the tool.</p>
+</li>
+<li>
+<p>Click the magnifying glass in the left top of the tool pane and enter in the [Search   ] bar <strong>numlockx</strong>.</p>
+</li>
+<li>
+<p>The numlockx tool is presented as an icon with some brief comments and at the right side a blue square with white down pointing arrow.</p>
+</li>
+<li>
+<p>Hit the blue square with white down pointing arrow and then hit the [Apply] button at the bottom of the pane to install numlockx</p>
+</li>
+<li>
+<p>Change directory to the /etc/lightdm directory (this is for the Cinnamon install).</p>
+</li>
+<li>Open as root with a text editor the lightdm.conf file<ul>
+<li>Search for a text line staring with <strong>#greeter-setup-script=</strong></li>
+<li>Remove the <strong>#</strong> and add after the <strong>=</strong> /usr/bin/numlockx on</li>
+<li>Save the file</li>
+</ul>
+</li>
+<li>Next time the numeric keypad will be available from boot.</li>
+</ul>
+<h3 id="nas-devices">NAS devices</h3>
+<p>When having a NAS device connected to the network, enable access to its directories</p>
+<ul>
+<li>
+<p>Add the different users and their directories to the <strong>fstab</strong> file. The NAS drive users and their directories are mounted, using NFS, as if they were regular drives to make it look as if the NAS drive is part of the drives of the PC</p>
+</li>
+<li>
+<p>Open with a text editor, as root/sudo, the <strong>/etc/fstab</strong> file</p>
+</li>
+<li>
+<p>Add the NAS drive and users to the file.
+    <div class="highlight"><pre><span></span><code>&lt;NAS IP&gt;/&lt;Volume&gt;/&lt;User directory&gt; /mnt/&lt;Mount Directory&gt; nfs4 &lt;nfs options&gt; 0 0
+</code></pre></div></p>
+<p>example:</p>
+<div class="highlight"><pre><span></span><code>IP_address:/volume/VolumeName /mnt/MountName nfs4 x-systemd.automount,_netdev,noacl,nocto,rsize=32768,wsize=32768   0   0
+</code></pre></div>
+<ul>
+<li>
+<ul>
+<li>The NAS is a networked device, accessed by its IP_address</li>
+<li>A NAS can have several volumes (volume)and every volume can be used by several people, each having their own directory (VolumeName). This data is available when logging in to the NAS-es control and configuration web page.</li>
+<li>The NAS device is mounted onto the Linux OS and the place to do that is the /mnt directory.</li>
+<li>Each users NAS drive is mimicked in the Linux mount by it's own dedicated name (MountName)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>After installation of Manjaro check in the PAMAC tool if <strong>nfs-utils</strong>  and <strong>nfsidmap</strong> are installed. If they are just enable nfs, if they are not install the tools and then enable nfs.</p>
+<ul>
+<li>Check if both tools are installed, start <strong>Add/Remove Software</strong> from the main Manjaro menu.</li>
+<li>Click the magnifying glass (top left of the GUI pane) and type in the search bar  <code>nfs</code></li>
+<li>The two above mentioned tools should be installed (Have a red square with waste bin at the right).
+  If not (A blue square with white down arrow) install both tools.</li>
+<li>Start a command terminal and type: <code>systemctl enable --now nfs-client.target</code></li>
+</ul>
+</li>
+<li>
+<p>Add the user(s) to the <strong>netdev</strong> group
+    <code>sudo usermod -a -G groupname username</code> or for user marc and netdev: <code>sudo usermod -a -G netdev marc</code></p>
+</li>
+<li>
+<p>Restart the PC to let the modified fstab file be activated/read.
+    It will create directories at the given mount points and with the given names.
+    Example: </p>
+<ul>
+<li>If the \<NAS IP>/\<Volume>/\<User directory> /mnt/\<Mount Directory> is in the fstab file, after boot the system /mnt directory will have a sub directory /\<Mount Directory> that mimics the contents of the \<NAS IP>/\<Volume>/\<User directory> directory on the NAS device.</li>
+</ul>
+</li>
+<li>
+<p>It is possible, most likely, that the created files and possible directories are owned by root and that therefore the content of the directories is not accessible by the user of the machine.
+    To get this solved do:</p>
+<ul>
+<li>Disable the nfs NAS mount points in the fstab file (Put a # in front of each line).</li>
+<li>Reboot the machine.</li>
+<li>After boot go to the /mnt system directory (the earlier created directories are still there) and change the owner, group and access permissions of the directories, these directories are constructed by nfs due to the execution of the root owned fstab at the first boot.</li>
+<li>Enable the nfs NAS mount lines in the fstab file (remove the #).</li>
+<li>Reboot the machine.</li>
+<li>Now accessing the NAS directories should work.</li>
+</ul>
+</li>
+<li>
+<p>Directories and other stuff created on the NAS might be owned by a user <strong>user</strong>. Therefore it might be necessary to make the Linux user part of the group <strong>users</strong>, by: <code>sudo usermod -a -G users &lt;user&gt;</code></p>
+</li>
+</ul>
+<h3 id="bluetooth">Bluetooth</h3>
+<p>All, 99.9 %, of all new motherboards is equipped with Bluetooth capabilities and the Bluetooth hardware is normally default enabled in the BIOS. But in my experience with several motherboards, making the on-board Bluetooth work is a real pain. </p>
+<p>Maybe the first thing one should do is to check if the motherboard is equipped with Bluetooth and it is indeed default enabled in the BIOS. </p>
+<ul>
+<li>
+<p>For a ASUS motherboard; boot or reboot the machine and keep hitting the [DEL] or [F2] key to get the BIOS pages. Check for Bluetooth.</p>
+</li>
+<li>
+<p>Try first to use the on-board Bluetooth, go to <strong>1</strong>.</p>
+<ol>
+<li>
+<p>Remove all Bluetooth related tools, reboot the PC, then reinstall Bluetooth stuff. </p>
+<ul>
+<li>Start the <strong>PAMAC</strong> tool</li>
+<li>Click the magnifying glass at the left top of the GUI pane.</li>
+<li>Type in the search bar: <strong>rfkill</strong><ul>
+<li>A <strong>util-linux</strong> package should show up as installed (red square with waste bin).</li>
+<li>Click the red squared waste bin, will turn into a red square with <strong>V</strong>.</li>
+</ul>
+</li>
+<li>Type now in the search bar: <strong>blue</strong><ul>
+<li>Following utilities should show up as installed: <strong>blueman</strong>, <strong>bluez</strong>, <strong>bluez-libs</strong> and <strong>bluez-utils</strong></li>
+<li>Click for each if these the red squared waste bin</li>
+</ul>
+</li>
+<li>Finally type in the search bar: <strong>blueman</strong><ul>
+<li>Click  the red squared waste bin right of the blueman utility.</li>
+</ul>
+</li>
+<li>Click now at the right bottom of the GUI pane the [Apply] button to remove all tools and libraries.</li>
+<li>Reboot the PC (shut down and restart)</li>
+<li>Start the <strong>PAMAC</strong> tool and install all previous removed utilities. 
+    That can be done the same way as removing, click the blue square with white down arrow (turns into a blue square with **V*), do the same for the other utilities and at the end hit the [Apply] button in the right bottom corner.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Above removal and re-installation of Bluetooth utilities can be done from the command line with <strong>pacman</strong>, but there is chosen to organise it thru the GUI based Add/Remove tool so one gets quickly acquainted to the tool and the easiness of it.</p>
+</div>
+</li>
+<li>
+<p>Now, normally, Bluetooth should work. If not search for warning or error messages in the <strong>logs</strong> and search for solutions.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>If Bluetooth still doesn't work decently, disable the on-board Bluetooth and plug a Bluetooth dongle in one of the many USB ports. Try to use a USB port on the front or top of the computer case to expose the dongle to the world.</p>
+<p>!!!! Note
+    These days motherboards seem to have also on-board WIFI. Disable it!.
+    A desktop computer doesn't need WIFI but needs to connect to wired Ethernet</p>
+</li>
+<li>
+<p>Check if the Bluetooth dongle is recognised by one of the on-board USB switches.</p>
+<ul>
+<li>Start a command terminal and enter <code>lsusb</code></li>
+<li>One of the returned lines can be something as:
+    <code>Bus 009 Device 003: ID 0a12:0001 Cambridge Silicon Radio, Ltd Bluetooth Dongle (HCI mode)</code> 
+    This is the Bluetooth dongle signature.</li>
+</ul>
+</li>
+<li>
+<p>Restart from point <strong>1</strong> above and normally Bluetooth should work now.</p>
+</li>
+</ul>
+<p>If Bluetooth don't work or don't decently work or stops working or ... with or without bluetooth dongle, these things can be done to find a possible cause.</p>
+<ul>
+<li>
+<p>Open a command terminal and:</p>
+<ul>
+<li>
+<p>Check the Bluetooth blocking status , enter <code>sudo rfkill list</code></p>
+<ul>
+<li>The correct returned answer is <strong>no</strong>  for soft and hard blocked Bluetooth.</li>
+<li>If one or both return <strong>yes</strong>, unblock it by typing <code>sudo rfkill unblock bluetooth</code></li>
+</ul>
+</li>
+<li>
+<p>Check the Bluetooth service status, enter <code>sudo systemctl status bluetooth.service</code></p>
+<ul>
+<li>If the Bluetooth is inactive, start it with: <code>sudo systemctl start bluetooth.service</code></li>
+</ul>
+</li>
+<li>
+<p>The <strong>bluez</strong> daemon is the orchestrating Bluetooth part and when that is not up to date all kind of weird issues can pop up. </p>
+<ul>
+<li>Check the current version of bluez: <code>pacman -Qi bluez | grep -i version</code></li>
+<li>Update the bluez daemon: <code>sudo pacman -Syu bluez</code></li>
+</ul>
+</li>
+<li>
+<p>Make Bluetooth persistent</p>
+<ul>
+<li>
+<p>Start a text editor as sudo with a file name <strong>bluetooth-restore.service</strong></p>
+</li>
+<li>
+<p>Save the empty file in: <strong>/etc/systemd/system</strong></p>
+</li>
+<li>
+<p>Add following lines to the empty file</p>
+<div class="highlight"><pre><span></span><code>[Unit]
+Description=Restart Bluetooth after suspend
+After=suspend.target 
+
+[Service]  
+Type=simple
+ExecStart=/usr/bin/bash -c &quot;rfkill unblock bluetooth ; systemctl start bluetooth&quot;
+
+[Install]  
+WantedBy=suspend.target
+</code></pre></div>
+</li>
+<li>
+<p>Save the file and close the text editor.</p>
+</li>
+<li>
+<p>Start the just created service: <code>sudo systemctl enable bluetooth-restore.service</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>If audio quality sucks</p>
+<ul>
+<li>
+<p>install, with PAMAC, the <strong>bluetoothctl</strong> command line tool </p>
+<p>Command line install: <code>sudo pacman -S bluetoothctl</code></p>
+</li>
+<li>
+<p>Run the tool, to get device info, by typing in the command terminal: <code>bluetoothctl</code></p>
+<ul>
+<li>When having run earlier <code>sudo systemctl status bluetooth.service</code> the Bluetooth device MAC address has been displayed. Run now, from the bluetoothctl prompt: 
+    <code>info &lt;MAC address&gt;</code></li>
+<li>There should be a mentioning of <strong>A2DP</strong> in all obtained information.
+    If it's not displayed and the device support high-quality audio then, force A2DP.</li>
+</ul>
+</li>
+<li>
+<p>exit the bluetoothctl tool by typing: <code>quit</code></p>
+<ul>
+<li>
+<p>Start a text editor with /etc/bluetooth/main.conf as file to open.</p>
+</li>
+<li>
+<p>Add under the General section:</p>
+<div class="highlight"><pre><span></span><code>Enable=Source,Sink,Media
+Disable=Socket
+</code></pre></div>
+</li>
+<li>
+<p>Save the file and restart the daemon: <code>sudo systemctl restart bluetooth</code>.
+    That explicitly permits A2DP while stopping HFP.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="printer-scanner">Printer / Scanner</h3>
+<p>The attached printer is an all-in-one (printer, scanner, fax) Brother MFC-J6720DW device, but what's discussed here applies for other printer/scanners too.</p>
+<h4 id="printer">Printer</h4>
+<p>The printer was automatically recognised but to make it print decently these things needed to be done:</p>
+<ul>
+<li>Open the <strong>System Settings</strong> tool and double click the <strong>Printers</strong> icon in the hardware section.</li>
+<li>Click the [Server] tab and select <strong>Settings</strong>.<ul>
+<li>Vote for  <strong>Publish shared printers ...</strong></li>
+<li>Hit [OK]</li>
+</ul>
+</li>
+<li>Select the printer, right click:<ul>
+<li>Tick the voting box in front of <strong>Enabled</strong> and in front of <strong>Shared</strong> </li>
+<li>Select <strong>Properties</strong> from the fall down menu<ul>
+<li>Her lot of things can be set or unset.</li>
+<li>Under [Printer Options] the [Media Size] needed to be set to A4 (Borderless) in order to be able to use the full paper size.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="scanner">Scanner</h4>
+<p>The printer was automatically recognised but not so the scanner. A small and easy to use scanner tool (Document Scanner) is automatically installed with the Manjaro install but it needs software te be able to connect to a scanner.</p>
+<p>Install, using the PAMAC tool (AUR repository) the <strong>brscan-key</strong> and <strong>brscan4</strong> utilities to make the scanner software work.</p>
+<h2 id="tuning-cinnamon">Tuning Cinnamon</h2>
+<p>Cinnamon is the desktop environment of the Manjaro installation, so no special tuning need to be done.
+Anyway, if one want to change background, font type and or size, window behavioural, ... start the <strong>System Settings</strong> tool and modify [Appearance], [Preferences], [Hardware] and/or [Administration].</p>
+<p>Soem stuff that might be helpful when puitting the installation into the users wanted shape.</p>
+<ul>
+<li>
+<p>Calendar, date and time settings can be entered as: %H:%M:%S %n %d%b%y</p>
+</li>
+<li>
+<p>Checking and changing the shell (best use BASH):</p>
+<ul>
+<li>Check shelll: <code>ps -p $$</code></li>
+<li>Set shell: <code>sudo chsh -s /bin/bash \&lt;user&gt;</code></li>
+</ul>
+</li>
+<li>
+<p>Nemo the file browser can be customised and all custom settings are written and kept in <code>/home/&lt;user&gt;/.config/dconf</code>. It is often see that when customising Nemo for the root user, all customisation are lost adn it is not really possible to customise the file browser for the root user.
+    The solution is to copy, as rooy/sudo, the <strong>dconf</strong> directory in <strong>.config</strong> to the .config directory of the root user. By default it seems that the root user doesn't have a dconf directory and therefore it is not possibl eto customise the file browser.</p>
+</li>
+<li>
+<p>If there is a previous PC running Linux and <strong>Rhythmbox</strong> is used as radio/podcast player, copy the <strong>/home/<user>/.local/share/rhythmbox</strong> directory over from the old to the new PC. This way all presets are immediately available and set for the new machine as they were customised for the old PC.</p>
+</li>
+<li>
+<p>Provide the user with extra group permissions</p>
+<ul>
+<li>
+<p>Hit the [Manjaro Menu] button and start typing <strong>users</strong>. Click <strong>Users and Groups</strong></p>
+</li>
+<li>
+<p>In the new popped-up pane select the user. On the right side the users credentials are displayed together with the <strong>Groups</strong> the user belongs to. </p>
+</li>
+<li>
+<p>Click the summary of the groups and a new target list will pop up.</p>
+</li>
+<li>
+<p>In that list select or leave selected: </p>
+<ul>
+<li>
+<p>adm, audio, bluetooth, crontab, lp, \<user>, network, 
+    openvpn, power, root, scanner, sys, systemd-journal, 
+    users, vboxsf, vboxusers, vieo, wheel.</p>
+</li>
+<li>
+<p>If one of these groups doesn't exist, click the [Groups] tab and [Add] the missing group.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="installing-user-software">Installing user software</h2>
+<p>Since Manjaro is a rolling release update system, automatically the system is going to be equipped with the latest versions of installed software. Installing, removing and updating software is all done using the <strong>PAMAC</strong> tool. No need to add repositories or keys or work in a command terminal with the <strong>apt</strong> cli tool since everything is distributed from the same place. 
+Unless explicitly mentioned, below discussed software installations are installed from the PAMAC tool .
+The only good reason to install software manually is to install the software in a user dedicated directory.</p>
+<p>Manually installing software can be done using:</p>
+<ul>
+<li>A command terminal and the <strong>pacman</strong> CLI tool.</li>
+<li>Using AppImage files.
+    AppImage files are kind of compressed files for a single application. Everything the application requires is packed in the compressed file and the tool can thus be run by executing it. A tool make software life easier is AppImageLauncher (more later).</li>
+</ul>
+<p>To install software, click the [Menu Manjaro] button in the left bottom corner of the screen and start typing <strong>software</strong>. The first presented option is: <strong>Add/Remove Software</strong>, select it. <strong>Add/Remove Software</strong> is the fancy name for the PAMAC tool. The preference for the tool have been set in the <a href="#Updates">Updates</a> chapter of this document. If not already done, go there to set everything up and then come back here.</p>
+<p>To install software;</p>
+<ul>
+<li>
+<p>Click the magnifying glass at the top left corner of the GUI</p>
+</li>
+<li>
+<p>Type or start typing the name or function of the tool that needs to be installed. </p>
+</li>
+<li>
+<p>Hit [Enter] and a list with possibilities is presented, showing most likely the tool to install on top.</p>
+<ul>
+<li>If the tool is already installed as red square with waste bin is shown right of the tools title</li>
+<li>Remove an installed tool by clicking the red squared waste bin, will turn into red squared <strong>V</strong></li>
+<li>If the tool is not yet installed a blue square with white down arrow is showed.</li>
+<li>Install a tool by clicking the blue squared white down arrow, it will turn into a blue squared <strong>V</strong>.</li>
+<li>Hit then the [Apply] button in the bottom right corner of the GUI pane and enter credentials.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All later in the document discussed software tools have a line "Use <strong>PAMAC</strong> to ...". It just installs the discussed tool using PAMAC snd nothing else. Multiple tools can be installed at once by selecting (clicking the blue squared white down arrow button) each tool and when all required software tools are selected hit the  [Apply] button in the bottom right corner of the GUI pane and enter credentials.</p>
+</div>
+<h3 id="system">System</h3>
+<h4 id="timeshift">Timeshift</h4>
+<p>A tool I liked to appreciate in Linux-Mint. It saved me a couple of times from getting a stroke.
+Timeshift is a tool to take automatically backups of the system. It can take hourly and daily backups and store several backups on disk (use an external disk!).</p>
+<p>Use <strong>PAMAC</strong> to install Timeshift</p>
+<p>After installing the tool, take a first snapshot of the system till now.</p>
+<ul>
+<li>Start Timeshift from the menu (start typing timeshift and when it's displayed hit enter).</li>
+<li>Select the snapshot type : RSYNC</li>
+<li>It starts estimating the snapshot size and then comes back with a list of disks. During install of Ubuntu the 4 TB WDC siak has been reserved for timeshift. It got the name <strong>TimeMachine</strong> and is mounted as /mnt/TimeMachine. Select that disk and click[Next].</li>
+<li>Set the snapshot levels you want (Monthly, Weekly, Daily, Hourly, Boot) and determine how many snapshots to keep. Example: Daily: 3 and Hourly: 6.</li>
+<li>Determine what to backup and what not.</li>
+<li>[Finish], hit the [Create] tab to get the first snapshot.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Tip</p>
+<p>It is a good idea to make a new snapshot when all tools are installed and configured.</p>
+</div>
+<h4 id="appimagelauncher">AppImageLauncher</h4>
+<p>Integrate AppImages to your application launcher with one click, and manage, update and remove them from there. Double-click AppImages to open them, without having to make them executable first.</p>
+<p>Use <strong>PAMAC</strong> to install appimagelauncher from the AUR repositories</p>
+<p>Configure the Appimagelauncher tool so all used appimage files are managed from, one place.</p>
+<ul>
+<li>
+<p>Create, as root/sudo, in <strong>/opt</strong> a directory <strong>AppImages</strong> and change the owner, group and properties of the directory. Use a file browser (Nemo) to do that or use a command line terminal.</p>
+<ul>
+<li><code>cd /opt
+    sudo chown &lt;user&gt; AppImages
+    sudo chgrp &lt;user&gt; AppImages
+    sudo chmod 775 AppImages</code></li>
+</ul>
+</li>
+<li>
+<p>Click the [Menu Manjaro] button in the left bottom corner of the screen and start typing <strong>appimagelauncher</strong>. The first presented option is: <strong>AppImageLauncher Settings</strong>, select it.</p>
+</li>
+<li>
+<p>[AppimageLauncher] tab</p>
+<ul>
+<li>Tick the box left of "Ask whether to move AppImage files ... "</li>
+<li>Set the location were to store the appimage files and were to execute them from to
+    <code>/opt/AppImages</code></li>
+</ul>
+</li>
+<li>
+<p>[AppimageLauncherd] tab</p>
+<ul>
+<li>Tick the box left of "Auto start auto-integration ... "</li>
+</ul>
+</li>
+<li>
+<p>Click [OK]</p>
+</li>
+</ul>
+<p>How to run a tool disguised as appimage </p>
+<ul>
+<li>Download the tools .appimage file and save it somewhere on disk</li>
+<li>Right click the appimage file and select "Open with AppImageLauncher" or double click the file to autoload it with AppImageLauncher.</li>
+<li>A pop-up pane will ask (2 buttons): <strong>[Run Once]</strong> - <strong>[Integrate and run]</strong>
+    Chose for <strong>[Integrate and run]</strong> as then the tools appimage file will be moved to the directory set in the preferences and it will become available in the main menu of the system.</li>
+</ul>
+<h4 id="bitwarden">Bitwarden</h4>
+<p>The best Password storage and sharing application. It's a desktop tool (Windows/Linux/IOS), a phone app (Android/IOS) and a browser plugin. Thus when used passwords are available from any and for any system.
+It is possible to use <strong>PAMAC</strong> to install Bitwarden but then it's installed somewhere on disk under control of the PAMAC Bitwarden build files.</p>
+<p>Better is to download it because then it can be installed in a custom place under control of the user.</p>
+<ul>
+<li>Download as Appimage file from the <a href="https://bitwarden.com/download/">Bitwarden web site</a>, </li>
+<li>Save the file on disk</li>
+<li>Double click the saved file and for the popped-up pane click the [Integrate and Run] button</li>
+<li>Bitwarden will start and ask for credentials.</li>
+</ul>
+<p>What happened is; the saved appimage file is copied to the /opt/AppImages directory and the AppImageLauncher created an input for the [Manjaro main] menu so that when clicking the [Memu] button one can type bitwarden and launch bitwarden from the menu structure.
+The AppImageLauncher tool will also take care of regularly updating the Bitwarden tool.</p>
+<div class="admonition note">
+<p class="admonition-title">Tip</p>
+<p>In case of ... do export on regularly base the vault, using the PC version, of all passwords as csv or json file and store that file somewhere safe (in another personal vault).</p>
+</div>
+<h4 id="dropbox">Dropbox</h4>
+<p>Keep everything that’s important to you and your family shareable and safe in one place.
+Back up files in the cloud, share photos and videos, and more.</p>
+<p>Use <strong>PAMAC</strong> to install Dropbox</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>One needs to have a DropBox account in order to be able to use this tool. If no dropBox account is available this tool is of no use.</p>
+</div>
+<h4 id="pyenv">Pyenv</h4>
+<p>Managing Multiple Python Versions With pyenv.</p>
+<p>Pyenv can be installed from the <strong>PAMAC</strong> tool but then everything is installed following the PAMAC installation scripts and without user control.</p>
+<p>To install and manage Pyenv and Python read and follow the <a href="../Install_Manage_Pyenv/">Install_Manage_Pyenv</a> document.
+With the installation of pyenv, also install the required/wanted Python version(s) and packages.</p>
+<h4 id="java">Java</h4>
+<p>Many installed applications use JAVA. The latest JAVA version is installed when Manjaro was installed but it was a version from the AUR repositories and installing some applications encountered issues and therefore did not install. To get the things working as they should do:</p>
+<ul>
+<li>
+<p>Start  <strong>Add/Remove Software</strong> (PAMAC) and type in the search bar <strong>openjdk</strong>.</p>
+</li>
+<li>
+<p>A list of OpenJDK tools is presented, scroll down until an installed version shows up (red square with aste bin).</p>
+</li>
+<li>
+<p>Remove the installed openjdk applications </p>
+<ul>
+<li>
+<p>After ticking the, in this case three, red squares with waste bin they will turn in red squares with <strong>V</strong>.</p>
+</li>
+<li>
+<p>Click in the right bottom corner [Apply]</p>
+</li>
+<li>
+<p>A warning will pop-up telling something about dependencies, in this case about applications <strong>maven</strong>, <strong>beanshell</strong> and <strong>Freeplane</strong>. When clicking [OK] nothing is going to be installed because of the dependencies conflicts.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Possibly in this stage of the installation there will be no warnings about dependencies because it is the start of the Linux configuration and tuning. If there is a warning pop-in up do as above written, remove the applications and then continue. </p>
+</div>
+</li>
+<li>
+<p>Remove first the listed applications.</p>
+</li>
+<li>
+<p>Remove now the openjdk tools</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Check if things are really removed.</p>
+<ul>
+<li>Start a command terminal </li>
+<li>type <code>java --version</code> and after this <code>which java</code>
+    Both command should return a negative answer/</li>
+</ul>
+</li>
+<li>
+<p>Go back to   <strong>Add/Remove Software</strong> (PAMAC) and type in teh search bar openjdk</p>
+</li>
+<li>
+<p>A list of OpenJDK tools is presented. The top of that list are OpenJDK tools from the Official Repositories. Pick here the OpenJDK tools with the highest number (latest version).</p>
+<ul>
+<li><strong>OpenJDK Java 21 Shell (jdk21-openjdk)</strong></li>
+<li><strong>OpenJDK Java 21 Console (jdk21-openjdk)</strong></li>
+</ul>
+<p>and install them.</p>
+</li>
+<li>
+<p>It is maybe not a bad idea to also install an earlier JAVA version in case of ... (you never know).</p>
+<ul>
+<li>Pick and select and earlier OpenJDK version supported in the Official Repositories</li>
+<li><strong>OpenJDK Java 11 Shell (jdk11-openjdk)</strong></li>
+<li><strong>OpenJDK Java 11 Console (jdk11-openjdk)</strong></li>
+</ul>
+<p>and install them.</p>
+</li>
+<li>
+<p>Check now what JAVA version is used as default</p>
+<ul>
+<li>
+<p>In the command terminal type <code>archlinux-java status</code></p>
+</li>
+<li>
+<p>The answer in teh terminal should be</p>
+<div class="highlight"><pre><span></span><code>Available Java environments
+    java-11-openjdk
+    java-21-openjdk (default)
+</code></pre></div>
+</li>
+<li>
+<p>When the latest java version installed in not the default, type following command in the command terminal <code>sudo archlinux-java set java-21-openjdk</code> and run  <code>archlinux-java status</code>again.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Install the removed tools using PAMAC</p>
+<ul>
+<li>install <strong>maven</strong></li>
+<li>install <strong>beanshell</strong></li>
+<li>install <strong>Freeplane</strong> </li>
+</ul>
+</li>
+</ul>
+<h3 id="administration">Administration</h3>
+<h4 id="bleachbit">BleachBit</h4>
+<p>Clean Your System and Free Disk Space.
+Better than free, BleachBit is open source.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>BleachBit (bleachbit)**</strong></p>
+<p>The Bleachbit installed this way is a "user" version. A admin or root user version, bleachbit-admin, is also available for installation via PAMAC</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not run sudo or root functions, as cleaning apt, in the user or non-sudo version of the tool.
+There is a dedicated sudo version of the tool and both are installed at the same time..</p>
+</div>
+<h4 id="gparted">GParted</h4>
+<p>GNOME partition editor (Hard- Disk management tool). This tool can help managing portable disks and USB drives.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>GParted Partition Editor (gparted)</strong></p>
+<h4 id="dconf-editor">dconf Editor</h4>
+<p><strong>dconf</strong>  is a low-level configuration system, the configuration system is based  on keys, which stores the settings for most applications. The  configuration keys are in the unstructured database (keys are logically  interconnected grouped into categories), the key database is stored in a  binary file located:</p>
+<p>Use <strong>PAMAC</strong> to install the <strong>DconfEditor (dconf-editor)</strong></p>
+<h4 id="fonts">Fonts</h4>
+<p>Use <strong>PAMAC</strong> to install the <strong>Font Manager 9font-manager)</strong>
+As extra the <strong>Font Viewer (font-manager</strong> tool is automatically installed </p>
+<p>To install new free fonts go to: https://fonts.google.com
+Select wanted font families and the download them all at once.
+Download is a .zip file.</p>
+<p>Uncompress the file into: <code>/home/&lt;user&gt;/.local/share/fonts</code></p>
+<p>Start font manager to see all new installed fonts.</p>
+<div class="admonition note">
+<p class="admonition-title">Tip</p>
+<p>Good fonts to use for web ralated items are NOTO fonts as they are used al over the WWW</p>
+</div>
+<h4 id="sticky-notes">Sticky Notes</h4>
+<p>This is a goodie vor daily use. The electronic version of yellow notes on the PC screen.
+Very handy for TODO list, quick notes, ideas, ...</p>
+<p>Use <strong>PAMAC</strong> to install the <strong>sticky</strong></p>
+<p>It install itself in the right panel, but needs configuration to be useful.</p>
+<ul>
+<li>Right click the icon in the right panel and select [Manage Notes]
+    This starts a screen pane showing all notes. In the beginning this pane will be empty.</li>
+<li>Click the three horizontal lines in the left top of the pane.</li>
+<li>Select [Preferences]<ul>
+<li>[General : turn the switch for <strong>Tray icon</strong> on]</li>
+<li>[Notes: Set the initial size, colour, position and font for future notes]</li>
+<li>[Backups : Leave it off]</li>
+<li>[Automatic start : turn the automatic start on]</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The file keeping the notes text can be found in <code>/home/&lt;user&gt;/.config/sticky/notes.json</code></p>
+</div>
+<h3 id="sound-video">Sound &amp; Video</h3>
+<h4 id="obs-studio">OBS Studio</h4>
+<p>OBS Studio, also known as Open Broadcaster Software Studio, serves content creators, streamers, and video professionals as top-tier open-source software.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>OBS Studio (obs-studio)</strong></p>
+<h4 id="vlc-media-player">VLC Media Player</h4>
+<p>VLC is a free and open-source multimedia player. It supports a wide range of multimedia formats such as MKV, MP4, MPEG, MPEG-2, MPEG-4, DivX, MOV, WMV, QuickTime, WebM, FLAC, MP3, Ogg/Vorbis files, BluRays, DVDs, VCDs, podcasts, and multimedia streams from various network sources.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>VLC (vlc)</strong></p>
+<h4 id="pulse-audio-volume-control-pavu">Pulse Audio Volume Control (PAVU)</h4>
+<p>PulseAudio Volume Control (pavucontrol) is a simple GTK+ based volume control tool (mixer) for the PulseAudio sound server. In contrast to classic mixer tools this one allows you to control both the volume of hardware devices and of each playback stream separately. It also allows you to redirect a playback stream to another output device without interrupting playback.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>Volume Control (pavucontrol)</strong></p>
+<h3 id="programming">Programming</h3>
+<h4 id="git-git-cola">GIT - Git-Cola</h4>
+<p>Git Cola is a sleek and powerful graphical user interface for Git and It is mainly for use with GitHub.
+Git Cola is free software and written in Python.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>git</strong>
+Use <strong>PAMAC</strong> to install <strong>git-cola</strong>  (this comes out of the AUR repository)</p>
+<h4 id="visual-studio-code">Visual Studio Code</h4>
+<p>Visual Studio Code, often abbreviated as VS Code, is a Microsoft re-owned code editor (Git atom) appreciated for its lightweight nature and extensible possibilities for customisation. </p>
+<p>Use <strong>PAMAC</strong> to install <strong>Code - OSS (code)</strong></p>
+<p>As written, <strong>Visual Studio Code</strong> is a distribution of the Code - OSS repository with Microsoft specific customisation released under a traditional Microsoft product license. But the one in the Manjaro repositories is <strong>Code - OSS</strong> an open source project without any proprietary code.</p>
+<h4 id="meld">Meld</h4>
+<p>Files and directories comparison is the task that is often required, Meld takes this job seriously and is considered one of the best tools to perform comparisons between files, directories, and version control
+projects. It is widely used by Linux desktop users and app developers to cater their daily comparison needs. Here are some of the noteworthy features of this application.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>Meld (meld)</strong></p>
+<p>Meld is installed because a add-on package of Code-OSS is using it.</p>
+<h4 id="qt">QT</h4>
+<p>Unlike Linux Mint and Ubuntu, QT can directly be installed using the PAMAC install tool.
+With Linux Mint a QT account was required and a download of the QT tools. The QT tools web installer needed to be run to install required QT tools. With Manjaro, start PAMAC and in the search bar enter QT. Five QT packages are listed, select the package required.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>Qt Assistant (qt5-tools)</strong>
+Use <strong>PAMAC</strong> to install <strong>Qt Creator (qtcreator)</strong>
+Use <strong>PAMAC</strong> to install <strong>Qt Designer (qt5-tools</strong>
+Use <strong>PAMAC</strong> to install <strong>Qt Linguist (qt5-tools)</strong>
+Use <strong>PAMAC</strong> to install <strong>Qt QDBusViewer (qt5-tools)</strong></p>
+<h4 id="tcl-tk">Tcl-Tk</h4>
+<p>Tcl (Tool Command Language) is a powerful, open source, business-friendly and easy to learn programming language. Tcl is a mature yet evolving language that is truly cross platform, easily deployed and highly extensible. It is suitable for a very wide range of uses, including web and desktop applications, networking, administration, testing and many more.</p>
+<p>Tk is a graphical user interface toolkit that act as the standard GUI for not only Tcl but for many other languages It can can produce rich, native applications that run unchanged across Windows, Mac OS X, Linux and more.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>tcl</strong> (8.6.14-4)
+Use <strong>PAMAC</strong> to install <strong>tk</strong> (8.6.14-4)</p>
+<p>Browse the tcl and tk list presented by PAMAC to add options to the tcl and/or tk installation.</p>
+<h3 id="office">Office</h3>
+<h4 id="typora">Typora</h4>
+<p>Typora provides a seamless experience as both a Markdown reader and a writer.
+As a writer/editor it removes the preview window, mode switcher, syntax symbols of markdown source code, and all other unnecessary distractions of other markdown readers &amp; writers.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>typora</strong> from the AUR repository.</p>
+<p>A different way to install Typora is to copy the binary tar.gz file (X64) from <a href="https://typora.io/#linux">here</a> (small text button [binary file (X64)] under the screenshot of a terminal window). After saving it locally and uncompressing copy the contents of the <code>/bin</code> directory to the <code>/usr/bin</code> directory. In this case the update system of Manjaro will not auto update Pandoc.</p>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>Typora is no longer a free tool. The cost is $15. But it’s worth it.
+Pay the money, get a license and register it.</p>
+</div>
+<h4 id="pandoc">Pandoc</h4>
+<p><a href="http://pandoc.org/">Pandoc</a> is a universal document text converter.
+Typora is using it to support file import/export features for several file types (pdf, html, docx, ...).
+If ever using it, the GitHub Atom text edit is also using it.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>pandoc-cli</strong> from the official repositories</p>
+<p>Another way to get Pandoc is to download it (tar.gz file) from the <a href="">Pandoc site</a> and after uncompressing it, copy the contents, as root/sudo, of the <code>/bin</code> and <code>/share</code> directories to <code>/usr/bin</code> and <code>/usr/share</code>. As for Typora, in this case the update system of Manjaro will not auto update Pandoc.</p>
+<h4 id="latex-texlive">Latex (TexLive)</h4>
+<p>TeX Live is an easy way to get up and running with the <a href="https://tug.org/">TeX document production system</a>.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>texlive-\<something></strong> from the official repositories</p>
+<p>The <strong>\<something></strong> is what is displayed in the list after typing <strong>texlive</strong> in the PAMAC search bar.
+A whole list of texlive addons are displayed together with the necessities.  These texlive tools need to be installed as base using PAMAC:</p>
+<ul>
+<li>texlive-basic</li>
+<li>texlive-bin</li>
+<li>texlive-latex</li>
+<li>texlive-latexextra</li>
+<li>texlive-latexrecommended</li>
+<li>texlive-pictures</li>
+<li>texlive-plaingeneric</li>
+<li>texlive-pstricks</li>
+</ul>
+<p>There is always a different way to do things. So is here:</p>
+<ul>
+<li>
+<p>Start a web browser and go to: https://tug.org/texlive/acquire-netinstall.html</p>
+</li>
+<li>
+<p>Click the <a href="https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz">install-tl-unx.tar.gz</a> or the <a href="http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip">install-tl.zip</a> file and save it (/Downloads)</p>
+</li>
+<li>
+<p>Uncompress the tar.gz or zip file. The result will be a directory called <strong>install-tl-\&lt;invers-date&gt;</strong></p>
+</li>
+<li>
+<p>Launch a terminal and change into the directory created by the unzip operation.</p>
+</li>
+<li>
+<p>Run the install script <code>./install-tl -gui</code></p>
+<ul>
+<li>The most important in the install script is the install location .</li>
+<li>Provide the install directory <code>/opt/TexLive/&lt;year&gt;</code></li>
+</ul>
+</li>
+<li>
+<p>Installing TexLive will take a while, so be patient (go drink a cup of coffee, thee or something cold.</p>
+</li>
+<li>
+<p>........ (waiting)</p>
+</li>
+<li>
+<p>When installed, or even during install, add the TexLive installation to the path.</p>
+<ul>
+<li>
+<p>In the user home directory, open with a edit, xed, the <em>.bash_aliases</em> file.</p>
+</li>
+<li>
+<p>Add following lines to the file and save it afterwards.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>export TL_ROOT=/opt/TexLive/2024
+export PATH=$PATH:TL_ROOT/bin/x86_64-linux
+</code></pre></div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<blockquote>
+<p>Again, this way, Manjaro PAMAC will not update the LaTeX (texlive) installation.</p>
+</blockquote>
+<h4 id="latexdraw">LatexDraw</h4>
+<p>LaTeXDraw is a graphical drawing editor for LaTeX.
+LaTeXDraw can be used to generate <a href="http://tug.org/PSTricks/main.cgi/"><strong>PSTricks</strong></a> code and/or directly create PDF or PS pictures.</p>
+<p>Latexdraw is available in the AUR repositories but when installing it from there things went always wrong because of missing JAVA things or versioning issues with JAVA. </p>
+<p>Thus!  Do not use <strong>PAMAC</strong> to install LaTexDraw</p>
+<p>To get Latexdraw running it is a bit more work than hitting some buttons in PAMAC.</p>
+<ul>
+<li>Go to the latexdraw <a href="https://latexdraw.sourceforge.net">web page</a>.</li>
+<li>Click on the link right of <strong>Latest version:</strong> (At time of writing, it was: 4.0.3)</li>
+<li>Click the <strong>latexdraw-4.0.3-linux-binaries.txz</strong> entry and download/save the file.</li>
+<li>Uncompress the downloaded file and copy as root/sudo the contents (a latexdraw-\<version> directory) to the <code>/opt</code> directory. </li>
+<li>It is now possible to start Latexdraw as <code>/opt/latexdraw-4.0.3/bin/latexdraw-run</code> but it would be easier to have an entry for Latexdraw in the main [Manjaro Menu] in the left bottom of the screen.</li>
+<li>Let us create a Latexdraw entry in the [Office] tab of the main menu.<ul>
+<li>Right click the [Manjaro Menu] button in the bottom left corner of the screen</li>
+<li>Select in the pop up menu [Configure]</li>
+<li>A Menu pane pops, select here the [Menu] tab in the top of the pane.</li>
+<li>Hit, in the middle of the pane, the [Open the menu editor] button</li>
+<li>A new [Main Menu] pane pops up<ul>
+<li>Select in the left column [Office] </li>
+<li>Click now [New Item] in the right button column</li>
+<li>A small [Launcher Properties] window pops up.<ul>
+<li>[Name:  Latexdraw]</li>
+<li>[Command: /opt/latexdraw-4.0.3/bin/latexdraw-run]</li>
+<li>[Comment: A vector drawing editor for LaTeX.]</li>
+<li>Click the icon in the top left corner <ul>
+<li>Click [Applications] in the left column</li>
+<li>Search and select the icon [latexila]
+    Or select another, or find the Latexdraw icon or ...</li>
+<li>Click [Select]</li>
+</ul>
+</li>
+<li>Click [OK]</li>
+</ul>
+</li>
+<li>A new selector [Latexdraw] is now add in the right column for [Office]</li>
+</ul>
+</li>
+<li>Hit [Close]</li>
+</ul>
+</li>
+<li>Let's see if it works<ul>
+<li>Click the [Manjaro Menu] in the left bottom screen cormer and start typing Latexdraw</li>
+<li>A selection of application will pop up while typing with in top Latexdraw</li>
+<li>Select it and see how Latexdraw starts.</li>
+</ul>
+</li>
+</ul>
+<h4 id="texstudio">TeXstudio</h4>
+<p>Writing texts using the LaTeX typesetting system can be done using any text editor. When doing so, the begin will be hard and frustrating. It's also possible and easier to use advanced editors like Code-OSS with a LaTeX writing aid add-on but when having a LaTeX dedicated editor is better. Uing that editor the LaTeX typesetting system can be learned and when fully familiar other editors can be used.</p>
+<p>TeXstudio is an integrated writing environment for creating LaTeX documents. The goal is to make writing LaTeX as easy and comfortable as possible. Therefore TeXstudio has numerous features like syntax-highlighting, integrated viewer, reference checking, and various assistants. </p>
+<p>Use <strong>PAMAC</strong> to install <strong>TeXstudio (texstudio)</strong> from the official repositories</p>
+<h4 id="sozi">Sozi</h4>
+<p>A zooming presentation editor and player based on  SVG and JavaScript. Sozi is a piece of software for creating animated presentations. It is generally used to make visual aids for lectures or meetings. With Sozi, a presentation is not organised as a sequence of slides, but rather as a succession of <em>viewpoints</em> on a <em>map</em> that you <em>explore</em>.</p>
+<ul>
+<li>
+<p>Use Sozi as appimage, and download the appimage file from: 
+        https://github.com/sozi-projects/Sozi/releases/tag/v23.07. </p>
+</li>
+<li>
+<p>Download the <code>Sozi-\&lt;version&gt;.Appimage</code> file:
+        At time of writing it was: <code>Sozi-23.7.25-1690311612.AppImage</code></p>
+</li>
+<li>
+<p>Save the file on disk and double click or right click and select [Open with AppImageLauncher]</p>
+</li>
+<li>Click in the AppImageLauncher pop-up [Integrate and run] button
+    Sozi will start but is from now on also availabkle from the [Manjaro Menu] </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sozi is also available from the AUR repositories.
+Use <strong>PAMAC</strong> to install <strong>Sozi-bin</strong> </p>
+</div>
+<p>The Sozi web page can be found here: http://sozi.guide/en/about-sozi.html</p>
+<h4 id="freeplane">Freeplane</h4>
+<p>Mind mapping and project management tool</p>
+<p>Use <strong>PAMAC</strong> to install <strong>Freeplane (freeplane)</strong> from the official repositories.</p>
+<p>Install it when required. Unless you need such tool of course</p>
+<h4 id="pdf-reader-writer-organiser">PDF Reader / Writer / Organiser</h4>
+<p>The default installed PDF reader is <strong>xreader</strong> in the main menu named as "Document Viewer". It's good, fast but allows only read operations. WHen its required to write in a PDF or comment PDFs then another tool is required. For Linux Mint and Ubuntu <strong>Foxit Reader</strong> was installed for that purpose.</p>
+<p>For Manjaro two tools are installed, it's on the user to decide what tool to keep. Both tools are capable to manipulate PDF files and both tools have their pro- and cons.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>Okular (okular)</strong> from the official repositories.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>xournal</strong> from the AUR repositories.</p>
+<p><strong>Okular</strong> is the document viewer and annotator tool from the KDE environment but it does a good job in other display environments too.</p>
+<p><strong>xournal</strong> is basically a note taking and sketching tool but it does a very good job in managing PDF files.
+Load a PDF and when required to save the PDF, export the document as PDF but use a different name.</p>
+<p>To organise PDF files in Linux Mint and Ubuntu, <strong>PDFsam</strong> was installed. For Manjaro PDFsam comes out of the AUR repositories and after install it acted weird. Therefor a different, but very capable, tool has been installed</p>
+<p>Use <strong>PAMAC</strong> to install <strong>xdg-desktop-portal-gtk</strong> from the official repositories.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>PDF Mix Tool (pdfmixtool)</strong> from the official repositories.</p>
+<p>Both tools need to be installed. The PDF Mix Tool uses the xdg-desktop-portal-gtk package.</p>
+<h3 id="internet">Internet</h3>
+<h4 id="eid-electronic-id-belgium">eid (Electronic ID Belgium)</h4>
+<p>The Belgian <strong>eID</strong> <strong>is</strong> an essential element in the chain of trust that provides a framework for safe digital exchanges. By its virtue of certifying the identity of the person doing the exchange and protecting access to citizens' data, the Belgian <strong>eID</strong> card actively participates in the success of e-Government policy.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>eid-mw</strong> from the AUR repositories.</p>
+<p>Connect a card reader (USB) to the PC and launch the eid-viewer. It reports that there is no card-reader recognised. Thus something is wrong and needs to be solved.</p>
+<ul>
+<li>Check if card-reader is recognized by the system,</li>
+<li>Open a terminal and type: lsusb</li>
+<li>If the card reader is recognised as USB device, a line in the output of the command looks as:
+    Bus 001 Device 007: ID 072f:9000 Advanced Card Systems, Ltd ACR38 AC1038-based Smart Card Reader.</li>
+</ul>
+<p>Install, using PAMAC, following packages</p>
+<ul>
+<li>pcsc-perl</li>
+<li>Gscriptor (pcsc-tools)</li>
+<li>pcsclite</li>
+<li>acsccid</li>
+<li>ccid</li>
+<li>opensc</li>
+</ul>
+<p>It's best to reboot the PC. After boot, the LED on the card reader blinks steady and it should be possible to read a eid card now.</p>
+<p>Finally go to this site: https://iamapps.belgium.be/tma/?lang=en</p>
+<ul>
+<li>Hit [Start test]</li>
+<li>Hit [Log in]</li>
+<li>Click [OK] for the user certificate</li>
+<li>Provide the passcode</li>
+<li>Wait for "Log in Successful"</li>
+<li>Click the [Sign Out] button and close the web browser.</li>
+</ul>
+<h4 id="thunderbird">Thunderbird</h4>
+<p>Maybe/perhaps the best mail client available. It is default installed when Ubuntu or Linux Mint are installed.
+Normally one will use the installed Thunderbird software. In the PC setup discussed here mail needs to be stored on an external network connected drive (NAS). For that it was better to completely remove Thunderbird and install it again in the /opt directory. Putting mail storage on an external drive, as a NAS drive, has the advantage that all mail is secure and backed-up. 
+do:</p>
+<ul>
+<li>
+<p>Browse to: https://www.thunderbird.net</p>
+</li>
+<li>
+<p>Hit the [download] button and save the downloaded “thunderbird-\&lt;version&gt;.tar.bz2” somewhere.</p>
+</li>
+<li>
+<p>In <strong>PAMAC</strong> type <strong>thunderbird</strong> in the search bar and when the tool is displayed click the red square with waste bin (Thunderbird is a default installed tool) . Click the [Apply] button in the bottom right and remove the default installed Thunderbird.</p>
+</li>
+<li>
+<p>Un-compress the .tar.bz2 file, as sudo, in the <code>/opt</code> directory. After the operation there will be a <code>/opt/thunderbird</code> directory available.</p>
+</li>
+<li>
+<p>Add, with a text editor, “/opt/thunderbird”  to the path in the .bash-aliases as:</p>
+<div class="highlight"><pre><span></span><code># Thunderbird mail client settings
+export PATH=$PATH:/opt/thunderbird.
+</code></pre></div>
+</li>
+<li>
+<p>Of course there is now no clickable entry for Thunderbird in the [Manjaro menu]
+    Create one by:</p>
+<ul>
+<li>Right click the menu in the left corner and select ‘configure’.</li>
+<li>In the pop up menu select the [Menu] tab and the hit the [Open the menu editor] button.</li>
+<li>Select [Internet] in the left menu and then hit [New Item] in the right menu.<ul>
+<li>Name: Thunderbird Mail</li>
+<li>Command: [Browse] go to /opt/thunderbird and pick thunderbird. Add a space and “<strong>%U</strong>”.</li>
+<li>Comment: Send and receive mail with Thunderbird</li>
+<li>Click the icon and in the popup go to /opt/thunderbird/chrome/icons/default.
+    Pick an icon from the listed, like default24.png</li>
+<li>[OK]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Assume Thunderbird mail need to be stored on a NAS drive or other external drive . 
+    Thunderbird cannot do it by default , but:</p>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>**Do this when Thunderbird is closed / not running! **</p>
+</div>
+<ul>
+<li>
+<p>Start Thunderbird, it is assumed that Thunderbird is started for the first time, and close it again.</p>
+</li>
+<li>
+<p>Thunderbird creates a .thunderbird directory in the users home directory.
+    This directory is only available if Thunderbird has been started and closed once.</p>
+</li>
+<li>
+<p>Copy that entire directory to a default mounted directory on the NAS, rename it to thunderbird (remove the ”<strong>.</strong>”).</p>
+</li>
+<li>
+<p>As precaution rename the .thunderbird directory in the users home to something like thunderbird_Org.</p>
+</li>
+<li>
+<p>Open a command terminal in the users home directory and create a symbolic link to the  thunderbird directory on the NAS.</p>
+<div class="highlight"><pre><span></span><code>ln -s /mnt/MainNasDir/thunderbird .thunderbird
+</code></pre></div>
+<p>A directory link .thunderbird  is created in the user home directory.
+The link shows all directories and files copied earlier to the Thunderbird NAS directory.</p>
+</li>
+<li>
+<p>Now Thunderbird can be started and used. all mail will be stored on the NAS drive.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="vivaldi">Vivaldi</h4>
+<p>Nothing needs to be done as Vivaldi is the default Manjaro browser.
+It might be smart to install a second web browser as Firefox.
+Install it from the PAMAC tool or download a appimage and run it that way.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>Firefox Web Browser (firefox)</strong> from the official repositories.</p>
+<p>OR</p>
+<p>Download the Firefox appimage file from: https://github.com/srevinsaju/Firefox-Appimage/releases
+Download the latest <code>firefox &lt;version&gt;</code>file, save it. Double click or right click and tick the AppImageLauncher pop-up [Integrate and run] button.</p>
+<p>At time of writing the Firefox version was: <code>firefox v128.0.r20240725162350</code></p>
+<h4 id="signal">Signal</h4>
+<p>Say "hello" to a different messaging experience.
+An unexpected focus on privacy, combined with all of the features you expect</p>
+<p>Use <strong>PAMAC</strong> to install <strong>Signal (signal-desktop)</strong> from the official repositories.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If Signal was used and running on the old PC, copy the entire <code>/home/&lt;user&gt;/.config/Signal</code> directory from the old PC into the <code>/home/&lt;user&gt;/.config/</code>directory of the new PC. The new PC will then get all settings, messages, ... from the on the old PC running Signal in a  <code>/home/&lt;user&gt;/.config/Signal</code> directory. When launching Signal on the new PC it will start as if it was always used on the new PC.</p>
+</div>
+<h4 id="deluge">Deluge</h4>
+<p><a href="http://deluge-torrent.org/">Deluge</a> is one of the most used <strong>torrent</strong> downloaders. It’s stable and easier to use as any other torrent client but the team makes it more stable by providing fix updates.</p>
+<p>Use <strong>PAMAC</strong> to install Deluge (deluge-gtk) from the official repositories.</p>
+<h3 id="graphics_1">Graphics</h3>
+<h4 id="inkscape">Inkscape</h4>
+<p>Inkscape is professional quality vector graphics software which runs on Windows, Mac OS X and GNU/Linux. It is used by design professionals and hobbyists worldwide, for creating a wide variety of graphics such as illustrations, icons, logos, diagrams, maps and web graphics. Inkscape uses the <a href="http://www.w3.org/">W3C</a> open standard <a href="http://www.w3.org/Graphics/SVG/">SVG</a> (Scalable Vector Graphics) as its native format, and is free and open-source software.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>Inkscape (inkscape)</strong> from the official repositories.</p>
+<p>OR <em>The better solution:</em> </p>
+<ul>
+<li>Download the appimage file from the <a href="https://inkscape.org/release/inkscape-1.3.2/">Inkscape download page</a>. hit the [GNU/Linux] button and the the [An executable file for Linux] button.</li>
+<li>Save the downloaded file and double click or right click the file and in the AppImageLauncher pop-up hit the [Integrate and run] button.</li>
+</ul>
+<p>Tutorials and guides:</p>
+<ul>
+<li>http://goinkscape.com/</li>
+<li>https://daviesmediadesign.com/inkscape-tutorials/</li>
+</ul>
+<h4 id="freecad">FreeCad</h4>
+<p>Freedom to build what you want. FreeCAD is an open-source parametric 3D modeler made primarily to           design real-life objects of any size. Parametric modeling allows you to easily modify your design by going back into your model history and changing its parameters. Create 3D from 2D &amp; back. FreeCAD allows you to sketch geometry constrained 2D shapes and use them as a base to build other objects. It contains many components to adjust dimensions or extract design details from 3D models to create high quality production ready drawings.</p>
+<p>It can be installed using PAMAC or as appimage, what seems the favourite choice of the developers.</p>
+<ul>
+<li>Download the appimage file from the <a href="https://www.freecad.org/downloads.php">FreeCad download page</a>. hit the [x86_64 Appimage] button.</li>
+<li>Save the downloaded file and double click or right click the file and in the AppImageLauncher pop-up hit the [Integrate and run] button.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<ul>
+<li>Find all information about FreeCad <a href="https://www.freecadweb.org/">here</a>.</li>
+<li>A basics tutorial can be found <a href="https://www.freecadweb.org/wiki/Basic_Part_Design_Tutorial">here</a>.</li>
+<li>Video tutorials on YouTube can be found <a href="https://www.youtube.com/watch?v=QzfT-ZDp0Wo">here</a>, (this is the first tutorial of a series).</li>
+</ul>
+<h4 id="odafileconverter">ODAfileConverter</h4>
+<p>DWG and DXF converter for converting between different versions of .dwg and .dxf
+Useful when used with FreeCad</p>
+<p>Use <strong>PAMAC</strong> to install <strong>oda-file-converter</strong> from the AUR repositories.</p>
+<h4 id="darktable">Darktable</h4>
+<p>Darktable is an open source photography workflow application and raw developer. A virtual lighttable and darkroom for photographers. It manages your digital negatives in a database, lets you view them through a zoom-able lighttable and enables you to develop raw images and enhance them.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>darktable (darktable)</strong> from the official repositories.</p>
+<p>Find darktable stuff <a href="https://www.darktable.org/">here</a></p>
+<h3 id="electronics">Electronics</h3>
+<h4 id="virtualbox">VirtualBox</h4>
+<p>VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use. </p>
+<p>Use <strong>PAMAC</strong> to install <strong>Oracle VM VirtualBox (virtualbox)</strong> from the official repositories.
+Use <strong>PAMAC</strong> to install <strong>virtualbox-guest-utils</strong> from the official repositories.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For several hardware projects, experiments are done with Linux. Download the 21.3 Cinnamon edition form <a href="https://linuxmint.com/download.php">Linux-Mint</a> . Save the downloaded ISO image somewhere on disk and setup and install a virtual machine. Read the details in the <a href="../VirtualBox/">Virtualbox</a> document.</p>
+</div>
+<h4 id="putty">PuTTY</h4>
+<p>PuTTY is an SSH and telnet client, developed originally by Simon Tatham for the Windows platform. PuTTY is open source software that is available with source code and is developed and supported by a group of volunteers.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>PuTTY (putty)</strong> from the official repositories.</p>
+<h4 id="cutecom">CuteCom</h4>
+<p>CuteCom is a graphical serial terminal. Currently it runs on Linux, FreeBSD and Mac OS X.
+It is aimed mainly at hardware developers or other people who need a terminal to talk to their devices. It is free software and distributed under the GNU General Public License Version 2.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>cutecom</strong> from the AUR repositories.</p>
+<h4 id="gtkwave">GTKwave</h4>
+<p>GTKWave is a fully featured <a href="http://www.gtk.org/">GTK+</a> based wave form viewer for Unix, Win32, and Mac OSX which reads LXT, LXT2, VZT, FST, and GHW files as well as standard VCD/EVCD files and allows their viewing.</p>
+<p>Documentation can be found <a href="https://gtkwave.sourceforge.net/gtkwave.pdf">here</a> as PDF file.</p>
+<p>Use <strong>PAMAC</strong> to install <strong>GTKWave (gtkwave)</strong> from the official repositories.</p>
+<h4 id="logisim-evolution">Logisim-Evolution</h4>
+<p>Logisim-evolution is educational software for designing and simulating digital logic circuits. Logisim-evolution is <a href="https://github.com/logisim-evolution/logisim-evolution#license">free</a>, <a href="https://github.com/logisim-evolution">open-source</a>, and <a href="https://github.com/logisim-evolution/logisim-evolution#requirements">cross-platform</a>. Logisim-evolution is a Java application it can thus run on any operating system supporting the Java runtime environment (It requires <a href="https://www.oracle.com/java/technologies/javase-downloads.html">Java 16 (or newer)</a>).</p>
+<p>Beside an educational tool it is a nice tool to get things quickly simulated.</p>
+<p>The <a href="https://github.com/logisim-evolution/logisim-evolution">GitHub page</a> and project highlights:</p>
+<ul>
+<li>easy to use circuit designer,</li>
+<li>logic circuit simulations,</li>
+<li>chronogram (to see the evolution of signals in your circuit),</li>
+<li>electronic board integration (schematics can be simulated on real hardware),</li>
+<li>VHDL components (components behavior can be specified in VHDL!),</li>
+<li>TCL/TK console (interfaces between the circuit and the user),</li>
+<li>huge library of components (LEDs, TTLs, switches, SoCs),</li>
+<li>supports <a href="https://github.com/logisim-evolution/logisim-evolution/blob/main/docs/docs.md#translations">multiple languages</a>,</li>
+<li>and more!</li>
+</ul>
+<p>Use <strong>PAMAC</strong> to install <strong>logisim-evolution-bin</strong> from the AUR repositories.</p>
+<h4 id="kicad">KiCad</h4>
+<p>KiCad EDA is A Cross Platform and Open Source Electronics Design Automation Suite</p>
+<p>Use <strong>PAMAC</strong> to install <strong>KiCad (kicad)</strong> from the official repositories.</p>
+<h6 id="libaries">Libaries</h6>
+<p>Use <strong>PAMAC</strong> to install <strong>kicad-library</strong> from the official repositories.
+Use <strong>PAMAC</strong> to install <strong>kicad-library-3d</strong> from the official repositories.</p>
+<p>More information and tips about and working with KiCad can be found <a href="../UseKiCad/">in this document</a></p>
+<h5 id="add-ons">Add-ons</h5>
+<p>When using PAMAC to install KiCad, the list of presented KiCad software is long and lists lots of good add-ons and side programs to help with design, debug, conversion, ... </p>
+<h4 id="xilinx-tools">Xilinx Tools</h4>
+<p>This is the big name in Field Programmable Gate Array (FPGA).
+Install the tools as described in <a href="../InstallXilinxTools/">this document</a></p>
+<h4 id="efinix-tools">Efinix tools</h4>
+<p>A very promising low cost FPGA vendor </p>
+<ul>
+<li><a href="https://www.efinixinc.com/support/account.php?do=create">Register</a> onto the Efinix website.</li>
+<li>
+<p><a href="https://www.efinixinc.com/support/index.php">Log in</a> onto the support page.</p>
+</li>
+<li>
+<p>Download the software, updates and patches, at the moment of writing the software is:</p>
+</li>
+<li>efinity-2024.1.163-ubuntu-x64.tar.bz2</li>
+<li>efinity-2024.1.163.2.15-ubuntu-x64-patch.zip</li>
+<li>efinity-riscv-ide-2024.1.0.1-linux-x64.run</li>
+<li>Install the software as described in <a href="../InstallEfinixTools/">this document</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 - ZirconfleX bv
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

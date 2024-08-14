@@ -1,0 +1,1079 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Rocinante Documentation">
+      
+      
+        <meta name="author" content="ZirconfleX">
+      
+      
+      
+        <link rel="prev" href="../UseKiCad/">
+      
+      
+        <link rel="next" href="../InstallEfinixTools/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Install Xilinx Tools - Rocinante</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#xilinx-tools-setup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Rocinante" class="md-header__button md-logo" aria-label="Rocinante" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rocinante
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Install Xilinx Tools
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Rocinante" class="md-nav__button md-logo" aria-label="Rocinante" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Rocinante
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-PC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Used Hardware
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux Install Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Linux Install Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-LinuxMint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux - Mint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-Ubuntu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocinante-Manjaro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manjaro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Add-on Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Add-on Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tmp_fstab_Issue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    /tmp fstab issue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Numlockx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numlockx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Remove_SNAP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Remove SNAP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The_Apt_Command/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The APT commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Updating_Keyring_Files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Keyring Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tech Add-on Documents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tech Add-on Documents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Install_Manage_Pyenv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PYENV & Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VirtualBox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VirtualBox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GTK_Wave_Installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GTK-Wave
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UseKiCad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using KiCad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Install Xilinx Tools
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Install Xilinx Tools
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-settings-for-vivado-vitis-and-petalinux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Settings for Vivado, Vitis and PetaLinux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-boards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development Boards
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstallEfinixTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Efinix Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-settings-for-vivado-vitis-and-petalinux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Settings for Vivado, Vitis and PetaLinux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-boards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development Boards
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="xilinx-tools-setup">Xilinx Tools Setup</h1>
+<h2 id="overview">Overview</h2>
+<p>This guide will work you through the process of setting up Vivado, Vitis and PetaLinux.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The guide provides a global Xilinx/AMD tools installation but the first goal is/was to run Bare-Metal designs, Linux and Pynq designs on the Zynq 7000 Eclypse board.</p>
+</div>
+<h2 id="installation">Installation</h2>
+<p>Installing Xilinx/AMD tools can be done after downloading a binary installation file from the <a href="https://www.xilinx.com/support/download.html">software download</a> center of the XIlinx/AMD web site. Download the Linux Self Extracting installer (~220 MB) and save it.</p>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>A Xilinx User Account is required to be able to do this.</p>
+</div>
+<p><strong>Self Extracting File</strong></p>
+<ul>
+<li>Check if the downloaded file is executable and when it is:</li>
+<li>Start a command terminal and change directory to where the software installer file is saved.</li>
+<li>
+<p>Start the installer: <code>sudo ./&lt;File_name&gt;_Lin64.bin</code> and hit [Enter]</p>
+</li>
+<li>
+<p>Follow the installer and tell what needs to be installed.</p>
+</li>
+<li>At a point the installer shows the default installation directory (<strong>/tools/Xilinx</strong>) where it’s going to create the installation. This is not following UNIX or Linux rules as optional or vendor software tools should be installed in the <strong>/opt</strong> directory. Thus change the proposed install directory to: <strong>/opt/Xilinx</strong></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>/opt (Optional Software)</strong>: The /opt directory is used for optional software installed on the system. This directory can be used for installing software that is not included in the system’s package manager.
+Optional files such as vendor supplied application programs should be located here.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>It is not possible to install multiple tools at the same time. If multiple tools need to be installed, the binary installer needs to be run once for each tool that needs to be installed.</p>
+</div>
+<h3 id="setup">Setup</h3>
+<div class="admonition note">
+<p class="admonition-title">important</p>
+<ol>
+<li>
+<p><strong>Manjaro installation</strong>
+    When starting one of the tools (Vivado or Vitis) the tool will try to start but error out with this error
+    <code>"/path/to/vivado/unwrapped/lnx64.o/vivado" error while loading shared libraries:</code>
+    libcrypt.so.1: cannot open shared object file: No such file or directory`.</p>
+<ul>
+<li>The solution is to start PAMAC</li>
+<li>Click the magnifying glass and type in teh search bar: <code>libcrypt</code></li>
+<li>Select <strong>libxcrypt</strong> and <strong>libxcrypt-compat</strong> and click [Apply] to install the libraries.</li>
+</ul>
+<p>After installation of above libraries starting Vivado or Vitis pops up a second error </p>
+<p><code>application-specific initialization failed: couldn't load file "librdi_commontasks.so": libtinfo.so.5: cannot open shared object file: No such file or directory</code></p>
+<ul>
+<li>The solution is to start PAMAC</li>
+<li>Click the magnifying glass and type in teh search bar: <code>ncurses5</code></li>
+<li>Select <strong>ncurses5-compat-libs</strong> (AUR) and click [Apply] to install the library.</li>
+</ul>
+<p>Vitis and/or Vivado will now start without issues.</p>
+</li>
+<li>
+<p>Xilinx/AMD provides in <a href="https://support.xilinx.com/s/article/73296?language=en_US">AMD solution 73286</a> a script that can be used before PetaLinux is installed to check if all PetaLinux dependencies are met. If a dependency is not met, the script will install the tool or library. The script checks only supported OSses as Ubuntu and Red-Hat. Since this guide is written for a machine running Linux Mint (A full Ubuntu derivative) I’ve adapted the script so that the Linux Mint user can also work safely.
+The adapted “plnx-env-setup.sh” script is available <a href="../Scripts/plnx-env-setup.sh">here</a>.</p>
+</li>
+<li>
+<p>The shell used by the PetaLinux tools is the <strong>bash</strong> shell ( <em>Bourne Again Shell</em>). The script from  <a href="https://support.xilinx.com/s/article/73296?language=en_US">AMD solution 73286</a> and the modified script that goes with the user guide check if bash is the default shell. If not (sometimes the shell is set to <strong>dash</strong>) the shell is changed by the script to bash. The modified script can be downloaded form <a href="../Scripts/plnx-chng-shell.sh">here</a>.</p>
+</li>
+</ol>
+</div>
+<p>The script used in point <strong>2</strong> calls the script used in point <strong>3</strong>.
+Download both scripts in the same directory and run the script form poin <strong>2</strong> in order to fit also point <strong>3</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">important</p>
+<p>Despite that after the script is executed and the shell is possibly changed from <code>dash</code> to <code>bash</code>, starting a command terminal (after .bash_aliases has been setup for Xilinx environments) might report back that bash is not the default shell. </p>
+<ul>
+<li>To get rid of this and be able to work, do in the command terminal:</li>
+<li>Type <code>ln -l /bin/sh</code>. The answer in the terminal should be <strong>/bin/sh -&gt; bash</strong>. When that is not the case, the return is /bin/sh -&gt; dash, the symbolic link must be moved manually.</li>
+<li>To manually change the symbolic link type in the command terminal <code>sudo ln -sf bash /bin/sh</code></li>
+<li>Type <code>ln -l /usr/bin/sh</code>. In most cases the return is <strong>No such file or directory</strong> (1), but it might be that the returned text is  <strong>/usr/bin/sh -&gt; bash</strong> (2) or  <strong>/usr/bin/sh -&gt; dash</strong> (3). <ol>
+<li>Everything is OK, nothing to change.</li>
+<li>Everything is OK, nothing to change.</li>
+<li>Make the link point to the bash shell, type in the command terminal <code>sudo ln -sf bash /usr/bin/sh</code></li>
+</ol>
+</li>
+<li>Close the terminal and re-open a new command terminal. The text should be as in “Environment Settings for Vivado Vitis and PetaLinux”.</li>
+</ul>
+</div>
+<h3 id="environment-settings-for-vivado-vitis-and-petalinux">Environment Settings for Vivado, Vitis and PetaLinux</h3>
+<p>As earlier written, it is assumed that the user is using a bash environment.
+When Vivado, Vitis and PetaLinux tools are all installed make a system setup so that tools can easily be started from the command line in a terminal
+Each of the Xilinx tools has a <strong>settings64.sh</strong> file. Sourcing that file sets all environment variables for the installed tools. Thus each time the Xilinx tools are going to be used one needs to source the setting64.sh script. Easier is to declare all the settings in the .bash_aliases file acting as a .bashrc companion file. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>
+<p><strong>do not</strong> Put environment or other settings for installed tools in the main <strong>.bashrc</strong> file, but use a companion file that is automatically sourced by the .bashrc file. The companion file to use is the  <strong>.bash_aliases</strong> file.</p>
+</li>
+<li>
+<p>As <strong>pyenv</strong> is installed as Python development environment, protecting the system Python installation from being altered, its path needs to be in the absolute front of the system path. 
+Every installed vendor tool want to be in the front of the path and that is something that is prevented in below showed .bash_aliases text.</p>
+</li>
+</ul>
+</div>
+<p>Open in the users home directory, using a text editor (xed, gedit, vim, code or ...), the “<strong>.bash_aliases</strong>” file and add</p>
+<div class="highlight"><pre><span></span><code># Xilinx Tools
+export XILINX_VERSION=2024.1
+#
+export XILINX_VIVADO=/opt/Xilinx/Vivado/$XILINX_VERSION
+export XILINX_HLS=/opt/Xilinx/Vitis_HLS/$XILINX_VERSION
+#export XILINX_VITIS=/opt/Xilinx/Vitis/$XILINX_VERSION
+#
+export PATH=$PATH:$XILINX_VIVADO/bin
+export PATH=$PATH:$XILINX_HLS/bin
+#export PATH=$PATH:$XILINX_VITIS/bin
+#
+echo &quot; Vivado, Vitis-HLS and Vitis settings done.&quot;
+#
+# PetaLinux
+. /opt/PetaLinux/settings.sh
+#
+</code></pre></div>
+<p>Save the .bash_aliases file.</p>
+<p>When starting a command terminal the .bash_aliases file is read after the main .bash file is read and all settings are done so that Vivado/Vitis/PetaLinux and other tools can be started.</p>
+<div class="admonition note">
+<p class="admonition-title">tip</p>
+<p>When the Efinix FPGA tools are installed or are going to be installed drop the Xilinx/AMD and Efinix environment settings in their own script file (example: .SelectFpgaEnv.sh). Make the file executable and call it from withing .bash_aliases. An example is provided in the "More about environment settings" chapter in the <a href="../InstallEfinixTools/#More-about-environment-settings">document discussing the Efinix FPGA tools installation</a>.</p>
+</div>
+<p>When new versions of the Xilinx/AMD tools must be installed, then:</p>
+<ul>
+<li>Rename the directory of the current installed tools. Example <code>/opt/Xilinx</code> to <code>/opt/Xilinx_Old</code>.</li>
+<li>Install the new Xilinx tools and set the install directory to be <code>/opt/Xilinx</code>.</li>
+<li>When the tools are installed, the only thing to change to get back up and running is the <strong>XILINX_VERSION</strong> environment in the .bash_aliases file or in the .SelectFpgaEnv.sh script.</li>
+</ul>
+<h3 id="development-boards">Development Boards</h3>
+<p>When setting up a Vivado project one must select a FPGA family, part, package and speed range or select a board from a list of Xilinx and/or third party boards. When the tools are installed a list of boards is installed and from those a selection can be made.</p>
+<p>When the boards tab is selected, as showed in figure 2, a table with by Vivado recognised board is presented. When the files representing a board are installed, the column <strong>Status</strong> will show “Installed”, when the board is not installed the “Status” column will show a “down pointing arrow” indicating that a mouse click on the arrow will download the board files.</p>
+<p>When a board is not present in the table list, one can hit the [Refresh] button in an attempt to update the table with the latest board information from Xilinx/AMD and partners.</p>
+<p>Another way to get boards installed is:</p>
+<ul>
+<li>
+<p>Xilinx and partners or even unrelated to Xilinx FPGA board manufactures publish on the GitHub page or on a dedicated own web page Vivado Board files for download.</p>
+</li>
+<li>
+<p>An example: </p>
+<ul>
+<li>
+<p>Digilent publishes on <a href="https://github.com/Digilent/vivado-boards">GitHub</a> a set of all available Digilent boards for download.</p>
+</li>
+<li>
+<p>Download the file (vivado-boards-master.zip), store it and unzip it in a directory on the PC.</p>
+</li>
+<li>
+<p>Delete all files and directories, except the directory <strong>vivado-boards-master/new/board_files</strong> and its contents.</p>
+</li>
+<li>
+<p>Make a new directory with meaningful name, like <strong>Digilent_Boards</strong> and copy the content of the <strong>board_files</strong> directory in here.</p>
+</li>
+<li>
+<p>Using a file browser (Nemo), go to the users home directory, make all hidden directories and files visible (CTRL-H)</p>
+</li>
+<li>
+<p>Look for the directory <strong>.Xilinx</strong></p>
+</li>
+<li>
+<p>Change into its sub-directory <strong>Vivado</strong></p>
+</li>
+<li>
+<p>Create with a text editor a file <strong>Vivadi_init.tcl</strong> and let the content of the file be:</p>
+<div class="highlight"><pre><span></span><code>set_param board.repoPaths [list &quot;Path/to/the/board/directory&quot;]
+</code></pre></div>
+</li>
+<li>
+<p>If there are multiple directories with board files, like own made board files, separate the different path using <strong>“ ”</strong>. Like : </p>
+<div class="highlight"><pre><span></span><code>set_param board.repoPaths [list &quot;Path One&quot; &quot;Path Two&quot; &quot;...&quot;]
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 - ZirconfleX bv
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
