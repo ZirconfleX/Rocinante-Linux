@@ -1,0 +1,93 @@
+uname -r
+
+version 6.5 is being used
+This version is not supported in the list we get from below command
+
+sudo pacman -Ss virtualbox-host-modules
+
+Upgrade kernel
+
+
+uname -r
+
+version 6.6 is being used
+This version is listed as: linux66-virtualbox-host-modules
+
+sudo pacman -S linux66-virtualbox-host-modules
+
+sudo pacman -S virtualbox
+
+The VirtualBox is now installed and ready for use on your Manjaro system. Reload its modules:
+
+sudo vboxreload
+
+verify the exact version of the installed locally VirtualBox
+
+vboxmanage -v | cut -dr -f1
+
+It is: 7.0.18 in my case
+
+wget https://download.virtualbox.org/virtualbox/7.0.18/Oracle_VM_VirtualBox_Extension_Pack-7.0.18.vbox-extpack
+
+install the VirtualBox Extension pack
+
+sudo vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack-7.0.18.vbox-extpack
+
+agree to Oracle’s license terms and conditions, answer YES
+
+verify installed VirtualBox’s extension pack version
+
+vboxmanage list extpacks
+
+Before using VirtualBox, add your user account to the “vboxusers” group.
+
+sudo usermod -aG vboxusers $USER
+
+groups $USER
+
+start using VirtualBox by launching it from the desktop environment’s application menu -> “System” -> “Oracle VM VirtualBox.”
+
+After install of the geust OS, it is best to install VirtualBoxGuestadditions.
+
+Example :
+    Configure all settings of VirtualBox for a Guest OS.
+    Install as Guest OS, Linux Mint 21.4
+    Start the Guest OS.
+
+    Click [Devices] [Insert Guest Addirtions CD Image]
+    Probably it will tell there is no GuestAdditions CD image and as to download it. WHen clicking on [Download] probably an error will follow.
+
+Do next to get the Guest Addiions installed
+
+In teh Guest Machine do:
+    Start a command terminal
+    sudo apt update
+    sudo apt upgrade
+    sudo apt install build-essential
+    sudo apt install module-assistant
+    sudo m-a prepare
+
+Go back to the Manjaro host.
+    Start a web browser and go to:
+    https://download.virtualbox.org/virtualbox
+        Select: 7.0.18 because 7.0.18 is the version of VirtualBox installed  or select the version of Virtual BOx installed on your machine.
+        Download the: VBoxGuestAdditions_7.0.18.iso 
+
+Go back to the Virtual Linux-Mint guestmachine
+[Devices] [Optical Drives][Chose a disk file ...]
+Brose to where the VBoxGuestAdditions_7.0.18.iso is stored.
+and insert it in teh virtual CD player.
+
+Aftre a couple of seconds Linux-Mint will pop up a window with text telling an installable software CD is inserted and as to install it. Install it.
+Follow the txt on screen (poped up command terminal).
+
+Unoumt the VboxGuest Addirtions CD (Will need force unmount).
+
+Done.
+
+
+    
+        
+    
+    
+
