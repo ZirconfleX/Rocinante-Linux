@@ -9,3 +9,5 @@ While searching the WWW for solutions I decided to write a elaborated version of
 
 As above text reads this was initially setup as guide for people developing hardware but while writing and getting comments from colleagues and friends it turned out that the document (webpages) are useful for eveybody wanting to install Linux on a brand new custom build PC.
 
+For comments, remarks, hints, and all other things that might make thes pages more usefull (Flagged typos are also welcome): info@zirconflex.be
+
