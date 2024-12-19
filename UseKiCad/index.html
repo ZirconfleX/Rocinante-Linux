@@ -835,11 +835,16 @@ sudo chmod 775 /opt/KiCad
 </li>
 </ul>
 <blockquote>
-<p>[!note]</p>
-<p>Why /opt?</p>
-<p><strong>/opt (Optional Software)</strong>: The /opt directory is used for optional software installed on the system. This directory can be used for installing software that is not included in the system’s package manager.
-Optional files such as vendor supplied application programs should be located here.</p>
+<!--[!note]-->
+<!--Why /opt?-->
+<p><!--**/opt (Optional Software)**: The /opt directory is used for optional software installed on the system. This directory can be used for installing software that is not included in the system’s package manager.-->
+<!--Optional files such as vendor supplied application programs should be located here.--></p>
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Why /opt?</p>
+<p><strong>/opt (Optional Software)</strong>: The /opt directory is used for optional software installed on the system. This directory can be used for installing software that is not included in the system’s package manager.</p>
+</div>
+<p>Optional files such as vendor supplied application programs should be located here.</p>
 <h2 id="work-method">Work Method</h2>
 <p>As earlier written, the usefulness and easiness (call it feeling) of a CAD tool is closely related to how one organises work and operates the CAD tool.  When that is done in a smooth and consistent way, flaws of the tooling can mostly be forgiven and solved.
 As showed in the libraries paragraph the setup of libraries is important and the organisation of a project leans very close to the organisation of libraries. Because all things need a place and storage. The cleaner the organisation the easier one can work. The structure of the default installed libraries already shows a useful way how to organise the things of a project.</p>
@@ -896,10 +901,14 @@ Copy symbols present in the default library <code>/opt/KiCad/kicad/symbols</code
 </li>
 </ul>
 <blockquote>
-<p>[!tip]</p>
-<p>When the project is stable, schematics, PCB and mechanics are checked and the functioning of the whole is proven 3d models, symbols and footprints can be copied to the <code>/opt/KicadUser</code> sub-directories. 
-Of course all of this takes time and attention, but once the habit of it kicks in it makes things so easy. After years all information about a project is still available without any effort to spend. Once models, symbols, footprints, mechanical stuff has proven to be correct and working it can be copied to the global user libraries.</p>
+<!--[!tip]-->
+<p><!--When the project is stable, schematics, PCB and mechanics are checked and the functioning of the whole is proven 3d models, symbols and footprints can be copied to the <code>/opt/KicadUser</code> sub-directories.--> 
+<!--Of course all of this takes time and attention, but once the habit of it kicks in it makes things so easy. After years all information about a project is still available without any effort to spend. Once models, symbols, footprints, mechanical stuff has proven to be correct and working it can be copied to the global user libraries.--></p>
 </blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When the project is stable, schematics, PCB and mechanics are checked and the functioning of the whole is proven 3d models, symbols and footprints can be copied to the <code>/opt/KicadUser</code> sub-directories. Of course all of this takes time and attention, but once the habit of it kicks in it makes things so easy. After years all information about a project is still available without any effort to spend. Once models, symbols, footprints, mechanical stuff has proven to be correct and working it can be copied to the global user libraries.</p>
+</div>
 </li>
 <li>
 <p><strong>GerberFiles</strong></p>

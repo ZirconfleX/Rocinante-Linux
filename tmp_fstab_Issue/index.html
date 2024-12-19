@@ -839,14 +839,21 @@ This can only be checked (it should be one of the first things to check) and sol
 </li>
 </ul>
 <blockquote>
-<p>[!NOTE]</p>
-<p>The explication in this document shows how to solve a possible warning about the system partitioning when using the automatic /tmp mount setting. When knowing that Manjaro is going to be used and before installation, remove the /tmp partition from the partitioning table and add the size spend to the /tmp partitioning to the users /home partitioning. This will avoid the need to use this document to solve a boot warning about partitioning issues.</p>
+<!--[!NOTE]-->
+<!--The explication in this document shows how to solve a possible warning about the system partitioning when using the automatic /tmp mount setting. When knowing that Manjaro is going to be used and before installation, remove the /tmp partition from the partitioning table and add the size spend to the /tmp partitioning to the users /home partitioning. This will avoid the need to use this document to solve a boot warning about partitioning issues.-->
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The explication in this document shows how to solve a possible warning about the system partitioning when using the automatic /tmp mount setting. When knowing that Manjaro is going to be used and before installation, remove the /tmp partition from the partitioning table and add the size spend to the /tmp partitioning to the users /home partitioning. This will avoid the need to use this document to solve a boot warning about partitioning issues.</p>
+</div>
 <h3 id="the-log-warming-message">The log warming message</h3>
 <div class="highlight"><pre><span></span><code>system /usr/lib/systemd/system-generators/systemd-fstab-generator failed with exit status 1. system Failed to create unit file &#39;/run/systemd/generator/tmp.mount&#39;, as it already exists. Duplicate entry in &#39;/etc/fstab&#39;?
 </code></pre></div>
 <blockquote>
-<p>[!TIP]</p>
+<!-- [!TIP] -->
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+</div>
 <p>To easily get the above warning and in general get notified about errors, warnings, and other hardware and software messages normally written in different logs files, install after the first boot the <strong>gnome logs</strong> tool.</p>
 <ul>
 <li>
@@ -975,9 +982,13 @@ In case it is not installed do:</p>
 <p>Consult the partitioning table and find out what partition is occupied by /tmp. 
 Here it is the line starting with <strong>/dev/nvme0n1p4</strong>.</p>
 <blockquote>
-<p>[!IMPORTANT]</p>
-<p>The lines indicating the mount points of the NAS drive are not included here.</p>
+<!--[!IMPORTANT]-->
+<!--The lines indicating the mount points of the NAS drive are not included here.-->
 </blockquote>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The lines indicating the mount points of the NAS drive are not included here.</p>
+</div>
 <p><span style="font-size:10px; ">[/dev/nvme0n1p7: UUID="da728a9f-47b3-4784-9aa0-942d78536418" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="4f19ce30-7825-4724-958d-e10ddb540199"]</span>
 <span style="font-size:10px; ">[/dev/nvme0n1p5: UUID="da9dfb0b-df66-4a7f-9391-408d4c735ee2" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="42c60059-7008-42a5-96e4-4917ab9e276b"]</span>
 <span style="font-size:10px; ">[/dev/nvme0n1p3: UUID="0f23c13a-2fba-48aa-8e8a-66ebe579bdd5" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="1ea974c9-9f97-45ea-8f0a-cd8292e823f3"]</span>
@@ -989,11 +1000,14 @@ Here it is the line starting with <strong>/dev/nvme0n1p4</strong>.</p>
 <span style="font-size:10px; ">[/dev/nvme1n1p2: UUID="cf3acd37-243d-4bd5-9385-500576b25164" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="f2aff194-0e33-40c4-a24b-968f0025e2f8"]</span>
 <span style="font-size:10px; ">[/dev/nvme1n1p1: UUID="37db1472-d722-42bd-8cf1-48080d098072" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="849eed55-4e0e-47bd-9d0b-40867b8cdbd3"]</span>
 <span style="font-size:10px; ">[/dev/sda1:      UUID="5e8c3765-4ced-447b-b81e-88bd2be15863" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="239d98a5-16c9-45d6-864c-aa1db4832122"]</span></p>
-<h3 id="fstab-b">fstab B</h3>
+<h3 id="fstab-b">fstab B<!--[!IMPORTANT]--></h3>
 <blockquote>
-<p>[!IMPORTANT]</p>
-<p>The lines indicating the mount points of the NAS drive are not included here.</p>
+<!--The lines indicating the mount points of the NAS drive are not included here.-->
 </blockquote>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The lines indicating the mount points of the NAS drive are not included here.</p>
+</div>
 <div class="highlight"><pre><span></span><code># /etc/fstab: static file system information.
 #
 # Use &#39;blkid&#39; to print the universally unique identifier for a device; this may

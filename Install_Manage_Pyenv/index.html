@@ -1172,12 +1172,16 @@ When in need for something, in a lot of cases somebody already developed it.
 Those add-ons can be download from the PyPi website. PyPi is a huge database/repository of community developed and shared software utilities.</p>
 <p>PyPi packages are installed in a terminal/command window using <strong>pip</strong> (<strong>pip</strong> works the same for Linux and Microsoft).</p>
 <blockquote>
-<p>[!Note]</p>
-<p>Using a Python version allows that a set of packages/libraries for/with that version are installed and used. The packages are installed in the same <em>pyenv</em> directory containing the Python version.
-When a new Python version is installed all in a previous version installed packages are gone. The remain installed with the old Python version.
-To get all previous used packages back into the new Python version use the <strong>pyenv-pip-migrate</strong> tool.
-<code>pyenv migrate &lt;old_version&gt; &lt;new_version&gt;</code> Like: <em>pyenv migrate 3.7.4 3.8.0</em></p>
+<!--[!Note]-->
+<p><!--Using a Python version allows that a set of packages/libraries for/with that version are installed and used. The packages are installed in the same *pyenv* directory containing the Python version.-->
+<!--When a new Python version is installed all in a previous version installed packages are gone. The remain installed with the old Python version.-->
+<!--To get all previous used packages back into the new Python version use the **pyenv-pip-migrate** tool.-->
+<!--<code>pyenv migrate &lt;old_version&gt; &lt;new_version&gt;</code> Like: *pyenv migrate 3.7.4 3.8.0*--></p>
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Using a Python version allows that a set of packages/libraries for/with that version are installed and  used. The packages are installed in the same <em>pyenv</em> directory containing the Python version. When a    new Python version is installed all in a previous version installed packages are gone. The remain   installed with the old Python version. To get all previous used packages back into the new Python version use the <strong>pyenv-pip-migrate</strong> tool<code>pyenv migrate &lt;old_version&gt; &lt;new_version&gt;</code> Like: <em>pyenv migrate 3.7.4 3.8.0</em></p>
+</div>
 <h3 id="useful-stuff">Useful Stuff</h3>
 <p>It is not that all what is mentioned and discussed below is you-need-to-have-this-or-else ...
 Below is just a set of packages I have installed and use.</p>
@@ -1357,8 +1361,8 @@ Pyside2 allows the use of QT for generating professional looking GUI tools and U
 <li>Qt (cute) is basically an aid to give to C/C++ easy graphical possibilities.</li>
 <li>Due to that PySide has dependencies to a C/C++ parser clang.</li>
 </ul>
-<p>A complete Python IDE that can be installed using pip:</p>
 <h4 id="spyder">Spyder</h4>
+<p>A complete Python IDE that can be installed using pip:</p>
 <ul>
 <li>
 <p>Spyder is a kind of all in one tool for Python development.</p>

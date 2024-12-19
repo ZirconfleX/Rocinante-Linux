@@ -843,15 +843,23 @@
 <h2 id="overview">Overview</h2>
 <p>This guide will work you through the process of setting up Vivado, Vitis and PetaLinux.</p>
 <blockquote>
-<p>[!note]</p>
-<p>The guide provides a global Xilinx/AMD tools installation but the first goal is/was to run Bare-Metal designs, Linux and Pynq designs on the Zynq 7000 Eclypse board.</p>
+<!--[!note]-->
+<!--The guide provides a global Xilinx/AMD tools installation but the first goal is/was to run Bare-Metal designs, Linux and Pynq designs on the Zynq 7000 Eclypse board.-->
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The guide provides a global Xilinx/AMD tools installation but the first goal is/was to run Bare-Metal designs, Linux and Pynq designs on the Zynq 7000 Eclypse board.</p>
+</div>
 <h2 id="installation">Installation</h2>
 <p>Installing Xilinx/AMD tools can be done after downloading a binary installation file from the <a href="https://www.xilinx.com/support/download.html">software download</a> center of the XIlinx/AMD web site. Download the Linux Self Extracting installer (~220 MB) and save it.</p>
 <blockquote>
-<p>[!Note]</p>
-<p>A Xilinx User Account is required to be able to do this.</p>
+<!--[!Note]-->
+<!--A Xilinx User Account is required to be able to do this.-->
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A Xilinx User Account is required to be able to do this.</p>
+</div>
 <p><strong>Self Extracting File</strong></p>
 <ul>
 <li>Check if the downloaded file is executable and when it is:</li>
@@ -862,18 +870,34 @@
 <li>
 <p>Follow the installer and tell what needs to be installed.</p>
 </li>
-<li>At a point the installer shows the default installation directory (<strong>/tools/Xilinx</strong>) where it’s going to create the installation. This is not following UNIX or Linux rules as optional or vendor software tools should be installed in the <strong>/opt</strong> directory. Thus change the proposed install directory to: <strong>/opt/Xilinx</strong></li>
+<li>At a point the installer shows the default installation directory (<strong>/tools/Xilinx</strong>) where it’s going to create the installation. This is not following UNIX or Linux rules as optional or vendor software tools should be installed in the <strong>/opt</strong> directory. Thus change the proposed install directory to: **/opt/Xilinx<!--**--></li>
 </ul>
 <blockquote>
-<p>[!note]</p>
+<!--[!note]-->
+<p><!--**/opt (Optional Software)**: The /opt directory is used for optional software installed on the system. This directory can be used for installing software that is not included in the system’s package manager.-->
+<!--Optional files such as vendor supplied application programs should be located here.--></p>
+<p><!-- [!Note]-->
+<!--It is not possible to install multiple tools at the same time. If multiple tools need to be installed, the binary installer needs to be run once for each tool that needs to be installed.--></p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>/opt (Optional Software)</strong>: The /opt directory is used for optional software installed on the system. This directory can be used for installing software that is not included in the system’s package manager.
 Optional files such as vendor supplied application programs should be located here.</p>
-<p>[!Note]
-It is not possible to install multiple tools at the same time. If multiple tools need to be installed, the binary installer needs to be run once for each tool that needs to be installed.</p>
-</blockquote>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is not possible to install multiple tools at the same time. If multiple tools need to be installed, the binary installer needs to be run once for each tool that needs to be installed.</p>
+</div>
 <h3 id="setup">Setup</h3>
 <blockquote>
-<p>[!important]</p>
+<!--[!Important]-->
+<!--READ BELOW TEXT CAREFULLY else the Xilinx tools will not work.-->
+</blockquote>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+</div>
+<p>READ BELOW TEXT CAREFULLY else the Xilinx tools will not work.</p>
+<blockquote>
 <ol>
 <li>
 <p><strong>Manjaro installation</strong>
@@ -905,7 +929,6 @@ It is not possible to install multiple tools at the same time. If multiple tools
 <p>The script used in point <strong>2</strong> calls the script used in point <strong>3</strong>.
 Download both scripts in the same directory and run the script form poin <strong>2</strong> in order to fit also point <strong>3</strong>.</p>
 <blockquote>
-<p>[!important]</p>
 <p>Despite that after the script is executed and the shell is possibly changed from <code>dash</code> to <code>bash</code>, starting a command terminal (after .bash_aliases has been setup for Xilinx environments) might report back that bash is not the default shell. </p>
 <ul>
 <li>To get rid of this and be able to work, do in the command terminal:</li>
@@ -926,17 +949,26 @@ Download both scripts in the same directory and run the script form poin <strong
 When Vivado, Vitis and PetaLinux tools are all installed make a system setup so that tools can easily be started from the command line in a terminal
 Each of the Xilinx tools has a <strong>settings64.sh</strong> file. Sourcing that file sets all environment variables for the installed tools. Thus each time the Xilinx tools are going to be used one needs to source the setting64.sh script. Easier is to declare all the settings in the .bash_aliases file acting as a .bashrc companion file. </p>
 <blockquote>
-<p>[!Important]</p>
+<!--[!Important]-->
 <ul>
 <li>
-<p><strong>do not</strong> Put environment or other settings for installed tools in the main <strong>.bashrc</strong> file, but use a companion file that is automatically sourced by the .bashrc file. The companion file to use is the  <strong>.bash_aliases</strong> file.</p>
+<!--**do not** Put environment or other settings for installed tools in the main **.bashrc** file, but use a companion file that is automatically sourced by the .bashrc file. The companion file to use is the  **.bash_aliases** file.-->
 </li>
 <li>
-<p>As <strong>pyenv</strong> is installed as Python development environment, protecting the system Python installation from being altered, its path needs to be in the absolute front of the system path. 
-    Every installed vendor tool want to be in the front of the path and that is something that is prevented in below showed .bash_aliases text.</p>
+<p><!--As **pyenv** is installed as Python development environment, protecting the system Python installation from being altered, its path needs to be in the absolute front of the system path.--> 
+    <!--Every installed vendor tool want to be in the front of the path and that is something that is prevented in below showed .bash_aliases text.--></p>
 </li>
 </ul>
 </blockquote>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>do not</strong> Put environment or other settings for installed tools in the main <strong>.bashrc</strong> file, but use a companion file that is automatically sourced by the .bashrc file. The companion file to use is the  <strong>.bash_aliases</strong> file.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title"> </p>
+<p>As <strong>pyenv</strong> is installed as Python development environment, protecting the system Python installation from being altered, its path needs to be in the absolute front of the system path. </p>
+</div>
+<p>Every installed vendor tool want to be in the front of the path and that is something that is prevented in below showed .bash_aliases text.</p>
 <p>Open in the users home directory, using a text editor (xed, gedit, vim, code or ...), the “<strong>.bash_aliases</strong>” file and add</p>
 <div class="highlight"><pre><span></span><code># Xilinx Tools
 export XILINX_VERSION=2024.1
@@ -958,9 +990,13 @@ echo &quot; Vivado, Vitis-HLS and Vitis settings done.&quot;
 <p>Save the .bash_aliases file.</p>
 <p>When starting a command terminal the .bash_aliases file is read after the main .bash file is read and all settings are done so that Vivado/Vitis/PetaLinux and other tools can be started.</p>
 <blockquote>
-<p>[!tip]</p>
-<p>When the Efinix FPGA tools are installed or are going to be installed drop the Xilinx/AMD and Efinix environment settings in their own script file (example: .SelectFpgaEnv.sh). Make the file executable and call it from withing .bash_aliases. An example is provided in the "More about environment settings" chapter in the <a href="../InstallEfinixTools/#More-about-environment-settings">document discussing the Efinix FPGA tools installation</a>.</p>
+<!--[!tip]-->
+<!--When the Efinix FPGA tools are installed or are going to be installed drop the Xilinx/AMD and Efinix environment settings in their own script file (example: .SelectFpgaEnv.sh). Make the file executable and call it from withing .bash_aliases. An example is provided in the "More about environment settings" chapter in the <a href="./InstallEfinixTools.md#More-about-environment-settings">document discussing the Efinix FPGA tools installation</a>.-->
 </blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When the Efinix FPGA tools are installed or are going to be installed drop the Xilinx/AMD and Efinix environment settings in their own script file (example: .SelectFpgaEnv.sh). Make the file executable and call it from withing .bash_aliases. An example is provided in the "More about environment settings" chapter in the <a href="../InstallEfinixTools/#More-about-environment-settings">document discussing the Efinix FPGA tools installation</a>.</p>
+</div>
 <p>When new versions of the Xilinx/AMD tools must be installed, then:</p>
 <ul>
 <li>Rename the directory of the current installed tools. Example <code>/opt/Xilinx</code> to <code>/opt/Xilinx_Old</code>.</li>

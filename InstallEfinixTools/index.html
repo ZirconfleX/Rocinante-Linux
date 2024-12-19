@@ -879,11 +879,17 @@
 <li>
 <p>Browse to the <a href="https://www.efinixinc.com/index.html">Efinix</a> web page, click the [Support] - [Support Home] tab.</p>
 <blockquote>
-<p>[!note]</p>
+<!--[!note]-->
+<p><!--One **must** have a Efinix support account to download software, guides, application notes, ...-->
+<!--The first thing to do is to create an account.-->
+<!--[Register] and when allowed, log on to the page.--></p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>One <strong>must</strong> have a Efinix support account to download software, guides, application notes, ...
 The first thing to do is to create an account.
 [Register] and when allowed, log on to the page.</p>
-</blockquote>
+</div>
 <p>When logging on do not forget to tick the "I agree to Efinix's <a href="https://www.efinixinc.com/privacy-policy.html">privacy policy</a> and <a href="https://www.efinixinc.com/terms-of-use.html">terms of use</a>" box.</p>
 </li>
 <li>
@@ -916,9 +922,13 @@ sudo chgrp &lt;user&gt; Efinix
 </li>
 </ul>
 <blockquote>
-<p>[!Note]</p>
-<p><strong>/opt (Optional Software)</strong>: The /opt directory is used for optional software installed on the system. This directory can be used for installing software that is not included in the system’s package manager and vendor supplied application programs.</p>
+<!-- [!Note] -->
+<!--**/opt (Optional Software)**: The /opt directory is used for optional software installed on the system. This directory can be used for installing software that is not included in the system’s package manager and vendor supplied application programs.-->
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>/opt (Optional Software)</strong>: The /opt directory is used for optional software installed on the system. This directory can be used for installing software that is not included in the system’s package manager and vendor supplied application programs.</p>
+</div>
 </li>
 <li>
 <p>Uncompress the Efinity package into <code>/opt/Efinix</code>.</p>
@@ -937,9 +947,13 @@ export PATH=$PATH:EFINITY_HOME/bin
 </li>
 </ul>
 <blockquote>
-<p>[!Important]</p>
-<p>When the Efinix tools are the only FPGA tools installed modify the setup.sh scripts delivered by Efinix. The Efinix tools,as many 3th party tools and maybe all vendor tools drop their path settings in front of all other settings, making that using Python and some other development tools is not possible anymore. Python is by installation run from it's own environment, securing the system installed Python version, called <strong>pyenv</strong>. The first item of the path must point to pyenv else it will not work. <strong>Thus</strong> go and read about <a href="#More-about-environment-settings">more environment settings</a></p>
+<!-- [!Important] -->
+<!--When the Efinix tools are the only FPGA tools installed modify the setup.sh scripts delivered by Efinix. The Efinix tools,as many 3th party tools and maybe all vendor tools drop their path settings in front of all other settings, making that using Python and some other development tools is not possible anymore. Python is by installation run from it's own environment, securing the system installed Python version, called **pyenv**. The first item of the path must point to pyenv else it will not work. **Thus** go and read about <a href="#More-about-environment-settings">more environment settings</a>-->
 </blockquote>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>When the Efinix tools are the only FPGA tools installed modify the setup.sh scripts delivered by Efinix. The Efinix tools,as many 3th party tools and maybe all vendor tools drop their path settings in front of all other settings, making that using Python and some other development tools is not possible anymore. Python is by installation run from it's own environment, securing the system installed Python version, called <strong>pyenv</strong>. The first item of the path must point to pyenv else it will not work. <strong>Thus</strong> go and read about [more environment settings](</p>
+</div>
 <ul>
 <li>When downloading the Efinity tool a patch was also available and downloaded
     Use Nemo or Nautillus and File Roller to uncompress the <code>...ubuntu-x64-patch</code> in its own directory.</li>
@@ -973,9 +987,13 @@ export PATH=$PATH:EFINITY_HOME/bin
 Uncompressing Efinity RISC-V Embedded Software IDE Installation  100%  
 </code></pre></div></p>
 <blockquote>
-<p>[!Note]</p>
-<p>Getting these messages in the terminal takes some time. Be patient.</p>
+<!-- [!Note] -->
+<!--Getting these messages in the terminal takes some time. Be patient.-->
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Getting these messages in the terminal takes some time. Be patient.</p>
+</div>
 </li>
 <li>
 <p>After the last message the next message asks for the place to store the Efinix RISC-V IDE</p>
@@ -999,9 +1017,13 @@ Efinity RISC-V Embedded Software IDE Installation successfully completed
 <p>Finally add below line to the earlier set Efinix environment settings in the .bash_aliases file
     <code>. /opt/Efinix/efinity-riscv-ide-$EFINITY_VERSION/setup.sh</code></p>
 <blockquote>
-<p>[!Important]</p>
-<p>When Efinix FPGA tools are the only FPGA tools installed, or if Efinix tools are installed with Xilinx FPGA tools read the <a href="#More-about-environment-settings">More about environment settings</a> chapter.</p>
+<!--[!Important]-->
+<!--When Efinix FPGA tools are the only FPGA tools installed, or if Efinix tools are installed with Xilinx FPGA tools read the <a href="#More-about-environment-settings">More about environment settings</a> chapter.-->
 </blockquote>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>When Efinix FPGA tools are the only FPGA tools installed, or if Efinix tools are installed with Xilinx FPGA tools read the <a href="#More-about-environment-settings">More about environment settings</a> chapter.</p>
+</div>
 </li>
 <li>
 <p>Start the Efinix RISC-V tools from within a command terminal by typing: <strong>efinity-riscv-ide &amp;</strong></p>
@@ -1061,9 +1083,13 @@ echo &quot;Valid FreeRTOS Kernel input at $FREERTOS_DIR&quot;
 </li>
 </ul>
 <blockquote>
-<p>[!Important]</p>
-<p>When ever a new Efinix RISC-V IDE environment is installed or when a new FreeRTOS system is installed, the <strong>setup.sh</strong> file must be changed.</p>
+<!-- [!Important] -->
+<!--When ever a new Efinix RISC-V IDE environment is installed or when a new FreeRTOS system is installed, the **setup.sh** file must be changed.-->
 </blockquote>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>When ever a new Efinix RISC-V IDE environment is installed or when a new FreeRTOS system is installed, the <strong>setup.sh</strong> file must be changed.</p>
+</div>
 <h2 id="more-about-environment-settings">More about environment settings</h2>
 <h3 id="a-script-for-efinix">A script for Efinix</h3>
 <p>As written before, the Efinix path settings are placed in front of all other path settings blocking normal Python development. Therefore a small script is created and source from the bash_aliases file.</p>

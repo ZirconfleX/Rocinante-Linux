@@ -791,11 +791,15 @@
 <li>
 <p>That’s not all. The sudo apt update command brings back SNAP if the apt trigger is not stopped.
     Create the new file <strong>nosnap.pref</strong> in <strong>/etc/apt/preferences.d/</strong> to stop snap from being brought back.
-    <code>sudo -H gedit /etc/apt/preferences.d/nosnap.pref</code></p>
+    <code>sudo -H gedit /etc/apt/preferences.d/nosnap.pref&lt;!--</code>&rarr;</p>
 <blockquote>
-<p>[!NOTE]</p>
-<p>The <code>gedit</code>text editor can be replaced by every on the system available editor as there are: vim, code, xed, gnome-text-editor, ...</p>
+<!--[!NOTE]-->
+<!--The <code>gedit</code>text editor can be replaced by every on the system available editor as there are: vim, code, xed, gnome-text-editor, ...-->
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>gedit</code>text editor can be replaced by every on the system available editor as there are: vim, code, xed, gnome-text-editor, ...</p>
+</div>
 </li>
 <li>
 <p>Add the following lines to the just created and empty file and save the file.</p>

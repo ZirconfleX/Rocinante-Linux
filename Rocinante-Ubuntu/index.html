@@ -586,6 +586,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#dropbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dropbox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pyenv" class="md-nav__link">
     <span class="md-ellipsis">
       Pyenv
@@ -1691,6 +1700,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#dropbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dropbox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pyenv" class="md-nav__link">
     <span class="md-ellipsis">
       Pyenv
@@ -2213,9 +2231,13 @@
 <li>
 <p>Select to install third party software for graphics and WIFI hardware.</p>
 <blockquote>
-<p>[!NOTE]</p>
-<p>In this case this options doesn't need to be selected because the newest PC has no devices or boards requiring proprietary drivers or software. </p>
+<!--[!NOTE]-->
+<p><!--In this case this options doesn't need to be selected because the newest PC has no devices or boards requiring proprietary drivers or software.--> </p>
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In this case this options doesn't need to be selected because the newest PC has no devices or boards requiring proprietary drivers or software. </p>
+</div>
 </li>
 <li>
 <p>Select to download and install media formats (codecs).</p>
@@ -2242,10 +2264,14 @@
 <p>Go and have a cup of coffee, hot chocolate or cup of thee with coffee corner chat and upon return Ubuntu Linux is going to be installed. The installer is asking to remove the USB thumb drive and hit [Enter]. Do it to reboot in Ubuntu.</p>
 <h2 id="after-the-first-reboot">After the First Reboot</h2>
 <blockquote>
-<p>[!IMPORTANT]</p>
-<p>Installing, updating and/or upgrading software requires root access. 
-When the Installation, update and/or upgrade is done using GUI type of tools a popup will be presented asking for the root password. When installing, updating and/or upgrading software in a command terminal root access is obtained by the <strong>sudo</strong> keyword (sudo followed by a command). The command line interface will ask for the root password.</p>
+<!--[!IMPORTANT]-->
+<p><!--Installing, updating and/or upgrading software requires root access.--> 
+<!--When the Installation, update and/or upgrade is done using GUI type of tools a popup will be presented asking for the root password. When installing, updating and/or upgrading software in a command terminal root access is obtained by the **sudo** keyword (sudo followed by a command). The command line interface will ask for the root password.--></p>
 </blockquote>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Installing, updating and/or upgrading software requires root access. When the Installation, update and/or upgrade is done using GUI type of tools a popup will be presented asking for the root password. When installing, updating and/or upgrading software in a command terminal root access is obtained by the <strong>sudo</strong> keyword (sudo followed by a command). The command line interface will ask for the root password.</p>
+</div>
 <h3 id="updates">Updates</h3>
 <ul>
 <li>
@@ -2292,9 +2318,13 @@ When the Installation, update and/or upgrade is done using GUI type of tools a p
 </li>
 </ul>
 <blockquote>
-<p>[!NOTE]</p>
-<p>These tabs are very important because updates and upgrades of the system are coming from the given mirrors. When installing tools from the command line, most of the time one start with typing: <code>sudo apt-add-repository ...</code> , this command adds addresses and keys to the "Other Software" / "Authentication" lists from were updates are retrieved. More about this in <a href="../The_Apt_Command/">The_Apt_Command</a>.</p>
+<!--[!NOTE]-->
+<!--These tabs are very important because updates and upgrades of the system are coming from the given mirrors. When installing tools from the command line, most of the time one start with typing: <code>sudo apt-add-repository ...</code> , this command adds addresses and keys to the "Other Software" / "Authentication" lists from were updates are retrieved. More about this in <a href="./The_Apt_Command.md">The_Apt_Command</a>.-->
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These tabs are very important because updates and upgrades of the system are coming from the given mirrors. When installing tools from the command line, most of the time one start with typing: <code>sudo apt-add-repository ...</code> , this command adds addresses and keys to the "Other Software" / "Authentication" lists from were updates are retrieved. More about this in <a href="../The_Apt_Command/">The_Apt_Command</a>.</p>
+</div>
 <ul>
 <li>It might be that when closing the tool a window pops up telling that the information gathered is out of date. Check that all modifications work by clicking [Refresh].</li>
 </ul>
@@ -2331,12 +2361,16 @@ When the Installation, update and/or upgrade is done using GUI type of tools a p
 <p>Click [Settings]</p>
 <ul>
 <li>
-<p>[Location]: indicate where Timeshift can drop it's backups of the system </p>
+<p>[Location]: indicate where Timeshift can drop it's backups of the system&rarr;&lt;!--  </p>
 <blockquote>
-<p>[!NOTE]</p>
-<p>At least 1 TB to 2 TB is required as a decent backup space.
-The Timeshift storage location can be set onto the NAS drive (setup is discussed later in this document) as that device has most of the time lots of space. Another option is, like in the the provided partition table shown, to install a 2 TB drive only for Timeshift backups.</p>
+<!--[!NOTE]-->
+<p><!--At least 1 TB to 2 TB is required as a decent backup space.-->
+<!--The Timeshift storage location can be set onto the NAS drive (setup is discussed later in this document) as that device has most of the time lots of space. Another option is, like in the the provided partition table shown, to install a 2 TB drive only for Timeshift backups.--></p>
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>At least 1 TB to 2 TB is required as a decent backup space. The Timeshift storage location can be set onto the NAS drive (setup is discussed later in this document) as that device has most of the time lots of space. Another option is, like in the the provided partition table shown, to install a 2 TB drive only for Timeshift backups.</p>
+</div>
 </li>
 <li>
 <p>[Schedule]: Tell the system when to backup and how many backups to keep.
@@ -2400,11 +2434,15 @@ The Timeshift storage location can be set onto the NAS drive (setup is discussed
 </li>
 <li>
 <p>Setup the GPU software
-    <code>amdgpu-install --opencl=rocr --vukan=pro --usecase=workstation</code></p>
+    <code>amdgpu-install --opencl=rocr --vukan=pro --usecase=workstation&lt;!--</code>&rarr;</p>
 <blockquote>
-<p>[!NOTE]</p>
-<p>Do not run this command as sudo</p>
+<!--[!NOTE]-->
+<!--Do not run this command as sudo-->
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not run this command as sudo</p>
+</div>
 <ul>
 <li>
 <p>Add the \&lt;user&gt; to the “video” group
@@ -2417,9 +2455,13 @@ The Timeshift storage location can be set onto the NAS drive (setup is discussed
 <li>
 <p>Add: <code>export PATH=$PATH:/opt/amdgpu:/opt/amdgpu-pro:/opt/rocm</code> to the .bash-aliases file.</p>
 <blockquote>
-<p>[!NOTE]</p>
-<p>Do not alter the default <strong>.bashrc</strong> file but use a <strong>.bash-aliases</strong> file for all bash customisation. The .bashrc file automatically looks for an existing bash-aliases file. When there is one, it uses it when not is just continues.</p>
+<!--[!NOTE]-->
+<!--Do not alter the default **.bashrc** file but use a **.bash-aliases** file for all bash customisation. The .bashrc file automatically looks for an existing bash-aliases file. When there is one, it uses it when not is just continues.-->
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not alter the default <strong>.bashrc</strong> file but use a <strong>.bash-aliases</strong> file for all bash customisation. The .bashrc file automatically looks for an existing bash-aliases file. When there is one, it uses it when not is just continues.</p>
+</div>
 </li>
 </ul>
 </li>
@@ -2462,10 +2504,18 @@ If the file does not exist, go to the <a href="../Numlockx/">Numlockx</a> docume
 <h3 id="remove-snap">Remove SNAP</h3>
 <p>Ubuntu uses <strong>snap</strong> for installation of applications, but other applications are installed the normal way using apt and .deb files.</p>
 <blockquote>
-<p>[!NOTE] </p>
-<p>From Wikipedia:
-<strong>Snap</strong> is a software <a href="https://en.wikipedia.org/wiki/Package_manager">packaging</a> and deployment system developed by Canonical for operating systems that use the Linux kernel and the systemd init system. The packages, called <em>snaps</em>, and the tool for using them, <em>snapd</em>, work across a range of Linux distributions and allow upstream software developers to distribute their applications directly to users. Snaps are self-contained applications running in a sandbox with mediated access to the host system. Snap was originally released for cloud applications but was later ported to also work for Internet of Things (IoT) devices and desktop applications.</p>
+<p><!--[!NOTE]--> </p>
+<p><!--From Wikipedia:-->
+<!--**Snap** is a software <a href="https://en.wikipedia.org/wiki/Package_manager">packaging</a> and deployment system developed by Canonical for operating systems that use the Linux kernel and the systemd init system. The packages, called *snaps*, and the tool for using them, *snapd*, work across a range of Linux distributions and allow upstream software developers to distribute their applications directly to users. Snaps are self-contained applications running in a sandbox with mediated access to the host system. Snap was originally released for cloud applications but was later ported to also work for Internet of Things (IoT) devices and desktop applications.--></p>
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>From Wikipedia:</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title"> </p>
+<p><strong>Snap</strong> is a software <a href="https://en.wikipedia.org/wiki/Package_manager">packaging</a> and deployment system developed by Canonical for operating systems that use the Linux kernel and the systemd init system. The packages, called <em>snaps</em>, and the tool for using them, <em>snapd</em>, work across a range of Linux distributions and allow upstream software developers to distribute their applications directly to users. Snaps are self-contained applications running in a sandbox with mediated access to the host system. Snap was originally released for cloud applications but was later ported to also work for Internet of Things (IoT) devices and desktop applications.</p>
+</div>
 <p>Personally I don't like the mix of installers and thus don’t like snap, so to remove it completely do as described in the <a href="../Remove_SNAP/">Remove_SNAP</a> document.</p>
 <h3 id="nas-devices">NAS devices</h3>
 <p>When having a NAS device connected to the network, enable access to its directories</p>
@@ -2579,10 +2629,14 @@ sudo service bluetooth start
 <li>
 <p>If Bluetooth still doesn't work decently, disable the on-board Bluetooth and plug a Bluetooth dongle in one of the many USB ports. Try to use a USB port on the front or top of the computer case (exposure of the dongle).</p>
 <blockquote>
-<p>[!NOTE]</p>
-<p>These days motherboards seem to have also on-board WIFI. Disable it!.
-A desktop computer needs to connect to wired Ethernet</p>
+<!--[!NOTE]-->
+<p><!--These days motherboards seem to have also on-board WIFI. Disable it!.-->
+<!--A desktop computer needs to connect to wired Ethernet--></p>
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These days motherboards seem to have also on-board WIFI. Disable it! A desktop computer needs to connect to wired Ethernet</p>
+</div>
 </li>
 <li>
 <p>Check if the Bluetooth dongle is recognised by one of the on-board USB switches.</p>
@@ -2787,15 +2841,19 @@ As also explained and tried, Ubuntu has a Cinnamon targeted version but that is 
 <li>Reboot</li>
 <li>Upon reaching the login screen, select Budgie from the desktop environment optionst, button in right bottom, to ensure to log in to Budgie by default.</li>
 </ul>
-<div style="page-break-after: always; break-after: page;">[]</div>
+<div style="page-break-after: always; break-after: page;"></div>
 
 <h4 id="tuning-cinnamon">Tuning Cinnamon</h4>
 <p>Tuning is user's choice or otherwise said, it's the problem” of the user.
 Thus as user, do with it what you like but find here the tuning experiment to make Cinnamon running on Ubuntu as a close copy of the Linux-Mint Cinnamon desktop on other (older) PCs. It will never be exactly the same and it does not need to be, but it must have the looks and feel for let's say 90%.</p>
 <blockquote>
-<p>[!NOTE] </p>
-<p>One need to be root or operate as sudo to execute most of the commands explained below</p>
+<p><!--[!NOTE]--> </p>
+<!--One need to be root or operate as sudo to execute most of the commands explained below-->
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>One need to be root or operate as sudo to execute most of the commands explained below</p>
+</div>
 <p>After the reboot and selection of Cinnamon as desktop, it already looks a bit as Cinnamon but needs settings for:</p>
 <ul>
 <li>
@@ -2892,7 +2950,7 @@ Open the “mint-themes-master.zip” file and extract the contents of “/files
 </ul>
 </li>
 </ul>
-<div style="page-break-after: always; break-after: page;">[]</div>
+<div style="page-break-after: always; break-after: page;"></div>
 
 <h2 id="installing-user-software">Installing user software</h2>
 <p>The software installed on a PC is the choice of the user. If you have a machine like the one discussed here, there is plenty of room for all kinds of software. Provided here is a list of software tools installed on my machines. These tools are not used daily but let’s say at least ones an week and certainly more of the tools are used weekly.</p>
@@ -2979,9 +3037,14 @@ It is possible to sync the PC version with the web browser version, this is easy
 <p>What happened is; the saved appimage file is copied to the /opt/AppImages directory and the AppImageLauncher created an input for the [Manjaro main] menu so that when clicking the [Memu] button one can type bitwarden and launch bitwarden from the menu structure.
 The AppImageLauncher tool will also take care of regularly updating the Bitwarden tool.</p>
 <blockquote>
-<p>[!TIP]</p>
-<p>In case of ... On regularly base export the vault, using the PC version, of all passwords as csv or json file and store that file somewhere safe (in another personal vault).Dropbox</p>
+<!--[!TIP]-->
+<!--In case of ... On regularly base export the vault, using the PC version, of all passwords as csv or json file and store that file somewhere safe (in another personal vault).-->
 </blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In case of ... On regularly base export the vault, using the PC version, of all passwords as csv or json file and store that file somewhere safe (in another personal vault).</p>
+</div>
+<h4 id="dropbox">Dropbox</h4>
 <p>Keep everything that’s important to you and your family shareable and safe in one place.
 Back up files in the cloud, share photos and videos, and more.</p>
 <p><div class="highlight"><pre><span></span><code>https://www.dropbox.com/install
@@ -3109,11 +3172,8 @@ Download the online installer here:</p>
 <li>
 <p>Provide the path where ActiveState Tcl-Tk will be installed or accept the default value.
     The default value is /opt/ActiveTcl-8.6
-    Hit [enter]cd ..</p>
+    Hit [enter] cd ..</p>
 </li>
-</ul>
-<p>-</p>
-<ul>
 <li>
 <p>Provide the path where demo design will dropped or accept the default. Hit [enter]</p>
 </li>
@@ -3143,10 +3203,14 @@ export MANPATH=$TCLTK_ROOT/man
 <p>Typora provides a seamless experience as both a Markdown reader and a writer.
 It removes the preview window, mode switcher, syntax symbols of markdown source code, and all other unnecessary distractions of other markdown readers &amp; writers.</p>
 <blockquote>
-<p>[!NOTE]</p>
-<p>Typora is no longer a free tool. The cost is $15. But it’s worth it. 
-Pay the money, get a license it and download it.</p>
+<!--[!NOTE]-->
+<p><!--Typora is no longer a free tool. The cost is $15. But it’s worth it.--> 
+<!--Pay the money, get a license it and download it.--></p>
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Typora is no longer a free tool. The cost is $15. But it’s worth it. Pay the money, get a license it and download it.</p>
+</div>
 <div class="highlight"><pre><span></span><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
 wget -qO - https://typora.io/linux/public-key.asc | sudo tee /etc/apt/trusted.gpg.d/typora.asc
 </code></pre></div>
@@ -3341,10 +3405,8 @@ export PATH=$PATH:/opt/thunderbird.
 </li>
 <li>
 <p>Assume Thunderbird is started for the first time and mail need to be stored on a NAS drive. Thunderbird cannot do it by default ,  but:</p>
+<p><strong>Do this when Thunderbird is closed / not running!</strong></p>
 <ul>
-<li>
-<p>**Do this when Thunderbird is closed / not running! **</p>
-</li>
 <li>
 <p>Thunderbird creates a .thunderbird directory in a users home directory.
     If there in no such directory yet, start Thunderbird and the close it again.</p>
@@ -3537,7 +3599,7 @@ Install the tools as described in the <a href="../InstallXilinxTools/">Xilinx To
 <p>A very promising low cost FPGA vendor.
 Install and configure the software as described in <a href="../InstallEfinixTools/">Efinix_Installation</a> document.</p>
 <hr />
-<div style="page-break-after: always; break-after: page;">[]</div>
+<div style="page-break-after: always; break-after: page;"></div>
 
 
 

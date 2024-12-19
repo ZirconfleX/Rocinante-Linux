@@ -2229,9 +2229,13 @@ Searching and starting tools in Ubuntu is done by hitting the <strong>[show apps
 <li>
 <p>"Something else" when you want to partition the disk(s) yourself before installing the whole shebang. When this option is chosen, the installer will show a screen were the disks can be partitioned, named and formatted.</p>
 <blockquote>
-<p>[!TIP]</p>
-<p>Before partitioning the disk(s) make a list, for the disk setup of your system, as the one given in the Rocinante document. This will get rid of a lot of possible (most likely) frustration.</p>
+<!--[!TIP]-->
+<!--Before partitioning the disk(s) make a list, for the disk setup of your system, as the one given in the Rocinante document. This will get rid of a lot of possible (most likely) frustration.-->
 </blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Before partitioning the disk(s) make a list, for the disk setup of your system, as the one given in the Rocinante document. This will get rid of a lot of possible (most likely) frustration.</p>
+</div>
 </li>
 </ul>
 </li>
@@ -2242,11 +2246,15 @@ Searching and starting tools in Ubuntu is done by hitting the <strong>[show apps
 <p>Go and have a cup of coffee, hot chocolate or cup of thee with coffee corner chat and upon return Linux Mint is going to be installed. The installer is asking to remove the USB thumb drive and hit [Enter]. Do it to reboot in Ubuntu.</p>
 <h2 id="after-the-first-reboot">After the First Reboot</h2>
 <blockquote>
-<p>[!IMPORTANT]</p>
-<p>During the evolution of the text, software can and will be installed.
-Installing, updating and/or upgrading software requires root access. 
-When the Installation, update and/or upgrade is done using GUI type of tools a popup will be presented asking for the root password. When installing, updating and/or upgrading software in a command terminal root access is obtained by the <strong>sudo</strong> keyword (sudo followed by a command). The command line interface will ask for the root password.</p>
+<!--[!IMPORTANT]-->
+<p><!--During the evolution of the text, software can and will be installed.-->
+<!--Installing, updating and/or upgrading software requires root access.--> 
+<!--When the Installation, update and/or upgrade is done using GUI type of tools a popup will be presented asking for the root password. When installing, updating and/or upgrading software in a command terminal root access is obtained by the **sudo** keyword (sudo followed by a command). The command line interface will ask for the root password.--></p>
 </blockquote>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>During the evolution of the text, software can and will be installed. Installing, updating and/or upgrading software requires root access. When the Installation, update and/or upgrade is done using GUI type of tools a popup will be presented asking for the root password. When installing, updating and/or upgrading software in a command terminal root access is obtained by the <strong>sudo</strong> keyword (sudo followed by a command). The command line interface will ask for the root password.</p>
+</div>
 <h3 id="updates">Updates</h3>
 <ul>
 <li>
@@ -2366,11 +2374,15 @@ The Timeshift storage location can be set onto the NAS drive (setup is discussed
 </li>
 <li>
 <p>Setup the GPU software
-    <code>amdgpu-install --opencl=rocr --vukan=pro --usecase=workstation</code></p>
+    <code>amdgpu-install --opencl=rocr --vukan=pro --usecase=workstation&lt;!--</code>&rarr;</p>
 <blockquote>
-<p>[!NOTE]</p>
-<p>Do not run this command as sudo</p>
+<!--[!NOTE]-->
+<!--Do not run this command as sudo-->
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not run this command as sudo</p>
+</div>
 <ul>
 <li>
 <p>Add the \&lt;user&gt; to the “video” group
@@ -2383,9 +2395,13 @@ The Timeshift storage location can be set onto the NAS drive (setup is discussed
 <li>
 <p>Add: <code>export PATH=$PATH:/opt/amdgpu:/opt/amdgpu-pro:/opt/rocm</code> to the .bash-aliases file.</p>
 <blockquote>
-<p>[!NOTE]</p>
-<p>Do not alter the default <strong>.bashrc</strong> file but use a <strong>.bash-aliases</strong> file for all bash customisation. The .bashrc file automatically looks for an existing bash-aliases file. When there is one, it uses it when not is just continues.</p>
+<!--[!NOTE]-->
+<!--Do not alter the default **.bashrc** file but use a **.bash-aliases** file for all bash customisation. The .bashrc file automatically looks for an existing bash-aliases file. When there is one, it uses it when not is just continues.-->
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not alter the default <strong>.bashrc</strong> file but use a <strong>.bash-aliases</strong> file for all bash customisation. The .bashrc file automatically looks for an existing bash-aliases file. When there is one, it uses it when not is just continues.</p>
+</div>
 </li>
 </ul>
 </li>
@@ -2544,10 +2560,14 @@ sudo service bluetooth start
 <li>
 <p>If Bluetooth still doesn't work decently, disable the on-board Bluetooth and plug a Bluetooth dongle in one of the many USB ports. Try to use a USB port on the front or top of the computer case (exposure of the dongle).</p>
 <blockquote>
-<p>[!NOTE]</p>
-<p>These days motherboards seem to have also on-board WIFI. Disable it!.
-A desktop computer needs to connect to wired Ethernet</p>
+<!--[!NOTE]-->
+<p><!--These days motherboards seem to have also on-board WIFI. Disable it!.-->
+<!--A desktop computer needs to connect to wired Ethernet--></p>
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These days motherboards seem to have also on-board WIFI. <strong>Disable it!</strong> A desktop computer needs to connect to wired Ethernet</p>
+</div>
 </li>
 <li>
 <p>Check if the Bluetooth dongle is recognised by one of the on-board USB switches.</p>
@@ -2660,16 +2680,20 @@ Disable=Socket
 <h3 id="display-manager-dm">Display Manager (DM)</h3>
 <p>No need to install a new Display Manager as the default display manager is LightDM.</p>
 <h3 id="install-cinnamon">Install Cinnamon</h3>
-<p>No need to install the Cinnamon desktop as the Cionnamon desktop is the signature desktop of Linux Mint.</p>
-<div style="page-break-after: always; break-after: page;">[]</div>
+<p>No need to install the Cinnamon desktop as the Cinnamon desktop is the signature desktop of Linux Mint.</p>
+<div style="page-break-after: always; break-after: page;"></div>
 
 <h4 id="tuning-cinnamon">Tuning Cinnamon</h4>
 <p>Tuning is user's choice or otherwise said, it's the problem” of the user.
 Thus as user, do with it what you like but find here the tuning experiment to make Cinnamon running on Ubuntu as a close copy of the Linux-Mint Cinnamon desktop on other (older) PCs. It will never be exactly the same and it does not need to be, but it must have the looks and feel for let's say 90%.</p>
 <blockquote>
-<p>[!NOTE] </p>
-<p>One need to be root or operate as sudo to execute most of the commands explained below</p>
+<p><!--[!NOTE]--> </p>
+<!--One need to be root or operate as sudo to execute most of the commands explained below-->
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>One need to be root or operate as sudo to execute most of the commands explained below</p>
+</div>
 <p>After the reboot and selection of Cinnamon as desktop, it already looks a bit as Cinnamon but needs settings for:</p>
 <ul>
 <li>
@@ -2766,7 +2790,7 @@ Open the “mint-themes-master.zip” file and extract the contents of “/files
 </ul>
 </li>
 </ul>
-<div style="page-break-after: always; break-after: page;">[]</div>
+<div style="page-break-after: always; break-after: page;"></div>
 
 <h2 id="installing-user-software">Installing user software</h2>
 <p>The software installed on a PC is the choice of the user. If you have a machine like the one discussed here, there is plenty of room for all kinds of software. Provided here is a list of software tools installed on my machines. These tools are not used daily but let’s say at least ones an week and certainly more of the tools are used weekly.</p>
@@ -2851,9 +2875,13 @@ It is possible to sync the PC version with the web browser version, this is easy
 <p>What happened is; the saved appimage file is copied to the /opt/AppImages directory and the AppImageLauncher created an input for the [Manjaro main] menu so that when clicking the [Memu] button one can type bitwarden and launch bitwarden from the menu structure.
 The AppImageLauncher tool will also take care of regularly updating the Bitwarden tool.</p>
 <blockquote>
-<p>[!TIP]</p>
-<p>In case of ... On regularly base export the vault, using the PC version, of all passwords as csv or json file and store that file somewhere safe (in another personal vault).</p>
+<!--[!TIP]-->
+<!--In case of ... On regularly base export the vault, using the PC version, of all passwords as csv or json file and store that file somewhere safe (in another personal vault).-->
 </blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In case of ... On regularly base export the vault, using the PC version, of all passwords as csv or json file and store that file somewhere safe (in another personal vault).</p>
+</div>
 <h4 id="dropbox">Dropbox</h4>
 <p>Keep everything that’s important to you and your family shareable and safe in one place.
 Back up files in the cloud, share photos and videos, and more.</p>
@@ -3346,9 +3374,13 @@ sudo apt install darktable
 <p>VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use. Download VirtualBox from <a href="https://www.virtualbox.org/wiki/Linux_Downloads">here</a>. Click the Ubuntu 22.04 version and save the downloaded file. Download the VirtualBox Extension pack from <a href="https://www.virtualbox.org/wiki/Downloads">here</a>. 
 Double click the downloaded .deb file to allow Gdebi to install the tool.</p>
 <blockquote>
-<p>[!Note]
-For several hardware projects, experiments are done with Linux. Download the 21.3 Cinnamon edition form <a href="https://linuxmint.com/download.php">Linux-Mint</a> . Save the downloaded ISO image somewhere on disk and setup and install a virtual machine. Read the details in the <a href="../VirtualBox/">Virtualbox</a> document.</p>
+<p><!-- [!Note]-->
+<!--For several hardware projects, experiments are done with Linux. Download the 21.3 Cinnamon edition form <a href="https://linuxmint.com/download.php">Linux-Mint</a> . Save the downloaded ISO image somewhere on disk and setup and install a virtual machine. Read the details in the <a href="./VirtualBox.md">Virtualbox</a> document.--></p>
 </blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For several hardware projects, experiments are done with Linux. Download the 21.3 Cinnamon edition form <a href="https://linuxmint.com/download.php">Linux-Mint</a> . Save the downloaded ISO image somewhere on disk and setup and install a virtual machine. Read the details in the <a href="../VirtualBox/">Virtualbox</a> document.</p>
+</div>
 <h4 id="putty">PuTTY</h4>
 <p>PuTTY is an SSH and telnet client, developed originally by Simon Tatham for the Windows platform. PuTTY is open source software that is available with source code and is developed and supported by a group of volunteers.</p>
 <div class="highlight"><pre><span></span><code>sudo apt update
@@ -3418,7 +3450,7 @@ Install the tools as described in the <a href="../InstallXilinxTools/">Xilinx To
 <p>A very promising low cost FPGA vendor.
 Install and configure the software as described in <a href="../InstallEfinixTools/">Efinix_Installation</a> document.</p>
 <hr />
-<div style="page-break-after: always; break-after: page;">[]</div>
+<div style="page-break-after: always; break-after: page;"></div>
 
 
 
