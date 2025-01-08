@@ -703,6 +703,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScriptingFpgaTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scripting for FPGA Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -771,11 +792,9 @@
 </code></pre></div>
 <h2 id="gtk-wave-installation">GTK-Wave Installation</h2>
 <ul>
-<li>To install GTK-Wave start the <strong>PAMAC</strong> GUI tool, type in the search bar GTK-Wave. At the top of the list of possible installations select GTK-Wave and then hit the <button type="button">[Apply]</button> button.</li>
-</ul>
-<!--To install GTK-Wave start the **PAMAC** GUI tool, type in the search bar GTK-Wave. At the top of the list of possible installations select GTK-Wave and then hit the [Apply](#){ .md.button} -->
-
-<ul>
+<li>
+<p>To install GTK-Wave start the <strong>PAMAC</strong> GUI tool, type in the search bar GTK-Wave. At the top of the list of possible installations select GTK-Wave and then hit the <button type="button">[Apply]</button> button.</p>
+</li>
 <li>
 <p>To install GTK-Wave using <strong>PACMAN</strong> in a command terminal window, type: <code>sudo pacman -S GTK-Wave</code></p>
 </li>
@@ -824,20 +843,14 @@ configure: error: Package requirements (gtk+-2.0 &gt;= 2.2.0) were not met:
 
 No package &#39;gtk+-2.0&#39; found
 </code></pre></div>
-<p>Consider adjusting the PKG_CONFIG_PATH environment variable if you installed software in a non-standard prefix.</p>
-<p>Alternatively, you may set the environment variables GTK_CFLAGS and GTK_LIBS to avoid the need to call pkg-config. See the pkg-config man page for more details.</p>
-<p>The machine has everything for gtk-3 installed. A search how to get gtk-2 learns to run this command: <code>sudo apt install libgtk2.0-dev</code>. Running that command in a terminal seem to install a lot of stuff.</p>
-<p>Rerun the command: <code>../configure --prefix=/opt/GtkWave --with-tcl=/opt/ActiveTcl-8.6/lib --with-tk=/opt/ActiveTcl-8.6/lib</code> and now finally the process ends without warnings or errors.</p>
-</li>
-<li>
-<p>Run <code>make</code></p>
-</li>
-<li>
-<p>Run the <code>sudo make install</code> command to install the GtkWave tool.</p>
-</li>
-<li>
-<p>Add GTKwave to the path.
-    Edit <em>/home/\&lt;user&gt;/.bash_aliases</em> and add GtkWave to the PATH.</p>
+<p>Consider adjusting the PKG_CONFIG_PATH environment variable if you installed software in a non-standard prefix.
+Alternatively, you may set the environment variables GTK_CFLAGS and GTK_LIBS to avoid the need to call pkg-config. See the pkg-config man page for more details.
+The machine has everything for gtk-3 installed. A search how to get gtk-2 learns to run this command: <code>sudo apt install libgtk2.0-dev</code>. Running that command in a terminal seem to install a lot of stuff.
+Rerun the command: <code>../configure --prefix=/opt/GtkWave --with-tcl=/opt/ActiveTcl-8.6/lib --with-tk=/opt/ActiveTcl-8.6/lib</code> and now finally the process ends without warnings or errors.
+    5. Run <code>make</code>
+    6. Run the <code>sudo make install</code> command to install the GtkWave tool.
+    7. Add GTKwave to the path.
+Edit <em>/home/\&lt;user&gt;/.bash_aliases</em> and add GtkWave to the PATH.</p>
 </li>
 </ol>
 </li>

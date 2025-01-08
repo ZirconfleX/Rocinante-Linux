@@ -694,7 +694,7 @@
           <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation:
+      Installation
     </span>
   </a>
   
@@ -838,6 +838,27 @@
   
   <span class="md-ellipsis">
     Install Efinix Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScriptingFpgaTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scripting for FPGA Tools
   </span>
   
 
@@ -1001,7 +1022,7 @@
           <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation:
+      Installation
     </span>
   </a>
   
@@ -1104,10 +1125,12 @@ eval &quot;$(pyenv virtualenv-init -)&quot;
 </li>
 <li>
 <p>Pyenv knows a lot of commands, the most used are listed here:</p>
-<ul>
-<li>help        Display help for a command</li>
+</li>
+<li>
+<p>help        Display help for a command</p>
+</li>
 <li>version     Show the current Python version and its origin
-    --version   Display the version of <em>pyenv</em></li>
+      --version   Display the version of <em>pyenv</em></li>
 <li>
 <p>install     Install a Python version using python-build</p>
 </li>
@@ -1116,8 +1139,8 @@ eval &quot;$(pyenv virtualenv-init -)&quot;
 </li>
 <li>local       Set or show the local application-specific Python version</li>
 <li>global      Set or show the global Python version</li>
-<li>migrate     Migrate pip packages from a Python version to another</li>
-</ul>
+<li>
+<p>migrate     Migrate pip packages from a Python version to another</p>
 <p>For all other <em>pyenv</em> command just type <code>pyenv</code> in a terminal or command window.</p>
 </li>
 </ul>
@@ -1146,7 +1169,7 @@ eval &quot;$(pyenv virtualenv-init -)&quot;
   3.7.4
   3.8.0
 </code></pre></div>
-<p>The ***** shows what Python version is in use.</p>
+<p>The front <strong>*</strong> shows what Python version is in use.</p>
 </li>
 <li>
 <p>To use one of the just installed Python versions type: <code>pyenv global 3.8.0</code>
@@ -1171,13 +1194,6 @@ eval &quot;$(pyenv virtualenv-init -)&quot;
 When in need for something, in a lot of cases somebody already developed it.
 Those add-ons can be download from the PyPi website. PyPi is a huge database/repository of community developed and shared software utilities.</p>
 <p>PyPi packages are installed in a terminal/command window using <strong>pip</strong> (<strong>pip</strong> works the same for Linux and Microsoft).</p>
-<blockquote>
-<!--[!Note]-->
-<p><!--Using a Python version allows that a set of packages/libraries for/with that version are installed and used. The packages are installed in the same *pyenv* directory containing the Python version.-->
-<!--When a new Python version is installed all in a previous version installed packages are gone. The remain installed with the old Python version.-->
-<!--To get all previous used packages back into the new Python version use the **pyenv-pip-migrate** tool.-->
-<!--<code>pyenv migrate &lt;old_version&gt; &lt;new_version&gt;</code> Like: *pyenv migrate 3.7.4 3.8.0*--></p>
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Using a Python version allows that a set of packages/libraries for/with that version are installed and  used. The packages are installed in the same <em>pyenv</em> directory containing the Python version. When a    new Python version is installed all in a previous version installed packages are gone. The remain   installed with the old Python version. To get all previous used packages back into the new Python version use the <strong>pyenv-pip-migrate</strong> tool<code>pyenv migrate &lt;old_version&gt; &lt;new_version&gt;</code> Like: <em>pyenv migrate 3.7.4 3.8.0</em></p>
@@ -1186,29 +1202,29 @@ Those add-ons can be download from the PyPi website. PyPi is a huge database/rep
 <p>It is not that all what is mentioned and discussed below is you-need-to-have-this-or-else ...
 Below is just a set of packages I have installed and use.</p>
 <h4 id="numpy">Numpy</h4>
+<div class="highlight"><pre><span></span><code>pip install numpy
+</code></pre></div>
 <ul>
 <li>
 <p>NumPy is the fundamental package for scientific computing with Python. It contains
     among other things:</p>
-<ul>
-<li>A powerful N-dimensional array object.</li>
+</li>
+<li>
+<p>A powerful N-dimensional array object.</p>
+</li>
 <li>Sophisticated (broadcasting) functions.</li>
 <li>Tools for integrating C/C++ and Fortran code.</li>
-<li>Useful linear algebra, Fourier transform, and random number capabilities.
-    Besides its obvious scientific uses, NumPy can also be used as an efficient multi-dimensional container of generic data. Arbitrary data-types can be defined. This allows NumPy to seamlessly and speedily integrate with a wide variety of databases.</li>
-</ul>
+<li>
+<p>Useful linear algebra, Fourier transform, and random number capabilities.
+    Besides its obvious scientific uses, NumPy can also be used as an efficient multi-dimensional container of generic data. Arbitrary data-types can be defined. This allows NumPy to seamlessly and speedily integrate with a wide variety of databases.</p>
 </li>
 <li>
-<p>The numpy web site with documentation and more can be found here:</p>
-<ul>
-<li><a href="https://numpy.org">https://numpy.org</a></li>
-</ul>
-</li>
-<li>
-<p><code>pip install numpy</code></p>
+<p>The numpy web site with documentation and more can be found here: <a href="https://numpy.org">https://numpy.org</a></p>
 </li>
 </ul>
 <h4 id="matplotlib">Matplotlib</h4>
+<div class="highlight"><pre><span></span><code>pip install matplotlib
+</code></pre></div>
 <ul>
 <li>
 <p>Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. Matplotlib can be used in Python scripts, the Python and |Python shells, the |: yr notebook, web application servers, and four graphical user interface toolkits.</p>
@@ -1218,87 +1234,69 @@ Below is just a set of packages I have installed and use.</p>
     functions familiar to MATLAB users.</p>
 </li>
 <li>
-<p>The matplotlib documentation can be found here:</p>
-<ul>
-<li><a href="https://matplotlib.org">https://matplotlib.org</a></li>
-</ul>
-</li>
-<li>
-<p><code>pip install matplotlib</code></p>
+<p>The matplotlib documentation can be found here: <a href="https://matplotlib.org">https://matplotlib.org</a></p>
 </li>
 </ul>
 <h4 id="pandas">Pandas</h4>
+<div class="highlight"><pre><span></span><code>pip install pandas
+</code></pre></div>
 <ul>
 <li>
 <p>Pandas is a Python package providing fast, flexible, and expressive data structures designed to make working with structured (tabular, multidimensional, potentially heterogeneous) and time series data both easy and intuitive. It aims to be the fundamental high-level building block for doing practical, real world data analysis in Python.</p>
 </li>
 <li>
 <p>Pandas is well suited for many different kinds of data:</p>
-<ul>
-<li>Tabular data with heterogeneously-typed columns, as in an SQL table or Excel spreadsheet.</li>
+</li>
+<li>
+<p>Tabular data with heterogeneously-typed columns, as in an SQL table or Excel spreadsheet.</p>
+</li>
 <li>Ordered and unordered (not necessarily fixed-frequency) time series data.</li>
 <li>Arbitrary matrix data (homogeneously typed or heterogeneous) with row and column labels</li>
 <li>Any other form of observational / statistical data sets. The data actually need not be labelled at all to be placed into a pandas data structure.</li>
-</ul>
-</li>
-<li>
-<p><code>pip install pandas</code></p>
-</li>
 </ul>
 <p>Above tools are all installed to make working with <em>MyHdl</em> easy. <em>Jupyter</em> allows one to write code and document it. Myhdl can create from a described hardware system verilog and/or vhdl files so that the system can be implemented in an FPGA using Vivado (Synthesis and implementation).
 On other side the output of MyHdl can be any other format that can be created by using python.
 Therefore the <em>numpy, matplotlib</em> and <em>pandas</em> python libraries can be used. Extra waveform help for those working with Jupyter notebook is offered with the MyHdlPeek library.</p>
 <h4 id="jupyter">Jupyter</h4>
+<div class="highlight"><pre><span></span><code>pip install jupyter
+    or
+pip install jupyterlab
+</code></pre></div>
 <ul>
 <li>
 <p>The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualisations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modelling, data visualisation, machine learning, and much more. The next generation of Jupyter is called JupyterLabs and can be installed the same way as the classic Jupyter.</p>
 </li>
 <li>
-<p>The jupyter web site with documentation, tutorial and more can be found here:</p>
-<ul>
-<li><a href="https://jupyter.org">https://jupyter.org</a></li>
-</ul>
-</li>
-<li>
-<p><code>pip install jupyter
-    or
-    pip install jupyterlab</code></p>
+<p>The jupyter web site with documentation, tutorial and more can be found here: <a href="https://jupyter.org">https://jupyter.org</a></p>
 </li>
 </ul>
 <p><strong>Remark:</strong> Use Jupyter notebook with VS code editor (or Atom)</p>
 <ul>
-<li>
-<p>Start VS Code</p>
-</li>
-<li>
-<p>Click the Marketplace button in the left vertical menu.</p>
-</li>
-<li>Type in the search bar Jupyter and install<ul>
+<li>Start VS Code</li>
+<li>Click the Marketplace button in the left vertical menu.</li>
+<li>Type in the search bar Jupyter and install</li>
 <li>Jupyter</li>
 <li>Jupyter Slide Show</li>
 <li>Jupyter Keymap</li>
 <li>Jupyter Notebook renderers</li>
 <li>Jupyter Cell Tags</li>
 </ul>
-</li>
-</ul>
 <h4 id="myhdl">MyHdl</h4>
+<div class="highlight"><pre><span></span><code>pip install myhdl
+</code></pre></div>
 <ul>
 <li>
 <p>MyHDL turns Python into a hardware description and verification language, providing hardware engineers with the power of the Python ecosystem.</p>
 </li>
 <li>
 <p>The MyHdl documentation can be found here:</p>
-<ul>
+</li>
 <li><a href="https://myhdl.org">https://myhdl.org</a></li>
 <li><a href="https://doc.myhdl.org/en/stable">https://doc.myhdl.org/en/stable</a></li>
 </ul>
-</li>
-<li>
-<p><code>pip install myhdl</code></p>
-</li>
-</ul>
 <h4 id="myhdlpeek">MyHdlPeek</h4>
+<div class="highlight"><pre><span></span><code>pip install myhdlpeek
+</code></pre></div>
 <ul>
 <li>
 <p>Why should or can you use this.</p>
@@ -1313,13 +1311,7 @@ Therefore the <em>numpy, matplotlib</em> and <em>pandas</em> python libraries ca
 <p>Myhdlpeek implements a Peeker object that monitors a signal and records the time and value when it changes. Just add multiple Peekers where you want to monitor something (even at sub-levels of a hierarchical design) and then view the collected timing wave-forms with a single command. You can also select which signals are shown, set the beginning and ending times of the display, and set other options.</p>
 </li>
 <li>
-<p>Documentation can be found here:</p>
-<ul>
-<li>https://xesscorp.github.io/myhdlpeek/docs/_build/singlehtml/index.html</li>
-</ul>
-</li>
-<li>
-<p><code>pip install myhdlpeek</code></p>
+<p>Documentation can be found here: https://xesscorp.github.io/myhdlpeek/docs/_build/singlehtml/index.html</p>
 </li>
 </ul>
 <p>Below are two bonus Python libraries one can install to do more than just hardware system design.
@@ -1333,28 +1325,17 @@ Pyside2 allows the use of QT for generating professional looking GUI tools and U
 <p>Qt is a platform to create high-performance, intuitive (if they are designed to be) UI, applications and other for embedded, desktop and all kind of other platforms. Qt appears in our homes, our cars, our workplaces and our pockets smart devices. Qt makes sure you can create unique &amp; modern connected devices that stand out from the crowd.</p>
 </li>
 </ul>
-<h5 id="installation">Installation:</h5>
+<h5 id="installation">Installation</h5>
 <ul>
-<li>
-<p>Open a web browser and go to:
-    https://download.qt.io/snapshots/ci/pyside</p>
-</li>
-<li>
-<p>Double click the latest stable version, let’s say 6.6/, and then double click <strong>latest</strong></p>
-</li>
-<li>
-<p>Download the <strong>shiboken ** and **PySide</strong> files with <em>manylinux</em> and <em>x86_64</em> in the filename.</p>
-</li>
-<li>
-<p>Save the downloaded wheel file.
-    All filenames have the <em>.whl</em> (wheel) extension.</p>
-</li>
-<li>
-<p>Open a command window and type:</p>
+<li>Open a web browser and go to: https://download.qt.io/snapshots/ci/pyside</li>
+<li>Double click the latest stable version, let’s say 6.6/, and then double click <strong>latest</strong></li>
+<li>Download the <strong>shiboken ** and **PySide</strong> files with <em>manylinux</em> and <em>x86_64</em> in the filename.</li>
+<li>Save the downloaded wheel file.
+    All filenames have the <em>.whl</em> (wheel) extension.</li>
+<li>Open a command window and type:</li>
+</ul>
 <div class="highlight"><pre><span></span><code>pip install &lt;drive&gt;:/&lt;Path&gt;/To/Downloaded/wheel/File
 </code></pre></div>
-</li>
-</ul>
 <h5 id="remark">Remark:</h5>
 <ul>
 <li>To do stuff with PySide, the Qt tools must be installed. That is subject for another text.</li>
@@ -1372,117 +1353,54 @@ Pyside2 allows the use of QT for generating professional looking GUI tools and U
 <p>Beyond its many built-in features, its abilities can be extended even further via its plugin system and API. Furthermore, Spyder can also be  used as a PyQt extension library, allowing developers to build upon its functionality and embed its components, such as the interactive  console, in their own PyQt software.</p>
 </li>
 <li>
-<p>Web site:</p>
-<ul>
-<li>https//www.spyder-ide.org</li>
-</ul>
-</li>
-<li>
-<p>Before installation these dependencies MUST be installed.</p>
-<ul>
-<li>
-<p><a href="https://www.python.org/">Python</a> 2.7 or &gt;=3.3        DO NOT USE Python 2 ANYMORE, please!</p>
-</li>
-<li>
-<p><a href="https://www.riverbankcomputing.com/software/pyqt/download5">PyQt5</a> &gt;=5.5</p>
-</li>
-<li>
-<p><a href="https://github.com/jupyter/qtconsole">Qtconsole</a> &gt;=4.2.0 – for an enhanced Python interpreter.</p>
-</li>
-<li>
-<p><a href="https://github.com/python-rope/rope">Rope</a> &gt;=0.9.4 and <a href="https://github.com/davidhalter/jedi">Jedi</a> &gt;=0.9.0 – for code completion, go-to-definition and calltips in the Editor.</p>
-</li>
-<li>
-<p><a href="https://github.com/PyCQA/pyflakes">Pyflakes</a>  – for real-time code analysis.</p>
-</li>
-<li>
-<p><a href="https://www.sphinx-doc.org/en/master/">Sphinx</a> – for the Help pane rich text mode and to get our documentation.</p>
-</li>
-<li>
-<p><a href="http://pygments.org/">Pygments</a> &gt;=2.0 – for syntax highlighting and code completion in the Editor of all file types it supports.</p>
-</li>
-<li>
-<p><a href="https://www.pylint.org/">Pylint</a>  – for static code analysis.</p>
-</li>
-<li>
-<p><a href="https://github.com/PyCQA/pycodestyle">Pycodestyle</a> – for style analysis.</p>
-</li>
-<li>
-<p><a href="https://github.com/giampaolo/psutil">Psutil</a>  – for memory/CPU usage in the status bar.</p>
-</li>
-<li>
-<p><a href="https://github.com/jupyter/nbconvert">Nbconvert</a> – to manipulate Jupyter notebooks on the Editor.</p>
-</li>
-<li>
-<p><a href="https://github.com/spyder-ide/qtawesome">Qtawesome</a> &gt;=0.4.1 – for an icon theme based on FontAwesome.</p>
-</li>
-<li>
-<p><a href="https://github.com/pickleshare/pickleshare">Pickleshare</a> – To show import completions in the Editor and Consoles.</p>
-</li>
-<li>
-<p><a href="https://github.com/zeromq/pyzmq">PyZMQ</a> – To run introspection services in the Editor asynchronously.</p>
-</li>
-<li>
-<p><a href="https://github.com/spyder-ide/qtpy">QtPy</a> &gt;=1.2.0 – To run Spyder with different Qt bindings seamlessly.</p>
-</li>
-<li>
-<p><a href="https://github.com/chardet/chardet">Chardet</a> &gt;=2.0.0– Character encoding auto-detection in the Editor.</p>
-</li>
-<li>
-<p><a href="https://github.com/numpy/numpydoc">Numpydoc</a> Used by Jedi to get return types for functions with Numpydoc docstrings.</p>
-</li>
-<li>
-<p><a href="https://github.com/cloudpipe/cloudpickle">Cloudpickle</a> Serialize variables in the IPython kernel to send them to Spyder.</p>
-<p><strong>Optional Modules</strong></p>
-</li>
-<li>
-<p><a href="https://matplotlib.org/">Matplotlib</a> &gt;=1.0 – for 2D and 3D plotting in the consoles.</p>
-</li>
-<li>
-<p><a href="https://pandas.pydata.org/">Pandas</a> &gt;=0.13.1 – for viewing and editing Series and DataFrames in the Variable Explorer.</p>
-</li>
-<li>
-<p><a href="https://www.numpy.org/">Numpy</a> – for viewing and editing two or three dimensional arrays in the Variable Explorer.</p>
-</li>
-<li>
-<p><a href="https://www.sympy.org/en/index.html">Sympy</a> &gt;=0.7.3 – for working with symbolic mathematics in the IPython console.</p>
-</li>
-<li>
-<p><a href="https://www.scipy.org/">Scipy</a> – for importing Matlab workspace files in the Variable Explorer.</p>
-</li>
-<li>
-<p><a href="http://cython.org/">Cython</a> &gt;=0.21 – to run Cython files or Python files that depend on Cython libraries in the IPython console.</p>
+<p>Web site: https//www.spyder-ide.org</p>
 </li>
 </ul>
-</li>
-<li>
-<p>Install now Spyder</p>
+<div class="highlight"><pre><span></span><code>pip install spyder
+</code></pre></div>
 <ul>
-<li><code>pip install spyder</code></li>
-</ul>
-</li>
 <li>
 <p>After installation, launch Spyder and customise it to your needs.</p>
 </li>
 <li>
-<p>Something that might be useful in Spider is Kite.</p>
-<p><strong>Kite</strong></p>
-<ul>
+<p>Before installation these dependencies MUST be installed.</p>
+</li>
+<li>
+<p><a href="https://www.python.org/">Python</a> 2.7 or &gt;=3.3        DO NOT USE Python 2 ANYMORE, please!</p>
+</li>
+<li><a href="https://www.riverbankcomputing.com/software/pyqt/download5">PyQt5</a> &gt;=5.5</li>
+<li><a href="https://github.com/jupyter/qtconsole">Qtconsole</a> &gt;=4.2.0 – for an enhanced Python interpreter.</li>
+<li><a href="https://github.com/python-rope/rope">Rope</a> &gt;=0.9.4 and <a href="https://github.com/davidhalter/jedi">Jedi</a> &gt;=0.9.0 – for code completion, go-to-definition and calltips in the Editor.</li>
+<li><a href="https://github.com/PyCQA/pyflakes">Pyflakes</a>  – for real-time code analysis.</li>
+<li><a href="https://www.sphinx-doc.org/en/master/">Sphinx</a> – for the Help pane rich text mode and to get our documentation.</li>
+<li><a href="http://pygments.org/">Pygments</a> &gt;=2.0 – for syntax highlighting and code completion in the Editor of all file types it supports.</li>
+<li><a href="https://www.pylint.org/">Pylint</a>  – for static code analysis.</li>
+<li><a href="https://github.com/PyCQA/pycodestyle">Pycodestyle</a> – for style analysis.</li>
+<li><a href="https://github.com/giampaolo/psutil">Psutil</a>  – for memory/CPU usage in the status bar.</li>
+<li><a href="https://github.com/jupyter/nbconvert">Nbconvert</a> – to manipulate Jupyter notebooks on the Editor.</li>
+<li><a href="https://github.com/spyder-ide/qtawesome">Qtawesome</a> &gt;=0.4.1 – for an icon theme based on FontAwesome.</li>
+<li><a href="https://github.com/pickleshare/pickleshare">Pickleshare</a> – To show import completions in the Editor and Consoles.</li>
+<li><a href="https://github.com/zeromq/pyzmq">PyZMQ</a> – To run introspection services in the Editor asynchronously.</li>
+<li><a href="https://github.com/spyder-ide/qtpy">QtPy</a> &gt;=1.2.0 – To run Spyder with different Qt bindings seamlessly.</li>
+<li><a href="https://github.com/chardet/chardet">Chardet</a> &gt;=2.0.0– Character encoding auto-detection in the Editor.</li>
+<li><a href="https://github.com/numpy/numpydoc">Numpydoc</a> Used by Jedi to get return types for functions with Numpydoc docstrings.</li>
+<li><a href="https://github.com/cloudpipe/cloudpickle">Cloudpickle</a> Serialize variables in the IPython kernel to send them to Spyder.</li>
+<li><strong>Optional Modules</strong></li>
+<li><a href="https://matplotlib.org/">Matplotlib</a> &gt;=1.0 – for 2D and 3D plotting in the consoles.</li>
+<li><a href="https://pandas.pydata.org/">Pandas</a> &gt;=0.13.1 – for viewing and editing Series and DataFrames in the Variable Explorer.</li>
+<li><a href="https://www.numpy.org/">Numpy</a> – for viewing and editing two or three dimensional arrays in the Variable Explorer.</li>
+<li><a href="https://www.sympy.org/en/index.html">Sympy</a> &gt;=0.7.3 – for working with symbolic mathematics in the IPython console.</li>
+<li><a href="https://www.scipy.org/">Scipy</a> – for importing Matlab workspace files in the Variable Explorer.</li>
+<li><a href="http://cython.org/">Cython</a> &gt;=0.21 – to run Cython files or Python files that depend on Cython libraries in the IPython console.</li>
+<li>Something that might be useful in Spider is <strong>Kite</strong></li>
 <li>Kite is a plugin for Spyder.</li>
 <li><strong>Kite</strong> is a free AI-powered autocomplete for <strong>Python</strong> developers. Code faster with the <strong>Kite</strong> plugin for your code editor, featuring Intelligent Snippets, Line-of-Code Completions, <strong>Python</strong> docs, and cloudless processing.</li>
 <li>Read also this article before you start:<ul>
 <li>https://qz.com/1043614/this-startup-learned-the-hard-way-that-you-do-not-piss-off-open-source-programmers/</li>
-</ul>
-</li>
-<li>Web site:<ul>
-<li>https://kite.com/</li>
-</ul>
-</li>
-<li>Install Kite<ul>
+<li>Web site: https://kite.com/</li>
+<li>Install Kite</li>
 <li>When Spyder is launched the first time, it is possible that a popup appears asking to install Kite. Thus, just follow the installation procedure.</li>
 <li>If no popup appear or not using Spyder but Atom and want Kite, go to the Kite web site and follow the install procedure.</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>

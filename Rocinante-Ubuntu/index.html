@@ -468,9 +468,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#display-manager-dm" class="md-nav__link">
+  <a href="#display-manager" class="md-nav__link">
     <span class="md-ellipsis">
-      Display Manager (DM)
+      Display Manager
     </span>
   </a>
   
@@ -902,21 +902,6 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#graphics_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Graphics
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Graphics">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#inkscape" class="md-nav__link">
@@ -1421,6 +1406,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScriptingFpgaTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scripting for FPGA Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1582,9 +1588,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#display-manager-dm" class="md-nav__link">
+  <a href="#display-manager" class="md-nav__link">
     <span class="md-ellipsis">
-      Display Manager (DM)
+      Display Manager
     </span>
   </a>
   
@@ -2017,21 +2023,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#graphics_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Graphics
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Graphics">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#inkscape" class="md-nav__link">
     <span class="md-ellipsis">
@@ -2211,29 +2202,29 @@
 </li>
 <li>
 <p>Boot form the thumb-drive and select <strong>Try or install Ubuntu</strong> from the GRUB menu.</p>
-<ul>
-<li>Select the language for the Ubuntu installation</li>
+</li>
+<li>
+<p>Select the language for the Ubuntu installation</p>
+</li>
 <li>If required, set the accessibility options (View, hear, type, ....)</li>
 <li>Select the keyboard and it's variant</li>
-<li>Tell how the PC is connected to the internet</li>
-</ul>
+<li>
+<p>Tell how the PC is connected to the internet</p>
 </li>
 <li>
 <p>Tell to "Install Ubuntu" and chose for the:</p>
-<ul>
-<li>"Interactive installation" when you want to make choices during install.</li>
-<li>If a "kind of Windows" install is wanted, select "Automated installation".</li>
-</ul>
+</li>
+<li>
+<p>"Interactive installation" when you want to make choices during install.</p>
+</li>
+<li>
+<p>If a "kind of Windows" install is wanted, select "Automated installation".</p>
 </li>
 <li>
 <p>Chose to install the "default Selection" or "Extended Selection" of tools to install.</p>
 </li>
 <li>
 <p>Select to install third party software for graphics and WIFI hardware.</p>
-<blockquote>
-<!--[!NOTE]-->
-<p><!--In this case this options doesn't need to be selected because the newest PC has no devices or boards requiring proprietary drivers or software.--> </p>
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In this case this options doesn't need to be selected because the newest PC has no devices or boards requiring proprietary drivers or software. </p>
@@ -2244,12 +2235,14 @@
 </li>
 <li>
 <p>Select:</p>
-<ul>
-<li>When accepting the fact that Ubuntu is going to partition the hard disk, select 
-    "Erase disk and install Ubuntu"</li>
-<li>When wanting to force an own partition scheme, chose: "Manual Installation"
-    In the next install screen enter a partition table as the one given in the main "Rocinante" document of this series.</li>
-</ul>
+</li>
+<li>
+<p>When accepting the fact that Ubuntu is going to partition the hard disk, select 
+    "Erase disk and install Ubuntu"</p>
+</li>
+<li>
+<p>When wanting to force an own partition scheme, chose: "Manual Installation"
+    In the next install screen enter a partition table as the one given in the main "Rocinante" document of this series.</p>
 </li>
 <li>
 <p>Follow the install pages and provide the correct answers.</p>
@@ -2263,12 +2256,7 @@
 </ul>
 <p>Go and have a cup of coffee, hot chocolate or cup of thee with coffee corner chat and upon return Ubuntu Linux is going to be installed. The installer is asking to remove the USB thumb drive and hit [Enter]. Do it to reboot in Ubuntu.</p>
 <h2 id="after-the-first-reboot">After the First Reboot</h2>
-<blockquote>
-<!--[!IMPORTANT]-->
-<p><!--Installing, updating and/or upgrading software requires root access.--> 
-<!--When the Installation, update and/or upgrade is done using GUI type of tools a popup will be presented asking for the root password. When installing, updating and/or upgrading software in a command terminal root access is obtained by the **sudo** keyword (sudo followed by a command). The command line interface will ask for the root password.--></p>
-</blockquote>
-<div class="admonition important">
+<div class="admonition note">
 <p class="admonition-title">Important</p>
 <p>Installing, updating and/or upgrading software requires root access. When the Installation, update and/or upgrade is done using GUI type of tools a popup will be presented asking for the root password. When installing, updating and/or upgrading software in a command terminal root access is obtained by the <strong>sudo</strong> keyword (sudo followed by a command). The command line interface will ask for the root password.</p>
 </div>
@@ -2286,7 +2274,7 @@
 </li>
 <li>When all updates are installed the tools displays: <strong>The software on this computer is up to date</strong></li>
 <li>Anyway, while here it's time to configure the Update Manager tool.</li>
-<li>Hit the [show apps] button, type "update ...". Select <strong>Software &amp; Updates</strong><ul>
+<li>Hit the [show apps] button, type "update ...". Select <strong>Software &amp; Updates</strong></li>
 <li>
 <p>[Ubuntu Software] tab</p>
 <ul>
@@ -2295,14 +2283,14 @@
 </li>
 <li>
 <p>Click in "Download from", select then [Other ...] and click [ Select Best Server]
-    The tool will now ping all Ubuntu update servers in the world and highlight the fasted, select it. </p>
+  The tool will now ping all Ubuntu update servers in the world and highlight the fasted, select it. </p>
 </li>
 <li>
 <p>[Updates] tab</p>
 </li>
 <li>
 <p>Leave everything as is.
-   The installation is subscribed to get all Ubuntu updates and there is a daily check for updates. Updates are downloaded and installed automatically. Other updates are displayed weekly but need installation after a mouse click. </p>
+  The installation is subscribed to get all Ubuntu updates and there is a daily check for updates. Updates are downloaded and installed automatically. Other updates are displayed weekly but need installation after a mouse click. </p>
 </li>
 <li>
 <p>[Ubuntu Pro] tab
@@ -2310,17 +2298,11 @@
     This service is free for personal use, but you need an Ubuntu account.</p>
 </li>
 <li>[Other Software] and [Authentication] tabs
-    At the start there are only one or two entries here. 
+    At the start there are only one or two entries here.
     As one installs extra software, mainly through command line and the use of apt, repositories and identification keys will be add.</li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-<blockquote>
-<!--[!NOTE]-->
-<!--These tabs are very important because updates and upgrades of the system are coming from the given mirrors. When installing tools from the command line, most of the time one start with typing: <code>sudo apt-add-repository ...</code> , this command adds addresses and keys to the "Other Software" / "Authentication" lists from were updates are retrieved. More about this in <a href="./The_Apt_Command.md">The_Apt_Command</a>.-->
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>These tabs are very important because updates and upgrades of the system are coming from the given mirrors. When installing tools from the command line, most of the time one start with typing: <code>sudo apt-add-repository ...</code> , this command adds addresses and keys to the "Other Software" / "Authentication" lists from were updates are retrieved. More about this in <a href="../The_Apt_Command/">The_Apt_Command</a>.</p>
@@ -2331,11 +2313,11 @@
 <h3 id="backups">Backups</h3>
 <ul>
 <li>
-<p><strong>Timeshift</strong> is the Linux equivalent of Apple's Time Machine. Thus Timeshift is the must have tool. Linux-Mint has this tool installed by default, so should other Linux distributions, but that's not the case for Ubuntu and other Linux disti.</p>
+<p><strong>Timeshift</strong> is the Linux equivalent of Apple's Time Machine. Thus Timeshift is the must have tool. Linux-Mint has this tool installed by default, so should other Linux distributions, but that's not the case for Ubuntu and other Linux distro.</p>
 </li>
 <li>
 <p>Thus install the tool:</p>
-<ul>
+</li>
 <li>
 <p>Unlike in previous Ubuntu editions, Ubuntu's "App Center" is completely SNAP oriented, finding Debian (deb) based tools is ...
     Timeshift is available in the Ubuntu Base Universe repository and can thus easily be installed.</p>
@@ -2345,36 +2327,31 @@
 </li>
 <li>
 <p>Enter following commands:</p>
-<ul>
-<li><code>sudo apt-update</code></li>
-<li><code>sudo apt install timeshift</code></li>
-</ul>
+</li>
+<li>
+<p><code>sudo apt-update</code></p>
+</li>
+<li>
+<p><code>sudo apt install timeshift</code></p>
 </li>
 <li>
 <p>After installation Timeshift will be available from the [show apps] button and also from the command line but then it will work without GUI interface. </p>
 </li>
 <li>
 <p>Hit the [show apps] button, start typing "timeshift".
-    Double click the timeshift icon to start the GUI version of Timeshift</p>
-<ul>
+  Double click the timeshift icon to start the GUI version of Timeshift</p>
+</li>
 <li>
 <p>Click [Settings]</p>
 <ul>
-<li>
-<p>[Location]: indicate where Timeshift can drop it's backups of the system&rarr;&lt;!--  </p>
-<blockquote>
-<!--[!NOTE]-->
-<p><!--At least 1 TB to 2 TB is required as a decent backup space.-->
-<!--The Timeshift storage location can be set onto the NAS drive (setup is discussed later in this document) as that device has most of the time lots of space. Another option is, like in the the provided partition table shown, to install a 2 TB drive only for Timeshift backups.--></p>
-</blockquote>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>At least 1 TB to 2 TB is required as a decent backup space. The Timeshift storage location can be set onto the NAS drive (setup is discussed later in this document) as that device has most of the time lots of space. Another option is, like in the the provided partition table shown, to install a 2 TB drive only for Timeshift backups.</p>
-</div>
-</li>
+<li>[Location]: indicate where Timeshift can drop it's backups of the system&rarr;&lt;!--  </li>
+</ul>
+<p>!!! Note
+      At least 1 TB to 2 TB is required as a decent backup space. The Timeshift storage location can be set onto the NAS drive (setup is discussed later in this document) as that device has most of the time lots of space. Another option is, like in the the provided partition table shown, to install a 2 TB drive only for Timeshift backups.</p>
+<ul>
 <li>
 <p>[Schedule]: Tell the system when to backup and how many backups to keep.
-    Example: hourly, 1 backup and daily 2 backups.</p>
+   Example: hourly, 1 backup and daily 2 backups.</p>
 </li>
 <li>
 <p>[Filters]: Tell the system what, and what not to backup.</p>
@@ -2382,12 +2359,8 @@
 <li>
 <p>Click [OK]</p>
 </li>
-</ul>
-</li>
 <li>
 <p>Click [Create] to make the first set of backups.</p>
-</li>
-</ul>
 </li>
 <li>
 <p>Close the Timeshift tool</p>
@@ -2403,31 +2376,34 @@
 <li>After a start or reboot of the PC and Linux, do start the Logs tool and solve any listed item.</li>
 <li>
 <p>Type Hit the [show apps] button and start typing "Logs" select the Logs tool.</p>
-<ul>
-<li>When the tool is started, under <strong>Important</strong> all warnings and errors that need attention are listed. </li>
-<li>One of the listed items can be the warning about the <strong>/tmp</strong> discussed in the main Rocinante document. Go to the <a href="../tmp_fstab_Issue/">tmp_fstab_Issue</a> document and solve the problem.</li>
-</ul>
+</li>
+<li>
+<p>When the tool is started, under <strong>Important</strong> all warnings and errors that need attention are listed. </p>
+</li>
+<li>
+<p>One of the listed items can be the warning about the <strong>/tmp</strong> discussed in the main Rocinante document. Go to the <a href="../tmp_fstab_Issue/">tmp_fstab_Issue</a> document and solve the problem.</p>
 </li>
 <li>
 <p>Reboot and again type "Logs" Hit the [show apps] button and start the logs tool.
-    It is possible that a warning message appears about “something ... casper”.
-    This casper tool is not of any use when not porting Linux and can thus be disabled.
-    Do this as:</p>
-<p><code>sudo sysemctl disable casper-md5check.service</code></p>
+  It is possible that a warning message appears about “something ... casper”.
+  This casper tool is not of any use when not porting Linux and can thus be disabled.
+  Do this as:</p>
+<div class="highlight"><pre><span></span><code>sudo sysemctl disable casper-md5check.service
+</code></pre></div>
 </li>
 <li>
 <p>Possible the next and only warning left will be about <strong>gkr-pam</strong>. 
     This message can safely be ignored.</p>
 </li>
 <li>
-<p>If there are other warnings or errors listed, select the text and copy it in a browser to search for possible solution on the WWW or maybe the warnings can be about the <a href="#Display-Manager-(DM)">Display Manager</a>.</p>
+<p>If there are other warnings or errors listed, select the text and copy it in a browser to search for possible solution on the WWW or maybe the warnings can be about the <a href="#display-manager">Display Manager</a>.</p>
 </li>
 </ul>
 <h3 id="graphics">Graphics</h3>
 <ul>
 <li>
 <p>For the AMD GPU graphics card installation do:</p>
-<ul>
+</li>
 <li>
 <p>Download and safe the latest AMD graphical and GPU driver software: “amdgpu-install_6.0.60002-1_all.deb“
     <code>sudo apt install ./amdgpu-install_6.0.60002-1_all.deb</code></p>
@@ -2435,10 +2411,6 @@
 <li>
 <p>Setup the GPU software
     <code>amdgpu-install --opencl=rocr --vukan=pro --usecase=workstation&lt;!--</code>&rarr;</p>
-<blockquote>
-<!--[!NOTE]-->
-<!--Do not run this command as sudo-->
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Do not run this command as sudo</p>
@@ -2446,26 +2418,18 @@
 <ul>
 <li>
 <p>Add the \&lt;user&gt; to the “video” group
-    <code>sudo usermod -a -G video &lt;user&gt;</code></p>
+  <code>sudo usermod -a -G video &lt;user&gt;</code></p>
 </li>
 <li>
-<p>Change the configuration file:<code>/etc/udev/rules.d/70-amdgpu.rules</code></p>
-<p>Change: “group <strong>==</strong> video” to “group <strong>=</strong> video”</p>
+<p>Change the configuration file:<code>/etc/udev/rules.d/70-amdgpu.rules</code>
+  Change: “group <strong>==</strong> video” to “group <strong>=</strong> video”</p>
 </li>
 <li>
 <p>Add: <code>export PATH=$PATH:/opt/amdgpu:/opt/amdgpu-pro:/opt/rocm</code> to the .bash-aliases file.</p>
-<blockquote>
-<!--[!NOTE]-->
-<!--Do not alter the default **.bashrc** file but use a **.bash-aliases** file for all bash customisation. The .bashrc file automatically looks for an existing bash-aliases file. When there is one, it uses it when not is just continues.-->
-</blockquote>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Do not alter the default <strong>.bashrc</strong> file but use a <strong>.bash-aliases</strong> file for all bash customisation. The .bashrc file automatically looks for an existing bash-aliases file. When there is one, it uses it when not is just continues.</p>
-</div>
 </li>
 </ul>
-</li>
-</ul>
+<p>!!! Note
+      Do not alter the default <strong>.bashrc</strong> file but use a <strong>.bash-aliases</strong> file for all bash customisation. The .bashrc file automatically looks for an existing bash-aliases file. When there is one, it uses it when not is just continues.</p>
 </li>
 </ul>
 <h3 id="games">Games</h3>
@@ -2483,16 +2447,22 @@
 </li>
 <li>
 <p>To install the Linux kernel easily:</p>
-<ul>
-<li>Start a command terminal.
-    Type Hit the [Linux Mint] icon in the left screen bottom and start typing "terminal" select the Terminal tool.</li>
-<li>Type following lines, press [Enter] after each line to execute the command
-    <code>sudo add-apt-repository ppa:cappelikan/ppa -y</code>
-    <code>sudo apt update</code>sudo apt install mainline`</li>
-<li>To upgrade to a new Linux kernel use the graphical <strong>mainline</strong> tool.
-    Type Hit the [Linux Mint] icon in the left screen bottom and start typing "mainline" select the Mainline tool.</li>
-</ul>
-<p>​       If possible use a “generic” core instead of a ”HWE” core.</p>
+</li>
+<li>
+<p>Start a command terminal.
+    Type Hit the [Linux Mint] icon in the left screen bottom and start typing "terminal" select the Terminal tool.</p>
+</li>
+<li>
+<p>Type following lines, press [Enter] after each line to execute the command</p>
+<div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:cappelikan/ppa -y
+sudo apt update
+sudo apt install mainline
+</code></pre></div>
+</li>
+<li>
+<p>To upgrade to a new Linux kernel use the graphical <strong>mainline</strong> tool.
+    Type Hit the [Linux Mint] icon in the left screen bottom and start typing "mainline" select the Mainline tool.
+    If possible use a “generic” core instead of a ”HWE” core.</p>
 </li>
 </ul>
 <h3 id="numlockx">Numlockx</h3>
@@ -2503,17 +2473,8 @@ If the file exist, everything will work
 If the file does not exist, go to the <a href="../Numlockx/">Numlockx</a> document and create a file as is discussed in the text.</p>
 <h3 id="remove-snap">Remove SNAP</h3>
 <p>Ubuntu uses <strong>snap</strong> for installation of applications, but other applications are installed the normal way using apt and .deb files.</p>
-<blockquote>
-<p><!--[!NOTE]--> </p>
-<p><!--From Wikipedia:-->
-<!--**Snap** is a software <a href="https://en.wikipedia.org/wiki/Package_manager">packaging</a> and deployment system developed by Canonical for operating systems that use the Linux kernel and the systemd init system. The packages, called *snaps*, and the tool for using them, *snapd*, work across a range of Linux distributions and allow upstream software developers to distribute their applications directly to users. Snaps are self-contained applications running in a sandbox with mediated access to the host system. Snap was originally released for cloud applications but was later ported to also work for Internet of Things (IoT) devices and desktop applications.--></p>
-</blockquote>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>From Wikipedia:</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title"> </p>
+<p class="admonition-title">From Wikipedia</p>
 <p><strong>Snap</strong> is a software <a href="https://en.wikipedia.org/wiki/Package_manager">packaging</a> and deployment system developed by Canonical for operating systems that use the Linux kernel and the systemd init system. The packages, called <em>snaps</em>, and the tool for using them, <em>snapd</em>, work across a range of Linux distributions and allow upstream software developers to distribute their applications directly to users. Snaps are self-contained applications running in a sandbox with mediated access to the host system. Snap was originally released for cloud applications but was later ported to also work for Internet of Things (IoT) devices and desktop applications.</p>
 </div>
 <p>Personally I don't like the mix of installers and thus don’t like snap, so to remove it completely do as described in the <a href="../Remove_SNAP/">Remove_SNAP</a> document.</p>
@@ -2529,74 +2490,74 @@ sudo apt install nfs-kernel-server
 </li>
 <li>
 <p>Add the user(s) to the <strong>netdev</strong> group
-    <code>sudo usermod -a -G groupname username</code> or for user marc and netdev: <code>sudo usermod -a -G netdev marc</code></p>
+    <code>sudo usermod -a -G groupname username</code> or for user Thorium/Mine and netdev: <code>sudo usermod -a -G netdev Thorium/Mine</code></p>
 </li>
 <li>
 <p>Add the different users and their directories to the <strong>fstab</strong> file. The NAS drive users and their directories are mounted, using NFS, as if they were regular drives locally to the computer, this makes it look as if the NAS drive is part of the drives in the PC</p>
 </li>
 <li>
 <p>Open with a text editor the <strong>/etc/fstab</strong> file
-    <code>sudo gedit /etc/fstab</code></p>
-<ul>
-<li>gedit can be every other text editor as: gnome-text-editor, code, xed, vi, ...</li>
-</ul>
+  <code>sudo gedit /etc/fstab</code></p>
 </li>
 <li>
-<p>Add the NAS drive and its user directories to the file and provide a mount point for ec
-    <div class="highlight"><pre><span></span><code>&lt;NAS IP&gt;/&lt;Volume&gt;/&lt;User&gt; /mnt/&lt;NAS Directory&gt; nfs4 &lt;nfs options&gt; 0 0
-</code></pre></div></p>
+<p>gedit can be every other text editor as: gnome-text-editor, code, xed, vi, ...</p>
+</li>
+<li>
+<p>Add the NAS drive and its user directories to the file and provide a mount point for ec</p>
+<div class="highlight"><pre><span></span><code>&lt;NAS IP&gt;/&lt;Volume&gt;/&lt;User&gt; /mnt/&lt;NAS Directory&gt; nfs4 &lt;nfs options&gt; 0 0
+</code></pre></div>
 <p>example:</p>
-<div class="highlight"><pre><span></span><code>NAS-IP:/volume1/Marc /mnt/Marc nfs4 x-systemd.automount,_netdev,noacl,nocto,rsize=32768,wsize=32768 0   0
+<div class="highlight"><pre><span></span><code>NAS-IP:/volume1/Thorium/Mine /mnt/Thorium/Mine nfs4 x-systemd.automount,_netdev,noacl,nocto,rsize=32768,wsize=32768 0   0
 </code></pre></div>
 </li>
 <li>
 <p>Restart to let the modified fstab file be read.
-    It will create directories at the given mount points and with the given names.
-    Example: If the NAS drive/directory is in the fstab file coupled to /mnt/Marc then; after reboot there will be a /Marc directory under the /mnt system directory.</p>
+  It will create directories at the given mount points and with the given names.
+  Example: If the NAS drive/directory is in the fstab file coupled to /mnt/Thorium/Mine then; after reboot there will be a /Thorium/Mine directory under the /mnt system directory.</p>
 </li>
 <li>
-<ul>
-<li>It is possible, most likely, that the created files and possible directories are owned by root and that therefore the content of the directories is not accessible by the user of the machine.
-        To get this solved do:
-        - Disable the nfs NAS mount points in the fstab file (Put a # in front of each line).
-        - Reboot the machine.
-        - After boot go to the /mnt system directory (the earlier created directories are still there) and change the owner, group and access permissions of the directories, these directories are constructed by nfs due to the execution of the root owned fstab at the first boot.
-        - Enable the nfs NAS mount lines in the fstab file (remove the #).
-        - Reboot the machine.
-        - Now accessing the NAS directories should work.</li>
-</ul>
+<p>It is possible, most likely, that the created files and possible directories are owned by root and that therefore the content of the directories is not accessible by the user of the machine.</p>
+</li>
+<li>To get this solved do:</li>
+<li>Disable the nfs NAS mount points in the fstab file (Put a # in front of each line).</li>
+<li>Reboot the machine.</li>
+<li>After boot go to the /mnt system directory (the earlier created directories are still there) and change the owner, group and access permissions of the directories, these directories are constructed by nfs due to the execution of the root owned fstab at the first boot.</li>
+<li>Enable the nfs NAS mount lines in the fstab file (remove the #).</li>
+<li>Reboot the machine.</li>
+<li>
+<p>Now accessing the NAS directories should work.</p>
 </li>
 <li>
 <p>Directories and other stuff created on the NAS might be owned by a user <strong>user</strong>. Therefore it might be necessary to make the Linux user part of the group <strong>users</strong>, by:
-     <code>sudo usermod -a -G users marc</code>
+     <code>sudo usermod -a -G users Mine</code>
     <strong>Remark:</strong> Other groups the user might be part of:</p>
-<ul>
+</li>
 <li>
 <p>When planning to use openvpn add the user to <strong>nm-openvpn</strong></p>
 </li>
 <li>
 <p>When planning to use one or more virtual machines under VirtualBox, make the user part of <strong>vboxsf</strong> and <strong>vboxusers</strong>
-    Since VirtualBox is not installed yet, the two groups must be created first: <code>sudo groupadd groupname</code></p>
+        Since VirtualBox is not installed yet, the two groups must be created first: <code>sudo groupadd groupname</code></p>
 </li>
 <li>
 <p>I’ve had in the past troubles with Bluetooth. Some of those were solved by making the user part of the Bluetooth group</p>
 </li>
 </ul>
-</li>
-</ul>
 <h3 id="enhancements">Enhancements</h3>
 <ul>
+<li>Install Ubuntu enhancements and codex with <strong>ubuntu-restricted-extras</strong>
+  Ubuntu Restricted Extras is a software package that enhances the user experience on Ubuntu desktops by providing a set of important utilities and codex that are typically not included in the standard installation. This includes media codex necessary to play various audio and video files, support for playing DVDs, and Microsoft TrueType fonts. These are called “restricted” because they are not included with Ubuntu by default due to legal and copyright restrictions in various countries.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo apt update
+sudo apt install ubuntu-restricted-extras
+</code></pre></div>
+<ul>
 <li>
-<p>Install Ubuntu enhancements and codex with <strong>ubuntu-restricted-extras</strong>
-    Ubuntu Restricted Extras is a software package that enhances the user experience on Ubuntu desktops by providing a set of important utilities and codex that are typically not included in the standard installation. This includes media codex necessary to play various audio and video files, support for playing DVDs, and Microsoft TrueType fonts. These are called “restricted” because they are not included with Ubuntu by default due to legal and copyright restrictions in various countries.</p>
-<p><code>sudo apt update``
-sudo apt install ubuntu-restricted-extras</code></p>
-</li>
-<li>
-<p>If the PC is going to be used for software development or an eventual compilation of source code, the <strong>ubuntu-essential</strong> meta-package can be useful to have. The meta-package contains the GNU Compiler Collection (GCC), being a collection of compilers and libraries for C, C++, Objective-C, Fortran, Ada, <a href="https://linuxize.com/post/how-to-install-go-on-ubuntu-20-04/">Go</a> , and D programming languages. A lot of open-source projects, including the Linux kernel and GNU tools, are compiled using GCC.
-    <code>sudo apt update</code>
-    <code>sudo apt install build-essential</code>
-    <code>sudo apt-get install manpages-dev</code></p>
+<p>If the PC is going to be used for software development or an eventual compilation of source code, the <strong>ubuntu-essential</strong> meta-package can be useful to have. The meta-package contains the GNU Compiler Collection (GCC), being a collection of compilers and libraries for C, C++, Objective-C, Fortran, Ada, <a href="https://linuxize.com/post/how-to-install-go-on-ubuntu-20-04/">Go</a> , and D programming languages. A lot of open-source projects, including the Linux kernel and GNU tools, are compiled using GCC.</p>
+<div class="highlight"><pre><span></span><code>sudo apt update
+sudo apt install build-essential
+sudo apt-get install manpages-dev
+</code></pre></div>
 </li>
 </ul>
 <h3 id="bluetooth">Bluetooth</h3>
@@ -2628,11 +2589,6 @@ sudo service bluetooth start
 </li>
 <li>
 <p>If Bluetooth still doesn't work decently, disable the on-board Bluetooth and plug a Bluetooth dongle in one of the many USB ports. Try to use a USB port on the front or top of the computer case (exposure of the dongle).</p>
-<blockquote>
-<!--[!NOTE]-->
-<p><!--These days motherboards seem to have also on-board WIFI. Disable it!.-->
-<!--A desktop computer needs to connect to wired Ethernet--></p>
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>These days motherboards seem to have also on-board WIFI. Disable it! A desktop computer needs to connect to wired Ethernet</p>
@@ -2640,12 +2596,14 @@ sudo service bluetooth start
 </li>
 <li>
 <p>Check if the Bluetooth dongle is recognised by one of the on-board USB switches.</p>
-<ul>
-<li>Start a command terminal and enter <code>lsusb</code></li>
-<li>One of the returned line can be something as:
+</li>
+<li>
+<p>Start a command terminal and enter <code>lsusb</code></p>
+</li>
+<li>
+<p>One of the returned line can be something as:
     <code>Bus 009 Device 003: ID 0a12:0001 Cambridge Silicon Radio, Ltd Bluetooth Dongle (HCI mode)</code> 
-    This is the Bluetooth dongle signature.</li>
-</ul>
+    This is the Bluetooth dongle signature.</p>
 </li>
 <li>
 <p>Restart from point <strong>1</strong> above and normally Bluetooth should work now.</p>
@@ -2655,7 +2613,7 @@ sudo service bluetooth start
 <ul>
 <li>
 <p>Open a command terminal and:</p>
-<ul>
+</li>
 <li>
 <p>Check the Bluetooth blocking status , enter <code>sudo rfkill list</code></p>
 <ul>
@@ -2715,37 +2673,35 @@ WantedBy=suspend.target
 </li>
 <li>
 <p>Run the tool, to get device info, by typing in the command terminal: <code>bluetoothctl</code></p>
-<ul>
-<li>When having run earlier <code>sudo systemctl status bluetooth.service</code> the Bluetooth device MAC address has been displayed. Run now, from the bluetoothctl prompt: 
-    <code>info &lt;MAC address&gt;</code></li>
-<li>There should be a mentioning of <strong>A2DP</strong> in all obtained information.
-    If it's not displayed and the device support high-quality audio then, force A2DP.</li>
-</ul>
+</li>
+<li>
+<p>When having run earlier <code>sudo systemctl status bluetooth.service</code> the Bluetooth device MAC address has been displayed. Run now, from the bluetoothctl prompt: 
+    <code>info &lt;MAC address&gt;</code></p>
+</li>
+<li>
+<p>There should be a mentioning of <strong>A2DP</strong> in all obtained information.
+    If it's not displayed and the device support high-quality audio then, force A2DP.</p>
 </li>
 <li>
 <p>exit the bluetoothctl tool by typing: <code>quit</code></p>
-<ul>
+</li>
 <li>
 <p>Start a text editor with /etc/bluetooth/main.conf as file to open.</p>
 </li>
 <li>
 <p>Add under the General section:</p>
+</li>
+</ul>
 <div class="highlight"><pre><span></span><code>Enable=Source,Sink,Media
 Disable=Socket
 </code></pre></div>
-</li>
-<li>
-<p>Save the file and restart the daemon: <code>sudo systemctl restart bluetooth</code>.
-    That explicitly permits A2DP while stopping HFP.</p>
-</li>
+<ul>
+<li>Save the file and restart the daemon: <code>sudo systemctl restart bluetooth</code>.
+    That explicitly permits A2DP while stopping HFP.</li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="display-manager-dm">Display Manager (DM)</h3>
+<h3 id="display-manager">Display Manager</h3>
 <p>Ubuntu is standard using the Gnome Display Manager (GDM), Linux-Mint on the other hand is using the LIghtDM display manager. Change the display manager only when getting warnings in the log files or when going to install the Cinnamon desktop. </p>
 <ul>
 <li>When booting it's possible that two of the warnings in the boot logs are:</li>
@@ -2756,30 +2712,36 @@ Disable=Socket
 <p>Both are warnings, thus non blocking, but are annoying and have to do with the GDM used by Ubuntu.</p>
 <ul>
 <li>
-<p>Type below in a command terminal as check to detect if GDM is used as display manager:
-    <div class="highlight"><pre><span></span><code>cat /etc/X11/default-display-manager
-</code></pre></div></p>
-<p>The return should be: <code>/usr/bin/gdm3</code></p>
+<p>Type below in a command terminal as check to detect if GDM is used as display manager:</p>
+<div class="highlight"><pre><span></span><code>cat /etc/X11/default-display-manager
+</code></pre></div>
 </li>
+</ul>
+<p>The return should be: <code>/usr/bin/gdm3</code></p>
+<ul>
 <li>
 <p>To get rid of the warnings change the display manager to <a href="https://github.com/canonical/lightdm">LightDM</a>, the default display manager used by Linux-Mint. LightDM is a cross-desktop lightweight display manager and is other than GDM independent of any Desktop Environment.
     Main features of lightDM are:</p>
-<ul>
-<li>Support different display servers</li>
+</li>
+<li>
+<p>Support different display servers</p>
+</li>
 <li>No GNOME dependencies</li>
 <li>Support GTK and Qt</li>
 <li>Low memory requirements</li>
 <li>Fast performance</li>
 <li>Remote login via <a href="https://www.x.org/releases/X11R7.6/doc/libXdmcp/xdmcp.html">XDMCP</a> and <a href="https://wiki.debian.org/VNCviewer">VNC</a></li>
-<li>Guest sessions</li>
-</ul>
+<li>
+<p>Guest sessions</p>
 </li>
 <li>
 <p>Install and Configure <a href="https://packages.debian.org/search?keywords=lightdm">lightDM</a></p>
-<div class="highlight"><pre><span></span><code>sudo apt update
-sudo apt install lightdm
-</code></pre></div>
 </li>
+</ul>
+<p><code>text
+    sudo apt update
+    sudo apt install lightdm</code></p>
+<ul>
 <li>
 <p>During the installation, a popup ask to consent licenses and a second popup will ask if the default display manager should be GDM3 or LightDM. Select: <strong>LightDM</strong></p>
 </li>
@@ -2816,9 +2778,10 @@ As also explained and tried, Ubuntu has a Cinnamon targeted version but that is 
 </li>
 <li>
 <p>then:</p>
-<p><code>sudo apt ugrade</code>
-<code>sudo apt update</code>
-<code>sudo apt install cinnamon-desktop-environment</code></p>
+<div class="highlight"><pre><span></span><code>sudo apt ugrade
+sudo apt update
+sudo apt install cinnamon-desktop-environment
+</code></pre></div>
 </li>
 <li>
 <p>Reboot</p>
@@ -2841,15 +2804,9 @@ As also explained and tried, Ubuntu has a Cinnamon targeted version but that is 
 <li>Reboot</li>
 <li>Upon reaching the login screen, select Budgie from the desktop environment optionst, button in right bottom, to ensure to log in to Budgie by default.</li>
 </ul>
-<div style="page-break-after: always; break-after: page;"></div>
-
 <h4 id="tuning-cinnamon">Tuning Cinnamon</h4>
 <p>Tuning is user's choice or otherwise said, it's the problem” of the user.
 Thus as user, do with it what you like but find here the tuning experiment to make Cinnamon running on Ubuntu as a close copy of the Linux-Mint Cinnamon desktop on other (older) PCs. It will never be exactly the same and it does not need to be, but it must have the looks and feel for let's say 90%.</p>
-<blockquote>
-<p><!--[!NOTE]--> </p>
-<!--One need to be root or operate as sudo to execute most of the commands explained below-->
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>One need to be root or operate as sudo to execute most of the commands explained below</p>
@@ -2858,29 +2815,27 @@ Thus as user, do with it what you like but find here the tuning experiment to ma
 <ul>
 <li>
 <p>Background</p>
-<ul>
-<li>The typical Linux-Mint background is; dark gray Linux Mint eDesigner with LM sign in left bottom quadrant of the screen.</li>
+</li>
+<li>
+<p>The typical Linux-Mint background is; dark gray Linux Mint eDesigner with LM sign in left bottom quadrant of the screen.</p>
+</li>
 <li>
 <p>For the eDesigner background, you’ll need a Linux-Mint system in the neighbourhood.</p>
 <ul>
-<li>Go to a machine running Linux-Mint<ul>
+<li>Go to a machine running Linux-Mint</li>
 <li>Browse to “/usr/share/backgrounds” (This is the directory with all system backgrounds).</li>
 <li>Copy, to a USB drive, the “linuxmint” directory.</li>
-</ul>
-</li>
 <li>Plug the USB drive into the new machine and copy or move the “linuxmint” directory to “/usr/share/backgrounds”</li>
 <li>Open <strong>SystemSettings - Backgrounds</strong> and add (<strong>+</strong>) the “/usr/share/backgrounds/linuxmint” directory to the backgrounds list (left size). Select and click “linuxmint” and make a choice in the right pane.</li>
 </ul>
 </li>
 <li>
 <p>If no Linux-Mint machine is available, find beautiful and stylish backgrounds here:
-    https://wallpapersafari.com/linux-mint-wallpaper-hd/</p>
-</li>
-</ul>
+        https://wallpapersafari.com/linux-mint-wallpaper-hd/</p>
 </li>
 <li>
 <p>Fonts and themes.</p>
-<ul>
+</li>
 <li>
 <p>Go to: https://github.com/orgs/linuxmint/repositories</p>
 <ul>
@@ -2888,7 +2843,7 @@ Thus as user, do with it what you like but find here the tuning experiment to ma
 <li>Select the “mint-themes” repository and download the zip file.</li>
 </ul>
 <p>Open the “mint-y-icons-master.zip” file and extract the contents of “/usr/share/icons” directory to the “/usr/share/icons” directory of the machine.
-Open the “mint-themes-master.zip” file and extract the contents of “/files/usr/share/themes” directory to the “/usr/share/themes” directory of the machine.</p>
+  Open the “mint-themes-master.zip” file and extract the contents of “/files/usr/share/themes” directory to the “/usr/share/themes” directory of the machine.</p>
 </li>
 <li>
 <p>Themes</p>
@@ -2900,11 +2855,9 @@ Open the “mint-themes-master.zip” file and extract the contents of “/files
 <li>Desktop: Mint-Y-black</li>
 </ul>
 </li>
-</ul>
-</li>
 <li>
 <p>Preferences</p>
-<ul>
+</li>
 <li>Applets: Selected (turned on) are:<ul>
 <li>Sticky Notes , Calendar (select the configuration wheel and enter the custom date format “%H:%M:%S %n %d %b %y”), Grouped Window List, Menu, Network Manger, Notifications, Power Manger</li>
 <li>Printers, Removable Drives, Rubbish Bin, Sound, System Tray, Workspaces Switcher, XApp Status Applet</li>
@@ -2930,28 +2883,24 @@ Open the “mint-themes-master.zip” file and extract the contents of “/files
 <li>Recent files and check connectivity are on.</li>
 </ul>
 </li>
-<li>Screensaver<ul>
+<li>
+<p>Screensaver</p>
+<ul>
 <li>Turns on after 10 minutes.</li>
 <li>The machine locks immediately when going to sleep and when the screen-saver starts.</li>
 </ul>
 </li>
-</ul>
-</li>
 <li>
 <p>Program and tool settings</p>
-<ul>
+</li>
 <li>
 <p>Copy the play and listen list for Rhythmbox from the previous PC to the new.
-    These things can be found in:</p>
+      These things can be found in:</p>
 <div class="highlight"><pre><span></span><code>~/.local/share/rhythmbox
 </code></pre></div>
 <p>Copy the content of above directory from one PC to the other.</p>
 </li>
 </ul>
-</li>
-</ul>
-<div style="page-break-after: always; break-after: page;"></div>
-
 <h2 id="installing-user-software">Installing user software</h2>
 <p>The software installed on a PC is the choice of the user. If you have a machine like the one discussed here, there is plenty of room for all kinds of software. Provided here is a list of software tools installed on my machines. These tools are not used daily but let’s say at least ones an week and certainly more of the tools are used weekly.</p>
 <p>The tool install instructions are provided as command lines and are expressed as a <code></code> bubble. <br />
@@ -2967,46 +2916,48 @@ sudo apt instal timeshift
 <p>After installing the tool, take a first snapshot of the system till now.</p>
 <ul>
 <li>Select the snapshot type : RSYNC</li>
-<li>It starts estimating the snapshot size and then comes back with a list of disks. During install of Ubuntu the 4 TB WDC siak has been reserved for timeshift. It got the name <strong>TimeMachine</strong> and is mounted as /mnt/TimeMachine. Select that disk and click[Next].</li>
-<li>Set the snapshot levels you want (Monthly, Weekly, Daily, Hourly, Boot) and determine how many snapshots to keep. Example: Daily: 3 and Hourly: 6.</li>
-<li>Determine what to backup and what not.</li>
+<li>It starts estimating the snapshot size and then comes back with a list of disks. During install of Ubuntu the 4 TB WDC disk has been reserved for timeshift. It got the name <strong>TimeMachine</strong> and is mounted as /mnt/TimeMachine. Select that disk and click[Next].</li>
+<li>Set the snapshot levels you want (Monthly, Weekly, Daily, Hourly, Boot) and deterThorium/Mine how many snapshots to keep. Example: Daily: 3 and Hourly: 6.</li>
+<li>DeterThorium/Mine what to backup and what not.</li>
 <li>[Finish], hit the [Create] tab to get the first snapshot.</li>
 </ul>
 <p><strong>Remark:</strong></p>
 <p>It is a good idea to make a first new snapshot when all tools are installed and configured.</p>
 <h4 id="appimagelauncher">AppImageLauncher</h4>
 <p>Integrate AppImages to your application launcher with one click, and manage, update and remove them from there. Double-click AppImages to open them, without having to make them executable first.</p>
-<p><div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:appimagelauncher-team/stable
+<div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:appimagelauncher-team/stable
 sudo apt update
 sudo apt install appimagelauncher
 </code></pre></div>
-An <a href="https://appimage.org">appimage</a> file  is kind of a compressed directory containing all files and directories required bij the tool the appimage file is representing. The only thing an appimage file has not is the files representing the customisation of the tool. Customisation of tools can be found in the users home directory under .config and .local directories.</p>
+<p>An <a href="https://appimage.org">appimage</a> file  is kind of a compressed directory containing all files and directories required bij the tool the appimage file is representing. The only thing an appimage file has not is the files representing the customisation of the tool. Customisation of tools can be found in the users home directory under .config and .local directories.</p>
 <p>Installing and removing tools using appimages is thus very easy. download the tools appimage file (\&lt;<em>File_Name</em>&gt;.appimage) and pass it through AppImageLauncher. Removing a tool is done by deleting the appimage file.</p>
 <h5 id="configure-appimagelauncher">Configure AppImageLauncher</h5>
 <ul>
-<li>
-<p>Create, as root/sudo, in <strong>/opt</strong> a directory <strong>AppImages</strong> and change the owner, group and properties of the directory. Use a file browser (Nemo) to do that or use a command line terminal.</p>
-<ul>
-<li><code>cd /opt
-    sudo chown &lt;user&gt; AppImages
-    sudo chgrp &lt;user&gt; AppImages
-    sudo chmod 775 AppImages</code></li>
-<li>Click the [Menu] button in the left bottom corner of the screen and start typing <strong>appimagelauncher</strong>. The first presented option is: <strong>AppImageLauncher Settings</strong>, select it.</li>
+<li>Create, as root/sudo, in <strong>/opt</strong> a directory <strong>AppImages</strong> and change the owner, group and properties of the directory. Use a file browser (Nemo) to do that or use a command line terminal.</li>
 </ul>
+<div class="highlight"><pre><span></span><code>cd /opt
+sudo chown &lt;user&gt; AppImages
+sudo chgrp &lt;user&gt; AppImages
+sudo chmod 775 AppImages
+</code></pre></div>
+<ul>
+<li>
+<p>Click the [Menu] button in the left bottom corner of the screen and start typing <strong>appimagelauncher</strong>. The first presented option is: <strong>AppImageLauncher Settings</strong>, select it.</p>
 </li>
 <li>
 <p>[AppimageLauncher] tab</p>
-<ul>
-<li>Tick the box left of "Ask whether to move AppImage files ... "</li>
-<li>Set the location were to store the appimage files and were to execute them from to
-    <strong>/opt/AppImages</strong></li>
-</ul>
+</li>
+<li>
+<p>Tick the box left of "Ask whether to move AppImage files ... "</p>
+</li>
+<li>
+<p>Set the location were to store the appimage files and were to execute them from to <strong>/opt/AppImages</strong></p>
 </li>
 <li>
 <p>[AppimageLauncherd] tab</p>
-<ul>
-<li>Tick the box left of "Auto start auto-integration ... "</li>
-</ul>
+</li>
+<li>
+<p>Tick the box left of "Auto start auto-integration ... "</p>
 </li>
 <li>
 <p>Click [OK]</p>
@@ -3036,10 +2987,6 @@ It is possible to sync the PC version with the web browser version, this is easy
 </ul>
 <p>What happened is; the saved appimage file is copied to the /opt/AppImages directory and the AppImageLauncher created an input for the [Manjaro main] menu so that when clicking the [Memu] button one can type bitwarden and launch bitwarden from the menu structure.
 The AppImageLauncher tool will also take care of regularly updating the Bitwarden tool.</p>
-<blockquote>
-<!--[!TIP]-->
-<!--In case of ... On regularly base export the vault, using the PC version, of all passwords as csv or json file and store that file somewhere safe (in another personal vault).-->
-</blockquote>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>In case of ... On regularly base export the vault, using the PC version, of all passwords as csv or json file and store that file somewhere safe (in another personal vault).</p>
@@ -3047,10 +2994,10 @@ The AppImageLauncher tool will also take care of regularly updating the Bitwarde
 <h4 id="dropbox">Dropbox</h4>
 <p>Keep everything that’s important to you and your family shareable and safe in one place.
 Back up files in the cloud, share photos and videos, and more.</p>
-<p><div class="highlight"><pre><span></span><code>https://www.dropbox.com/install
+<div class="highlight"><pre><span></span><code>https://www.dropbox.com/install
 dropbox_2024.01.22_amd64.deb
 </code></pre></div>
-After downloading the .deb file install it with the GDebi Package Installer</p>
+<p>After downloading the .deb file install it with the GDebi Package Installer</p>
 <h4 id="pyenv">Pyenv</h4>
 <p>Manage Multiple Python Versions With pyenv.
 Use another Python environment to play with than the system installed Python so you cannot break anything in your system.</p>
@@ -3127,9 +3074,9 @@ sudo apt install meld
 </code></pre></div>
 <p>Meld is installed because a extension installed in the code editor is using it.</p>
 <h4 id="qt-qute">QT (QuTe)</h4>
-<p>All the tools you need for creating software applications or embedded devices, from planning and design to development, testing, and future-proofing your products. QT is a tool that needs to be purchased and licensed, but there is a open source version available for the non-commercial developer (Hobby or home user). the rules are described here:
+<p>All the tools you need for creating software applications or embedded devices, from planning and design to development, testing, and future-proofing your products. QT is a tool that needs to be purchased and licensed, but there is a open source version available for the non-commercial developer (Hobby or home user). the rules are described here:</p>
 <div class="highlight"><pre><span></span><code>https://www.qt.io/download-open-source
-</code></pre></div></p>
+</code></pre></div>
 <p>READ the page about what can/must be done and cannot be done using the open source license.
 Download the online installer here:</p>
 <div class="highlight"><pre><span></span><code>https://doc.qt.io/qt-6/qt-online-installation.html#2-download-qt-online-installer
@@ -3162,31 +3109,19 @@ Download the online installer here:</p>
 </li>
 <li>
 <p>Run the <em>install.sh</em> script as root (sudo) and install the Tcl-Tk tooling in <em>/opt/ActiveState</em>.</p>
-<ul>
+</li>
 <li>
 <p>Accept the list of what is going to be installed, hit [enter].</p>
 </li>
-<li>
-<p>Accept the license of ActiveState by typing [A]</p>
-</li>
-<li>
-<p>Provide the path where ActiveState Tcl-Tk will be installed or accept the default value.
+<li>Accept the license of ActiveState by typing [A]</li>
+<li>Provide the path where ActiveState Tcl-Tk will be installed or accept the default value.
     The default value is /opt/ActiveTcl-8.6
-    Hit [enter] cd ..</p>
-</li>
-<li>
-<p>Provide the path where demo design will dropped or accept the default. Hit [enter]</p>
-</li>
-<li>
-<p>Specify the runtime installation or accept the default given value. Hit [enter]</p>
-</li>
-<li>
-<p>Hit [enter] to start the installation.</p>
-</li>
-<li>
-<p>At the end of the installation some settings are provided.
-    Open the <em>.bash_aliases</em> or <em>.bashrc</em> file with a text editor <code>~/.bash_aliases</code> .</p>
-</li>
+    Hit [enter] cd ..</li>
+<li>Provide the path where demo design will dropped or accept the default. Hit [enter]</li>
+<li>Specify the runtime installation or accept the default given value. Hit [enter]</li>
+<li>Hit [enter] to start the installation.</li>
+<li>At the end of the installation some settings are provided.
+    Open the <em>.bash_aliases</em> or <em>.bashrc</em> file with a text editor <code>~/.bash_aliases</code> .</li>
 <li>
 <p>Add following lines to one of the files.</p>
 <div class="highlight"><pre><span></span><code># TCL-TK settings (ActiveState)
@@ -3196,17 +3131,10 @@ export MANPATH=$TCLTK_ROOT/man
 </code></pre></div>
 </li>
 </ul>
-</li>
-</ul>
 <h3 id="office">Office</h3>
 <h4 id="typora">Typora</h4>
 <p>Typora provides a seamless experience as both a Markdown reader and a writer.
 It removes the preview window, mode switcher, syntax symbols of markdown source code, and all other unnecessary distractions of other markdown readers &amp; writers.</p>
-<blockquote>
-<!--[!NOTE]-->
-<p><!--Typora is no longer a free tool. The cost is $15. But it’s worth it.--> 
-<!--Pay the money, get a license it and download it.--></p>
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Typora is no longer a free tool. The cost is $15. But it’s worth it. Pay the money, get a license it and download it.</p>
@@ -3217,10 +3145,10 @@ wget -qO - https://typora.io/linux/public-key.asc | sudo tee /etc/apt/trusted.gp
 <p>Add Typora's repository to the list of repositories</p>
 <div class="highlight"><pre><span></span><code>sudo add-apt-repository &#39;deb https://typora.io/linux ./&#39;
 </code></pre></div>
-<p>Install Typora
+<p>Install Typora</p>
 <div class="highlight"><pre><span></span><code>sudo apt-get update
 sudo apt-get install typora
-</code></pre></div></p>
+</code></pre></div>
 <p>Markdown documents can easily be turned into complex static documentation web sites with a tool as: <a href="https://www.mkdocs.org">MkDocs</a></p>
 <h4 id="pandoc">Pandoc</h4>
 <p><a href="http://pandoc.org/">Pandoc</a> is a universal document text converter.
@@ -3230,41 +3158,19 @@ If ever using it, the GitHub Atom text edit is also using it.</p>
 <h4 id="texlive-latex">TexLive - Latex</h4>
 <p>TeX Live is an easy way to get up and running with the <a href="https://tug.org/">TeX document production system</a>.</p>
 <ul>
-<li>
-<p>Start a web browser and go to: https://tug.org/texlive/acquire-netinstall.html</p>
-</li>
-<li>
-<p>Click on the download for a <a href="http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip">install-tl.zip</a> file and save it (/Downloads)</p>
-</li>
-<li>
-<p>Extract the zip file. The result will be a directory called install-tl-\&lt;invers-date&gt;</p>
-</li>
-<li>
-<p>Launch a terminal and change into the directory created by the unzip operation.</p>
-</li>
-<li>
-<p>Run the install script <code>./install-tl -gui</code></p>
-<ul>
+<li>Start a web browser and go to: https://tug.org/texlive/acquire-netinstall.html</li>
+<li>Click on the download for a <a href="http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip">install-tl.zip</a> file and save it (/Downloads)</li>
+<li>Extract the zip file. The result will be a directory called install-tl-\&lt;invers-date&gt;</li>
+<li>Launch a terminal and change into the directory created by the unzip operation.</li>
+<li>Run the install script <code>./install-tl -gui</code></li>
 <li>The most important in the install script is the install location .</li>
 <li>Provide the install directory <code>/opt/TexLive/&lt;year&gt;</code></li>
-</ul>
-</li>
-<li>
-<p>Installing TexLive will take a while, so be patient.</p>
-</li>
-<li>
-<p>........ (waiting)</p>
-</li>
-<li>
-<p>When installed, or even during install, add the TexLive installation to the path.</p>
-<ul>
-<li>
-<p>In the user home directory, open with a edit, xed, the <em>.bash_aliases</em> file.</p>
-</li>
+<li>Installing TexLive will take a while, so be patient.</li>
+<li>........ (waiting)</li>
+<li>When installed, or even during install, add the TexLive installation to the path.</li>
+<li>In the user home directory, open with a edit, xed, the <em>.bash_aliases</em> file.</li>
 <li>
 <p>Add following lines to the file and save it afterwards.</p>
-</li>
-</ul>
 <div class="highlight"><pre><span></span><code>export TL_ROOT=/opt/TexLive/2024
 export PATH=$PATH:TL_ROOT/bin/x86_64-linux
 </code></pre></div>
@@ -3292,11 +3198,11 @@ Texmaker is easy to use and to configure. Texmaker is released under the GPL lic
 </ul>
 <h4 id="sozi">Sozi</h4>
 <p>Sozi is a piece of software for creating animated presentations. It is generally used to make visual aids for lectures or meetings. With Sozi, a presentation is not organised as a sequence of slides, but rather as a succession of <em>viewpoints</em> on a <em>map</em> that you <em>explore</em>.</p>
-<p>The Sozi web page can be found here: http://sozi.guide/en/about-sozi.html</p>
-<p>Go to this page for the installation: http://sozi.guide/en/installation.html</p>
+<p>The Sozi web page can be found here: http://sozi.guide/en/about-sozi.html
+Go to this page for the installation: http://sozi.guide/en/installation.html</p>
 <p>Double click the downloaded file from GitHub to install with Gdebi the tool.</p>
 <h4 id="freeplane">Freeplane</h4>
-<p>This is a mind mapping tool</p>
+<p>This is a very good mind mapping tool</p>
 <p>Maybe don’t install it immediately (Unless you need such tool of course)
 Install it when required.</p>
 <h4 id="foxit-reader">Foxit Reader</h4>
@@ -3310,12 +3216,10 @@ Install it when required.</p>
 <li>Rename the extracted file to FoxitReader.enu.setup.\&lt;version&gt;.x64.run
     Remove the number between the ( )</li>
 <li>Type: <code>sudo ./FoxitReader.enu.setup.&lt;version&gt;.x64.run</code></li>
-<li>Follow the install GUI!<ul>
+<li>Follow the install GUI!</li>
 <li>Install the Foxit PDF reader in "/opt/Foxitsoftware/FoxitReader"</li>
 <li>Accept the license</li>
 <li>Wait till Foxit is installed and click [Finish].</li>
-</ul>
-</li>
 <li>Start Foxit Reader and set the preferences; [Edit]-[Preferences]
     There is a Foxit Reader icon in the Linux-Mint Menu - Office</li>
 </ul>
@@ -3337,8 +3241,8 @@ join thousands of happy users, we have the solution you are looking for.</p>
 Go to:</p>
 <div class="highlight"><pre><span></span><code>https://eid.belgium.be/en/block/18/popup?width=970&amp;height=570&amp;top=10
 </code></pre></div>
-<p>Select the “Download for Linux” button and download: <strong>eid-archive.deb</strong></p>
-<p>When the .deb file is saved, install it (double click the file and allow GDebi to install it).</p>
+<p>Select the “Download for Linux” button and download: <strong>eid-archive.deb</strong>
+When the .deb file is saved, install it (double click the file and allow GDebi to install it).</p>
 <div class="highlight"><pre><span></span><code>sudo apt update (the terminal output should include repositories for Eid)
 sudo apt install eid-mw
 sudo apt install eid-viewer
@@ -3352,26 +3256,22 @@ sudo apt install eid-viewer
 <li>Leave the card in the reader.</li>
 <li>
 <p>Finally go to this site: https://iamapps.belgium.be/tma/?lang=en</p>
-<ul>
-<li>Hit [Start test]</li>
+</li>
+<li>
+<p>Hit [Start test]</p>
+</li>
 <li>Hit [Log in]</li>
 <li>Click [OK] for the user certificate</li>
 <li>Provide the passcode</li>
 <li>Wait for "Log in Successful"</li>
 <li>Click the [Sign Out] button and close the web browser.</li>
 </ul>
-</li>
-</ul>
 <h4 id="thunderbird">Thunderbird</h4>
 <p>Maybe, perhaps the best mail client available. It is default installed when Ubuntu is installed.
 Normally one will use the installed Thunderbird software but here mail needed to be stored on an external network connected drive and then it was better to completely remove Thunderbird and install it again in the /opt directory. To do this and put all mail on a NAS or network drive do:</p>
 <ul>
-<li>
-<p>Browse to: https://www.thunderbird.net</p>
-</li>
-<li>
-<p>Hit the [download] button and save the downloaded “thunderbird-\&lt;version&gt;.tar.bz2”</p>
-</li>
+<li>Browse to: https://www.thunderbird.net</li>
+<li>Hit the [download] button and save the downloaded “thunderbird-\&lt;version&gt;.tar.bz2”</li>
 <li>
 <p>In a command terminal do:</p>
 <div class="highlight"><pre><span></span><code>sudo apt remove --purge thunderbird
@@ -3389,7 +3289,7 @@ export PATH=$PATH:/opt/thunderbird.
 </li>
 <li>
 <p>Of course there is now no menu clickable entry for Thunderbird, create one by:</p>
-<ul>
+</li>
 <li>Right click the menu in the left corner and select ‘configure’.</li>
 <li>In the pop up menu select the [Menu] tab and the hit the [Open the menu editor] button.</li>
 <li>Select [Internet] in the left menu and then hit [New Item] in the right menu.<ul>
@@ -3397,37 +3297,27 @@ export PATH=$PATH:/opt/thunderbird.
 <li>Command: [Browse] go to /opt/thunderbird and pick thunderbird. Add a space and “<strong>%U</strong>”.</li>
 <li>Comment: Send and receive mail with Thunderbird</li>
 <li>Click the icon and in the popup go to /opt/thunderbird/chrome/icons/default.
-    Pick an icon from the listed, like default24.png</li>
+  Pick an icon from the listed, like default24.png</li>
 <li>[OK]</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>
 <p>Assume Thunderbird is started for the first time and mail need to be stored on a NAS drive. Thunderbird cannot do it by default ,  but:</p>
 <p><strong>Do this when Thunderbird is closed / not running!</strong></p>
-<ul>
+</li>
 <li>
 <p>Thunderbird creates a .thunderbird directory in a users home directory.
     If there in no such directory yet, start Thunderbird and the close it again.</p>
-</li>
-<li>
-<p>Copy that entire directory to a default mounted directory on the NAS, rename it to thunderbird (remove the ”<strong>.</strong>”).</p>
-</li>
-<li>
-<p>A precaution rename the .thunderbird directory in the users home to something like thunderbird_Org.</p>
-</li>
-<li>
-<p>Open a command terminal in the users home directory and create a symbolic link to the NAS Thunderbird directory.</p>
+<ul>
+<li>Copy that entire directory to a default mounted directory on the NAS, rename it to thunderbird (remove the ”<strong>.</strong>”).</li>
+<li>A precaution rename the .thunderbird directory in the users home to something like thunderbird_Org.</li>
+<li>Open a command terminal in the users home directory and create a symbolic link to the NAS Thunderbird directory.</li>
+</ul>
 <div class="highlight"><pre><span></span><code>ln -s /mnt/MainNasDir/thunderbird .thunderbird
 </code></pre></div>
 <p>A directory link .thunderbird  is created in the user home directory.
-The link shows all directories and files copied earlier to the Thunderbird NAS directory.</p>
-</li>
-<li>
-<p>Now Thunderbird can be started and used. all mail will nbe stored on the NAS drive.</p>
-</li>
-</ul>
+  The link shows all directories and files copied earlier to the Thunderbird NAS directory.
+- Now Thunderbird can be started and used. all mail will nbe stored on the NAS drive.</p>
 </li>
 </ul>
 <h4 id="vivladi">Vivladi</h4>
@@ -3458,7 +3348,7 @@ cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-key
 sudo apt install signal-desktop
 </code></pre></div>
 <ul>
-<li>Add signal to the startup applications BUT first:<ul>
+<li>Add signal to the startup applications BUT first:</li>
 <li>Make it run minimised and stored in the system tray. To do so:</li>
 <li>Right click the menu in the left corner and select ‘configure’.</li>
 <li>In the pop up menu select the [Menu] tab and the hit the [Open the menu editor] button.</li>
@@ -3466,15 +3356,12 @@ sudo apt install signal-desktop
 <li>Add to the <strong>Command:</strong> line: <code>--no-sandbox --use-tray-icon</code></li>
 <li>Do the same when adding Signal to the startup applications.</li>
 </ul>
-</li>
-</ul>
 <h4 id="deluge">Deluge</h4>
 <p><a href="http://deluge-torrent.org/">Deluge</a> is one of the most used <strong>torrent</strong> downloaders. It’s stable and easier to use as any other torrent client but the team makes it more stable by providing fix updates.</p>
 <div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:deluge-team/ppa
 sudo apt update
 sudo apt install deluge
 </code></pre></div>
-<h3 id="graphics_1">Graphics</h3>
 <h4 id="inkscape">Inkscape</h4>
 <p>Inkscape is professional quality vector graphics software which runs on Windows, Mac OS X and GNU/Linux. It is used by design professionals and hobbyists worldwide, for creating a wide variety of graphics such as illustrations, icons, logos, diagrams, maps and web graphics. Inkscape uses the <a href="http://www.w3.org/">W3C</a> open standard <a href="http://www.w3.org/Graphics/SVG/">SVG</a> (Scalable Vector Graphics) as its native format, and is free and open-source software.</p>
 <p>With below install Inkscape 1.3.2</p>
@@ -3497,15 +3384,9 @@ sudo apt update
 sudo apt install freecad
 </code></pre></div>
 <ul>
-<li>
-<p>Find all information about FreeCad <a href="https://www.freecadweb.org/">here</a>.</p>
-</li>
-<li>
-<p>A basics tutorial can be found <a href="https://www.freecadweb.org/wiki/Basic_Part_Design_Tutorial">here</a>.</p>
-</li>
-<li>
-<p>Video tutorials on YouTube can be found <a href="https://www.youtube.com/watch?v=QzfT-ZDp0Wo">here</a>, (this is the first tutorial of a series).</p>
-</li>
+<li>Find all information about FreeCad <a href="https://www.freecadweb.org/">here</a>.</li>
+<li>A basics tutorial can be found <a href="https://www.freecadweb.org/wiki/Basic_Part_Design_Tutorial">here</a>.</li>
+<li>Video tutorials on YouTube can be found <a href="https://www.youtube.com/watch?v=QzfT-ZDp0Wo">here</a>, (this is the first tutorial of a series).</li>
 </ul>
 <h5 id="odafileconverter">ODAfileConverter</h5>
 <p>ODA DWG-DXF CONVERTER For converting between different versions of .dwg and .dxf
@@ -3598,8 +3479,6 @@ Install the tools as described in the <a href="../InstallXilinxTools/">Xilinx To
 <h4 id="efinix-tools">Efinix tools</h4>
 <p>A very promising low cost FPGA vendor.
 Install and configure the software as described in <a href="../InstallEfinixTools/">Efinix_Installation</a> document.</p>
-<hr />
-<div style="page-break-after: always; break-after: page;"></div>
 
 
 

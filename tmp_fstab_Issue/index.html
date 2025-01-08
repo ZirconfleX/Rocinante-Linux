@@ -454,18 +454,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fstab-a" class="md-nav__link">
+  <a href="#fstab_a" class="md-nav__link">
     <span class="md-ellipsis">
-      fstab A
+      fstab_A
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fstab-b" class="md-nav__link">
+  <a href="#fstab_b" class="md-nav__link">
     <span class="md-ellipsis">
-      fstab B
+      fstab_B
     </span>
   </a>
   
@@ -734,6 +734,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScriptingFpgaTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scripting for FPGA Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -795,18 +816,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fstab-a" class="md-nav__link">
+  <a href="#fstab_a" class="md-nav__link">
     <span class="md-ellipsis">
-      fstab A
+      fstab_A
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fstab-b" class="md-nav__link">
+  <a href="#fstab_b" class="md-nav__link">
     <span class="md-ellipsis">
-      fstab B
+      fstab_B
     </span>
   </a>
   
@@ -831,49 +852,26 @@
 <p>Working with a manual created partition table as the table provided in the base <a href="../Rocinante-PC/">Rocinante</a> document makes Linux Mint and Ubuntu work without warnings about the system partitioning. Arch Linux and thus also Manjaro uses the automatic <code>systemd /tmp mount</code> what results in a warning about the partitioning of the system. 
 This can only be checked (it should be one of the first things to check) and solved after Ubuntu(Mint) or Manjaro is installed and boot logs can be examined.</p>
 <ul>
-<li>
-<p>Ubuntu and Mint are happy with the partitioning table as provided above and there will be no complaints about the partitioning table in any log file.</p>
-</li>
-<li>
-<p>Manjaro is not that happy and produces a warning in the boot log file about the /tmp partition.</p>
-</li>
+<li>Ubuntu and Mint are happy with the partitioning table as provided above and there will be no complaints about the partitioning table in any log file.</li>
+<li>Manjaro is not that happy and produces a warning in the boot log file about the /tmp partition.</li>
 </ul>
-<blockquote>
-<!--[!NOTE]-->
-<!--The explication in this document shows how to solve a possible warning about the system partitioning when using the automatic /tmp mount setting. When knowing that Manjaro is going to be used and before installation, remove the /tmp partition from the partitioning table and add the size spend to the /tmp partitioning to the users /home partitioning. This will avoid the need to use this document to solve a boot warning about partitioning issues.-->
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The explication in this document shows how to solve a possible warning about the system partitioning when using the automatic /tmp mount setting. When knowing that Manjaro is going to be used and before installation, remove the /tmp partition from the partitioning table and add the size spend to the /tmp partitioning to the users /home partitioning. This will avoid the need to use this document to solve a boot warning about partitioning issues.</p>
 </div>
-<h3 id="the-log-warming-message">The log warming message</h3>
+<h2 id="the-log-warming-message">The log warming message</h2>
 <div class="highlight"><pre><span></span><code>system /usr/lib/systemd/system-generators/systemd-fstab-generator failed with exit status 1. system Failed to create unit file &#39;/run/systemd/generator/tmp.mount&#39;, as it already exists. Duplicate entry in &#39;/etc/fstab&#39;?
 </code></pre></div>
-<blockquote>
-<!-- [!TIP] -->
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
+<p>To easily get the above warning and in general get notified about errors, warnings, and other hardware and software messages normally written in different logs files, install after the first boot the <strong>gnome logs</strong> tool.
+- In the <strong>Add/Remove Software</strong> tool, click the magnifying glass and type in the search bar <strong>logs</strong>
+- The top of the list shows a magnifying glass with title Logs (gnome-logs) and some brief comments.
+- Hit the blue square with white down pointing arrow to install the logs tool and click [Apply].
+- After the tool is installed the blue square with white down pointing arrow is replaced by a red square with wastebasket.
+- Click the Manjaro button at the left bottom of the screen and start typing "logs". A logs icon with magnifier glass will appear, click that and discover what might or should be solved to make the system run smooth.</p>
 </div>
-<p>To easily get the above warning and in general get notified about errors, warnings, and other hardware and software messages normally written in different logs files, install after the first boot the <strong>gnome logs</strong> tool.</p>
-<ul>
-<li>
-<p>In the <strong>Add/Remove Software</strong> tool, click the magnifying glass and type in the search bar <strong>logs</strong></p>
-</li>
-<li>
-<p>The top of the list shows a magnifying glass with title Logs (gnome-logs) and some brief comments.</p>
-</li>
-<li>
-<p>Hit the blue square with white down pointing arrow to install the logs tool and click [Apply].</p>
-</li>
-<li>
-<p>After the tool is installed the blue square with white down pointing arrow is replaced by a red square with wastebasket.</p>
-</li>
-<li>
-<p>Click the Manjaro button at the left bottom of the screen and start typing "logs". A logs icon with magnifier glass will appear, click that and discover what might or should be solved to make the system run smooth.</p>
-</li>
-</ul>
-</blockquote>
-<h3 id="solved-the-warning">Solved the warning</h3>
+<h2 id="solved-the-warning">Solved the warning</h2>
 <p>The reason for this warning is that the system probably has the <em>systemd tmp.mount</em> setting enabled.
 The reported warning is no shows stopper, as the PC boots perfectly.
 What's happening is that at boot a /tmp is created bij the OS and the partition setup as /tmp is not used.
@@ -907,20 +905,16 @@ jun 26 18:24:32 Rocinante systemd[1]: Mounted /tmp.
 <li>Go to the /etc directory (cd /etc)</li>
 <li>Start a text editor as root user an load the fstab file (sudo \<text-editor> fstab)
     \<text-editor> can be: gedit, xed, code, vim, ...</li>
-<li>Comment (#) the line dictating the /tmp partition.<ul>
-<li>If the fstab file content looks as <a href="#fstab-A">fstab A</a> then check the partition table to find out what partition represents /tmp and comment that out.</li>
-<li>if the fstab file looks as <a href="#fstab-B">fstab B</a> comment the line with /tmp</li>
-</ul>
-</li>
+<li>Comment (#) the line dictating the /tmp partition.</li>
+<li>If the fstab file content looks as <a href="#fstab_a">fstab A</a> then check the partition table to find out what partition represents /tmp and comment that out.</li>
+<li>if the fstab file looks as <a href="#fstab_b">fstab B</a> comment the line with /tmp</li>
 <li>Save the file and close the text editor.</li>
-<li>When rebooting <ul>
+<li>When rebooting </li>
 <li>The log file should have no warning anymore about the /tmp.</li>
 <li>A disk check (in a command terminal type: <code>gnome-disks</code>) will reveal that one partition, the original defined /tmp partition, is no longer used or mounted. It is thus not available for the system nor for the user.
-    The best thing to do is to append the partition in a previous or next partition.</li>
+  The best thing to do is to append the partition in a previous or next partition.</li>
 </ul>
-</li>
-</ul>
-<h3 id="remove-and-resize-a-disk-partition">Remove and Resize a disk partition</h3>
+<h2 id="remove-and-resize-a-disk-partition">Remove and Resize a disk partition</h2>
 <p>The easiest to do this is by using the <strong>gparted</strong> tool. For Manjaro gparted is installed by default. 
 In case it is not installed do:</p>
 <blockquote>
@@ -944,25 +938,25 @@ In case it is not installed do:</p>
 </li>
 <li>
 <p>First thing to do is to delete the unused and unmounted partition. The cleared space can then be used to add it onto an existing partition.</p>
-<ul>
+</li>
 <li>Select the <strong>/dev/nvme0n1p4</strong>  /tmp partition and click the [Partition] tab. In the fall down menu select [Delete].</li>
-<li>The space occupied by the partition is freed and can be used for something else as add it onto an exiting partition.</li>
-</ul>
+<li>
+<p>The space occupied by the partition is freed and can be used for something else as add it onto an exiting partition.</p>
 </li>
 <li>
 <p>Second thing, enlarge the <strong>/dev/nvme0n1p3 /</strong> partition with the size of the just removed <strong>/dev/nvme0n1p4</strong> partition.</p>
-<ul>
+</li>
 <li>
 <p>Select the <strong>/dev/nvme0n1p3 /</strong> partition, right click and in the pop-up menu chose [Resize/Move]</p>
 </li>
-<li>
-<p>A new pup-up GUI pane appears</p>
-<ul>
-<li>Free space preceding (MiB): should be left as is (normally this is geyed out)</li>
+<li>A new pup-up GUI pane appears<ul>
+<li>Free space preceding (MiB): should be left as is (normally this is greyed out)</li>
 <li>New size (Mib): Add the MiB of the freed space to the displayed value.</li>
 <li>Free space following (MiB): leave it or set it to <strong>0</strong></li>
 <li>Align to: MiB</li>
 </ul>
+</li>
+<li>
 <p>Hit the [Resize] button.</p>
 </li>
 <li>
@@ -970,22 +964,14 @@ In case it is not installed do:</p>
 </li>
 <li>
 <p>Hit the [<strong>V</strong>] (Apply All Operations) button to start making the required changes.
-    When everything is done the <strong>/</strong> partition grew with the extra size of the formal /tmp partition.</p>
+        When everything is done the <strong>/</strong> partition grew with the extra size of the formal /tmp partition.</p>
 </li>
+<li>Close GParted.</li>
 </ul>
-</li>
-<li>
-<p>Close GParted.</p>
-</li>
-</ul>
-<h3 id="fstab-a">fstab A</h3>
+<h2 id="fstab_a">fstab_A</h2>
 <p>Consult the partitioning table and find out what partition is occupied by /tmp. 
 Here it is the line starting with <strong>/dev/nvme0n1p4</strong>.</p>
-<blockquote>
-<!--[!IMPORTANT]-->
-<!--The lines indicating the mount points of the NAS drive are not included here.-->
-</blockquote>
-<div class="admonition important">
+<div class="admonition note">
 <p class="admonition-title">Important</p>
 <p>The lines indicating the mount points of the NAS drive are not included here.</p>
 </div>
@@ -1000,11 +986,8 @@ Here it is the line starting with <strong>/dev/nvme0n1p4</strong>.</p>
 <span style="font-size:10px; ">[/dev/nvme1n1p2: UUID="cf3acd37-243d-4bd5-9385-500576b25164" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="f2aff194-0e33-40c4-a24b-968f0025e2f8"]</span>
 <span style="font-size:10px; ">[/dev/nvme1n1p1: UUID="37db1472-d722-42bd-8cf1-48080d098072" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="849eed55-4e0e-47bd-9d0b-40867b8cdbd3"]</span>
 <span style="font-size:10px; ">[/dev/sda1:      UUID="5e8c3765-4ced-447b-b81e-88bd2be15863" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="239d98a5-16c9-45d6-864c-aa1db4832122"]</span></p>
-<h3 id="fstab-b">fstab B<!--[!IMPORTANT]--></h3>
-<blockquote>
-<!--The lines indicating the mount points of the NAS drive are not included here.-->
-</blockquote>
-<div class="admonition important">
+<h2 id="fstab_b">fstab_B</h2>
+<div class="admonition note">
 <p class="admonition-title">Important</p>
 <p>The lines indicating the mount points of the NAS drive are not included here.</p>
 </div>

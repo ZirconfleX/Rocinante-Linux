@@ -694,6 +694,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScriptingFpgaTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scripting for FPGA Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -786,16 +807,12 @@
 </ol>
 </li>
 <li>
-<p>Finally, emove the snap daemon per: <code>sudo apt remove --autoremove snapd</code></p>
+<p>Finally, remove the snap daemon per: <code>sudo apt remove --autoremove snapd</code></p>
 </li>
 <li>
 <p>That’s not all. The sudo apt update command brings back SNAP if the apt trigger is not stopped.
     Create the new file <strong>nosnap.pref</strong> in <strong>/etc/apt/preferences.d/</strong> to stop snap from being brought back.
     <code>sudo -H gedit /etc/apt/preferences.d/nosnap.pref&lt;!--</code>&rarr;</p>
-<blockquote>
-<!--[!NOTE]-->
-<!--The <code>gedit</code>text editor can be replaced by every on the system available editor as there are: vim, code, xed, gnome-text-editor, ...-->
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <code>gedit</code>text editor can be replaced by every on the system available editor as there are: vim, code, xed, gnome-text-editor, ...</p>
@@ -808,33 +825,36 @@ Pin: release a=*
 Pin-Priority: -10
 # Pin-Priority: -10 means preventing a package from installation
 </code></pre></div>
-<p>Run now: <code>sudo apt update</code>
-Done and getting rid of the snap.</p>
 </li>
 <li>
-<p>Re-install the removed snap tools the start of this journey</p>
-<ul>
+<p>Run now: <code>sudo apt update</code></p>
+</li>
+<li>
+<p>Done and getting rid of the snap.</p>
+</li>
+<li>
+<p>Re-install the removed snap tools, as non-snap at the start of this journey</p>
+</li>
 <li>
 <p>Install the apt version of the <strong>Gnome Software</strong>.
     <code>sudo apt install --install-suggests gnome-software</code>
     <strong>Remark:</strong> Make sure to use ‘’--install-suggests’. Otherwise, it will install the snap version again.</p>
-</li>
+<ul>
 <li>
 <p>Install the not snap version of Firefox (use the official PPA).</p>
 <div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:mozillateam/ppa
 sudo apt update
 sudo apt install -t &#39;o=LP-PPA-mozillateam&#39; firefox
 </code></pre></div>
-<ul>
-<li>
-<p>Enable automatic Firefox updates</p>
 </li>
 <li>
-<p><code>echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";' | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox</code></p>
+<p>Enable automatic Firefox updates</p>
+<div class="highlight"><pre><span></span><code>echo &#39;Unattended-Upgrade::Allowed-Origins:: &quot;LP-PPA-mozillateam:${distro_codename}&quot;;&#39; | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
+</code></pre></div>
 </li>
 <li>
 <p>Last but not least, create a preference file for Firefox to give super high priority to the above PPA while running apt.
-    Omitting this pulls back Firefox snap and brings back all snap packages.</p>
+Omitting this pulls back Firefox snap and brings back all snap packages.</p>
 </li>
 <li>
 <p>Create, as sudo/root, a new file <strong>mozillateamppa</strong> in <strong>/etc/apt/preferences.d/</strong></p>
@@ -848,10 +868,8 @@ Pin-Priority: 501
 </li>
 </ul>
 </li>
-</ul>
-</li>
 <li>
-<p>DONE</p>
+<p>DONE!</p>
 </li>
 </ul>
 

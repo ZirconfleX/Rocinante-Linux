@@ -16,6 +16,8 @@
         <link rel="prev" href="../InstallXilinxTools/">
       
       
+        <link rel="next" href="../ScriptingFpgaTools/">
+      
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
@@ -714,43 +716,31 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#more-about-environment-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      More about environment settings
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="More about environment settings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-script-for-efinix" class="md-nav__link">
-    <span class="md-ellipsis">
-      A script for Efinix
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-script-for-efinix-and-xilinx" class="md-nav__link">
-    <span class="md-ellipsis">
-      A script for Efinix and Xilinx
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScriptingFpgaTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scripting for FPGA Tools
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -825,39 +815,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#more-about-environment-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      More about environment settings
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="More about environment settings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-script-for-efinix" class="md-nav__link">
-    <span class="md-ellipsis">
-      A script for Efinix
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-script-for-efinix-and-xilinx" class="md-nav__link">
-    <span class="md-ellipsis">
-      A script for Efinix and Xilinx
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -878,12 +835,6 @@
 <ul>
 <li>
 <p>Browse to the <a href="https://www.efinixinc.com/index.html">Efinix</a> web page, click the [Support] - [Support Home] tab.</p>
-<blockquote>
-<!--[!note]-->
-<p><!--One **must** have a Efinix support account to download software, guides, application notes, ...-->
-<!--The first thing to do is to create an account.-->
-<!--[Register] and when allowed, log on to the page.--></p>
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>One <strong>must</strong> have a Efinix support account to download software, guides, application notes, ...
@@ -894,11 +845,11 @@ The first thing to do is to create an account.
 </li>
 <li>
 <p>Click the download software box and download:</p>
-<ul>
+</li>
 <li>The Ubuntu version of the <strong>Efinity IDE Full Release</strong></li>
 <li>The Ubuntu version of the <strong>Efinity Patch</strong></li>
-<li>The Linux version of the <strong>Efinity RISC-V Embedded Software IDE</strong></li>
-</ul>
+<li>
+<p>The Linux version of the <strong>Efinity RISC-V Embedded Software IDE</strong></p>
 </li>
 <li>
 <p>Save each downloaded files somewhere on disk and the start the installation of the tools.</p>
@@ -906,25 +857,16 @@ The first thing to do is to create an account.
 </ul>
 <h2 id="efinity-ide">Efinity IDE</h2>
 <ul>
-<li>
-<p>Create a <code>/opt/Efinix</code> directory.</p>
-<ul>
-<li>
-<p>When creating sub-directories in <code>/opt</code> one needs to be root/sudo.
-        The created <code>Efinix</code> directory will thus be owned to root. This must be changed because the Effinix tool have issues when running from a root owned directory.</p>
-</li>
+<li>Create a <code>/opt/Efinix</code> directory.</li>
+<li>When creating sub-directories in <code>/opt</code> one needs to be root/sudo.
+    The created <code>Efinix</code> directory will thus be owned to root. 
+    This must be changed because the Effinix tool have issues when running from a root owned directory.</li>
 <li>
 <p>Start a command terminal and:</p>
 <div class="highlight"><pre><span></span><code>cd /opt
 sudo chown &lt;user&gt; Efinix
 sudo chgrp &lt;user&gt; Efinix
 </code></pre></div>
-</li>
-</ul>
-<blockquote>
-<!-- [!Note] -->
-<!--**/opt (Optional Software)**: The /opt directory is used for optional software installed on the system. This directory can be used for installing software that is not included in the system’s package manager and vendor supplied application programs.-->
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>/opt (Optional Software)</strong>: The /opt directory is used for optional software installed on the system. This directory can be used for installing software that is not included in the system’s package manager and vendor supplied application programs.</p>
@@ -932,97 +874,69 @@ sudo chgrp &lt;user&gt; Efinix
 </li>
 <li>
 <p>Uncompress the Efinity package into <code>/opt/Efinix</code>.</p>
-<ul>
+</li>
 <li>Use a file browser as Nemo or Nautillus and open the directory where the <strong>tar.bz2</strong> file is stored.</li>
 <li>Open the tar.bz2 file using the default installed "File Roller" tool and extract the contents to <code>/opt/Efinix</code>. A sub-directory <code>efinity</code> is created in <code>/opt/Efinix</code></li>
+<li>The <code>/opt/Efinix/efinity/2014.1/bin/setup.sh</code> script has a wrong command syntax and produces a  <em>bad Substitution</em> error for the <strong>SCRIPT_PATH</strong>  environment. Due to that the <strong>EFINITY_HOME</strong> environment is not set. Set the path to the tools in the .bash_aliases file. The .bash_aliases file looks as:</li>
 </ul>
-</li>
-<li>
-<p>The <code>/opt/Efinix/efinity/2014.1/bin/setup.sh</code> script has a wrong command syntax and produces a  <em>bad Substitution</em> error for the <strong>SCRIPT_PATH</strong>  environment. Due to that the <strong>EFINITY_HOME</strong> environment is not set. Set the path to the tools in the .bash_aliases file. The .bash_aliases file looks as:</p>
 <div class="highlight"><pre><span></span><code>export EFINITY_VERSION=2024.1
 export EFINITY_HOME=/opt/Efinix/efinity/$EFINITY_VERSION/
 export PATH=$PATH:EFINITY_HOME/bin
 . /opt/Efinix/efinity/$EFINITY_VERSION/bin/setup.sh
 </code></pre></div>
-</li>
-</ul>
-<blockquote>
-<!-- [!Important] -->
-<!--When the Efinix tools are the only FPGA tools installed modify the setup.sh scripts delivered by Efinix. The Efinix tools,as many 3th party tools and maybe all vendor tools drop their path settings in front of all other settings, making that using Python and some other development tools is not possible anymore. Python is by installation run from it's own environment, securing the system installed Python version, called **pyenv**. The first item of the path must point to pyenv else it will not work. **Thus** go and read about <a href="#More-about-environment-settings">more environment settings</a>-->
-</blockquote>
-<div class="admonition important">
+<div class="admonition note">
 <p class="admonition-title">Important</p>
 <p>When the Efinix tools are the only FPGA tools installed modify the setup.sh scripts delivered by Efinix. The Efinix tools,as many 3th party tools and maybe all vendor tools drop their path settings in front of all other settings, making that using Python and some other development tools is not possible anymore. Python is by installation run from it's own environment, securing the system installed Python version, called <strong>pyenv</strong>. The first item of the path must point to pyenv else it will not work. <strong>Thus</strong> go and read about [more environment settings](</p>
 </div>
 <ul>
 <li>When downloading the Efinity tool a patch was also available and downloaded
     Use Nemo or Nautillus and File Roller to uncompress the <code>...ubuntu-x64-patch</code> in its own directory.</li>
-<li>
-<p>Start a command terminal (this also sets the Efinity environments)</p>
-<ul>
+<li>Start a command terminal (this also sets the Efinity environments)</li>
 <li>Change directory into the patch directory.</li>
 <li>Execute the <strong>run.sh</strong> script, type <code>./run.sh</code></li>
-</ul>
-</li>
-<li>
-<p>Start the Efinix tools from within a command terminal by typing: <strong>efinity &amp;</strong> </p>
-</li>
+<li>Start the Efinix tools from within a command terminal by typing: <strong>efinity &amp;</strong> </li>
 </ul>
 <h2 id="risc-v-software-installation">RISC-V software installation</h2>
 <ul>
-<li>
-<p>Make the <strong>efinity-riscv-ide-<version>-linux-x64.run</strong> file executable.</p>
-</li>
-<li>
-<p>Start a command terminal and browse to were the <strong>efinity ...-linux-x64.run</strong> file is stored.</p>
-</li>
-<li>
-<p>Run Efinity-riscv-ide-\&lt;version&gt;-linux-x64.run and follow the on-screen instructions.</p>
+<li>Make the <strong>efinity-riscv-ide-<version>-linux-x64.run</strong> file executable.</li>
+<li>Start a command terminal and browse to were the <strong>efinity ...-linux-x64.run</strong> file is stored.</li>
+<li>Run Efinity-riscv-ide-\&lt;version&gt;-linux-x64.run and follow the on-screen instructions.</li>
+</ul>
 <div class="highlight"><pre><span></span><code>./efinity-riscv-ide-&lt;version&gt;-linux-x64.run
 </code></pre></div>
 <ul>
 <li>
-<p>Messages in the terminal when above command is executed
-    <div class="highlight"><pre><span></span><code>Verifying archive integrity...  100%   All good.
+<p>Messages in the terminal when above command is executed</p>
+<div class="highlight"><pre><span></span><code>Verifying archive integrity...  100%   All good.
 Uncompressing Efinity RISC-V Embedded Software IDE Installation  100%  
-</code></pre></div></p>
-<blockquote>
-<!-- [!Note] -->
-<!--Getting these messages in the terminal takes some time. Be patient.-->
-</blockquote>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Getting these messages in the terminal takes some time. Be patient.</p>
 </div>
-</li>
-<li>
-<p>After the last message the next message asks for the place to store the Efinix RISC-V IDE</p>
+<ul>
+<li>After the last message the next message asks for the place to store the Efinix RISC-V IDE</li>
+</ul>
 <div class="highlight"><pre><span></span><code>Default Efinity RISC-V Embedded Software IDE installation path is /home/marc/efinity/efinity-riscv-ide-2024.1
 Press Enter to use the default path or provide the new path for Efinity RISC-V Embedded Software IDE installation
 </code></pre></div>
 <ul>
 <li>
 <p><strong>DO NOT</strong> press [enter], but give the path to the Efinix installation in the <code>/opt</code> directory.
-    Enter <code>/opt/Efinix/efinity-riscv-ide-2024.1</code></p>
-<p>The output in the terminal is:
+    Enter <code>/opt/Efinix/efinity-riscv-ide-2024.1</code>
+    The output in the terminal is:</p>
 <div class="highlight"><pre><span></span><code>Installing Efinity RISC-V Embedded Software IDE at /opt/Efinix/efinity-riscv-ide-2024.1
 Efinity RISC-V Embedded Software IDE Installation successfully completed
-</code></pre></div></p>
-</li>
-</ul>
+</code></pre></div>
 </li>
 </ul>
 </li>
 <li>
 <p>Finally add below line to the earlier set Efinix environment settings in the .bash_aliases file
     <code>. /opt/Efinix/efinity-riscv-ide-$EFINITY_VERSION/setup.sh</code></p>
-<blockquote>
-<!--[!Important]-->
-<!--When Efinix FPGA tools are the only FPGA tools installed, or if Efinix tools are installed with Xilinx FPGA tools read the <a href="#More-about-environment-settings">More about environment settings</a> chapter.-->
-</blockquote>
-<div class="admonition important">
+<div class="admonition note">
 <p class="admonition-title">Important</p>
-<p>When Efinix FPGA tools are the only FPGA tools installed, or if Efinix tools are installed with Xilinx FPGA tools read the <a href="#More-about-environment-settings">More about environment settings</a> chapter.</p>
+<p>When Efinix FPGA tools are the only FPGA tools installed, or if Efinix tools are installed with Xilinx FPGA tools read the <a href="../ScriptingFpgaTools/">Scripting for FPGA tools</a> document..</p>
 </div>
 </li>
 <li>
@@ -1031,247 +945,49 @@ Efinity RISC-V Embedded Software IDE Installation successfully completed
 </ul>
 <h2 id="freertos">FreeRTOS</h2>
 <p>When starting the Efinity RISC-V software it will ask for the path to the FreeRTOS installation.
-That is something not installed and/or not downloaded yet.</p>
-<ul>
-<li>
-<p>Download the FreeRTOS from https://www.freertos.org. Hit the [Download] tab at the top right of the screen.</p>
-</li>
-<li>
-<p>In the popup, select a version. The one presented is the latest stable version and hit [Download].
-    Save the downloaded file.</p>
-</li>
-<li>
-<p>Create a directory <code>FreeRTOS</code>in <code>/opt</code>
-    <div class="highlight"><pre><span></span><code>cd /opt/Efinix
+That is something not installed and/or not downloaded yet.
+- Download the FreeRTOS from https://www.freertos.org. Hit the [Download] tab at the top right of the screen.
+- In the popup, select a version. The one presented is the latest stable version and hit [Download].
+    Save the downloaded file.
+- Create a directory <code>FreeRTOS</code>in <code>/opt</code></p>
+<div class="highlight"><pre><span></span><code>```text
+cd /opt/Efinix
 mkdir FreeRTOS
-</code></pre></div></p>
-</li>
-<li>
-<p>Use file roller to uncompress the just downloaded FreeRTOS zip file into the just created <code>/opt/Efinix/FreeRTOS</code>directory. After the uncompress operation there will be a sub-directory FreeRTOS*\<version>* in the /opt/Efinix/FreeRTOS`directory.</p>
-</li>
-<li>
-<p>Each time when the RISC-V Efinix tool is started it will ask for the root directory of the FreeRTOS installation. To prevent this and set once and for all the FreeRTOS directory do:</p>
+```
+</code></pre></div>
 <ul>
+<li>Use file roller to uncompress the just downloaded FreeRTOS zip file into the just created <code>/opt/Efinix/FreeRTOS</code>directory. After the uncompress operation there will be a sub-directory FreeRTOS*\<version>* in the /opt/Efinix/FreeRTOS`directory.</li>
+<li>Each time when the RISC-V Efinix tool is started it will ask for the root directory of the FreeRTOS installation. To prevent this and set once and for all the FreeRTOS directory do:</li>
+<li>Open with a text editor the <strong>setup.sh</strong> file in the `/opt/Efinix/efinity-riscv-ide-<em>\<version></em> directory.</li>
 <li>
-<p>Open with a text editor the <strong>setup.sh</strong> file in the `/opt/Efinix/efinity-riscv-ide-<em>\<version></em> directory.</p>
-</li>
-<li>
-<p>Comment ( put a <strong>#</strong> in front of each text line) all of following text 
-    <div class="highlight"><pre><span></span><code> Prompt the user for the directory of freertos_src folder
+<p>Comment ( put a <strong>#</strong> in front of each text line) all of following text.</p>
+<div class="highlight"><pre><span></span><code># Prompt the user for the directory of freertos_src folder
 echo &quot;Enter the directory of freertos_src folder &quot;
 read -p &quot; (Enter if no freertos src required): &quot; FREERTOS_DIR
 
- Check if the directory exists
- if [ -d &quot;$FREERTOS_DIR/FreeRTOS&quot; ]; then
+# Check if the directory exists
+if [ -d &quot;$FREERTOS_DIR/FreeRTOS&quot; ]; then
     echo &quot;Valid FreeRTOS Kernel input at $FREERTOS_DIR&quot;
     export FreeRTOS_KERNEL_SRC=$FREERTOS_DIR
-   # Additional actions you want to perform if the directory exists
- else
-    echo &quot;Invalid FreeRTOS Kernel directory. &quot;
-    echo &quot;Ensure you inputted the correct directory. No FreeRTOS Kernel set.&quot;
- fi
-</code></pre></div></p>
+    # Additional actions you want to perform if the directory exists
+    else
+        echo &quot;Invalid FreeRTOS Kernel directory. &quot;
+        echo &quot;Ensure you inputted the correct directory. No FreeRTOS Kernel set.&quot;
+    fi
+</code></pre></div>
 </li>
 <li>
-<p>Add after the commented text following lines and save the file.
-    <div class="highlight"><pre><span></span><code>FREERTOS_DIR=/opt/Efinix/FreeRTOS/FreeRTOS&lt;version&gt;
+<p>Add after the commented text following lines and save the file.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>FREERTOS_DIR=/opt/Efinix/FreeRTOS/FreeRTOS&lt;version&gt;
 export FreeRTOS_KERNEL_SRC=$FREERTOS_DIR
 echo &quot;Valid FreeRTOS Kernel input at $FREERTOS_DIR&quot;
-</code></pre></div></p>
-</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<!-- [!Important] -->
-<!--When ever a new Efinix RISC-V IDE environment is installed or when a new FreeRTOS system is installed, the **setup.sh** file must be changed.-->
-</blockquote>
-<div class="admonition important">
+</code></pre></div>
+<div class="admonition note">
 <p class="admonition-title">Important</p>
 <p>When ever a new Efinix RISC-V IDE environment is installed or when a new FreeRTOS system is installed, the <strong>setup.sh</strong> file must be changed.</p>
 </div>
-<h2 id="more-about-environment-settings">More about environment settings</h2>
-<h3 id="a-script-for-efinix">A script for Efinix</h3>
-<p>As written before, the Efinix path settings are placed in front of all other path settings blocking normal Python development. Therefore a small script is created and source from the bash_aliases file.</p>
-<ul>
-<li>
-<p>Add following to the .bash_aliases file and save it afterwards</p>
-<div class="highlight"><pre><span></span><code># Source a script that sets environments for Efinix FPGA tools
-. .EfinixFpgaEnv.sh
-</code></pre></div>
-</li>
-<li>
-<p>Create in the users home directory a script. Start a text editor (Xed, Gedit, Code, ..), create a new text file and name it <strong>.EfinixFpgaEnv.sh</strong> or give it another name, but make the name understandable.</p>
-</li>
-<li>
-<p>Drop below text in the open text file and save it afterwards.</p>
-</li>
-<li>
-<p>Text for the script:
-    <div class="highlight"><pre><span></span><code>#!/bin/bash
-#
-# Arrive here from .bash_aliases to make a decide if the Efinix tools environment 
-# variables are going to be set.
-########################################################
-#
-AskQuestion () {
-    read -p &quot; Use Efinix FPGA tools or No tools at all? (E/N) : &quot; Answr
-    if [ &quot;${Answr,,}&quot; == &quot;e&quot; ]; then
-        EnvsFor=Efnx
-    elif [ &quot;${Answr,,}&quot; == &quot;n&quot; ]; then
-        EnvsFor=Quit
-    else
-        echo &quot; Probably entered wrong answer! &quot;
-        AskQuestion
-    fi
-}
-#
-SetEfnxEnvs () {
-    # Efinity FPGA
-    export EFINITY_VERSION=2024.1
-    export EFINITY_VERSION=2024.1
-    export EFINITY_HOME=/opt/Efinix/efinity/$EFINITY_VERSION/
-    export PATH=$PATH:EFINITY_HOME/bin
-    . /opt/Efinix/efinity/$EFINITY_VERSION/bin/setup.sh
-    . /opt/Efinix/efinity-riscv-ide-$EFINITY_VERSION/setup.sh
-    echo &quot; Efinix Efinity tool is started by typingh: efinity &amp; &quot;
-    echo &quot; Efinityy-RISC-V tool is started by typing: efinity-riscv-ide &amp; &quot;
-    sleep 1
-}
-#
-SetNone () {
-    echo &quot; No FPGA environments are set. &quot;
-}
-#=====================================================================================
-# Start/run the script to create a new project or library
-#=====================================================================================
-echo &quot; Set the environment variables for the Efinix FPGA tools &quot;
-echo &quot; or do not set any FPGA tool variables at all. &quot;
-#
-sleep 1
-AskQuestion
-if [ &quot;$EnvsFor&quot; = &quot;Efnx&quot; ]; then
-    SetEfnxEnvs
-elif [ &quot;$EnvsFor&quot; = &quot;Quit&quot; ]; then
-    SetNone
-else
-    AskQuestion 
-fi
-#
-# The end
-</code></pre></div></p>
-</li>
-</ul>
-<h3 id="a-script-for-efinix-and-xilinx">A script for Efinix and Xilinx</h3>
-<ul>
-<li>
-<p>When both Efinix and Xilinx FPGA tools installed make use of a sourced script in the bash_aliases file. 
-    Add with a text editor following lines in the bash_aliases file</p>
-<div class="highlight"><pre><span></span><code># Source a script that sets environments following the used FPGA technology.
-# The script asks if Xilinx or Efinix FPGA are going to be used and set the
-# required environment variables accordingly.
-. .SelectFpgaEnv.sh
-</code></pre></div>
-</li>
-<li>
-<p>When both Efinix and Xilinx FPGA tools are installed vendor scripts doesn't need to be altered.</p>
-</li>
-<li>
-<p>Create in the users home directory a script. Start a text editor (Xed, Gedit, Code, ..), create a new text file and name it <strong>.SelectFpgaEnv.sh</strong> or give it another name, but make the name understandable.</p>
-</li>
-<li>
-<p>Drop below text in the open text file and save it afterwards.</p>
-</li>
-<li>
-<p>Text for the script:
-    <div class="highlight"><pre><span></span><code>#!/bin/bash
-#
-# Arrive here from .bash_aliases to make a selection on what 
-# FPGA tools to set the environments for. This approach has been 
-# taken because the Efinix tools are taking over the default 
-# Python environment and that can not be tolerated.
-#
-########################################################
-#
-AskQuestion () {
-    read -p &quot; Use FPGA tools for Xilinx, Efinix or No tools at all? (X/E/N) : &quot; Answr
-    if [ &quot;${Answr,,}&quot; == &quot;x&quot; ]; then
-        EnvsFor=Xlnx
-    elif [ &quot;${Answr,,}&quot; == &quot;e&quot; ]; then
-        EnvsFor=Efnx
-    elif [ &quot;${Answr,,}&quot; == &quot;n&quot; ]; then
-        EnvsFor=Quit
-    else
-        echo &quot; Probably entered wrong answer! &quot;
-        AskQuestion
-    fi
-}
-#
-SetXlnxEnvs () {
-    # Xilinx Tools
-    export XILINX_VERSION=2024.1
-    #
-    export XILINX_VIVADO=/opt/Xilinx/Vivado/$XILINX_VERSION
-    export XILINX_HLS=/opt/Xilinx/Vitis_HLS/$XILINX_VERSION
-    export XILINX_VITIS=/opt/Xilinx/Vitis/$XILINX_VERSION
-    export XILINX_DOCNAV=/opt/Xilinx/DocNav
-    #
-    export PATH=$PATH:$XILINX_VIVADO/bin
-    export PATH=$PATH:$XILINX_HLS/bin
-    export PATH=$PATH:$XILINX_VITIS/bin
-    export PATH=$PATH:$XILINX_DOCNAV
-    #
-    # PetaLinux
-    . /opt/Xilinx/PetaLinux/$XILINX_VERSION/tool/settings.sh
-    echo &quot; Vivado is started by typing: vivado &amp; &quot;
-    echo &quot; Vitis is started by typing: vitis &amp; &quot;
-    echo &quot; PetaLinux settings done. &quot;
-    sleep 1
-}
-#
-SetEfnxEnvs () {
-    # Efinity FPGA
-    export EFINITY_VERSION=2024.1
-    export EFINITY_VERSION=2024.1
-    export EFINITY_HOME=/opt/Efinix/efinity/$EFINITY_VERSION/
-    export PATH=$PATH:EFINITY_HOME/bin
-    . /opt/Efinix/efinity/$EFINITY_VERSION/bin/setup.sh
-    . /opt/Efinix/efinity-riscv-ide-$EFINITY_VERSION/setup.sh
-    echo &quot; Efinix Efinity tool is started by typingh: efinity &amp; &quot;
-    echo &quot; Efinityy-RISC-V tool is started by typing: efinity-riscv-ide &amp; &quot;S
-    sleep 1
-}
-#
-SetNone () {
-    echo &quot; No FPGA environments are set. &quot;
-}
-#=========================================================================================
-# Start/run the script to create a new project or library
-#=========================================================================================
-echo &quot; Set the environment variables for the Xilinx FPGA tools &quot;
-echo &quot; or set the environment variables for the Efinix FPGA tools &quot;
-echo &quot; or do not set any FPGA tool variables at all. &quot;
-#
-sleep 1
-AskQuestion
-if [ &quot;$EnvsFor&quot; = &quot;Xlnx&quot; ]; then
-    SetXlnxEnvs
-elif [ &quot;$EnvsFor&quot; = &quot;Efnx&quot; ]; then
-    SetEfnxEnvs
-elif [ &quot;$EnvsFor&quot; = &quot;Quit&quot; ]; then
-    SetNone
-else
-    AskQuestion 
-fi
-#
-# The end
-</code></pre></div></p>
-</li>
-<li>
-<p>When a command terminal is started, it will ask if Xilinx or Efinix or no tools are going to be used.
-    Answer X, E or N (not case sensitive).</p>
-</li>
-</ul>
 
 
 

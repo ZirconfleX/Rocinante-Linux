@@ -657,9 +657,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kicad-steup" class="md-nav__link">
+  <a href="#kicad-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      KiCAd Steup
+      KiCAd Setup
     </span>
   </a>
   
@@ -707,6 +707,27 @@
   
   <span class="md-ellipsis">
     Install Efinix Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScriptingFpgaTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scripting for FPGA Tools
   </span>
   
 
@@ -768,9 +789,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kicad-steup" class="md-nav__link">
+  <a href="#kicad-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      KiCAd Steup
+      KiCAd Setup
     </span>
   </a>
   
@@ -819,12 +840,12 @@ For KiCAd a default and extended set of libraries is installed is <code>/usr/sha
 <p>The way, I use, to keep libraries in one place and easily up to date is:</p>
 <ul>
 <li>
-<p>Create as root/sudo in <code>/opt</code>a directory <strong>KiCad</strong> and modify the properties so that the user can read, modify, write all created sub directories.
-    <div class="highlight"><pre><span></span><code>sudo mkdir /opt/KiCad
+<p>Create as root/sudo in <code>/opt</code>a directory <strong>KiCad</strong> and modify the properties so that the user can read, modify, write all created sub directories.</p>
+<div class="highlight"><pre><span></span><code>sudo mkdir /opt/KiCad
 sudo chown &lt;user&gt; /opt/KiCad
 sudo chgrp &lt;user&gt; /opt/KiCad
 sudo chmod 775 /opt/KiCad
-</code></pre></div></p>
+</code></pre></div>
 <p>In that directory all libraries for KiCad get a own directory. There is a <strong>kicad</strong> directory mimicking the default installed libraries. A copy of the latest downloaded libraries for GitHub or other online source is kept in the directory <strong>LibUpdates</strong> and there is a directory <strong>KicadUser</strong> to store 3<sup>th</sup> party and user created libraries.  </p>
 </li>
 <li>
@@ -834,97 +855,70 @@ sudo chmod 775 /opt/KiCad
 <p>All default libraries, templates, demos and other user things are going to be available to the user from the <code>/opt</code> directory but remain under root/sudo control. Since everything is going to be in one place it is easy to manipulate and modify. What is modified in <code>/opt/KiCad/kicad</code> sub-folders is modified in the default installation <code>/usr/.share/kicad</code> and vice-versa.</p>
 </li>
 </ul>
-<blockquote>
-<!--[!note]-->
-<!--Why /opt?-->
-<p><!--**/opt (Optional Software)**: The /opt directory is used for optional software installed on the system. This directory can be used for installing software that is not included in the system’s package manager.-->
-<!--Optional files such as vendor supplied application programs should be located here.--></p>
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Why /opt?</p>
-<p><strong>/opt (Optional Software)</strong>: The /opt directory is used for optional software installed on the system. This directory can be used for installing software that is not included in the system’s package manager.</p>
+<p><strong>/opt (Optional Software)</strong>: The /opt directory is used for optional software installed on the system. This directory can be used for installing software that is not included in the system’s package manager.
+Optional files such as vendor supplied application programs should be located here.</p>
 </div>
-<p>Optional files such as vendor supplied application programs should be located here.</p>
 <h2 id="work-method">Work Method</h2>
 <p>As earlier written, the usefulness and easiness (call it feeling) of a CAD tool is closely related to how one organises work and operates the CAD tool.  When that is done in a smooth and consistent way, flaws of the tooling can mostly be forgiven and solved.
 As showed in the libraries paragraph the setup of libraries is important and the organisation of a project leans very close to the organisation of libraries. Because all things need a place and storage. The cleaner the organisation the easier one can work. The structure of the default installed libraries already shows a useful way how to organise the things of a project.</p>
 <p>In short, a project starts, after brainstorming and project goal and calculation writing, with a "project idea" schematic on a sheet of paper (nowadays on a tablet). From that drawing a list of required, necessary and wanted components is created. The list ends in a search for and download of data sheets and from the data sheets a list of footprints rises. </p>
 <p>KiCad library organisation is almost following the same path because footprints and symbols and other things are each fit in their own directory. So create a project in similar way.</p>
 <ul>
-<li>
-<p><strong>Project</strong></p>
+<li><strong>Project</strong></li>
+</ul>
 <p>Everything that has to do with the project goes into a sub-directory. The listed sub-directories are given as guide, nothing hold one to create extra directories (like sub-directories for PCB or mechanical issues or a sub-directory for return &amp; repair or ... ).</p>
 <ul>
-<li>
-<p><strong>DataSheets</strong></p>
-<p>Store here the data sheets of all for the project required components.
-Even the data sheets of used resistors and capacitors must be stored here so that all relevant information captured at the moment of the project run stays together in one place</p>
-</li>
-<li>
-<p><strong>Documents</strong></p>
-<ul>
-<li>
-<p><strong>Documents</strong></p>
-<p>Store here the documentation as pre-studies, calculations, user guide and more of the project </p>
-</li>
-<li>
-<p><strong>Figures</strong></p>
-<p>Store here the figures (png, svg, ...) used in the various documents of the sub-directories of the top level /Documents directory.</p>
-</li>
-<li>
-<p><strong>Mechanics</strong></p>
-<p>Storage for all information that has to do with mechanical dimensions and behaviour of the project. Example: store here all measurements of a PCB (dimensions of the PCB, dimensions of the mounting holes, cut-outs, ...)</p>
-</li>
-<li>
-<p><strong>Partslist</strong></p>
-<p>The complete parts list goes here. In case of a PSB it's the list of all electric and electronic components but also the list of all mechanical things as screws, housing, ...</p>
-</li>
-<li>
-<p><strong>Production</strong></p>
-<p>Store here all documentation related to the production of the project. documentation about how to mount things, hints and tips, notes, ...</p>
-</li>
+<li><strong>DataSheets</strong>
+    Store here the data sheets of all for the project required components.
+    Even the data sheets of used resistors and capacitors must be stored here so that all relevant information captured at the moment of the project run stays together in one place</li>
+<li><strong>Documents</strong><ul>
+<li><strong>Documents</strong>
+  Store here the documentation as pre-studies, calculations, user guide and more of the project </li>
+<li><strong>Figures</strong>
+  Store here the figures (png, svg, ...) used in the various documents of the sub-directories of the top level /Documents directory.</li>
+<li><strong>Mechanics</strong>
+  Storage for all information that has to do with mechanical dimensions and behaviour of the project. Example: store here all measurements of a PCB (dimensions of the PCB, dimensions of the mounting holes, cut-outs, ...)</li>
+<li><strong>Partslist</strong>
+  The complete parts list goes here. In case of a PSB it's the list of all electric and electronic components but also the list of all mechanical things as screws, housing, ...</li>
+<li><strong>Production</strong>
+  Store here all documentation related to the production of the project. documentation about how to mount things, hints and tips, notes, ...</li>
 </ul>
 </li>
 <li>
-<p><strong>Lib3d</strong></p>
-<p>This directory will contain 3D models created for this project.
-Copy 3D models present in the default library <code>/opt/KiCad/kicad/3dmodels</code>and/or 3<sup>th</sup> party and/or global user created 3D models into this directory. This way, again, everything that has to do with the project stays with the project. </p>
+<p><strong>Lib3d</strong>
+    This directory will contain 3D models created for this project.
+    Copy 3D models present in the default library <code>/opt/KiCad/kicad/3dmodels</code>and/or 3<sup>th</sup> party and/or global user created 3D models into this directory. This way, again, everything that has to do with the project stays with the project. </p>
 </li>
 <li>
-<p><strong>LibSymbols</strong></p>
-<p>Symbols of components created for this project are stored here.
-Copy symbols present in the default library <code>/opt/KiCad/kicad/symbols</code>and/or 3<sup>th</sup> party and/or global user created symbols into this directory. This way, again, everything that has to do with the project stays with the project. </p>
+<p><strong>LibSymbols</strong>
+    Symbols of components created for this project are stored here.
+    Copy symbols present in the default library <code>/opt/KiCad/kicad/symbols</code>and/or 3<sup>th</sup> party and/or global user created symbols into this directory. This way, again, everything that has to do with the project stays with the project. </p>
 </li>
 <li>
-<p><strong>LibFootpints</strong></p>
-<p>Idem dito as for the <strong>Lib3d</strong> and <strong>LibSymbols</strong> directories, store footprints made for the project here and copy footprints from the other footprint libraries inhere.</p>
-</li>
-</ul>
-<blockquote>
-<!--[!tip]-->
-<p><!--When the project is stable, schematics, PCB and mechanics are checked and the functioning of the whole is proven 3d models, symbols and footprints can be copied to the <code>/opt/KicadUser</code> sub-directories.--> 
-<!--Of course all of this takes time and attention, but once the habit of it kicks in it makes things so easy. After years all information about a project is still available without any effort to spend. Once models, symbols, footprints, mechanical stuff has proven to be correct and working it can be copied to the global user libraries.--></p>
-</blockquote>
+<p><strong>LibFootpints</strong>
+    Idem dito as for the <strong>Lib3d</strong> and <strong>LibSymbols</strong> directories, store footprints made for the project here and copy footprints from the other footprint libraries inhere.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>When the project is stable, schematics, PCB and mechanics are checked and the functioning of the whole is proven 3d models, symbols and footprints can be copied to the <code>/opt/KicadUser</code> sub-directories. Of course all of this takes time and attention, but once the habit of it kicks in it makes things so easy. After years all information about a project is still available without any effort to spend. Once models, symbols, footprints, mechanical stuff has proven to be correct and working it can be copied to the global user libraries.</p>
 </div>
 </li>
 <li>
-<p><strong>GerberFiles</strong></p>
-<p>Outputs of PCB design work required for manufacturing go here.</p>
+<p><strong>GerberFiles</strong>
+    Outputs of PCB design work required for manufacturing go here.</p>
 </li>
 <li>
-<p><strong>Schemas</strong></p>
-<p>As the directory title reads, a place to store all schematics</p>
+<p><strong>Schemas</strong>
+    As the directory title reads, a place to store all schematics</p>
 </li>
 <li>
-<p><strong>Pdfs</strong></p>
-<p>Usually from schematics, gerbers, layouts, gerbers and other thinsg PDF documents are created. Store them here.</p>
+<p><strong>Pdfs</strong>
+    Usually from schematics, gerbers, layouts, gerbers and other things PDF documents are created. Store them here.</p>
 </li>
 </ul>
-<h2 id="kicad-steup">KiCAd Steup</h2>
-<p>All directories can be setup in KiCad using the <strong>Preferences</strong> <strong>, **Configure paths</strong></p>
+<h2 id="kicad-setup">KiCAd Setup</h2>
+<p>All directories can be setup in KiCad using the <strong>Preferences</strong>, <strong>Configure paths</strong></p>
 
 
 

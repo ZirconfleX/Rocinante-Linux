@@ -740,6 +740,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScriptingFpgaTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scripting for FPGA Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -889,14 +910,7 @@ Optional files such as vendor supplied application programs should be located he
 <p>It is not possible to install multiple tools at the same time. If multiple tools need to be installed, the binary installer needs to be run once for each tool that needs to be installed.</p>
 </div>
 <h3 id="setup">Setup</h3>
-<blockquote>
-<!--[!Important]-->
-<!--READ BELOW TEXT CAREFULLY else the Xilinx tools will not work.-->
-</blockquote>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-</div>
-<p>READ BELOW TEXT CAREFULLY else the Xilinx tools will not work.</p>
+<p><strong>READ BELOW TEXT CAREFULLY</strong> else the Xilinx tools will not work.</p>
 <blockquote>
 <ol>
 <li>
@@ -948,64 +962,45 @@ Download both scripts in the same directory and run the script form poin <strong
 <p>As earlier written, it is assumed that the user is using a bash environment.
 When Vivado, Vitis and PetaLinux tools are all installed make a system setup so that tools can easily be started from the command line in a terminal
 Each of the Xilinx tools has a <strong>settings64.sh</strong> file. Sourcing that file sets all environment variables for the installed tools. Thus each time the Xilinx tools are going to be used one needs to source the setting64.sh script. Easier is to declare all the settings in the .bash_aliases file acting as a .bashrc companion file. </p>
-<blockquote>
-<!--[!Important]-->
-<ul>
-<li>
-<!--**do not** Put environment or other settings for installed tools in the main **.bashrc** file, but use a companion file that is automatically sourced by the .bashrc file. The companion file to use is the  **.bash_aliases** file.-->
-</li>
-<li>
-<p><!--As **pyenv** is installed as Python development environment, protecting the system Python installation from being altered, its path needs to be in the absolute front of the system path.--> 
-    <!--Every installed vendor tool want to be in the front of the path and that is something that is prevented in below showed .bash_aliases text.--></p>
-</li>
-</ul>
-</blockquote>
-<div class="admonition important">
+<div class="admonition note">
 <p class="admonition-title">Important</p>
 <p><strong>do not</strong> Put environment or other settings for installed tools in the main <strong>.bashrc</strong> file, but use a companion file that is automatically sourced by the .bashrc file. The companion file to use is the  <strong>.bash_aliases</strong> file.</p>
 </div>
-<div class="admonition important">
-<p class="admonition-title"> </p>
-<p>As <strong>pyenv</strong> is installed as Python development environment, protecting the system Python installation from being altered, its path needs to be in the absolute front of the system path. </p>
-</div>
-<p>Every installed vendor tool want to be in the front of the path and that is something that is prevented in below showed .bash_aliases text.</p>
-<p>Open in the users home directory, using a text editor (xed, gedit, vim, code or ...), the “<strong>.bash_aliases</strong>” file and add</p>
-<div class="highlight"><pre><span></span><code># Xilinx Tools
-export XILINX_VERSION=2024.1
-#
-export XILINX_VIVADO=/opt/Xilinx/Vivado/$XILINX_VERSION
-export XILINX_HLS=/opt/Xilinx/Vitis_HLS/$XILINX_VERSION
-#export XILINX_VITIS=/opt/Xilinx/Vitis/$XILINX_VERSION
-#
-export PATH=$PATH:$XILINX_VIVADO/bin
-export PATH=$PATH:$XILINX_HLS/bin
-#export PATH=$PATH:$XILINX_VITIS/bin
-#
-echo &quot; Vivado, Vitis-HLS and Vitis settings done.&quot;
-#
-# PetaLinux
-. /opt/PetaLinux/settings.sh
-#
-</code></pre></div>
-<p>Save the .bash_aliases file.</p>
+<p>Open in the users home directory, using a text editor the “<strong>.bash_aliases</strong>” file or when there is not such a file create it. Then add the contents from the <strong>A script for Xilinx Tools</strong> chapter of the <a href="../ScriptingFpgaTools/">Scripting for FPGA Tools</a> file.</p>
 <p>When starting a command terminal the .bash_aliases file is read after the main .bash file is read and all settings are done so that Vivado/Vitis/PetaLinux and other tools can be started.</p>
-<blockquote>
-<!--[!tip]-->
-<!--When the Efinix FPGA tools are installed or are going to be installed drop the Xilinx/AMD and Efinix environment settings in their own script file (example: .SelectFpgaEnv.sh). Make the file executable and call it from withing .bash_aliases. An example is provided in the "More about environment settings" chapter in the <a href="./InstallEfinixTools.md#More-about-environment-settings">document discussing the Efinix FPGA tools installation</a>.-->
-</blockquote>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>When the Efinix FPGA tools are installed or are going to be installed drop the Xilinx/AMD and Efinix environment settings in their own script file (example: .SelectFpgaEnv.sh). Make the file executable and call it from withing .bash_aliases. An example is provided in the "More about environment settings" chapter in the <a href="../InstallEfinixTools/#More-about-environment-settings">document discussing the Efinix FPGA tools installation</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>If the Xilinx tool cannot be started from the command line, it is possible that the version of the .bashrc file doesn't have the necessary code lines to read the .bash_aliases file. If that is the case, add below lines to the .bashrc file.
+<div class="highlight"><pre><span></span><code># Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+#
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
+fi
+</code></pre></div></p>
 </div>
-<p>When new versions of the Xilinx/AMD tools must be installed, then:</p>
+<p>After installing a new version of the software, like 2024.2, then only thing that one needs to make everything work nicely is change the <code>export XILINX_VERSION=</code> line in the script. </p>
+<p>When new versions of the Xilinx/AMD tools is or must be installed, then:</p>
 <ul>
 <li>Rename the directory of the current installed tools. Example <code>/opt/Xilinx</code> to <code>/opt/Xilinx_Old</code>.</li>
-<li>Install the new Xilinx tools and set the install directory to be <code>/opt/Xilinx</code>.</li>
-<li>When the tools are installed, the only thing to change to get back up and running is the <strong>XILINX_VERSION</strong> environment in the .bash_aliases file or in the .SelectFpgaEnv.sh script.</li>
+<li>Install the new Xilinx tools in the <code>/opt/Xilinx</code> directory.</li>
 </ul>
+<p>There is now always a fall back option available in case of ...</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li>When <strong>pyenv</strong> is installed as Python development environment, protecting the system installed Python installation from being altered, its path needs to be in the absolute front of the system path. As every installed vendor tool wants to be in the front of the path, things need to be changed and altered.</li>
+<li>The issue of the path order is solved in the scripting for the .bash_aliases file.</li>
+<li>The issue comes from the call of the petalinux script from within the .bash_aliases file.
+    To read more about this open the <a href="../ScriptingFpgaTools/">Scripting for FPGA tools</a> document.</li>
+<li>When the Efinix FPGA tools are installed or are going to be installed drop the Xilinx/AMD and Efinix environment settings each in their own script file (example: .SelectFpgaEnv.sh). Make the files executable and call a FPGA settings file from within .bash_aliases. The full explanation can be found in the <a href="../ScriptingFpgaTools/">Scripting for FPGA tools</a> document.</li>
+</ul>
+</div>
 <h3 id="development-boards">Development Boards</h3>
 <p>When setting up a Vivado project one must select a FPGA family, part, package and speed range or select a board from a list of Xilinx and/or third party boards. When the tools are installed a list of boards is installed and from those a selection can be made.</p>
-<p>When the boards tab is selected, as showed in figure 2, a table with by Vivado recognised board is presented. When the files representing a board are installed, the column <strong>Status</strong> will show “Installed”, when the board is not installed the “Status” column will show a “down pointing arrow” indicating that a mouse click on the arrow will download the board files.</p>
+<p>When the boards tab is selected a table with, by Vivado recognised boards, is presented. When the files representing a board are installed, the column <strong>Status</strong> will show “Installed”, when the board is not installed the “Status” column will show a “down pointing arrow” indicating that a mouse click on the arrow will download the board files.</p>
 <p>When a board is not present in the table list, one can hit the [Refresh] button in an attempt to update the table with the latest board information from Xilinx/AMD and partners.</p>
 <p>Another way to get boards installed is:</p>
 <ul>
@@ -1014,7 +1009,7 @@ echo &quot; Vivado, Vitis-HLS and Vitis settings done.&quot;
 </li>
 <li>
 <p>An example: </p>
-<ul>
+</li>
 <li>
 <p>Digilent publishes on <a href="https://github.com/Digilent/vivado-boards">GitHub</a> a set of all available Digilent boards for download.</p>
 </li>
@@ -1045,8 +1040,6 @@ echo &quot; Vivado, Vitis-HLS and Vitis settings done.&quot;
 <p>If there are multiple directories with board files, like own made board files, separate the different path using <strong>“ ”</strong>. Like : </p>
 <div class="highlight"><pre><span></span><code>set_param board.repoPaths [list &quot;Path One&quot; &quot;Path Two&quot; &quot;...&quot;]
 </code></pre></div>
-</li>
-</ul>
 </li>
 </ul>
 

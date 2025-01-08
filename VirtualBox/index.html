@@ -707,6 +707,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScriptingFpgaTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scripting for FPGA Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -776,12 +797,8 @@
 <h1 id="virtualbox">VirtualBox</h1>
 <h2 id="configure-virtualbox">Configure VirtualBox</h2>
 <ul>
-<li>
-<p>Start virtual box (Oracle VM VirtualBox) from the main menu or show apps button.</p>
-</li>
-<li>
-<p>Click [File] - [Preferences]</p>
-<ul>
+<li>Start virtual box (Oracle VM VirtualBox) from the main menu or show apps button.</li>
+<li>Click [File] - [Preferences]</li>
 <li>Under <strong>General</strong> set the "Default Machine Folder" to <code>/mnt/VirtualMachines</code>
     Remember, from the <strong>disk partitioning table</strong> that an entire drive of 1GB has been designated for the use of a virtual machine.</li>
 <li>Tick under <strong>Update</strong> the "Check for Updates" box<ul>
@@ -789,29 +806,17 @@
 <li>Check for: Stable Release Versions</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>
-<p>Hit [OK]</p>
-</li>
-<li>
-<p>Click [File] - [Tools] - [Extension Pack Manager] and then click [Extension] - [Install]</p>
-<ul>
+<li>Hit [OK]</li>
+<li>Click [File] - [Tools] - [Extension Pack Manager] and then click [Extension] - [Install]</li>
 <li>Browse to where the downloaded extension pack is saved and click [Open] on the selected extension pack.</li>
 <li>Read the text in the small pop-up menu and click [Install]</li>
 <li>Pull the slider down of the VirtualBox License pop-up and click [I Agree]</li>
 <li>Enter the sudo password and let the tool install the extension pack.</li>
 </ul>
-</li>
-</ul>
 <h2 id="install-and-run-a-virtual-machine">Install and Run a Virtual Machine</h2>
 <ul>
-<li>
-<p>Install a virtual machine (As example Linux-Mint 21.3 is installed as guest OS)</p>
-<ul>
-<li>
-<p>Click [Machine] - [New]</p>
-</li>
+<li>Install a virtual machine (As example Linux-Mint 21.3 is installed as guest OS)</li>
+<li>Click [Machine] - [New]</li>
 <li>
 <p>Normally selected by default [Guided Mode], but check if it's correct. else click the [Expert Mode] button at the bottom of the window to change it into [Guided Mode].</p>
 </li>
@@ -829,31 +834,31 @@
 <p><strong>Hardware</strong></p>
 <ul>
 <li>Base Memory: Move the slider to the right until 16384 MB is indicated in the amount of memory box.</li>
-<li>Processors: Move the slider to the right until 4 CPUs is shown</li>
-</ul>
+<li>
+<p>Processors: Move the slider to the right until 4 CPUs is shown</p>
 </li>
 <li>
 <p><strong>Hard Disk</strong></p>
-<ul>
+</li>
 <li>"Create a Virtual Machine Now" should be ticked (voted for) by default. If not select this option.
     The "Hard Disk File Location and Size" bar should display this path /mnt/VirtualMachines/<em>\<Name of the VM></em>/<em>\<VM_name></em>.vdi
     were: <em>\<Name of the VM></em> is in this example: LinuxMint213
     and*\<VM_name>*.vdi will be set to LinuxMint213.vdi</li>
-<li>Select, vote for, "Pre-Allocate Full Size"</li>
-</ul>
+<li>
+<p>Select, vote for, "Pre-Allocate Full Size"</p>
 </li>
 <li>
 <p>Hit the [Finish] button</p>
 </li>
+<li>The base for the Linux-Mint virtual machine is setup. 
+  Now the Linux-Mint version needs to be installed. 
+  Follow the guidelines below.</li>
 <li>
-<p>The base for the Linux-Mint virtual machine is setup. 
-    Now the Linux-Mint version needs to be installed. 
-    Follow the guidelines below.</p>
+<p>Click the [Settings] button</p>
 <ul>
-<li>Click the [Settings] button<ul>
-<li><strong>General</strong> - [Advanced]<ul>
-<li>Enable "Shared Clipboard" and "Drag'n'Drop". 
-    Make these <strong>Bidirectional</strong></li>
+<li><strong>General</strong> - [Advanced]</li>
+<li>Enable "Shared Clipboard" and "Drag'n'Drop". <ul>
+<li>Make these <strong>Bidirectional</strong></li>
 </ul>
 </li>
 <li><strong>System</strong> - [Motherboard]<ul>
@@ -868,10 +873,8 @@
 <li>Select; <em>Enable 3D Acceleration</em> as extended Feature</li>
 </ul>
 </li>
-<li><strong>USB</strong> - <ul>
+<li><strong>USB</strong><ul>
 <li>Select USB3.0 (xHCI) Controller</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>Click [OK]</li>
@@ -879,34 +882,30 @@
 </li>
 <li>
 <p>Click the [Start] button</p>
-<ul>
+</li>
 <li>The Linux-Mint installation will start and show as for a normal installation a Linux-Mint tryout system with on desktop a icon-button to install Linux Mint.</li>
 <li>Double click the icon-button</li>
 <li>Install Linux Mint as if it's going to be installed on a PC.
-    Fllow the GUI setup and anwser the questions and provide information to the installer</li>
-<li>
-<p>When Linux Mint is installed configure it as a normal Linux installation.</p>
-</li>
+    Follow the GUI setup and anwser the questions and provide information to the installer</li>
+<li>When Linux Mint is installed configure it as a normal Linux installation.</li>
 <li>
 <p>Extra things one can do to make life easier</p>
-</li>
-</ul>
 </li>
 <li>
 <p>Click [Devices] - [Insert Guest Additions CD image ...]</p>
 </li>
 <li>
 <p>Double click the icon-link on the desktop and follow the instructions
-    After installation,install the Guest Additions upgrade ([Devices] - [Upgrade Guest Additions]).</p>
+  After installation,install the Guest Additions upgrade ([Devices] - [Upgrade Guest Additions]).</p>
 </li>
 <li>
 <p>Share a directory or directories of the host machine with the Virtual Machine.</p>
-<ul>
+</li>
 <li>Click in the "Oracle VM VirtualBox Manager" the entry <strong>Shared folders</strong>.
     Click <em>Machine Folders</em> and then the <strong>+</strong>.
     Browse to the folder (other) on the host that needs sharing.</li>
-<li>Do this for one or multiple directories</li>
-</ul>
+<li>
+<p>Do this for one or multiple directories</p>
 </li>
 <li>
 <p>Click [Machine] and in the drop down menu click [Create Shortcut on Desktop]

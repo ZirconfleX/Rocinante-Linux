@@ -1604,6 +1604,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScriptingFpgaTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scripting for FPGA Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2586,10 +2607,10 @@
 </li>
 <li>
 <p>At the first booted Manjaro screen tell to boot with:</p>
-<ul>
+</li>
 <li>Open source drivers (<em>this is the default and also used here as no proprietary driver is required</em>)</li>
-<li>Proprietary drivers (<em>select this when using Nvidia graphics cards or special Ethernet setups</em>)</li>
-</ul>
+<li>
+<p>Proprietary drivers (<em>select this when using Nvidia graphics cards or special Ethernet setups</em>)</p>
 </li>
 <li>
 <p>Double click the <strong>Install Manjaro Linux icon</strong> on the desktop to start the install tool.</p>
@@ -2606,21 +2627,13 @@
 </li>
 <li>
 <p>Select in the partition selection:</p>
-<ul>
+</li>
 <li>"Erase Disk - SWAP(with Hibernate)" for a Microsoft Windows-isch installation when the installer does the complete job of partitioning and installing.</li>
-<li>
-<p>"<strong>Manual partitioning</strong>" for a own partitioning scheme as the one provided in the main Rocinante document. </p>
-<blockquote>
-<!--[!Tip]-->
-<!--The partitioning table in the main Rocinante is that for the new PC I have constructed, but most likely another new PC will require a different partitioning table. Thus make a similar table for your new machine before starting the installation. This will overcome a lot of frustration during and after installation.-->
-</blockquote>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>The partitining table in the main Rocinante is that for the new PC I have constructed, but most likely another new PC will require a different partitioning table. Thus make a similar table for your new machine before starting the installation. This will overcome a lot of frustration during and after installation.</p>
-</div>
-</li>
+<li>"<strong>Manual partitioning</strong>" for a own partitioning scheme as the one provided in the main Rocinante document. </li>
 </ul>
-</li>
+<p>!!! Tip
+       The partitioning table in the main Rocinante is that for the new PC I have constructed, but most likely another new PC will require a different partitioning table. Thus make a similar table for your new machine before starting the installation. This will overcome a lot of frustration during and after installation.</p>
+<ul>
 <li>
 <p>Follow the install pages and provide the correct answers.</p>
 </li>
@@ -2630,12 +2643,7 @@
 </ul>
 <p>Go and have a cup of coffee, hot chocolate or cup of thee with coffee corner chat and upon return Ubuntu Linux is going to be installed. The installer is asking to remove the USB thumb drive and hit [Enter]. Do it to reboot in Manjaro.</p>
 <h2 id="after-the-first-reboot">After the First Reboot</h2>
-<blockquote>
-<!--[!IMPORTANT]-->
-<p><!--Installing, updating and/or upgrading software requires root access.--> 
-<!--When the Installation, update and/or upgrade is done using GUI type of tools a popup will be presented asking for the root password. When installing, updating and/or upgrading software in a command terminal root access is obtained by the **sudo** keyword (sudo followed by a command). The command line interface will ask for the root password.--></p>
-</blockquote>
-<div class="admonition important">
+<div class="admonition note">
 <p class="admonition-title">Important</p>
 <p>Installing, updating and/or upgrading software requires root access. When the Installation, update and/or upgrade is done using GUI type of tools a popup will be presented asking for the root password. When installing, updating and/or upgrading software in a command terminal root access is obtained by the <strong>sudo</strong> keyword (sudo followed by a command). The command line interface will ask for the root password.</p>
 </div>
@@ -2647,15 +2655,9 @@
 <p>Let's start the first check if everything is up to date and functioning</p>
 <ul>
 <li>
-<p>Hit the [Menu] button in the left bottom corner of the screen, start typing "update ...". 
+<p>Hit the [Menu] button in the left bottom corner of the screen, start typing "update ...".
     While typing one tool is showed; <strong>Add/Remove Software</strong>. Click it to start the tool.</p>
-<blockquote>
-<!--[!IMPORTANT]-->
-<!--The tool showing up in the Manjaro main menu structure as **Add/Remove Software** is in reality called **PAMAC**. From now on Add/Remove Software will be referred to as PAMAC.-->
-<!--[!NOTE]-->
-<!--Manjaro only knows one tool to do it all, installing, removing, updating and upgrading tools and OS related things.-->
-</blockquote>
-<div class="admonition important">
+<div class="admonition note">
 <p class="admonition-title">Important</p>
 <p>The tool showing up in the Manjaro main menu structure as <strong>Add/Remove Software</strong> is in reality called <strong>PAMAC</strong>. From now on Add/Remove Software will be referred to as PAMAC.</p>
 </div>
@@ -2666,7 +2668,7 @@
 </li>
 <li>
 <p>Set up of the PAMAC tool</p>
-<ul>
+</li>
 <li>
 <p>Click the thee small horizontal lines at the right top of the tools pane (left of the minimise, maximise and close buttons).</p>
 </li>
@@ -2675,74 +2677,66 @@
 <ul>
 <li>
 <p>[General] - [Updates] tab:</p>
-<ul>
-<li>Check for updates should be default ON, if not turn it on</li>
+</li>
+<li>
+<p>Check for updates should be default ON, if not turn it on</p>
+</li>
 <li>Update check frequency, change it if wanted but default it's set to <em>every day</em></li>
-<li>Check the other options and maybe change them else leave the rest as is.</li>
-</ul>
+<li>
+<p>Check the other options and maybe change them else leave the rest as is.</p>
 </li>
 <li>
 <p>[General] - [Downloads] tab:</p>
-<ul>
-<li>I've set the number of parallel downloads to 6</li>
-</ul>
+</li>
+<li>
+<p>I've set the number of parallel downloads to 6</p>
 </li>
 <li>
 <p>[General] - [Official Repositories]</p>
-<ul>
-<li>Leave it to: <em>Worldwide</em></li>
-</ul>
+</li>
+<li>
+<p>Leave it to: <em>Worldwide</em></p>
 </li>
 <li>
 <p>[General] - [Cache] tab:</p>
-<ul>
+</li>
 <li>
-<p>I've set "keep package versions" to 2
-    <!--[!TIP]--></p>
-<blockquote>
-<!--Come here on a regularly base and hit the  <button type="button">[Clean]</button> button to clear the cache.-->
-</blockquote>
+<p>I've set "keep package versions" to 2</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Come here on a regularly base and hit the <button type="button">[Clean]</button> button to clear the cache.</p>
 </div>
 </li>
-</ul>
-</li>
-</ul>
-</li>
 <li>
 <p>[Advanced] tab:</p>
-<ul>
-<li>Turn the slider for chack available disk space to ON.<ul>
-<li>Do the same for required dependencies</li>
-</ul>
 </li>
+<li>
+<p>Turn the slider for check available disk space to ON.</p>
+<ul>
+<li>Do the same for required dependencies</li>
 </ul>
 </li>
 <li>
 <p>[Third Party] tab:</p>
-<ul>
-<li>
-<p>Turn the slide for "Enable AUR support" to ON.</p>
-<blockquote>
-<!--[!TIP]-->
-<!--Come here on a regularly base and hit the  <button type="button">[Clean]</button> button to clear the tmp-->
-</blockquote>
 </li>
-</ul>
+<li>
+<p>Turn the slider for "Enable AUR support" to ON.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Come here on a regularly base and hit the  <button type="button">[Clean]</button> button to clear the tmp&rarr;</p>
+</div>
 </li>
 <li>
 <p>The tool is configured, close the pane and return to the main pane.</p>
 </li>
 <li>
 <p>Click the <button type="button">[Updates]</button> button on top of the tool pane.</p>
-<ul>
-<li>When everything i updated and running it shows: <strong>Your system is up to date</strong></li>
+</li>
+<li>
+<p>When everything i updated and running it shows: <strong>Your system is up to date</strong></p>
+</li>
 <li>Hit the <button type="button">[Refresh]</button> button to check and when it tool comes back with the above message everything is really up to date.</li>
 <li>If there are things that need updated, they will be presented and a button click will update the things.</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -2755,14 +2749,8 @@
 <li>The top of the list shows a magnifying glass with title of the tool that needs to be installed and some brief comments.</li>
 <li>Hit the blue square with white down pointing arrow to install the logs tool.</li>
 </ul>
-<blockquote>
-<!--[!important]-->
-<!--When a tool is installed the blue square with white down pointing arrow is changed into a red square with rubbish bin graph.-->
-</blockquote>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>When a tool is installed the blue square with white down pointing arrow is changed into a red square with rubbish bin graph.</p>
-</div>
+<p>!!! Note "Important"
+      When a tool is installed the blue square with white down pointing arrow is changed into a red square with rubbish bin graph.</p>
 <ul>
 <li>To remove a tool from the system, click the red square with rubbish bin graph. 
     Then click the  <button type="button">[Apply]</button> button and the tool and all its dependencies is removed from the system.</li>
@@ -2774,7 +2762,7 @@
 </li>
 <li>
 <p>Install the tool:</p>
-<ul>
+</li>
 <li>
 <p>Hit the [Menu] button in the left bottom corner of the screen, start typing "software ...". 
     While typing one tool is showed; <strong>Add/Remove Software</strong>. Click it to start the tool.</p>
@@ -2787,11 +2775,6 @@
 </li>
 <li>
 <p>Hit the blue square with white down pointing arrow and then hit the  <button type="button">[Apply]</button> button at the bottom of the pane to install Timeshift</p>
-<blockquote>
-<!--[!IMPORTANT]-->
-<p><!--When a tool is installed the blue square with white down pointing arrow is changed into a red square with rubbish bin icon.-->
- <!--To remove a tool from the system, click the red square with rubbish bin graph. The tool and all its dependencies is removed from the system.--></p>
-</blockquote>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>When a tool is installed the blue square with white down pointing arrow is changed into a red square with rubbish bin icon. To remove a tool from the system, click the red square with rubbish bin graph. The tool and all its dependencies is removed from the system.</p>
@@ -2802,36 +2785,25 @@
 <ul>
 <li>
 <p>Hit the [Manjaro Menu] button, and start typing "timeshift".
-    Double click the appearing timeshift icon to start the GUI version of Timeshift</p>
-<ul>
+  Double click the appearing timeshift icon to start the GUI version of Timeshift</p>
+</li>
 <li>
 <p>Click [Settings]</p>
 <ul>
-<li>
-<p>[Location]: indicate where Timeshift can drop it's backups of the system</p>
-<blockquote>
-<!--[!NOTE]-->
-<p><!--At least 1 TB to 2 TB is required as a decent backup space.-->
- <!--The Timeshift storage location, like in the base <a href="./Rocinante-PC.md">Rocinante</a> document provided partition table shown, can be set to a installed and dedicated 2 TB hard disk. Timeshift backups can be set onto the NAS drive (setup of a NAS drive is discussed later in this document) as that device has most of the time lots of space.--> </p>
-</blockquote>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>At least 1 TB to 2 TB is required as a decent backup space. The Timeshift storage location, like in the base <a href="../Rocinante-PC/">Rocinante</a> document provided partition table shown, can be set to a installed and dedicated 2 TB hard disk. Timeshift backups can be set onto the NAS drive (setup of a NAS drive is discussed later in this document) as that device has most of the time lots of space. </p>
-</div>
-</li>
+<li>[Location]: indicate where Timeshift can drop it's backups of the system</li>
 </ul>
-</li>
+<p>!!! Note
+      At least 1 TB to 2 TB is required as a decent backup space. The Timeshift storage location, like in the base <a href="../Rocinante-PC/">Rocinante</a> document provided partition table shown, can be set to a installed and dedicated 2 TB hard disk. Timeshift backups can be set onto the NAS drive (setup of a NAS drive is discussed later in this document) as that device has most of the time lots of space. </p>
+<ul>
 <li>
 <p>[Schedule]: Tell the system when to backup and how many backups to keep.
-        Example: hourly, 1 backup and daily 2 backups.</p>
+   Example: hourly, 1 backup and daily 2 backups.</p>
 </li>
 <li>
 <p>[Filters]: Tell the system what, and what not to backup.</p>
 </li>
 <li>
 <p>Click [OK]</p>
-</li>
-</ul>
 </li>
 <li>
 <p>Click [Create] to make the first set of backups.</p>
@@ -2863,7 +2835,7 @@
 <li>
 <p>The installed Manjaro system will always use the latest available stable kernel.
     Manually installing a new kernel is as easy as:</p>
-<ul>
+</li>
 <li>
 <p>Click the [Manjaro Menu] icon in the left bottom of the screen.</p>
 </li>
@@ -2881,18 +2853,12 @@
 <ul>
 <li>The one running the system is indicted as [Running] - [Installed]</li>
 <li>Select the wanted kernel and hit the [Install] button.
-    The selected kernel is installed and will be used at next boot.</li>
+  The selected kernel is installed and will be used at next boot.</li>
 </ul>
 <p>At time of writing, the 6.5.3-1 kernel was changed for the 6.6.40-1 kernel.
-The 6.5.3-1 kernel is left [Installed] as possible fall-back kernel in case of ...</p>
-</li>
-</ul>
-<blockquote>
-<!--[!IMPORTANT]-->
-<!--To keep a stable system, use only kernels indicated as [LTS] and [Recommended]-->
-</blockquote>
-<div class="admonition importan">
-<p class="admonition-title">Importan</p>
+  The 6.5.3-1 kernel is left [Installed] as possible fall-back kernel in case of ...</p>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
 <p>To keep a stable system, use only kernels indicated as [LTS] and [Recommended]</p>
 </div>
 </li>
@@ -2902,15 +2868,11 @@ The 6.5.3-1 kernel is left [Installed] as possible fall-back kernel in case of .
 This casper tool is not of any use when not porting Linux and can thus be disabled. Do this as:</p>
 <ul>
 <li>Start a command terminal</li>
-<li>Enter: <code>sudo sysemctl disable casper-md5check.service</code></li>
+<li>Enter: <code>sudo systemctl disable casper-md5check.service</code></li>
 </ul>
 <h3 id="numlockx">Numlockx</h3>
 <p>Useful to have installed is "numlockx". It makes the numeric keypad of keyboard available without the need to push the [Numlock] key.</p>
-<blockquote>
-<!--[!Important]-->
-<!--Numlockx was automatically installed after installing a new version of Manjaro on a new PC. There was thus no longer a need to install it afterwards.-->
-</blockquote>
-<div class="admonition important">
+<div class="admonition note">
 <p class="admonition-title">Important</p>
 <p>Numlockx was automatically installed after installing a new version of Manjaro on a new PC. There was thus no longer a need to install it afterwards.</p>
 </div>
@@ -2932,12 +2894,10 @@ This casper tool is not of any use when not porting Linux and can thus be disabl
 <li>
 <p>Change directory to the /etc/lightdm directory (this is for the Cinnamon install).</p>
 </li>
-<li>Open as root with a text editor the lightdm.conf file<ul>
+<li>Open as root with a text editor the lightdm.conf file</li>
 <li>Search for a text line staring with <strong>#greeter-setup-script=</strong></li>
 <li>Remove the <strong>#</strong> and add after the <strong>=</strong> /usr/bin/numlockx on</li>
 <li>Save the file</li>
-</ul>
-</li>
 <li>Next time the numeric keypad will be available from boot.</li>
 </ul>
 <h3 id="nas-devices">NAS devices</h3>
@@ -2950,32 +2910,32 @@ This casper tool is not of any use when not porting Linux and can thus be disabl
 <p>Open with a text editor, as root/sudo, the <strong>/etc/fstab</strong> file</p>
 </li>
 <li>
-<p>Add the NAS drive and users to the file.
-    <div class="highlight"><pre><span></span><code>&lt;NAS IP&gt;/&lt;Volume&gt;/&lt;User directory&gt; /mnt/&lt;Mount Directory&gt; nfs4 &lt;nfs options&gt; 0 0
-</code></pre></div></p>
+<p>Add the NAS drive and users to the file.</p>
+<div class="highlight"><pre><span></span><code>&lt;NAS IP&gt;/&lt;Volume&gt;/&lt;User directory&gt; /mnt/&lt;Mount Directory&gt; nfs4 &lt;nfs options&gt; 0 0
+</code></pre></div>
 <p>example:</p>
 <div class="highlight"><pre><span></span><code>IP_address:/volume/VolumeName /mnt/MountName nfs4 x-systemd.automount,_netdev,noacl,nocto,rsize=32768,wsize=32768   0   0
 </code></pre></div>
-<ul>
+</li>
 <li>
+<p>The NAS is a networked device, accessed by its IP_address</p>
 <ul>
-<li>The NAS is a networked device, accessed by its IP_address</li>
 <li>A NAS can have several volumes (volume) and every volume can be used by several people, each having their own directory (VolumeName). This data is available when logging in to the NAS-es control and configuration web page.</li>
 <li>The NAS device is mounted onto the Linux OS and the place to do that is the /mnt directory.</li>
 <li>Each users NAS drive is mimicked in the Linux mount by it's own dedicated name (MountName)</li>
 </ul>
 </li>
-</ul>
-</li>
 <li>
 <p>After installation of Manjaro check in the PAMAC tool if <strong>nfs-utils</strong>  and <strong>nfsidmap</strong> are installed. If they are just enable nfs, if they are not install the tools and then enable nfs.</p>
-<ul>
-<li>Check if both tools are installed, start <strong>Add/Remove Software</strong> from the main Manjaro menu.</li>
+</li>
+<li>
+<p>Check if both tools are installed, start <strong>Add/Remove Software</strong> from the main Manjaro menu.</p>
+</li>
 <li>Click the magnifying glass (top left of the GUI pane) and type in the search bar  <code>nfs</code></li>
 <li>The two above mentioned tools should be installed (Have a red square with waste bin at the right).
-  If not (A blue square with white down arrow) install both tools.</li>
-<li>Start a command terminal and type: <code>systemctl enable --now nfs-client.target</code></li>
-</ul>
+    If not (A blue square with white down arrow) install both tools.</li>
+<li>
+<p>Start a command terminal and type: <code>systemctl enable --now nfs-client.target</code></p>
 </li>
 <li>
 <p>Add the user(s) to the <strong>netdev</strong> group
@@ -2985,32 +2945,30 @@ This casper tool is not of any use when not porting Linux and can thus be disabl
 <p>Restart the PC to let the modified fstab file be activated/read.
     It will create directories at the given mount points and with the given names.
     Example: </p>
-<ul>
-<li>If the \<NAS IP>/\<Volume>/\<User directory> /mnt/\<Mount Directory> is in the fstab file, after boot the system /mnt directory will have a sub directory /\<Mount Directory> that mimics the contents of the \<NAS IP>/\<Volume>/\<User directory> directory on the NAS device.</li>
-</ul>
+</li>
+<li>
+<p>If the \<NAS IP>/\<Volume>/\<User directory> /mnt/\<Mount Directory> is in the fstab file, after boot the system /mnt directory will have a sub directory /\<Mount Directory> that mimics the contents of the \<NAS IP>/\<Volume>/\<User directory> directory on the NAS device.</p>
 </li>
 <li>
 <p>It is possible, most likely, that the created files and possible directories are owned by root and that therefore the content of the directories is not accessible by the user of the machine.
     To get this solved do:</p>
-<ul>
-<li>Disable the nfs NAS mount points in the fstab file (Put a # in front of each line).</li>
+</li>
+<li>
+<p>Disable the nfs NAS mount points in the fstab file (Put a # in front of each line).</p>
+</li>
 <li>Reboot the machine.</li>
 <li>After boot go to the /mnt system directory (the earlier created directories are still there) and change the owner, group and access permissions of the directories, these directories are constructed by nfs due to the execution of the root owned fstab at the first boot.</li>
 <li>Enable the nfs NAS mount lines in the fstab file (remove the #).</li>
 <li>Reboot the machine.</li>
-<li>Now accessing the NAS directories should work.</li>
-</ul>
+<li>
+<p>Now accessing the NAS directories should work.</p>
 </li>
 <li>
 <p>Directories and other stuff created on the NAS might be owned by a user <strong>user</strong>. Therefore it might be necessary to make the Linux user part of the group <strong>users</strong>, by: <code>sudo usermod -a -G users &lt;user&gt;</code></p>
 </li>
 </ul>
 <h3 id="bluetooth">Bluetooth</h3>
-<blockquote>
-<p><!--[!important]--> </p>
-<!--On a installation from scratch with a newer version of Manjaro, on a new PC, it turned out that Bluetooth was working out of the box. Thus! check always first if something works before intervene and start modifying installations and settings.-->
-</blockquote>
-<div class="admonition important">
+<div class="admonition note">
 <p class="admonition-title">Important</p>
 <p>On a installation from scratch with a newer version of Manjaro, on a new PC, it turned out that Bluetooth was working out of the box. Thus! check always first if something works before intervene and start modifying installations and settings.</p>
 </div>
@@ -3047,10 +3005,6 @@ This casper tool is not of any use when not porting Linux and can thus be disabl
 <li>Start the <strong>PAMAC</strong> tool and install all previous removed utilities. 
     That can be done the same way as removing, click the blue square with white down arrow (turns into a blue square with **V*), do the same for the other utilities and at the end hit the  <button type="button">[Apply]</button> button in the right bottom corner.</li>
 </ul>
-<blockquote>
-<!--[!NOTE]-->
-<!--Above removal and re-installation of Bluetooth utilities can be done from the command line with **pacman**, but there is chosen to organise it thru the GUI based Add/Remove tool so one gets quickly acquainted to the tool and the easiness of it.-->
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Above removal and re-installation of Bluetooth utilities can be done from the command line with <strong>pacman</strong>, but there is chosen to organise it thru the GUI based Add/Remove tool so one gets quickly acquainted to the tool and the easiness of it.</p>
@@ -3063,11 +3017,6 @@ This casper tool is not of any use when not porting Linux and can thus be disabl
 </li>
 <li>
 <p>If Bluetooth still doesn't work decently, disable the on-board Bluetooth and plug a Bluetooth dongle in one of the many USB ports. Try to use a USB port on the front or top of the computer case to expose the dongle to the world.</p>
-<blockquote>
-<!--[!NOTE]-->
-<p><!--These days motherboards seem to have also on-board WIFI. Disable it!.-->
-<!--A desktop computer doesn't need WIFI but needs to connect to wired Ethernet--></p>
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>These days motherboards seem to have also on-board WIFI. Disable it!. A desktop computer doesn't need WIFI but needs to connect to wired Ethernet</p>
@@ -3075,12 +3024,14 @@ This casper tool is not of any use when not porting Linux and can thus be disabl
 </li>
 <li>
 <p>Check if the Bluetooth dongle is recognised by one of the on-board USB switches.</p>
-<ul>
-<li>Start a command terminal and enter <code>lsusb</code></li>
-<li>One of the returned lines can be something as:
+</li>
+<li>
+<p>Start a command terminal and enter <code>lsusb</code></p>
+</li>
+<li>
+<p>One of the returned lines can be something as:
     <code>Bus 009 Device 003: ID 0a12:0001 Cambridge Silicon Radio, Ltd Bluetooth Dongle (HCI mode)</code> 
-    This is the Bluetooth dongle signature.</li>
-</ul>
+    This is the Bluetooth dongle signature.</p>
 </li>
 <li>
 <p>Restart from point <strong>1</strong> above and normally Bluetooth should work now.</p>
@@ -3090,7 +3041,7 @@ This casper tool is not of any use when not porting Linux and can thus be disabl
 <ul>
 <li>
 <p>Open a command terminal and:</p>
-<ul>
+</li>
 <li>
 <p>Check the Bluetooth blocking status , enter <code>sudo rfkill list</code></p>
 <ul>
@@ -3122,6 +3073,8 @@ This casper tool is not of any use when not porting Linux and can thus be disabl
 </li>
 <li>
 <p>Add following lines to the empty file</p>
+</li>
+</ul>
 <div class="highlight"><pre><span></span><code>[Unit]
 Description=Restart Bluetooth after suspend
 After=suspend.target 
@@ -3133,7 +3086,7 @@ ExecStart=/usr/bin/bash -c &quot;rfkill unblock bluetooth ; systemctl start blue
 [Install]  
 WantedBy=suspend.target
 </code></pre></div>
-</li>
+<ul>
 <li>
 <p>Save the file and close the text editor.</p>
 </li>
@@ -3145,22 +3098,24 @@ WantedBy=suspend.target
 <li>
 <p>If audio quality sucks</p>
 <ul>
-<li>
-<p>install, with PAMAC, the <strong>bluetoothctl</strong> command line tool </p>
+<li>install, with PAMAC, the <strong>bluetoothctl</strong> command line tool </li>
+</ul>
 <p>Command line install: <code>sudo pacman -S bluetoothctl</code></p>
-</li>
+<ul>
 <li>
 <p>Run the tool, to get device info, by typing in the command terminal: <code>bluetoothctl</code></p>
-<ul>
-<li>When having run earlier <code>sudo systemctl status bluetooth.service</code> the Bluetooth device MAC address has been displayed. Run now, from the bluetoothctl prompt: 
-    <code>info &lt;MAC address&gt;</code></li>
-<li>There should be a mentioning of <strong>A2DP</strong> in all obtained information.
-    If it's not displayed and the device support high-quality audio then, force A2DP.</li>
-</ul>
+</li>
+<li>
+<p>When having run earlier <code>sudo systemctl status bluetooth.service</code> the Bluetooth device MAC address has been displayed. Run now, from the bluetoothctl prompt: 
+    <code>info &lt;MAC address&gt;</code></p>
+</li>
+<li>
+<p>There should be a mentioning of <strong>A2DP</strong> in all obtained information.
+    If it's not displayed and the device support high-quality audio then, force A2DP.</p>
 </li>
 <li>
 <p>exit the bluetoothctl tool by typing: <code>quit</code></p>
-<ul>
+</li>
 <li>
 <p>Start a text editor with /etc/bluetooth/main.conf as file to open.</p>
 </li>
@@ -3177,16 +3132,12 @@ Disable=Socket
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
 <p>A hardware issue can be the cause why Bluetooth is not working. To find out if the Bluetooth issue experiencing is caused by hardware do:</p>
 <ul>
 <li>In a command terminal window type: <code>sudo dmesg | grep -i bluetooth</code></li>
 <li>Examine the text output in the same command terminal. When a line is showing an error as "Firmware not found ..." or "Firmware update not found ..." there is a hardware issue.</li>
 <li>The name of the missing hardware (driver) is listed In the sentence about the missing firmware.
-    For example; for a Broadcom chipset the name of the driver mentioned in the error line starts as "bcrm/BCM...".</li>
+  For example; for a Broadcom chipset the name of the driver mentioned in the error line starts as "bcrm/BCM...".</li>
 <li>Copy the "BCM..." part of the error and search the web for the driver. Copy it into the <code>/lib/firmware/bcrm</code>directory of the machine.</li>
 </ul>
 <blockquote>
@@ -3215,11 +3166,9 @@ Disable=Socket
 </li>
 <li>Select the printer, right click:<ul>
 <li>Tick the voting box in front of <strong>Enabled</strong> and in front of <strong>Shared</strong> </li>
-<li>Select <strong>Properties</strong> from the fall down menu<ul>
+<li>Select <strong>Properties</strong> from the fall down menu</li>
 <li>Her lot of things can be set or unset.</li>
 <li>Under [Printer Options] the [Media Size] needed to be set to A4 (Borderless) in order to be able to use the full paper size.</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -3273,29 +3222,15 @@ The solution is to copy, as rooy/sudo, the <strong>dconf</strong> directory in <
 </li>
 <li>
 <p>Provide the user with extra group permissions</p>
-<ul>
-<li>
-<p>Hit the <button type="button">[Manjaro Menu]</button> button and start typing <strong>users</strong>. Click <strong>Users and Groups</strong></p>
 </li>
-<li>
-<p>In the new popped-up pane select the user. On the right side the users credentials are displayed together with the <strong>Groups</strong> the user belongs to. </p>
-</li>
-<li>
-<p>Click the summary of the groups and a new target list will pop up.</p>
-</li>
-<li>
-<p>In that list select or leave selected: </p>
-<ul>
-<li>
-<p>adm, audio, bluetooth, crontab, lp, \<user>, network, 
-    openvpn, power, root, scanner, sys, systemd-journal, 
-    users, vboxsf, vboxusers, vieo, wheel.</p>
-</li>
-<li>
-<p>If one of these groups doesn't exist, click the [Groups] tab and [Add] the missing group.</p>
-</li>
-</ul>
-</li>
+<li>Hit the <button type="button">[Manjaro Menu]</button> button and start typing <strong>users</strong>. Click <strong>Users and Groups</strong></li>
+<li>In the new popped-up pane select the user. On the right side the users credentials are displayed together with the <strong>Groups</strong> the user belongs to. </li>
+<li>Click the summary of the groups and a new target list will pop up.</li>
+<li>In that list select or leave selected: <ul>
+<li>adm, audio, bluetooth, crontab, lp, \<user>, network, 
+  openvpn, power, root, scanner, sys, systemd-journal, 
+  users, vboxsf, vboxusers, vieo, wheel.</li>
+<li>If one of these groups doesn't exist, click the [Groups] tab and [Add] the missing group.</li>
 </ul>
 </li>
 </ul>
@@ -3304,16 +3239,12 @@ The solution is to copy, as rooy/sudo, the <strong>dconf</strong> directory in <
 Thus remove the <button type="button">[Hibernate]</button> from the shut down menu options.</p>
 <ul>
 <li>Start a file browser (Nemo) and browse to <code>/etc</code> open the <code>systemd</code>directory "as root".</li>
-<li>Open in a text editor the <code>sleep.conf</code> file and uncomment and modify following lines, then save the file<ul>
+<li>Open in a text editor the <code>sleep.conf</code> file and uncomment and modify following lines, then save the file</li>
 <li>Original line is: #AllowHibernation=yes ---&gt; make it:  AllowHibernation=no</li>
 <li>Original line is: #AllowHybridSleep=yes ---&gt; make it: AllowHybridSleep=no</li>
 <li>Original line is: #AllowSuspendThenHibernate=yes ---&gt; make it: AllowSuspendThenHibernate=no</li>
-</ul>
-</li>
-<li>Open in a text editor the <code>logind.conf</code> file and uncomment the line, then save the file<ul>
+<li>Open in a text editor the <code>logind.conf</code> file and uncomment the line, then save the file</li>
 <li>HibernateKeyIgnoreInhibited=no</li>
-</ul>
-</li>
 </ul>
 <p>Launch now the <strong>dconf-editor</strong>. 
 Click and follow this path in the dconf-editor: <code>cinnamon - settings-daemon - plugins - power</code>, then click (edit) the item <code>button-hibernate</code> and change:</p>
@@ -3332,30 +3263,18 @@ The only good reason to install software manually is to install the software in 
 <li>Using AppImage files.
     AppImage files are kind of compressed files for a single application. Everything the application requires is packed in the compressed file and the tool can thus be run by executing it. A tool make software life easier is AppImageLauncher (more later).</li>
 </ul>
-<p>To install software, click the <button type="button">[Menu Manjaro]</button> button in the left bottom corner of the screen and start typing <strong>software</strong>. The first presented option is: <strong>Add/Remove Software</strong>, select it. <strong>Add/Remove Software</strong> is the fancy name for the PAMAC tool. The preference for the tool have been set in the <a href="#Updates">Updates</a> chapter of this document. If not already done, go there to set everything up and then come back here.</p>
+<p>To install software, click the <button type="button">[Menu Manjaro]</button> button in the left bottom corner of the screen and start typing <strong>software</strong>. The first presented option is: <strong>Add/Remove Software</strong>, select it. <strong>Add/Remove Software</strong> is the fancy name for the PAMAC tool. The preference for the tool have been set in the <a href="#updates">Updates</a> chapter of this document. If not already done, go there to set everything up and then come back here.</p>
 <p>To install software;</p>
 <ul>
-<li>
-<p>Click the magnifying glass at the top left corner of the GUI</p>
-</li>
-<li>
-<p>Type or start typing the name or function of the tool that needs to be installed. </p>
-</li>
-<li>
-<p>Hit [Enter] and a list with possibilities is presented, showing most likely the tool to install on top.</p>
-<ul>
+<li>Click the magnifying glass at the top left corner of the GUI</li>
+<li>Type or start typing the name or function of the tool that needs to be installed. </li>
+<li>Hit [Enter] and a list with possibilities is presented, showing most likely the tool to install on top.</li>
 <li>If the tool is already installed as red square with waste bin is shown right of the tools title</li>
 <li>Remove an installed tool by clicking the red squared waste bin, will turn into red squared <strong>V</strong></li>
 <li>If the tool is not yet installed a blue square with white down arrow is showed.</li>
 <li>Install a tool by clicking the blue squared white down arrow, it will turn into a blue squared <strong>V</strong>.</li>
 <li>Hit then the  <button type="button">[Apply]</button> button in the bottom right corner of the GUI pane and enter credentials.</li>
 </ul>
-</li>
-</ul>
-<blockquote>
-<!--[!note]-->
-<!--All later in the document discussed software tools have a line "Use **PAMAC** to ...". It just installs the discussed tool using PAMAC snd nothing else. Multiple tools can be installed at once by selecting (clicking the blue squared white down arrow button) each tool and when all required software tools are selected hit the   <button type="button">[Apply]</button> button in the bottom right corner of the GUI pane and enter credentials.-->
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>All later in the document discussed software tools have a line "Use <strong>PAMAC</strong> to ...". It just installs the discussed tool using PAMAC snd nothing else. Multiple tools can be installed at once by selecting (clicking the blue squared white down arrow button) each tool and when all required software tools are selected hit the   <button type="button">[Apply]</button> button in the bottom right corner of the GUI pane and enter credentials.</p>
@@ -3381,35 +3300,21 @@ Timeshift is a tool to take automatically backups of the system. It can take hou
 <p>Use <strong>PAMAC</strong> to install appimagelauncher from the AUR repositories</p>
 <p>Configure the Appimagelauncher tool so all used appimage files are managed from, one place.</p>
 <ul>
-<li>
-<p>Create, as root/sudo, in <strong>/opt</strong> a directory <strong>AppImages</strong> and change the owner, group and properties of the directory. Use a file browser (Nemo) to do that or use a command line terminal.</p>
-<ul>
-<li><code>cd /opt
-    sudo chown &lt;user&gt; AppImages
-    sudo chgrp &lt;user&gt; AppImages
-    sudo chmod 775 AppImages</code></li>
+<li>Create, as root/sudo, in <strong>/opt</strong> a directory <strong>AppImages</strong> and change the owner, group and properties of the directory. Use a file browser (Nemo) to do that or use a command line terminal.</li>
 </ul>
-</li>
-<li>
-<p>Click the  <button type="button">[Menu Manjaro]</button> in the left bottom corner of the screen and start typing <strong>appimagelauncher</strong>. The first presented option is: <strong>AppImageLauncher Settings</strong>, select it.</p>
-</li>
-<li>
-<p>[AppimageLauncher] tab</p>
+<div class="highlight"><pre><span></span><code>cd /opt
+sudo chown &lt;user&gt; AppImages
+sudo chgrp &lt;user&gt; AppImages
+sudo chmod 775 AppImages
+</code></pre></div>
 <ul>
+<li>Click the  <button type="button">[Menu Manjaro]</button> in the left bottom corner of the screen and start typing <strong>appimagelauncher</strong>. The first presented option is: <strong>AppImageLauncher Settings</strong>, select it.</li>
+<li>[AppimageLauncher] tab</li>
 <li>Tick the box left of "Ask whether to move AppImage files ... "</li>
-<li>Set the location were to store the appimage files and were to execute them from to
-    <code>/opt/AppImages</code></li>
-</ul>
-</li>
-<li>
-<p>[AppimageLauncherd] tab</p>
-<ul>
+<li>Set the location were to store the appimage files and were to execute them from to <code>/opt/AppImages</code></li>
+<li>[AppimageLauncherd] tab</li>
 <li>Tick the box left of "Auto start auto-integration ... "</li>
-</ul>
-</li>
-<li>
-<p>Click [OK]</p>
-</li>
+<li>Click [OK]</li>
 </ul>
 <p>How to run a tool disguised as appimage </p>
 <ul>
@@ -3430,10 +3335,6 @@ It is possible to use <strong>PAMAC</strong> to install Bitwarden but then it's 
 </ul>
 <p>What happened is; the saved appimage file is copied to the /opt/AppImages directory and the AppImageLauncher created an input for the [Manjaro main] menu so that when clicking the [Memu] button one can type bitwarden and launch bitwarden from the menu structure.
 The AppImageLauncher tool will also take care of regularly updating the Bitwarden tool.</p>
-<blockquote>
-<!--[!TIP]-->
-<!--In case of ... do export on regularly base the vault, using the PC version, of all passwords as csv or json file and store that file somewhere safe (in another personal vault).-->
-</blockquote>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>In case of ... do export on regularly base the vault, using the PC version, of all passwords as csv or json file and store that file somewhere safe (in another personal vault).</p>
@@ -3442,43 +3343,25 @@ The AppImageLauncher tool will also take care of regularly updating the Bitwarde
 <p>Keep everything that’s important to you and your family shareable and safe in one place.
 Back up files in the cloud, share photos and videos, and more.</p>
 <p>Use <strong>PAMAC</strong> to install Dropbox</p>
-<blockquote>
-<!--[!NOTE]-->
-<!--One needs to have a DropBox account in order to be able to use this tool. If no dropBox account is available this tool is of no use.-->
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>One needs to have a DropBox account in order to be able to use this tool. If no dropBox account is available this tool is of no use.</p>
 </div>
 <h4 id="pyenv">Pyenv</h4>
-<p>Managing Multiple Python Versions With pyenv.</p>
-<p>Pyenv can be installed from the <strong>PAMAC</strong> tool but then everything is installed following the PAMAC installation scripts and without user control.</p>
-<p>To install and manage Pyenv and Python read and follow the <a href="../Install_Manage_Pyenv/">Install_Manage_Pyenv</a> document.
+<p>Managing Multiple Python Versions With pyenv.
+Pyenv can be installed from the <strong>PAMAC</strong> tool but then everything is installed following the PAMAC installation scripts and without user control.
+To install and manage Pyenv and Python read and follow the <a href="../Install_Manage_Pyenv/">Install_Manage_Pyenv</a> document.
 With the installation of pyenv, also install the required/wanted Python version(s) and packages.</p>
 <h4 id="java">Java</h4>
 <p>Many installed applications use JAVA. The latest JAVA version is installed when Manjaro was installed but it was a version from the AUR repositories and installing some applications encountered issues and therefore did not install. To get the things working as they should do:</p>
 <ul>
-<li>
-<p>Start  <strong>Add/Remove Software</strong> (PAMAC) and type in the search bar <strong>openjdk</strong>.</p>
-</li>
-<li>
-<p>A list of OpenJDK tools is presented, scroll down until an installed version shows up (red square with aste bin).</p>
-</li>
-<li>
-<p>Remove the installed openjdk applications </p>
-<ul>
-<li>
-<p>After ticking the, in this case three, red squares with waste bin they will turn in red squares with <strong>V</strong>.</p>
-</li>
-<li>
-<p>Click in the right bottom corner [Apply]</p>
-</li>
+<li>Start  <strong>Add/Remove Software</strong> (PAMAC) and type in the search bar <strong>openjdk</strong>.</li>
+<li>A list of OpenJDK tools is presented, scroll down until an installed version shows up (red square with aste bin).</li>
+<li>Remove the installed openjdk applications </li>
+<li>After ticking the, in this case three, red squares with waste bin they will turn in red squares with <strong>V</strong>.</li>
+<li>Click in the right bottom corner [Apply]</li>
 <li>
 <p>A warning will pop-up telling something about dependencies, in this case about applications <strong>maven</strong>, <strong>beanshell</strong> and <strong>Freeplane</strong>. When clicking [OK] nothing is going to be installed because of the dependencies conflicts.</p>
-<blockquote>
-<!--[!NOTE]-->
-<p><!--Possibly in this stage of the installation there will be no warnings about dependencies because it is the start of the Linux configuration and tuning. If there is a warning pop-in up do as above written, remove the applications and then continue.--> </p>
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Possibly in this stage of the installation there will be no warnings about dependencies because it is the start of the Linux configuration and tuning. If there is a warning pop-in up do as above written, remove the applications and then continue. </p>
@@ -3487,65 +3370,37 @@ With the installation of pyenv, also install the required/wanted Python version(
 <li>
 <p>Remove first the listed applications.</p>
 </li>
-<li>
-<p>Remove now the openjdk tools</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Check if things are really removed.</p>
-<ul>
+<li>Remove now the openjdk tools</li>
+<li>Check if things are really removed.</li>
 <li>Start a command terminal </li>
 <li>type <code>java --version</code> and after this <code>which java</code>
     Both command should return a negative answer/</li>
-</ul>
-</li>
-<li>
-<p>Go back to   <strong>Add/Remove Software</strong> (PAMAC) and type in the search bar openjdk</p>
-</li>
-<li>
-<p>A list of OpenJDK tools is presented. The top of that list are OpenJDK tools from the Official Repositories. Pick here the OpenJDK tools with the highest number (latest version).</p>
-<ul>
+<li>Go back to   <strong>Add/Remove Software</strong> (PAMAC) and type in the search bar openjdk</li>
+<li>A list of OpenJDK tools is presented. The top of that list are OpenJDK tools from the Official Repositories. Pick here the OpenJDK tools with the highest number (latest version).</li>
 <li><strong>OpenJDK Java 21 Shell (jdk21-openjdk)</strong></li>
-<li><strong>OpenJDK Java 21 Console (jdk21-openjdk)</strong></li>
-</ul>
-<p>and install them.</p>
-</li>
-<li>
-<p>It is maybe not a bad idea to also install an earlier JAVA version in case of ... (you never know).</p>
-<ul>
+<li><strong>OpenJDK Java 21 Console (jdk21-openjdk)</strong>
+    and install them.</li>
+<li>It is maybe not a bad idea to also install an earlier JAVA version in case of ... (you never know).</li>
 <li>Pick and select and earlier OpenJDK version supported in the Official Repositories</li>
 <li><strong>OpenJDK Java 11 Shell (jdk11-openjdk)</strong></li>
-<li><strong>OpenJDK Java 11 Console (jdk11-openjdk)</strong></li>
-</ul>
-<p>and install them.</p>
-</li>
-<li>
-<p>Check now what JAVA version is used as default</p>
-<ul>
-<li>
-<p>In the command terminal type <code>archlinux-java status</code></p>
-</li>
+<li><strong>OpenJDK Java 11 Console (jdk11-openjdk)</strong>
+    and install them.</li>
+<li>Check now what JAVA version is used as default</li>
+<li>In the command terminal type <code>archlinux-java status</code></li>
 <li>
 <p>The answer in the terminal should be</p>
 <div class="highlight"><pre><span></span><code>Available Java environments
-    java-11-openjdk
-    java-21-openjdk (default)
+java-11-openjdk
+java-21-openjdk (default)
 </code></pre></div>
 </li>
 <li>
 <p>When the latest java version installed in not the default, type following command in the command terminal <code>sudo archlinux-java set java-21-openjdk</code> and run  <code>archlinux-java status</code>again.</p>
 </li>
-</ul>
-</li>
-<li>
-<p>Install the removed tools using PAMAC</p>
-<ul>
+<li>Install the removed tools using PAMAC</li>
 <li>install <strong>maven</strong></li>
 <li>install <strong>beanshell</strong></li>
 <li>install <strong>Freeplane</strong> </li>
-</ul>
-</li>
 </ul>
 <h3 id="administration">Administration</h3>
 <h4 id="bleachbit">BleachBit</h4>
@@ -3553,11 +3408,6 @@ With the installation of pyenv, also install the required/wanted Python version(
 Better than free, BleachBit is open source.</p>
 <p>Use <strong>PAMAC</strong> to install <strong>BleachBit (bleachbit)**</strong></p>
 <p>The Bleachbit installed this way is a "user" version. A admin or root user version, bleachbit-admin, is also available for installation via PAMAC</p>
-<blockquote>
-<!--[!NOTE]-->
-<p><!--Do not run sudo or root functions, as cleaning apt, in the user or non-sudo version of the tool.-->
- <!--There is a dedicated sudo version of the tool and both are installed at the same time.--></p>
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Do not run sudo or root functions, as cleaning apt, in the user or non-sudo version of the tool.</p>
@@ -3568,21 +3418,12 @@ Better than free, BleachBit is open source.</p>
 <p>Use <strong>PAMAC</strong> to install <strong>GParted Partition Editor (gparted)</strong></p>
 <h4 id="dconf-editor">dconf Editor</h4>
 <p><strong>dconf</strong>  is a low-level configuration system, the configuration system is based  on keys, which stores the settings for most applications. The  configuration keys are in the unstructured database (keys are logically  interconnected grouped into categories), the key database is stored in a  binary file located:</p>
-<blockquote>
-<!--[!note]-->
-<p><!--After installing a new version of Manjaro on a new PC, dconf-editor was installed by default.-->
-<!--Thus before installing dconf-editor, check if it's not already installed--></p>
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>After installing a new version of Manjaro on a new PC, dconf-editor was installed by default.</p>
 </div>
 <p>Thus before installing dconf-editor, check if it's not already installed</p>
 <p>Use <strong>PAMAC</strong> to install the <strong>DconfEditor (dconf-editor)</strong></p>
-<blockquote>
-<!--[!note]-->
-<!--When having customised as user the nemo file browser, all customisation efforts will be gone when switching into "root". To make nemo for "root" look identically to nemo used as normal user do copy the <code>/home/&lt;user&gt;/.config/dconf</code> directory into <code>/root/.config</code>.-->
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>When having customised as user the nemo file browser, all customisation efforts will be gone when switching into "root". To make nemo for "root" look identically to nemo used as normal user do copy the <code>/home/&lt;user&gt;/.config/dconf</code> directory into <code>/root/.config</code>.</p>
@@ -3595,10 +3436,6 @@ Select wanted font families and the download them all at once.
 Download is a .zip file.</p>
 <p>Uncompress the file into: <code>/home/&lt;user&gt;/.local/share/fonts</code></p>
 <p>Start font manager to see all new installed fonts.</p>
-<blockquote>
-<!--[!TIP]-->
-<!--Good fonts are NOTO and ROBOTO fonts as they are used all over the WWW-->
-</blockquote>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Good fonts are NOTO and ROBOTO fonts as they are used all over the WWW</p>
@@ -3612,18 +3449,12 @@ Very handy for TODO list, quick notes, ideas, ...</p>
 <li>Right click the icon in the right panel and select [Manage Notes]
     This starts a screen pane showing all notes. In the beginning this pane will be empty.</li>
 <li>Click the three horizontal lines in the left top of the pane.</li>
-<li>Select [Preferences]<ul>
+<li>Select [Preferences]</li>
 <li>[General : turn the switch for <strong>Tray icon</strong> on]</li>
 <li>[Notes: Set the initial size, colour, position and font for future notes]</li>
 <li>[Backups : Leave it off]</li>
 <li>[Automatic start : turn the automatic start on]</li>
 </ul>
-</li>
-</ul>
-<blockquote>
-<!--[!NOTE]-->
-<!--The file keeping the notes text can be found in <code>/home/&lt;user&gt;/.config/sticky/notes.json</code>-->
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The file keeping the notes text can be found in <code>/home/&lt;user&gt;/.config/sticky/notes.json</code></p>
@@ -3673,12 +3504,7 @@ Use <strong>PAMAC</strong> to install <strong>tk</strong> (8.6.14-4)</p>
 As a writer/editor it removes the preview window, mode switcher, syntax symbols of markdown source code, and all other unnecessary distractions of other markdown readers &amp; writers.</p>
 <p>Use <strong>PAMAC</strong> to install <strong>typora</strong> from the AUR repository.</p>
 <p>A different way to install Typora is to copy the binary tar.gz file (X64) from <a href="https://typora.io/#linux">here</a> (small text button [binary file (X64)] under the screenshot of a terminal window). After saving it locally and uncompressing copy the contents of the <code>/bin</code> directory to the <code>/usr/bin</code> directory. In this case the update system of Manjaro will not auto update Pandoc.</p>
-<blockquote>
-<!--[!IMPORTANT]-->
-<p><!--Typora is no longer a free tool. The cost is $15. But it’s worth it.-->
-<!--Pay the money, get a license and register it.--></p>
-</blockquote>
-<div class="admonition important">
+<div class="admonition note">
 <p class="admonition-title">Important</p>
 <p>Typora is no longer a free tool. The cost is $15. But it’s worth it. Pay the money, get a license and register it.</p>
 </div>
@@ -3696,23 +3522,13 @@ To get it installed follow below steps.</p>
 <li>Click the <a href="https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz">install-tl-unx.tar.gz</a> or the <a href="http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip">install-tl.zip</a> file and save it (/Downloads)</li>
 <li>Uncompress the tar.gz or zip file. The result will be a directory called <strong>install-tl-\&lt;invers-date&gt;</strong></li>
 <li>Launch a command terminal and change into the directory created by the unzip operation.</li>
-<li>
-<p>Run the install script <code>sudo ./install-tl -gui</code></p>
-<ul>
+<li>Run the install script <code>sudo ./install-tl -gui</code></li>
 <li>The most important in the install script is the install location .</li>
-<li>Provide the install directory <code>/opt/TexLive/&lt;year&gt;</code></li>
+<li>Provide the install directory <code>/opt/TexLive/&lt;year&gt;</code><ul>
+<li>It is also possible to run the installer in non-GUI version by just entering <code>sudo ./install-tl</code></li>
 </ul>
 </li>
-</ul>
-<blockquote>
-<ul>
-<li>It is also possible to run the installer in non-GUI version by just entering <code>sudo ./install-tl</code><ul>
-<li>When the installer is started this way a lot of text and questions are displayed. To provide the installation path enter "O" and "L" and provide the install path (three entries). Finally return to the main menu and start the installation by entering "I".</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<ul>
+<li>When the installer is started a lot of text and questions are displayed. To provide the installation path enter "O" and "L" and provide the install path (three entries). Finally return to the main menu and start the installation by entering "I".</li>
 <li>
 <p>Installing TexLive will take a while, so be patient (go drink a cup of coffee or thee or go for a walk.</p>
 </li>
@@ -3720,30 +3536,24 @@ To get it installed follow below steps.</p>
 <p>........ (waiting)</p>
 </li>
 <li>
-<p>When installed, or even during install, add the TexLive installation to the path.</p>
-<ul>
-<li>
-<p>In the user home directory, open with a edit, xed, the <em>.bash_aliases</em> file.</p>
+<p>.................. (More waiting)</p>
 </li>
+<li>
+<p>When installed, or even during install, add the TexLive installation to the path.</p>
+</li>
+<li>In the user home directory, open with a edit, xed, the <em>.bash_aliases</em> file.</li>
 <li>
 <p>Add following lines to the file and save it afterwards.</p>
-</li>
-</ul>
 <div class="highlight"><pre><span></span><code>export TL_ROOT=/opt/TexLive/2024
 export PATH=$PATH:TL_ROOT/bin/x86_64-linux
 </code></pre></div>
 </li>
 </ul>
-<blockquote>
-<!-- [!NOTE] -->
-<p><!--Installing software this way Manjaro will not automatically update the LaTeX (texlive) installation.-->
- <!--It's thus the man behind the machine who needs to go get updates and install them. For the LateX software checking once a years for updates is OK.--></p>
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Installing software this way Manjaro will not automatically update the LaTeX (texlive) installation.</p>
+<p>When installing software this way Manjaro will not automatically update the LaTeX (texlive) installation.
+It's thus the man behind the machine who needs to go get updates and install them. For the LateX software checking once a years for updates is OK.</p>
 </div>
-<p>It's thus the man behind the machine who needs to go get updates and install them. For the LateX software checking once a years for updates is OK.</p>
 <h4 id="texstudio">TeXstudio</h4>
 <p>Writing texts using the LaTeX typesetting system can be done using any text editor. When doing so, the begin will be hard and frustrating. It's also possible and easier to use advanced editors like MS-Code with a LaTeX writing aid add-on but when having a LaTeX dedicated editor is better. Uing that editor the LaTeX typesetting system can be learned and when fully familiar other editors can be used.</p>
 <p>TeXstudio is an integrated writing environment for creating LaTeX documents. The goal is to make writing LaTeX as easy and comfortable as possible. Therefore TeXstudio has numerous features like syntax-highlighting, integrated viewer, reference checking, and various assistants. </p>
@@ -3760,7 +3570,7 @@ LaTeXDraw can be used to generate <a href="http://tug.org/PSTricks/main.cgi/"><s
 <li>Click the <strong>latexdraw-4.0.3-linux-binaries.txz</strong> entry and download/save the file.</li>
 <li>Uncompress the downloaded file and copy as root/sudo the contents (a latexdraw-\<version> directory) to the <code>/opt</code> directory. </li>
 <li>It is now possible to start Latexdraw as <code>/opt/latexdraw-4.0.3/bin/latexdraw-run</code> but it would be easier to have an entry for Latexdraw in the main [Manjaro Menu] in the left bottom of the screen.</li>
-<li>Let us create a Latexdraw entry in the [Office] tab of the main menu.<ul>
+<li>Let us create a Latexdraw entry in the [Office] tab of the main menu.</li>
 <li>Right click the [Manjaro Menu] button in the bottom left corner of the screen</li>
 <li>Select in the pop up menu [Configure]</li>
 <li>A Menu pane pops, select here the [Menu] tab in the top of the pane.</li>
@@ -3772,7 +3582,7 @@ LaTeXDraw can be used to generate <a href="http://tug.org/PSTricks/main.cgi/"><s
 <li>[Name:  Latexdraw]</li>
 <li>[Command: /opt/latexdraw-4.0.3/bin/latexdraw-run]</li>
 <li>[Comment: A vector drawing editor for LaTeX.]</li>
-<li>Click the icon in the top left corner <ul>
+<li>Click the icon in the top left corner </li>
 <li>Click [Applications] in the left column</li>
 <li>Search and select the icon [latexila]
     Or select another, or find the Latexdraw icon or ...</li>
@@ -3780,20 +3590,14 @@ LaTeXDraw can be used to generate <a href="http://tug.org/PSTricks/main.cgi/"><s
 </ul>
 </li>
 <li>Click [OK]</li>
-</ul>
-</li>
 <li>A new selector [Latexdraw] is now add in the right column for [Office]</li>
 </ul>
 </li>
 <li>Hit [Close]</li>
-</ul>
-</li>
-<li>Let's see if it works<ul>
-<li>Click the [Manjaro Menu] in the left bottom screen cormer and start typing Latexdraw</li>
+<li>Let's see if it works</li>
+<li>Click the [Manjaro Menu] in the left bottom screen corner and start typing Latexdraw</li>
 <li>A selection of application will pop up while typing with in top Latexdraw</li>
 <li>Select it and see how Latexdraw starts.</li>
-</ul>
-</li>
 </ul>
 <h4 id="sozi">Sozi</h4>
 <p>A zooming presentation editor and player based on  SVG and JavaScript. Sozi is a piece of software for creating animated presentations. It is generally used to make visual aids for lectures or meetings. With Sozi, a presentation is not organised as a sequence of slides, but rather as a succession of <em>viewpoints</em> on a <em>map</em> that you <em>explore</em>.</p>
@@ -3812,11 +3616,6 @@ LaTeXDraw can be used to generate <a href="http://tug.org/PSTricks/main.cgi/"><s
 <li>Click in the AppImageLauncher pop-up [Integrate and run] button
     Sozi will start but is from now on also availabkle from the [Manjaro Menu] </li>
 </ul>
-<blockquote>
-<!--[!NOTE]-->
-<p><!--Sozi is also available from the AUR repositories.-->
- <!--Use **PAMAC** to install **Sozi-bin**--> </p>
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Sozi is also available from the AUR repositories. Use <strong>PAMAC</strong> to install <strong>Sozi-bin</strong> </p>
@@ -3898,56 +3697,47 @@ export PATH=$PATH:/opt/thunderbird.
 <li>
 <p>Of course there is now no clickable entry for Thunderbird in the [Manjaro menu]
     Create one by:</p>
-<ul>
-<li>Right click the menu in the left corner and select ‘configure’.</li>
+</li>
+<li>
+<p>Right click the menu in the left corner and select ‘configure’.</p>
+</li>
 <li>In the pop up menu select the [Menu] tab and the hit the [Open the menu editor] button.</li>
-<li>Select [Internet] in the left menu and then hit [New Item] in the right menu.<ul>
+<li>
+<p>Select [Internet] in the left menu and then hit [New Item] in the right menu.</p>
+<ul>
 <li>Name: Thunderbird Mail</li>
 <li>Command: [Browse] go to /opt/thunderbird and pick thunderbird. Add a space and “<strong>%U</strong>”.</li>
 <li>Comment: Send and receive mail with Thunderbird</li>
 <li>Click the icon and in the popup go to /opt/thunderbird/chrome/icons/default.
-    Pick an icon from the listed, like default24.png</li>
+  Pick an icon from the listed, like default24.png</li>
 <li>[OK]</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>
 <p>Assume Thunderbird mail need to be stored on a NAS drive or other external drive . 
     Thunderbird cannot do it by default , but:</p>
-<blockquote>
-<!--[!IMPORTANT]-->
-<!--**Do this when Thunderbird is closed / not running! **-->
-</blockquote>
-<div class="admonition important">
+<div class="admonition note">
 <p class="admonition-title">Important</p>
 <p><strong>Do this when Thunderbird is closed / not running!</strong></p>
 </div>
-<ul>
+</li>
 <li>
 <p>Start Thunderbird, it is assumed that Thunderbird is started for the first time, and close it again.</p>
 </li>
+<li>Thunderbird creates a .thunderbird directory in the users home directory.
+    This directory is only available if Thunderbird has been started and closed once.</li>
+<li>Copy that entire directory to a default mounted directory on the NAS, rename it to thunderbird (remove the ”<strong>.</strong>”).</li>
+<li>As precaution rename the .thunderbird directory in the users home to something like thunderbird_Org.</li>
 <li>
-<p>Thunderbird creates a .thunderbird directory in the users home directory.
-    This directory is only available if Thunderbird has been started and closed once.</p>
+<p>Open a command terminal in the users home directory and create a symbolic link to the thunderbird directory on the NAS drive.</p>
+<p><code>ln -s /mnt/MainNasDir/thunderbird .thunderbird</code></p>
 </li>
 <li>
-<p>Copy that entire directory to a default mounted directory on the NAS, rename it to thunderbird (remove the ”<strong>.</strong>”).</p>
-</li>
-<li>
-<p>As precaution rename the .thunderbird directory in the users home to something like thunderbird_Org.</p>
-</li>
-<li>
-<p>Open a command terminal in the users home directory and create a symbolic link to the  thunderbird directory on the NAS.</p>
-<div class="highlight"><pre><span></span><code>ln -s /mnt/MainNasDir/thunderbird .thunderbird
-</code></pre></div>
 <p>A directory link .thunderbird  is created in the user home directory.
-The link shows all directories and files copied earlier to the Thunderbird NAS directory.</p>
+    The link shows all directories and files copied earlier to the Thunderbird NAS directory.</p>
 </li>
 <li>
 <p>Now Thunderbird can be started and used. all mail will be stored on the NAS drive.</p>
-</li>
-</ul>
 </li>
 </ul>
 <h4 id="vivaldi">Vivaldi</h4>
@@ -3987,21 +3777,13 @@ An unexpected focus on privacy, combined with all of the features you expect</p>
 <li>Download the appimage file from the <a href="https://www.freecad.org/downloads.php">FreeCad download page</a>. hit the [x86_64 Appimage] button.</li>
 <li>Save the downloaded file and double click or right click the file and in the AppImageLauncher pop-up hit the [Integrate and run] button.</li>
 </ul>
-<blockquote>
-<!--[!note]-->
-<!--Find all information about FreeCad <a href="https://www.freecadweb.org/">here</a>.-->
-<!--A basics tutorial can be found <a href="https://www.freecadweb.org/wiki/Basic_Part_Design_Tutorial">here</a>.-->
-<!--Video tutorials on YouTube can be found <a href="https://www.youtube.com/watch?v=QzfT-ZDp0Wo">here</a>, (this is the first tutorial of a series).-->
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Find all information about FreeCad <a href="https://www.freecadweb.org/">here</a>.</p>
-</div>
-<div class="admonition note">
-<p>A basics tutorial can be found <a href="https://www.freecadweb.org/wiki/Basic_Part_Design_Tutorial">here</a>.</p>
-</div>
-<div class="admonition note">
-<p>Video tutorials on YouTube can be found <a href="https://www.youtube.com/watch?v=QzfT-ZDp0Wo">here</a>, (this is the first tutorial of a series).</p>
+<ul>
+<li>Find all information about FreeCad <a href="https://www.freecadweb.org/">here</a>.</li>
+<li>A basics tutorial can be found <a href="https://www.freecadweb.org/wiki/Basic_Part_Design_Tutorial">here</a>.</li>
+<li>Video tutorials on YouTube can be found <a href="https://www.youtube.com/watch?v=QzfT-ZDp0Wo">here</a>, (this is the first tutorial of a series).</li>
+</ul>
 </div>
 <h4 id="odafileconverter">ODAfileConverter</h4>
 <p>DWG and DXF converter for converting between different versions of .dwg and .dxf
@@ -4016,10 +3798,6 @@ Useful when used with FreeCad</p>
 <p>VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use. </p>
 <p>Use <strong>PAMAC</strong> to install <strong>Oracle VM VirtualBox (virtualbox)</strong> from the official repositories.
 Use <strong>PAMAC</strong> to install <strong>virtualbox-guest-utils</strong> from the official repositories.</p>
-<blockquote>
-<!--[!Note]-->
-<!--For several hardware projects, experiments are done with Linux. Download the 21.3 Cinnamon edition form <a href="https://linuxmint.com/download.php">Linux-Mint</a> . Save the downloaded ISO image somewhere on disk and setup and install a virtual machine. Read the details in the <a href="./VirtualBox.md">Virtualbox</a> document.-->
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For several hardware projects, experiments are done with Linux. Download the 21.3 Cinnamon edition form <a href="https://linuxmint.com/download.php">Linux-Mint</a> . Save the downloaded ISO image somewhere on disk and setup and install a virtual machine. Read the details in the <a href="../VirtualBox/">Virtualbox</a> document.</p>
@@ -4078,8 +3856,6 @@ Install the tools as described in <a href="../InstallXilinxTools/">this document
 <li>efinity-riscv-ide-2024.1.0.1-linux-x64.run</li>
 <li>Install the software as described in <a href="../InstallEfinixTools/">this document</a></li>
 </ul>
-<div style="page-break-after: always; break-after: page;"></div>
-
 <h2 id="investigate-andor-revive-a-system">Investigate and/or revive a system</h2>
 <p>When a system doesn't boot anymore, boot from a Live Manjaro version and investigate what's going wrong. A Live Manjaro version is the USB thumb drive used to install Manjaro.</p>
 <h3 id="boot-an-un-boot-able-system">Boot an un-boot-able system</h3>
@@ -4089,13 +3865,13 @@ Install the tools as described in <a href="../InstallXilinxTools/">this document
 </li>
 <li>
 <p>When the USB version of Manjaro is booted, start a command terminal and enter:</p>
-<ul>
-<li>Type <code>su -</code>and enter the base Manjaro password <code>manjaro</code></li>
+</li>
+<li>
+<p>Type <code>su -</code>and enter the base Manjaro password <code>manjaro</code></p>
+</li>
 <li>Then type <code>manjaro-chroot -a</code> and wait till the drives and other things are mounted and reported in the terminal</li>
 <li>The original (not booting) system can now be examined as it is mounted in the <code>/mnt</code> directory.
     Also the nemo version from the running Live Manjaro can be used to browse through the original system.</li>
-</ul>
-</li>
 </ul>
 <h3 id="make-list-of-installed-packages">Make list of installed packages</h3>
 <p>Make a list of all installed packages by entering this in a command terminal: 
@@ -4129,9 +3905,9 @@ Install the tools as described in <a href="../InstallXilinxTools/">this document
 <li>
 <p>Set a system timer via systemd
     Create a file <code>paccache.timer</code> in <code>/etc/systemd/system/</code> with the following contents</p>
-<ul>
+</li>
 <li>
-<p>```
+<p>```text
     [Unit]
     Description=Clean-up old pacman pkg cache</p>
 <p>[Timer]
@@ -4140,8 +3916,6 @@ Persistent=true</p>
 <p>[Install]
 WantedBy=multi-user.target
 ```</p>
-</li>
-</ul>
 </li>
 <li>
 <p>Enable the timer by <code>sudo systemctl start paccache.timer</code></p>
@@ -4182,17 +3956,18 @@ While it is generally safe to remove everything in the <code>~/.cache</code> fol
 </li>
 <li>
 <p>An example of solving a suddenly popping up listed warning</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>systemd-udevd[298]: event3: Failed to call EVIOCSKEYCODE with scan code 0x7c, and key code 190: Invalid argument
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>- After searching the web, this explication popped up:
+
+```text
+Most keyboards report a single usb device &#39;interface&#39; for the keyboard (some have separate interface(s) for builtin mice or other non-keyboard stuff). However, your keyboard reports two separate &#39;interfaces&#39; for your single keyboard. Unfortunately, both of the interfaces it reports use the exact same vendor and product id, so there&#39;s no way for systemd to tell which is which, from the bus/vendor/product info.
+However these warning log messages are only produced for the second interface which doesn&#39;t actually support or provide the scancodes in question. So, this logged warning is completely harmless and you can ignore it.
+```
+</code></pre></div>
 <ul>
-<li>
-<p><code>systemd-udevd[298]: event3: Failed to call EVIOCSKEYCODE with scan code 0x7c, and key code 190: Invalid argument</code></p>
-</li>
-<li>
-<p>After searching the web, this explication came </p>
-</li>
-<li>
-<p><code>Most keyboards report a single usb device 'interface' for the keyboard (some have separate interface(s) for builtin mice or other non-keyboard stuff). However, your keyboard reports two separate 'interfaces' for your single keyboard. Unfortunately, both of the interfaces it reports use the exact same vendor and product id, so there's no way for systemd to tell which is which, from the bus/vendor/product info.
-    However these warning log messages are only produced for the second interface which doesn't actually support or provide the scancodes in question. So, this logged warning is completely harmless and you can ignore it.</code></p>
-</li>
 <li>
 <p>The the reported issue is harmless but annoying in the logs.
     It need a solution, so it wont pop up again</p>
@@ -4204,8 +3979,6 @@ While it is generally safe to remove everything in the <code>~/.cache</code> fol
 </li>
 <li>
 <p>Reboot and again type "Logs" Hit the [Menu] button and start the logs tool.</p>
-</li>
-</ul>
 </li>
 </ul>
 <h3 id="cli-logs">CLI Logs</h3>
@@ -4221,12 +3994,10 @@ To remove all but the most recent entries by time enter: <code>journalctl --vacu
 <h3 id="et4-fs-errors">ET4-fs errors</h3>
 <ul>
 <li>Boot the machine from an USB stick (Live manjaro)</li>
-<li>Start a command terminal<ul>
+<li>Start a command terminal</li>
 <li>Type <code>sudo fdisk -l</code> to list all partitions.</li>
-</ul>
-</li>
 <li>Remember the partition were Linux is installed and do: 
-    <code>sudo e2fsck -fccky /dev/&lt;drive&gt;</code></li>
+  <code>sudo e2fsck -fccky /dev/&lt;drive&gt;</code></li>
 </ul>
 
 

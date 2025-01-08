@@ -707,6 +707,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScriptingFpgaTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scripting for FPGA Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -780,24 +801,20 @@
 <li>Processor: AMD Ryzen 9 7950X3D</li>
 <li>Graphics Card: ASUS TUF Gaming Radeon RX 7900 XTX OC edition</li>
 <li>Memory: G.Skill Trident Z5 Neo RGB F5-6000J3040G32GX2-TZ5N DDR5 - 64 GB: 2 x 32</li>
-<li>Disks:<ul>
+<li>Disks:</li>
 <li>Twice: Corsair MP700 Pro 2 TB - SSD M.2 2280 - PCI Express 5.0 x4 - NVMe</li>
 <li>One: 2 TB WDC: WD2002FFSX-68PF8N0</li>
 <li>One: 4 TB WDC: WD40EFRX-68WT0N0</li>
-</ul>
-</li>
+<li>Extra</li>
 <li>
-<p>Extra</p>
+<p>Installed extra USB, USB-C and card-reader ports via a added:</p>
 <ul>
-<li>Installed extra USB, USB-C and card-reader ports via a added:<ul>
 <li>Graugear Multi-Front Panel USB hub &amp; Card reader</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>
 <p>ASUS ROG-Crosshair changed board settings:</p>
-<ul>
+</li>
 <li>Disabled the on-board wireless and on-board Bluetooth.</li>
 <li>After assembly and at first power up of the system, upgrade the BIOS to the latest version!
     This is easily done using the ASUS motherboard BIOS build in web upgrade functionality.<ul>
@@ -805,15 +822,9 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-<blockquote>
-<!--[!TIP]-->
-<p><!--In the first year of using a new motherboard look regularly on the manufacturers web site for an upgraded/updated BIOS and apply it. Updating the BIOS is easy these days.--> </p>
-</blockquote>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>In the first year of using a new motherboard look regularly on the manufacturers web site for an upgraded/updated BIOS and apply it. Updating the BIOS is easy these days. </p>
+<p>In the first year of using a new motherboard look regularly on the manufacturers web site for an upgraded/updated BIOS and apply it. Updating the BIOS is easy these days.</p>
 </div>
 <h2 id="disk-partitioning">Disk Partitioning</h2>
 <p>Installation of Linux can be as simple as leaving the hard disk organisation over to the Linux installer tool. It becomes then installing Linux like installing Microsoft Windows. I've in the past had issues with hard disks and switched to force Linux into my own hard disk partitioning scheme. I make sure things get separated so that if something crashes I don't need to redo everything.
@@ -934,19 +945,9 @@ Find below a partitioning table used for both Ubuntu(Mint) and Manjaro.</p>
 </table>
 <p>This partitioning is entered while installing the OS.
 The second or third window in the installation process asks how and where the new Linux version must be installed. Chose for the “do something else” option and enter the above partition table in the tool, when you use the same set of disks of course.</p>
-<blockquote>
-<!--[!NOTE]-->
-<p><!--In the partition table, a part of the partitions are named **nvme...** because disks are Flash-PCIe drives-->
-<!--Two other partitions are named following the old disk partition style, **sda, sdb, ...** because the two disks are old school hard disks.-->
-<!--The **nvme** naming goes: **nvme**<disk number>n1<Partition> and <partition> = p<number>--></p>
-<!--[!NOTE]-->
-<!--In all previous Linux installs "/home" was on a different partition that the OS itself. Now it is on the same partition as the operating system but /home is hourly backed up with Time Machine. When something goes wrong the latest "/home" can be retrieved from there.-->
-</blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In the partition table, a part of the partitions are named <strong>nvme...</strong> because disks are Flash-PCIe drives. Two other partitions are named following the old disk partition style, <strong>sda, sdb, ...</strong> because the two disks are old school hard disks.</p>
-</div>
-<div class="admonition note">
 <p>The <strong>nvme</strong> naming goes: <strong>nvme</strong>&lt;\disk number&gt;n1&lt;\Partition&gt; and &lt;\partition&gt; = p&lt;\number&gt;</p>
 </div>
 <div class="admonition note">
@@ -958,19 +959,15 @@ Something to know is that finally, for all Linux installations and distributions
 <div class="highlight"><pre><span></span><code>system /usr/lib/systemd/system-generators/systemd-fstab-generator failed with exit status 1. system Failed to create unit file &#39;/run/systemd/generator/tmp.mount&#39;, as it already exists. Duplicate entry in &#39;/etc/fstab&#39;?
 </code></pre></div>
 <p>See the <strong>Important</strong> note below and to solve this, go to the <a href="../tmp_fstab_Issue/">fstab_issue</a> text.</p>
-<blockquote>
-<p><!--[!IMPORTANT]-->   </p>
-<!--**This can only be checked, but it should be one of the first things to check, and solved after Ubuntu(Mint) or Manjaro is installed.**-->
-</blockquote>
-<div class="admonition important">
+<div class="admonition note">
 <p class="admonition-title">Important</p>
 <p>This can only be checked, but it should be one of the first things to check, and solved after Ubuntu(Mint) or Manjaro is installed.</p>
 </div>
 <p>Go from here to the:</p>
 <ul>
-<li><strong>LinuxMint</strong> article</li>
-<li><strong>Ubuntu</strong> article</li>
-<li><strong>Manjaro</strong> article</li>
+<li><a href="../Rocinante-LinuxMint/"><strong>LinuxMint</strong></a> article</li>
+<li><a href="../Rocinante-Ubuntu/"><strong>Ubuntu</strong></a> article</li>
+<li><a href="../Rocinante-Manjaro/"><strong>Manjaro</strong></a> article</li>
 </ul>
 
 
